@@ -13,6 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -63,7 +64,7 @@
   
   # nvidia
   hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
