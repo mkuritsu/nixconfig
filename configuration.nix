@@ -97,7 +97,7 @@
   users.users.kuritsu = {
     isNormalUser = true;
     description = "kuritsu";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -132,6 +132,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  virtualisation.docker.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -144,20 +146,24 @@
     mangohud
 
     # dev
-    clang
-    cmake
-    ninja
-    python3
-    jdk
-    gcc
-    gnumake
-    gdb
-    valgrind
-    nodejs
-    rustc
-    cargo
-    rust.packages.stable.rustPlatform.rustcSrc
-    rustfmt
+    pkgs-unstable.clang
+    pkgs-unstable.clang-tools
+    pkgs-unstable.cmake
+    pkgs-unstable.ninja
+    pkgs-unstable.python3
+    pkgs-unstable.jdk
+    pkgs-unstable.gcc
+    pkgs-unstable.gnumake
+    pkgs-unstable.gdb
+    pkgs-unstable.valgrind
+    pkgs-unstable.nodejs
+    pkgs-unstable.rustc
+    pkgs-unstable.cargo
+    pkgs-unstable.rust.packages.stable.rustPlatform.rustcSrc
+    pkgs-unstable.rustfmt
+    pkgs-unstable.maven
+    pkgs-unstable.gradle
+    pkgs-unstable.meson
 
     # apps
     papers
