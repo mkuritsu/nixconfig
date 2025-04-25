@@ -135,32 +135,42 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # system utilities
     vim
     wget
     git
-    papers
-    showtime
+    fastfetch
+    onefetch
+    mangohud
+
+    # dev
     clang
     cmake
     python3
     jdk
     gcc
     gnumake
+
+    # apps
+    papers
+    showtime
+    decibels
     vesktop
     gnome-tweaks
     gnome-shell-extensions
-    fastfetch
-    onefetch
     vscode-fhs
     heroic
     prismlauncher
+    thunderbird
+
+    # unstable packages
     pkgs-unstable.osu-lazer-bin
-    mangohud
   ];
   
   environment.gnome.excludePackages = with pkgs; [
     geary
     totem
+    gnome-music
   ];
   
   fileSystems."/mnt/ssd2" = {
