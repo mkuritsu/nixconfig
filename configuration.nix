@@ -146,10 +146,18 @@
     # dev
     clang
     cmake
+    ninja
     python3
     jdk
     gcc
     gnumake
+    gdb
+    valgrind
+    nodejs
+    rustc
+    cargo
+    rust.packages.stable.rustPlatform.rustcSrc
+    rustfmt
 
     # apps
     papers
