@@ -105,9 +105,19 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.gamescope.enable = true;
+  programs.gamemode.enable = true;
+  programs.java.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
+    gamescopeSession.enable = true;
+    package = pkgs.steam.override {
+      extraPkgs = pkgs: [
+        pkgs.gtk4
+        pkgs.adwaita-icon-theme
+      ];
+    };
   };
   
   qt = {
@@ -145,6 +155,7 @@
     heroic
     prismlauncher
     pkgs-unstable.osu-lazer-bin
+    mangohud
   ];
   
   environment.gnome.excludePackages = with pkgs; [
