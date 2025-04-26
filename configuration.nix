@@ -17,6 +17,12 @@
   
   # Nix settings
   nix.optimise.automatic = true;
+  nix.gc = {
+    automatic = true;
+    persistent = false;
+    dates = "daily";
+    options = "--delete-older-than 30d";
+  };
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
 
@@ -88,6 +94,7 @@
     isNormalUser = true;
     description = "kuritsu";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };
@@ -97,6 +104,7 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   programs.java.enable = true;
+  programs.zsh.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
