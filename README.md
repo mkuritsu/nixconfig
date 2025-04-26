@@ -1,0 +1,1 @@
+Just a repository to keep my nix configuration that I'm testing while experimenting with NixOS
