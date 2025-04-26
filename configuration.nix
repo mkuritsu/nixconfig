@@ -51,12 +51,12 @@
     displayManager.gdm.enable = true;
     desktopManager = {
       gnome.enable = true;
-      xterm.enable = false;
     };
     xkb = {
       layout = "us";
       variant = "altgr-intl";
     };
+    excludePackages = [ pkgs.xterm ];
   };
   services.printing.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
