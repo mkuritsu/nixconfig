@@ -71,8 +71,10 @@
     open = false;
     nvidiaSettings = false;
   };
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
   services.xserver.videoDrivers = ["nvidia"];
 
   # Enable sound with pipewire.
@@ -144,6 +146,9 @@
     fastfetch
     onefetch
     mangohud
+    btop
+    vaapiVdpau
+    libvdpau-va-gl
 
     # dev
     pkgs-unstable.clang
@@ -176,10 +181,13 @@
     heroic
     prismlauncher
     thunderbird
+    chromium
 
     # unstable packages
     pkgs-unstable.osu-lazer-bin
   ];
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
   environment.gnome.excludePackages = with pkgs; [
     geary
