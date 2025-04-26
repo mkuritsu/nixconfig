@@ -17,19 +17,20 @@
 
         bash = {
             enable = false;
-            enableCompletion = false;
+            enableCompletion = true;
         };
 
-        # zsh = {
-        #     enable = true;
-        #     enableCompletion = true;
-        #     autosuggestion.enable = true;
-        #     syntaxHighlighting.enable = true;
-        # };
+        zsh = {
+            enable = true;
+            enableCompletion = true;
+            autosuggestion.enable = true;
+            syntaxHighlighting.enable = true;
+        };
 
         direnv = {
             enable = true;
             enableBashIntegration = true;
+            enableZshIntegration = true;
             nix-direnv.enable = true;
         };
 
