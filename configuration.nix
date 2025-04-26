@@ -167,6 +167,7 @@
     vesktop
     gnome-tweaks
     gnome-shell-extensions
+    gnome-extension-manager
     heroic
     prismlauncher
     thunderbird
@@ -181,6 +182,7 @@
     geary
     totem
     gnome-music
+    gnome-tour
   ];
 
   # Misc
