@@ -24,6 +24,26 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/mnt/ssd2" = {
+    label = "ssd2";
+    fsType = "ext4";
+    device = "/dev/disk/by-uuid/a6d24f19-006f-4fbd-9c68-12fd207bca62";
+    options = [
+      "nofail"
+      "x-gvfs-show"
+    ];
+  };
+  
+  fileSystems."/mnt/hdd" = {
+    label = "hdd";
+    fsType = "btrfs";
+    device = "/dev/disk/by-uuid/78992061-e44e-47c4-bcb9-fc2935b5d710";
+    options = [
+      "nofail"
+      "x-gvfs-show"
+    ];
+  };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/91a7b259-ee6b-4cd4-9c73-6331881ef85f"; }
     ];
