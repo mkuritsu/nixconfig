@@ -97,7 +97,6 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   programs.java.enable = true;
-  programs.direnv.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -124,23 +123,23 @@
     libvdpau-va-gl
 
     # dev
-    pkgs-unstable.clang
-    pkgs-unstable.clang-tools
-    pkgs-unstable.cmake
-    pkgs-unstable.ninja
-    pkgs-unstable.python3
-    pkgs-unstable.jdk
-    pkgs-unstable.gcc
-    pkgs-unstable.gnumake
-    pkgs-unstable.gdb
-    pkgs-unstable.valgrind
-    pkgs-unstable.nodejs
-    pkgs-unstable.rustc
-    pkgs-unstable.cargo
-    pkgs-unstable.rustfmt
-    pkgs-unstable.maven
-    pkgs-unstable.gradle
-    pkgs-unstable.meson
+    clang
+    clang-tools
+    cmake
+    ninja
+    python3
+    jdk
+    gcc
+    gnumake
+    gdb
+    valgrind
+    nodejs
+    rustc
+    cargo
+    rustfmt
+    maven
+    gradle
+    meson
 
     # apps
     papers
