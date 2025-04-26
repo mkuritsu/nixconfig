@@ -62,6 +62,7 @@
   services.xserver.videoDrivers = ["nvidia"];
   services.flatpak.enable = true;
   services.gvfs.enable = true;
+  systemd.services.NetworkManager-wait-online.enable = false;
   
   # hardware
   hardware.nvidia = {
