@@ -103,7 +103,6 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   programs.java.enable = true;
-  programs.zsh.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -175,8 +174,6 @@
     vscode
     pkgs-unstable.osu-lazer-bin
   ];
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
   environment.gnome.excludePackages = with pkgs; [
     geary
