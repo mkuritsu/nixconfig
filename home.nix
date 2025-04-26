@@ -32,6 +32,11 @@
             nix-direnv.enable = true;
         };
 
+        vscode = {
+            enable = true;
+            mutableExtensionsDir = true;
+        };
+
         home-manager.enable = true;
     };
 }

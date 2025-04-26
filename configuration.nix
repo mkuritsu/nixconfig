@@ -167,11 +167,11 @@
     vesktop
     gnome-tweaks
     gnome-shell-extensions
-    vscode-fhs
     heroic
     prismlauncher
     thunderbird
     chromium
+    vscode
     pkgs-unstable.osu-lazer-bin
   ];
 
