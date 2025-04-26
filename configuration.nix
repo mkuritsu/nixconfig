@@ -94,7 +94,6 @@
     isNormalUser = true;
     description = "kuritsu";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };
