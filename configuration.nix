@@ -94,11 +94,13 @@
     isNormalUser = true;
     description = "kuritsu";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };
 
   # Programs
+  programs.zsh.enable = true;
   programs.firefox.enable = true;
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
