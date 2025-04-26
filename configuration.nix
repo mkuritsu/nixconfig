@@ -116,6 +116,17 @@
       ];
     };
   };
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      "nngceckbapebfimnlniiiahkandclblb" # bitwarden
+      "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privact badger
+      "gebbhagfogifgggkldgodflihgfeippi" # return youtube dislike
+      "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsor block
+      "ddkjiahejlhfcafbddmgiahcphecmpfh" # ublock origin lite
+      "kehjfphhkfppnnjhdfhanmehkegdppho" # youtube row fixer
+    ];
+  };
 
   # Setup environment
   environment.systemPackages = with pkgs; [
