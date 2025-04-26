@@ -15,6 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
   
+  nix.optimise.automatic = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -164,7 +165,6 @@
     pkgs-unstable.nodejs
     pkgs-unstable.rustc
     pkgs-unstable.cargo
-    pkgs-unstable.rust.packages.stable.rustPlatform.rustcSrc
     pkgs-unstable.rustfmt
     pkgs-unstable.maven
     pkgs-unstable.gradle
@@ -182,8 +182,6 @@
     prismlauncher
     thunderbird
     chromium
-
-    # unstable packages
     pkgs-unstable.osu-lazer-bin
   ];
 
