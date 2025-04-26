@@ -19,6 +19,13 @@
             enableCompletion = true;
         };
 
+        zsh = {
+            enable = true;
+            enableCompletion = true;
+            autosuggestion.enable = true;
+            syntaxHighlighting.enable = true;
+        };
+
         direnv = {
             enable = true;
             enableBashIntegration = true;
