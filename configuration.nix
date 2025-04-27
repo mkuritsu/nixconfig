@@ -142,6 +142,7 @@
     chromium
     vscode
     pkgs-unstable.osu-lazer-bin
+    android-studio
   ];
 
   environment.gnome.excludePackages = with pkgs; [
