@@ -5,16 +5,15 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
-  
+
   # Nix settings
   nix.optimise.automatic = true;
   nix.gc = {
@@ -23,7 +22,7 @@
     dates = "daily";
     options = "--delete-older-than 30d";
   };
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
   # Networking
@@ -49,9 +48,7 @@
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
-    desktopManager = {
-      gnome.enable = true;
-    };
+    desktopManager = { gnome.enable = true; };
     xkb = {
       layout = "us";
       variant = "altgr-intl";
@@ -59,11 +56,11 @@
     excludePackages = [ pkgs.xterm ];
   };
   services.printing.enable = true;
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   services.flatpak.enable = true;
   services.gvfs.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
-  
+
   # hardware
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.latest;
@@ -96,8 +93,7 @@
     description = "kuritsu";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [ ];
   };
 
   # Programs
@@ -111,22 +107,8 @@
     remotePlay.openFirewall = true;
     gamescopeSession.enable = true;
     package = pkgs.steam.override {
-      extraPkgs = pkgs: [
-        pkgs.gtk4
-        pkgs.adwaita-icon-theme
-      ];
+      extraPkgs = pkgs: [ pkgs.gtk4 pkgs.adwaita-icon-theme ];
     };
-  };
-  programs.chromium = {
-    enable = true;
-    extensions = [
-      "nngceckbapebfimnlniiiahkandclblb" # bitwarden
-      "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privact badger
-      "gebbhagfogifgggkldgodflihgfeippi" # return youtube dislike
-      "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsor block
-      "ddkjiahejlhfcafbddmgiahcphecmpfh" # ublock origin lite
-      "kehjfphhkfppnnjhdfhanmehkegdppho" # youtube row fixer
-    ];
   };
 
   # Setup environment
@@ -161,7 +143,7 @@
     vscode
     pkgs-unstable.osu-lazer-bin
   ];
-  
+
   environment.gnome.excludePackages = with pkgs; [
     geary
     totem
