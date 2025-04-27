@@ -142,25 +142,9 @@
     btop
     vaapiVdpau
     libvdpau-va-gl
-
-    # dev
-    clang
-    clang-tools
-    cmake
-    ninja
     python3
-    jdk
-    gcc
-    gnumake
     gdb
     valgrind
-    nodejs
-    rustc
-    cargo
-    rustfmt
-    maven
-    gradle
-    meson
 
     # apps
     papers
