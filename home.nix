@@ -27,31 +27,6 @@
       ];
     };
 
-    vscode = {
-      enable = true;
-      enableUpdateCheck = false;
-      enableExtensionUpdateCheck = false;
-      mutableExtensionsDir = false;
-      extensions = with pkgs.vscode-marketplace; [
-        catppuccin.catppuccin-vsc
-        llvm-vs-code-extensions.vscode-clangd
-        ms-vscode.cmake-tools
-        icrawl.discord-vscode
-        ms-azuretools.vscode-docker
-        editorconfig.editorconfig
-        tamasfe.even-better-toml
-        vscjava.vscode-gradle
-        redhat.java
-        ms-vsliveshare.vsliveshare
-        pkief.material-icon-theme
-        vscjava.vscode-maven
-        mesonbuild.mesonbuild
-        jnoortheen.nix-ide
-        ms-python.python
-        rust-lang.rust-analyzer
-      ];
-    };
-
     bash = {
       enable = false;
       enableCompletion = true;
