@@ -1,11 +1,14 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, pkgs-unstable, ... }:
-
 {
-  imports = [ # Include the results of the hardware scan.
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
@@ -22,7 +25,10 @@
     dates = "daily";
     options = "--delete-older-than 30d";
   };
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   # Networking
@@ -48,15 +54,17 @@
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
-    desktopManager = { gnome.enable = true; };
+    desktopManager = {
+      gnome.enable = true;
+    };
     xkb = {
       layout = "us";
       variant = "altgr-intl";
     };
-    excludePackages = [ pkgs.xterm ];
+    excludePackages = [pkgs.xterm];
   };
   services.printing.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
   services.flatpak.enable = true;
   services.gvfs.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -91,9 +99,13 @@
   users.users.kuritsu = {
     isNormalUser = true;
     description = "kuritsu";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     shell = pkgs.zsh;
-    packages = with pkgs; [ ];
+    packages = with pkgs; [];
   };
 
   # Programs
@@ -107,7 +119,10 @@
     remotePlay.openFirewall = true;
     gamescopeSession.enable = true;
     package = pkgs.steam.override {
-      extraPkgs = pkgs: [ pkgs.gtk4 pkgs.adwaita-icon-theme ];
+      extraPkgs = pkgs: [
+        pkgs.gtk4
+        pkgs.adwaita-icon-theme
+      ];
     };
   };
 
@@ -143,6 +158,7 @@
     vscode
     pkgs-unstable.osu-lazer-bin
     android-studio
+    godot_4
   ];
 
   environment.gnome.excludePackages = with pkgs; [
