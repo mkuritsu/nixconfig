@@ -5,6 +5,7 @@
   config,
   pkgs,
   pkgs-unstable,
+  options,
   ...
 }: {
   imports = [
@@ -125,6 +126,7 @@
       ];
     };
   };
+  programs.nix-ld.enable = true;
 
   # Setup environment
   environment.systemPackages = with pkgs; [
