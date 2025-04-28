@@ -14,42 +14,47 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    nixpkgs-unstable,
-    flake-utils,
-    home-manager,
-    nix-vscode-extensions,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-      overlays = [nix-vscode-extensions.overlays.default];
-    };
-    pkgs-unstable = import nixpkgs-unstable {
-      inherit system;
-      config.allowUnfree = true;
-    };
-  in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {inherit pkgs pkgs-unstable;};
-      modules = [
-        ./configuration.nix
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-unstable,
+      flake-utils,
+      home-manager,
+      nix-vscode-extensions,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ nix-vscode-extensions.overlays.default ];
+      };
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit pkgs pkgs-unstable; };
+        modules = [
+          ./configuration.nix
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.users.kuritsu = import ./home.nix;
-        }
-      ];
-    };
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.users.kuritsu = import ./home.nix;
+          }
+        ];
+      };
 
-    devShells.${system}.default = pkgs.mkShell {nativeBuildInputs = with pkgs; [alejandra];};
-  };
+      devShells.${system}.default = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt-rfc-style ]; };
+
+      formatter = pkgs.nixfmt-rfc-style;
+    };
 }
