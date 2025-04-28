@@ -116,6 +116,11 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   programs.java.enable = true;
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
+  programs.neovim.enable = true;
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -132,8 +137,6 @@
   # Setup environment
   environment.systemPackages = with pkgs; [
     # system utilities
-    vim
-    neovim
     wget
     git
     fastfetch
