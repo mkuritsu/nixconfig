@@ -116,6 +116,10 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   programs.java.enable = true;
+  programs.foot = {
+    enable = true;
+    enableZshIntegration = false;
+  };
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -203,6 +207,14 @@
     platformTheme = "gnome";
     style = "adwaita-dark";
   };
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    font-awesome
+    jetbrains-mono
+  ];
 
   system.stateVersion = "24.11";
 }
