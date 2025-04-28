@@ -116,6 +116,12 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   programs.java.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    package = pkgs-unstable.hyprland;
+    portalPackage = pkgs-unstable.xdg-desktop-portal-hyprland;
+  };
   programs.vim = {
     enable = true;
     defaultEditor = true;
@@ -163,8 +169,23 @@
     thunderbird
     chromium
     vscode
-    pkgs-unstable.osu-lazer-bin
     android-studio
+    ghostty
+
+    # for hyprland
+    grim
+    slurp
+    dunst
+    wofi
+    wl-clipboard
+    waybar
+    pkgs-unstable.hyprpaper
+    pkgs-unstable.hypridle
+    pkgs-unstable.hyprlock
+    pkgs-unstable.hyprpicker
+
+    # unstable
+    pkgs-unstable.osu-lazer-bin
   ];
 
   environment.gnome.excludePackages = with pkgs; [
