@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   home.stateVersion = "24.11";
   home.username = "kuritsu";
   home.homeDirectory = "/home/kuritsu";
@@ -21,12 +22,12 @@
     chromium = {
       enable = true;
       extensions = [
-        {id = "nngceckbapebfimnlniiiahkandclblb";} # bitwarden
-        {id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";} # privact badger
-        {id = "gebbhagfogifgggkldgodflihgfeippi";} # return youtube dislike
-        {id = "mnjggcdmjocbbbhaepdhchncahnbgone";} # sponsor block
-        {id = "ddkjiahejlhfcafbddmgiahcphecmpfh";} # ublock origin lite
-        {id = "kehjfphhkfppnnjhdfhanmehkegdppho";} # youtube row fixer
+        { id = "nngceckbapebfimnlniiiahkandclblb"; } # bitwarden
+        { id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"; } # privact badger
+        { id = "gebbhagfogifgggkldgodflihgfeippi"; } # return youtube dislike
+        { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # sponsor block
+        { id = "ddkjiahejlhfcafbddmgiahcphecmpfh"; } # ublock origin lite
+        { id = "kehjfphhkfppnnjhdfhanmehkegdppho"; } # youtube row fixer
       ];
     };
 

@@ -7,7 +7,8 @@
   pkgs-unstable,
   options,
   ...
-}: {
+}:
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -62,10 +63,10 @@
       layout = "us";
       variant = "altgr-intl";
     };
-    excludePackages = [pkgs.xterm];
+    excludePackages = [ pkgs.xterm ];
   };
   services.printing.enable = true;
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   services.flatpak.enable = true;
   services.gvfs.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -106,7 +107,7 @@
       "docker"
     ];
     shell = pkgs.zsh;
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Programs
