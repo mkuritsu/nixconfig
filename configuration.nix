@@ -162,7 +162,6 @@
     vscode
     pkgs-unstable.osu-lazer-bin
     android-studio
-    godot_4
   ];
 
   environment.gnome.excludePackages = with pkgs; [
