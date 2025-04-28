@@ -142,6 +142,7 @@
     python3
     gdb
     valgrind
+    nerdfonts
 
     # apps
     papers
