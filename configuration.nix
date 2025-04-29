@@ -172,7 +172,7 @@
     prismlauncher
     thunderbird
     chromium
-    vscode
+    vscodium
     android-studio
     ghostty
     spotify
