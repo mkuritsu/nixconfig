@@ -17,7 +17,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
+  # boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
 
   # Nix settings
   nix.optimise.automatic = true;
@@ -70,7 +70,7 @@
 
   # hardware
   hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
