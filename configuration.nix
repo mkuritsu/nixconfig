@@ -56,9 +56,6 @@
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
-    desktopManager = {
-      gnome.enable = true;
-    };
     xkb = {
       layout = "us";
       variant = "altgr-intl";
@@ -153,20 +150,18 @@
     onefetch
     mangohud
     btop
+    htop
     vaapiVdpau
     libvdpau-va-gl
     python3
     gdb
     valgrind
-    nerdfonts
 
     # apps
+    okular
     papers
-    showtime
-    decibels
-    gnome-tweaks
-    gnome-shell-extensions
-    gnome-extension-manager
+    mpv
+    nautilus
     heroic
     prismlauncher
     thunderbird
@@ -192,13 +187,6 @@
     pkgs-unstable.hyprpicker
   ];
 
-  environment.gnome.excludePackages = with pkgs; [
-    geary
-    totem
-    gnome-music
-    gnome-tour
-  ];
-
   # Misc
   virtualisation.docker.enable = true;
 
@@ -214,9 +202,8 @@
     noto-fonts-emoji
     font-awesome
     jetbrains-mono
+    nerdfonts
   ];
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   system.stateVersion = "24.11";
 }
