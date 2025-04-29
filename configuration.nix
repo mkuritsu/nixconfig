@@ -164,7 +164,6 @@
     papers
     showtime
     decibels
-    vesktop
     gnome-tweaks
     gnome-shell-extensions
     gnome-extension-manager
@@ -176,7 +175,9 @@
     android-studio
     ghostty
     spotify
+    pkgs-unstable.vesktop
     pkgs-unstable.osu-lazer-bin
+    pkgs-unstable.discord
 
     # for hyprland
     grim
@@ -214,6 +215,8 @@
     font-awesome
     jetbrains-mono
   ];
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   system.stateVersion = "24.11";
 }
