@@ -116,10 +116,6 @@
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
   programs.java.enable = true;
-  programs.foot = {
-    enable = true;
-    enableZshIntegration = false;
-  };
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -131,6 +127,10 @@
     defaultEditor = true;
   };
   programs.neovim.enable = true;
+  programs.foot = {
+    enable = true;
+    enableZshIntegration = false;
+  };
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
