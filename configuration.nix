@@ -116,8 +116,6 @@
   programs.hyprland = {
     enable = true;
     withUWSM = true;
-    package = pkgs-unstable.hyprland;
-    portalPackage = pkgs-unstable.xdg-desktop-portal-hyprland;
   };
   programs.vim = {
     enable = true;
@@ -151,8 +149,7 @@
     mangohud
     btop
     htop
-    vaapiVdpau
-    libvdpau-va-gl
+    nvidia-vaapi-driver
     python3
     gdb
     valgrind
@@ -170,9 +167,9 @@
     android-studio
     ghostty
     spotify
-    pkgs-unstable.vesktop
+    vesktop
+    discord
     pkgs-unstable.osu-lazer-bin
-    pkgs-unstable.discord
 
     # for hyprland
     grim
@@ -181,10 +178,10 @@
     wofi
     wl-clipboard
     waybar
-    pkgs-unstable.hyprpaper
-    pkgs-unstable.hypridle
-    pkgs-unstable.hyprlock
-    pkgs-unstable.hyprpicker
+    hyprpaper
+    hypridle
+    hyprlock
+    hyprpicker
   ];
 
   # Misc
@@ -204,6 +201,8 @@
     jetbrains-mono
     nerdfonts
   ];
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   system.stateVersion = "24.11";
 }
