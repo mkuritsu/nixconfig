@@ -149,10 +149,10 @@
     mangohud
     btop
     htop
-    nvidia-vaapi-driver
     python3
     gdb
     valgrind
+    easyeffects
 
     # apps
     okular
@@ -184,6 +184,20 @@
     hyprlock
     hyprpicker
   ];
+
+  systemd.user.services.easyeffects = {
+    enable = true;
+    description = "Easyeffects service";
+    unitConfig = {
+      Type = "simple";
+    };
+    serviceConfig = {
+      execStart = "${pkgs.easyeffects}/bin/easyeffects --gapplication-service";
+      execStop = "${pkgs.easyeffects}/bin/easyeffects --quit";
+      restart = "on-failure";
+    };
+    wantedBy = [ "graphical-session.target" ];
+  };
 
   # Misc
   virtualisation.docker.enable = true;
