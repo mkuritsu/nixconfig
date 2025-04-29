@@ -172,6 +172,7 @@
     pkgs-unstable.osu-lazer-bin
 
     # for hyprland
+    wf-recorder
     grim
     slurp
     dunst
