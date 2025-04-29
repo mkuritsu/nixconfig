@@ -175,6 +175,8 @@
     vscode
     android-studio
     ghostty
+    spotify
+    pkgs-unstable.osu-lazer-bin
 
     # for hyprland
     grim
@@ -187,9 +189,6 @@
     pkgs-unstable.hypridle
     pkgs-unstable.hyprlock
     pkgs-unstable.hyprpicker
-
-    # unstable
-    pkgs-unstable.osu-lazer-bin
   ];
 
   environment.gnome.excludePackages = with pkgs; [
