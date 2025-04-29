@@ -87,6 +87,11 @@
       nix-direnv.enable = true;
     };
 
+    foot = {
+      enable = true;
+      server.enable = true;
+    };
+
     vscode = {
       enable = true;
       enableUpdateCheck = false;
