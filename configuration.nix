@@ -159,6 +159,7 @@
     mpv
     nautilus
     loupe
+    gnome-calendar
 
     # apps
     easyeffects
