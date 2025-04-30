@@ -92,47 +92,47 @@
       server.enable = true;
     };
 
-    vscode = {
-      enable = true;
-      enableUpdateCheck = false;
-      enableExtensionUpdateCheck = false;
-      package = pkgs.vscodium;
-      extensions = with pkgs.vscode-marketplace; [
-        patbenatar.advanced-new-file
-        catppuccin.catppuccin-vsc
-        llvm-vs-code-extensions.vscode-clangd
-        ms-vscode.cmake-tools
-        icrawl.discord-vscode
-        editorconfig.editorconfig
-        redhat.java
-        pkief.material-icon-theme
-        jnoortheen.nix-ide
-        ms-python.vscode-pylance
-        ms-python.python
-        ms-python.debugpy
-        rust-lang.rust-analyzer
-      ];
-      userSettings = {
-        "workbench.iconTheme" = "material-icon-theme";
-        "workbench.colorTheme" = "Catppuccin Mocha";
-        "catppuccin.italicComments" = false;
-        "catppuccin.italicKeywords" = false;
-        "clangd.arguments" = [
-          "--header-insertion=never"
-          "--function-arg-placeholders=false"
-        ];
-        "cmake.configureOnOpen" = false;
-        "cmake.configureOnEdit" = false;
-        "editor.codeLens" = false;
-        "editor.inlayHints.enabled" = "offUnlessPressed";
-        "material-icon-theme.folders.theme" = "classic";
-        "cmake.enableAutomaticKitScan" = false;
-        "workbench.startupEditor" = "none";
-        "cmake.showSystemKits" = false;
-        "cmake.automaticReconfigure" = false;
-        "editor.formatOnSave" = true;
-        "window.menuBarVisibility" = "toggle";
-      };
-    };
+    # vscode = {
+    #   enable = true;
+    #   enableUpdateCheck = false;
+    #   enableExtensionUpdateCheck = false;
+    #   package = pkgs.vscodium;
+    #   extensions = with pkgs.vscode-marketplace; [
+    #     patbenatar.advanced-new-file
+    #     catppuccin.catppuccin-vsc
+    #     llvm-vs-code-extensions.vscode-clangd
+    #     ms-vscode.cmake-tools
+    #     icrawl.discord-vscode
+    #     editorconfig.editorconfig
+    #     redhat.java
+    #     pkief.material-icon-theme
+    #     jnoortheen.nix-ide
+    #     ms-python.vscode-pylance
+    #     ms-python.python
+    #     ms-python.debugpy
+    #     rust-lang.rust-analyzer
+    #   ];
+    #   userSettings = {
+    #     "workbench.iconTheme" = "material-icon-theme";
+    #     "workbench.colorTheme" = "Catppuccin Mocha";
+    #     "catppuccin.italicComments" = false;
+    #     "catppuccin.italicKeywords" = false;
+    #     "clangd.arguments" = [
+    #       "--header-insertion=never"
+    #       "--function-arg-placeholders=false"
+    #     ];
+    #     "cmake.configureOnOpen" = false;
+    #     "cmake.configureOnEdit" = false;
+    #     "editor.codeLens" = false;
+    #     "editor.inlayHints.enabled" = "offUnlessPressed";
+    #     "material-icon-theme.folders.theme" = "classic";
+    #     "cmake.enableAutomaticKitScan" = false;
+    #     "workbench.startupEditor" = "none";
+    #     "cmake.showSystemKits" = false;
+    #     "cmake.automaticReconfigure" = false;
+    #     "editor.formatOnSave" = true;
+    #     "window.menuBarVisibility" = "toggle";
+    #   };
+    # };
   };
 }
