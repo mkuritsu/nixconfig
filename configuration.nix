@@ -152,13 +152,16 @@
     python3
     gdb
     valgrind
-    easyeffects
 
-    # apps
+    # essentials
     okular
     papers
     mpv
     nautilus
+    loupe
+
+    # apps
+    easyeffects
     heroic
     prismlauncher
     thunderbird
