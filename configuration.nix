@@ -173,6 +173,7 @@
     spotify
     vesktop
     discord
+    obs-studio
     pkgs-unstable.osu-lazer-bin
 
     # for hyprland
