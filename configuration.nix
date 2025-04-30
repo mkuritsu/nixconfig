@@ -174,6 +174,7 @@
     vesktop
     discord
     obs-studio
+    rnote
     pkgs-unstable.osu-lazer-bin
 
     # for hyprland
