@@ -183,6 +183,7 @@
     wofi
     wl-clipboard
     waybar
+    pavucontrol
     hyprpaper
     hypridle
     hyprlock
