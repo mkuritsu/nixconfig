@@ -175,24 +175,7 @@
     obs-studio
     rnote
     pkgs-unstable.osu-lazer-bin
-    (vscode-with-extensions.override {
-      vscode = pkgs.vscodium;
-      vscodeExtensions = with pkgs.vscode-marketplace; [
-        patbenatar.advanced-new-file
-        catppuccin.catppuccin-vsc
-        llvm-vs-code-extensions.vscode-clangd
-        ms-vscode.cmake-tools
-        icrawl.discord-vscode
-        editorconfig.editorconfig
-        redhat.java
-        pkief.material-icon-theme
-        jnoortheen.nix-ide
-        ms-python.vscode-pylance
-        ms-python.python
-        ms-python.debugpy
-        rust-lang.rust-analyzer
-      ];
-    })
+    vscode
 
     # for hyprland
     wf-recorder

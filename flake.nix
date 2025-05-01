@@ -8,10 +8,6 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions/00e11463876a04a77fb97ba50c015ab9e5bee90d";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -21,7 +17,6 @@
       nixpkgs-unstable,
       flake-utils,
       home-manager,
-      nix-vscode-extensions,
       ...
     }@inputs:
     let
@@ -29,7 +24,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ nix-vscode-extensions.overlays.default ];
       };
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
