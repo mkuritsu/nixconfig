@@ -7,6 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    my-dotfiles = {
+      url = "github:mkuritsu/dotfiles";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -42,7 +46,8 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "bak";
-            home-manager.users.kuritsu = import ./home/home.nix;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.kuritsu = import ./home/kuritsu.nix;
           }
         ];
       };

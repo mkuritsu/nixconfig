@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "my-dotfiles": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1746223967,
+        "narHash": "sha256-SpZCYwnffwm9SBKTFV2YSHZLKMf3rrfVqiEo+UAwnFQ=",
+        "owner": "mkuritsu",
+        "repo": "dotfiles",
+        "rev": "9aecde2e2f52e73ec5df8e9c17ee768c1f13e6ec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkuritsu",
+        "repo": "dotfiles",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1746141548,
@@ -39,6 +59,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "my-dotfiles": "my-dotfiles",
         "nixpkgs": "nixpkgs"
       }
     }
