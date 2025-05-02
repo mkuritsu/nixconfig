@@ -73,7 +73,10 @@
   };
 
   # Graphics
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [
+    "modesetting"
+    "nvidia"
+  ];
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
