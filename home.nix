@@ -39,14 +39,6 @@
   };
 
   programs = {
-    starship = {
-      enable = true;
-      settings = {
-        add_newline = false;
-        git_status.disabled = true;
-      };
-    };
-
     bash = {
       enable = false;
       enableCompletion = true;
@@ -64,6 +56,11 @@
         bindkey  "^[[F"   end-of-line
         bindkey  "^[[3~"  delete-char
       '';
+      oh-my-zsh = {
+        enable = true;
+        plugins = [ "git" ];
+        theme = "robbyrussell";
+      };
     };
 
     direnv = {
