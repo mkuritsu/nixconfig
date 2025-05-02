@@ -35,14 +35,14 @@
       nixosConfigurations.yggdrasil = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+          ./hosts/yggdrasil/configuration.nix
 
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "bak";
-            home-manager.users.kuritsu = import ./home.nix;
+            home-manager.users.kuritsu = import ./home/home.nix;
           }
         ];
       };
