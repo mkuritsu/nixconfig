@@ -1,41 +1,52 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
   pkgs,
-  pkgs-unstable,
-  options,
   ...
 }:
 {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    xkb = {
+      layout = "us";
+      variant = "altgr-intl";
+    };
+    excludePackages = [ pkgs.xterm ];
+  };
 
   # Nix settings
-  nix.optimise.automatic = true;
-  nix.gc = {
-    automatic = true;
-    persistent = false;
-    dates = "daily";
-    options = "--delete-older-than 30d";
-  };
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
   nixpkgs.config.allowUnfree = true;
+  nix = {
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    optimise.automatic = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
 
   # Networking
-  networking.hostName = "nixos";
+  networking.hostName = "yggdrasil";
   networking.networkmanager.enable = true;
+  networking.interfaces.eth0.ipv4.addresses = [{
+    address = "192.168.1.70";
+    prefixLength = 24;
+  }];
+  networking.defaultGateway = "192.168.1.254";
+  networking.nameservers = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" ];
 
   # Localization
   time.timeZone = "Europe/Lisbon";
@@ -52,39 +63,23 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Services
-  services.xserver = {
-    enable = true;
-    displayManager.gdm.enable = true;
-    xkb = {
-      layout = "us";
-      variant = "altgr-intl";
-    };
-    excludePackages = [ pkgs.xterm ];
-  };
-  services.printing.enable = true;
+  # Graphics
   services.xserver.videoDrivers = [ "nvidia" ];
-  services.flatpak.enable = true;
-  services.gvfs.enable = true;
-  systemd.services.NetworkManager-wait-online.enable = false;
-
-  # hardware
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.latest;
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
     open = false;
-    nvidiaSettings = false;
+    nvidiaSettings = true;
   };
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-  hardware.opentabletdriver.enable = true;
 
-  # Sound
-  hardware.pulseaudio.enable = false;
+  # Audio
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -108,38 +103,32 @@
   };
 
   # Programs
-  programs.zsh.enable = true;
-  programs.firefox.enable = true;
-  programs.gamescope.enable = true;
-  programs.gamemode.enable = true;
-  programs.java.enable = true;
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-  };
-  programs.neovim.enable = true;
-  programs.foot = {
-    enable = true;
-    enableZshIntegration = false;
-  };
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    gamescopeSession.enable = true;
-    package = pkgs.steam.override {
-      extraPkgs = pkgs: [
-        pkgs.gtk4
-        pkgs.adwaita-icon-theme
-      ];
+  programs = {
+    zsh.enable = true;
+    firefox.enable = true;
+    gamescope.enable = true;
+    gamemode.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM = true;
     };
+    vim = {
+      enable = true;
+      defaultEditor = true;
+    };
+    neovim.enable = true;
+    foot = {
+      enable = true;
+      enableZshIntegration = false;
+    };
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      gamescopeSession.enable = true;
+    };
+    nix-ld.enable = true;
   };
-  programs.nix-ld.enable = true;
 
-  # Setup environment
   environment.systemPackages = with pkgs; [
     # system utilities
     wget
@@ -149,65 +138,52 @@
     mangohud
     btop
     htop
-    python3
     gdb
     valgrind
 
-    # essentials
-    okular
+    # basic apps
     papers
     mpv
     nautilus
     loupe
     gnome-calendar
+    thunderbird
+    rnote
 
     # apps
-    easyeffects
+    spotify
+    discord
+    vesktop
+    vscode
+    android-studio
+    obs-studio
     heroic
     prismlauncher
-    thunderbird
-    chromium
-    android-studio
-    ghostty
-    spotify
-    vesktop
-    discord
-    obs-studio
-    rnote
-    pkgs-unstable.osu-lazer-bin
-    vscode
+    osu-lazer-bin
 
     # for hyprland
-    wf-recorder
     grim
     slurp
     dunst
     wofi
     wl-clipboard
+    wf-recorder
     waybar
     pavucontrol
     hyprpaper
     hypridle
     hyprlock
     hyprpicker
+    hyprpolkitagent
   ];
-
-  systemd.user.services.easyeffects = {
-    enable = true;
-    description = "Easyeffects service";
-    unitConfig = {
-      Type = "simple";
-    };
-    serviceConfig = {
-      execStart = "${pkgs.easyeffects}/bin/easyeffects --gapplication-service";
-      execStop = "${pkgs.easyeffects}/bin/easyeffects --quit";
-      restart = "on-failure";
-    };
-    wantedBy = [ "graphical-session.target" ];
-  };
 
   # Misc
   virtualisation.docker.enable = true;
+  hardware.opentabletdriver.enable = true;
+  services.printing.enable = false;
+  services.gvfs.enable = true;
+  systemd.services.NetworkManager-wait-online.enable = false;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   qt = {
     enable = true;
@@ -221,7 +197,6 @@
     noto-fonts-emoji
     font-awesome
     jetbrains-mono
-    nerdfonts
   ];
 
   system.stateVersion = "24.11";
