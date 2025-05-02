@@ -41,12 +41,18 @@
   # Networking
   networking.hostName = "yggdrasil";
   networking.networkmanager.enable = true;
-  networking.interfaces.eth0.ipv4.addresses = [{
-    address = "192.168.1.70";
-    prefixLength = 24;
-  }];
+  networking.interfaces.eth0.ipv4.addresses = [
+    {
+      address = "192.168.1.70";
+      prefixLength = 24;
+    }
+  ];
   networking.defaultGateway = "192.168.1.254";
-  networking.nameservers = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" ];
+  networking.nameservers = [
+    "1.1.1.1"
+    "1.0.0.1"
+    "8.8.8.8"
+  ];
 
   # Localization
   time.timeZone = "Europe/Lisbon";
@@ -71,7 +77,7 @@
     powerManagement.enable = false;
     powerManagement.finegrained = false;
     open = false;
-    nvidiaSettings = true;
+    nvidiaSettings = false;
   };
   hardware.graphics = {
     enable = true;
@@ -183,7 +189,6 @@
   services.printing.enable = false;
   services.gvfs.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   qt = {
     enable = true;
