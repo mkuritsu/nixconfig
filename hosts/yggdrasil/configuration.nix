@@ -213,6 +213,7 @@
     noto-fonts-emoji
     font-awesome
     jetbrains-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   system.stateVersion = "24.11";

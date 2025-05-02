@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -8,6 +7,10 @@
   home.username = "kuritsu";
   home.homeDirectory = "/home/kuritsu";
   programs.home-manager.enable = true;
+
+  imports = [
+    ../dotfiles/dotfiles.nix
+  ];
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
