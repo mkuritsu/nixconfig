@@ -1,15 +1,13 @@
 {
   pkgs,
+  my-dotfiles,
   ...
 }:
 {
   home.stateVersion = "24.11";
-  home.username = "kuritsu";
-  home.homeDirectory = "/home/kuritsu";
   programs.home-manager.enable = true;
 
   imports = [
-    ../dotfiles/dotfiles.nix
   ];
 
   dconf.settings = {
