@@ -12,6 +12,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [
+    "nvidia-drm.fbdev=1"
+  ];
 
   services.xserver = {
     enable = true;
@@ -25,6 +28,7 @@
 
   # Nix settings
   nixpkgs.config.allowUnfree = true;
+  hardware.enableAllFirmware = true;
   nix = {
     settings.experimental-features = [
       "nix-command"
@@ -136,6 +140,12 @@
   };
 
   environment.systemPackages = with pkgs; [
+
+    # nvidia
+    egl-wayland
+    nvidia-vaapi-driver
+    vulkan-headers
+
     # system utilities
     wget
     git
