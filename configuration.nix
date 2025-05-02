@@ -11,7 +11,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "nvidia-drm.fbdev=1"
   ];
@@ -76,7 +75,6 @@
   # Graphics
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
