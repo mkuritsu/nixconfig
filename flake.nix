@@ -62,6 +62,13 @@
           ];
         };
 
+      templates = {
+        rust = {
+          description = "rust starting template";
+          path = ./templates/rust;
+        };
+      };
+
       formatter = forAllSystems (pkgs: pkgs.nixfmt-rfc-style);
 
       devShells = forAllSystems (pkgs: {
