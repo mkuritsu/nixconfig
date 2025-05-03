@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1746223967,
-        "narHash": "sha256-SpZCYwnffwm9SBKTFV2YSHZLKMf3rrfVqiEo+UAwnFQ=",
+        "lastModified": 1746230276,
+        "narHash": "sha256-V7YOClOp8y5NYbV4nibqKzTZN2jSIa8wmG7NJtolcAw=",
         "owner": "mkuritsu",
         "repo": "dotfiles",
-        "rev": "9aecde2e2f52e73ec5df8e9c17ee768c1f13e6ec",
+        "rev": "0099c315a033619d9fc4685e665b94064ee32ae3",
         "type": "github"
       },
       "original": {

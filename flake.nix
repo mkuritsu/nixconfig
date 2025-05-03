@@ -18,6 +18,7 @@
       self,
       nixpkgs,
       home-manager,
+      my-dotfiles,
       ...
     }@inputs:
     let
@@ -36,21 +37,30 @@
         );
     in
     {
-      nixosConfigurations.yggdrasil = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/yggdrasil/configuration.nix
+      nixosConfigurations.yggdrasil =
+        let
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        in
+        nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/yggdrasil/configuration.nix
 
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "bak";
-            home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.kuritsu = import ./home/kuritsu.nix;
-          }
-        ];
-      };
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "bak";
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.kuritsu =
+                { ... }:
+                nixpkgs.lib.mkMerge [
+                  (import ./home/kuritsu.nix { inherit pkgs; })
+                  my-dotfiles.dotfiles
+                ];
+            }
+          ];
+        };
 
       formatter = forAllSystems (pkgs: pkgs.nixfmt-rfc-style);
 

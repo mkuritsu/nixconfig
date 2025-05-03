@@ -1,14 +1,10 @@
 {
   pkgs,
-  my-dotfiles,
   ...
 }:
 {
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
-
-  imports = [
-  ];
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -50,6 +46,7 @@
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
+      history.share = false;
       oh-my-zsh = {
         enable = true;
         plugins = [ "git" ];
