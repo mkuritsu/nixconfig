@@ -11,6 +11,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.blacklistedKernelModules = [ "nouveau" ];
   boot.kernelParams = [
     "nvidia-drm.fbdev=1"
   ];
@@ -166,6 +167,7 @@
     gnome-calendar
     thunderbird
     rnote
+    gnome-text-editor
 
     # apps
     spotify
