@@ -30,8 +30,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
+      name = "rose-pine";
+      package = pkgs.rose-pine-gtk-theme;
     };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
