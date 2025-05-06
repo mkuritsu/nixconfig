@@ -1,14 +1,10 @@
 {
-  description = "Kuritsu nixconfig";
+  description = "mkuritsu's nixconfig";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    my-dotfiles = {
-      url = "github:mkuritsu/dotfiles";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -18,7 +14,6 @@
       self,
       nixpkgs,
       home-manager,
-      my-dotfiles,
       ...
     }@inputs:
     let
@@ -52,22 +47,10 @@
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "bak";
               home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.kuritsu =
-                { ... }:
-                nixpkgs.lib.mkMerge [
-                  (import ./home/kuritsu.nix { inherit pkgs; })
-                  my-dotfiles.dotfiles
-                ];
+              home-manager.users.kuritsu = ./home/kuritsu;
             }
           ];
         };
-
-      templates = {
-        rust = {
-          description = "rust starting template";
-          path = ./templates/rust;
-        };
-      };
 
       formatter = forAllSystems (pkgs: pkgs.nixfmt-rfc-style);
 
@@ -78,5 +61,12 @@
           ];
         };
       });
+
+      templates = {
+        rust = {
+          description = "rust starting template";
+          path = ./templates/rust;
+        };
+      };
     };
 }

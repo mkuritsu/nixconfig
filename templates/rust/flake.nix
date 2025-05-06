@@ -2,7 +2,7 @@
   description = "rust starting template";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
@@ -20,9 +20,9 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        overlays = [ rust-overlay.overlays.default ];
         pkgs = import nixpkgs {
-          inherit system overlays;
+          inherit system;
+          overlays = [ rust-overlay.overlays.default ];
         };
       in
       {
@@ -30,7 +30,7 @@
           packages = with pkgs; [
             pkg-config
             (rust-bin.stable.latest.default.override {
-              extensions = ["rust-src" "clippy" "rust-analyzer"]
+              extensions = ["rust-src"]
             });
           ];
         };
