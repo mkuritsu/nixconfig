@@ -4,7 +4,15 @@
 }:
 {
   home.stateVersion = "24.11";
-  programs.home-manager.enable = true;
+
+  imports = [
+    ./btop
+    ./dunst
+    ./foot
+    ./hypr
+    ./waybar
+    ./wofi
+  ];
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -14,8 +22,8 @@
 
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.adwaita-icon-theme;
-    name = "Adwaita";
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
     size = 24;
   };
 
@@ -29,17 +37,22 @@
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
-    font = {
-      name = "Sans";
-      size = 11;
-    };
+    gtk3.bookmarks = [
+      "file:///home/kuritsu/Documents"
+      "file:///home/kuritsu/Music"
+      "file:///home/kuritsu/Pictures"
+      "file:///home/kuritsu/Videos"
+      "file:///home/kuritsu/Downloads"
+    ];
+  };
+
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
   };
 
   programs = {
-    bash = {
-      enable = false;
-      enableCompletion = true;
-    };
+    home-manager.enable = true;
 
     zsh = {
       enable = true;
@@ -61,9 +74,13 @@
       nix-direnv.enable = true;
     };
 
-    foot = {
+    git = {
       enable = true;
-      server.enable = true;
+      userName = "mkuritsu";
+      userEmail = "mkuritsuu@gmail.com";
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
     };
   };
 }

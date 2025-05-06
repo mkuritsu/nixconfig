@@ -11,15 +11,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.blacklistedKernelModules = [ "nouveau" ];
-  boot.kernelParams = [
-    "nvidia-drm.fbdev=1"
-  ];
 
+  services.displayManager.sddm.enable = true;
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
     xkb = {
       layout = "us";
       variant = "altgr-intl";
@@ -29,7 +24,6 @@
 
   # Nix settings
   nixpkgs.config.allowUnfree = true;
-  hardware.enableAllFirmware = true;
   nix = {
     settings.experimental-features = [
       "nix-command"
@@ -44,8 +38,13 @@
   };
 
   # Networking
-  networking.hostName = "yggdrasil";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "yggdrasil";
+    firewall.enable = true;
+    useDHCP = false;
+    dhcpcd.enable = false;
+    networkmanager.enable = false;
+  };
   networking.interfaces.eth0.ipv4.addresses = [
     {
       address = "192.168.1.70";
@@ -143,12 +142,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-
-    # nvidia
-    egl-wayland
-    nvidia-vaapi-driver
-    vulkan-headers
-
     # system utilities
     wget
     git
@@ -159,6 +152,7 @@
     htop
     gdb
     valgrind
+    nvidia-vaapi-driver
 
     # basic apps
     papers
@@ -172,7 +166,6 @@
 
     # apps
     spotify
-    discord
     vesktop
     vscode
     android-studio
@@ -200,19 +193,13 @@
   # Misc
   virtualisation.docker.enable = true;
   hardware.opentabletdriver.enable = true;
-  services.printing.enable = false;
+  services.printing.enable = true;
   services.gvfs.enable = true;
-  systemd.services.NetworkManager-wait-online.enable = false;
-
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-dark";
-  };
 
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     noto-fonts-emoji
     font-awesome
     jetbrains-mono
