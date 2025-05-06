@@ -121,7 +121,6 @@
     gamemode.enable = true;
     hyprland = {
       enable = true;
-      withUWSM = true;
     };
     vim = {
       enable = true;
