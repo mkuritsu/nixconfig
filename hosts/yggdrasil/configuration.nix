@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -15,6 +11,8 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    extraPackages = with pkgs; [ sddm-sugar-dark ];
+    theme = "sddm-sugar-dark";
   };
   services.xserver = {
     enable = true;
@@ -47,7 +45,6 @@
     defaultGateway = "192.168.1.254";
     nameservers = [ "1.1.1.1" "8.8.8.8" ];
     interfaces.enp34s0 = {
-      useDHCP = true;
       ipv4.addresses = [
         {
           address = "192.168.1.70";
@@ -110,7 +107,6 @@
       "docker"
     ];
     shell = pkgs.zsh;
-    packages = with pkgs; [ ];
   };
 
   # Programs
