@@ -143,6 +143,7 @@
     gdb
     valgrind
     nvidia-vaapi-driver
+    tmux
 
     # basic apps
     papers
