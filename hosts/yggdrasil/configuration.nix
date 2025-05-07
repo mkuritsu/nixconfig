@@ -8,12 +8,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    extraPackages = with pkgs; [ sddm-sugar-dark ];
-    theme = "sddm-sugar-dark";
-  };
+  services.displayManager.ly.enable = true;
+
   services.xserver = {
     enable = true;
     xkb = {
