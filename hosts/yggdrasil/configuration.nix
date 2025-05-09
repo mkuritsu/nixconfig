@@ -144,6 +144,7 @@
     valgrind
     nvidia-vaapi-driver
     tmux
+    fzf
 
     # basic apps
     papers
