@@ -11,6 +11,7 @@
     ./wofi
     ./xdg
     ./gtk
+    ./tmux
   ];
 
   programs = {
@@ -27,6 +28,13 @@
         plugins = [ "git" ];
         theme = "robbyrussell";
       };
+      initContent = ''
+        bindkey -s "^f" "~/.local/bin/tmux-sessionizer\n"
+
+        if [[ -z "$TMUX" ]]; then
+          tmux attach || tmux new -s master
+        fi
+      '';
     };
 
     direnv = {
