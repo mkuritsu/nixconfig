@@ -1,4 +1,4 @@
 { ... }:
 {
-  home.file.".local/bin/tmux-sessionizer".source = ./tmux-sessionizer;
+  home.file.".config/tmux/tmux.conf".source = ./tmux.conf;
 }

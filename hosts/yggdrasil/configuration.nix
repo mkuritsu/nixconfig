@@ -131,6 +131,8 @@
     nix-ld.enable = true;
   };
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   environment.systemPackages = with pkgs; [
     # system utilities
     wget
@@ -145,6 +147,7 @@
     nvidia-vaapi-driver
     tmux
     fzf
+    ueberzugpp
 
     # basic apps
     papers
