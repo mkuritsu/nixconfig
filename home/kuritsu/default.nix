@@ -33,6 +33,7 @@
         bindkey  "^[[H"   beginning-of-line
         bindkey  "^[[F"   end-of-line
         bindkey  "^[[3~"  delete-char
+        bindkey "\e\x7f" backward-kill-word
 
         bindkey -s "^f" "~/.local/bin/tmux-sessionizer\n"
         bindkey -s "^t" "tmux a || tmux\n"
