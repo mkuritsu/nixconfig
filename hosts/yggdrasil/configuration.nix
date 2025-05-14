@@ -146,6 +146,7 @@
     tmux
     fzf
     ueberzugpp
+    bubblewrap
 
     # basic apps
     papers
