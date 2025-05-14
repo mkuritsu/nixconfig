@@ -7,6 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -14,6 +18,7 @@
       self,
       nixpkgs,
       home-manager,
+      aagl,
       ...
     }@inputs:
     let
@@ -48,6 +53,13 @@
               home-manager.backupFileExtension = "bak";
               home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.users.kuritsu = ./home/kuritsu;
+            }
+
+            {
+              imports = [ aagl.nixosModules.default ];
+              programs = {
+                  honkers-railway-launcher.enable = true;
+              };
             }
           ];
         };

@@ -23,10 +23,7 @@
   # Nix settings
   nixpkgs.config.allowUnfree = true;
   nix = {
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+    settings.experimental-features = [ "nix-command" "flakes" ];
     optimise.automatic = true;
     gc = {
       automatic = true;
@@ -199,6 +196,8 @@
     noto-fonts-emoji
     font-awesome
     jetbrains-mono
+    dejavu_fonts
+    cantarell-fonts
     nerd-fonts.jetbrains-mono
   ];
 
