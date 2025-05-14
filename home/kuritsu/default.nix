@@ -12,6 +12,8 @@
     ./xdg
     ./gtk
     ./tmux
+    ./scripts
+    ./starship
   ];
 
   programs = {
@@ -23,17 +25,17 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       history.share = false;
-      oh-my-zsh = {
-        enable = true;
-        plugins = [ "git" ];
-        theme = "robbyrussell";
-      };
       initContent = ''
-        bindkey -s "^f" "~/.local/bin/tmux-sessionizer\n"
+        bindkey "^[[1;3C" forward-word
+        bindkey "^[[1;3D" backward-word
+        bindkey "^[[1;5C" forward-word
+        bindkey "^[[1;5D" backward-word
+        bindkey  "^[[H"   beginning-of-line
+        bindkey  "^[[F"   end-of-line
+        bindkey  "^[[3~"  delete-char
 
-        if [[ -z "$TMUX" ]]; then
-          tmux attach || tmux new -s master
-        fi
+        bindkey -s "^f" "~/.local/bin/tmux-sessionizer\n"
+        bindkey -s "^t" "tmux a || tmux\n"
       '';
     };
 
@@ -50,6 +52,7 @@
       userEmail = "mkuritsuu@gmail.com";
       extraConfig = {
         init.defaultBranch = "main";
+        pull.rebase = true;
       };
     };
   };
