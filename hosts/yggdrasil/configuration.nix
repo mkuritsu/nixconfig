@@ -34,6 +34,7 @@
 
   # Networking
   networking = {
+    useDHCP = false;
     hostName = "yggdrasil";
     firewall = {
       enable = true;
@@ -48,6 +49,7 @@
     defaultGateway = "192.168.1.254";
     nameservers = [ "1.1.1.1" "8.8.8.8" ];
     interfaces.enp34s0 = {
+      useDHCP = false;
       ipv4.addresses = [
         {
           address = "192.168.1.70";
