@@ -170,6 +170,7 @@
     thunderbird
     rnote
     gnome-text-editor
+    file-roller
 
     # apps
     spotify
