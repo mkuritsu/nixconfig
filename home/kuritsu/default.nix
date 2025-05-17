@@ -50,7 +50,7 @@
     git = {
       enable = true;
       userName = "mkuritsu";
-      userEmail = "mkuritsuu@gmail.com";
+      userEmail = "rodrigoalexccorreia@gmail.com";
       extraConfig = {
         init.defaultBranch = "main";
         pull.rebase = true;
