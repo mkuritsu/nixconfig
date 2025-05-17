@@ -54,6 +54,10 @@
         address = "192.168.1.70";
         prefixLength = 24;
       }];
+      ipv6.addresses = [{
+        address = "fd00::70";
+        prefixLength = 64;
+      }];
     };
   };
 
