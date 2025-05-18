@@ -213,6 +213,7 @@
     jetbrains-mono
     dejavu_fonts
     cantarell-fonts
+    adwaita-fonts
     nerd-fonts.jetbrains-mono
   ];
 
