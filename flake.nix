@@ -44,6 +44,8 @@
         nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
+            ./modules/common
+            ./modules/nvidia.nix
             ./hosts/yggdrasil/configuration.nix
 
             home-manager.nixosModules.home-manager
@@ -58,7 +60,7 @@
             {
               imports = [ aagl.nixosModules.default ];
               programs = {
-                  honkers-railway-launcher.enable = true;
+                honkers-railway-launcher.enable = true;
               };
             }
           ];
@@ -76,8 +78,18 @@
 
       templates = {
         rust = {
-          description = "rust starting template";
+          description = "Rust starting template";
           path = ./templates/rust;
+        };
+
+        java = {
+          description = "Java starting template";
+          path = ./templates/java;
+        };
+
+        c-cpp = {
+          description = "C/C++ starting template";
+          path = ./templates/c-cpp;
         };
       };
     };
