@@ -1,5 +1,4 @@
-# Not working currently, infinite recursion, don't know why
-{ ... }@inputs:
+{ inputs, ... }:
 {
   imports = [
     inputs.aagl.nixosModules.default

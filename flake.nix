@@ -46,6 +46,7 @@
           modules = [
             ./modules/common
             ./modules/nvidia.nix
+            ./modules/aagl.nix
             ./hosts/yggdrasil/configuration.nix
 
             home-manager.nixosModules.home-manager
@@ -55,13 +56,6 @@
               home-manager.backupFileExtension = "bak";
               home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.users.kuritsu = ./home/kuritsu;
-            }
-
-            {
-              imports = [ aagl.nixosModules.default ];
-              programs = {
-                honkers-railway-launcher.enable = true;
-              };
             }
           ];
         };
