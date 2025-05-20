@@ -77,7 +77,7 @@
             "common"
             "graphical"
             "gaming"
-            "nvidia.nix"
+            "amd.nix"
           ];
           users = [ "kuritsu" ];
         };
