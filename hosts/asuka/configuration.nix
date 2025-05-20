@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -13,6 +13,9 @@
       allowedTCPPorts = [ ];
     };
   };
+
+  services.power-profiles-daemon.enable = true;
+  powerManagement.enable = true;
 
   system.stateVersion = "24.11";
 }

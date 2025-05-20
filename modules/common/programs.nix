@@ -23,5 +23,7 @@
     ueberzugpp
     wl-clipboard
     brightnessctl
+    blueman
+    networkmanagerapplet
   ];
 }
