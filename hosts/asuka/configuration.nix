@@ -7,6 +7,7 @@
   # Networking
   networking = {
     hostName = "asuka";
+    networkmanager.enable = true;
     firewall = {
       enable = true;
       allowedTCPPorts = [ ];
