@@ -22,5 +22,6 @@
     fzf
     ueberzugpp
     wl-clipboard
+    brightnessctl
   ];
 }
