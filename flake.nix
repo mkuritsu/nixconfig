@@ -25,6 +25,7 @@
         "x86_64-linux"
         "aarch64-linux"
       ];
+
       forAllSystems =
         fn:
         nixpkgs.lib.genAttrs systems (
@@ -34,46 +35,60 @@
           in
           fn pkgs
         );
+
+      mkNixOs =
+        {
+          hostname,
+          users,
+          modules,
+        }:
+        let
+          extraModules = map (module: ./modules/${module}) modules;
+          userModules = map (user: ./users/${user}.nix) users;
+          mkUserAttrSet = username: {
+            name = "${username}";
+            value = ./home/${username};
+          };
+          userHomes = builtins.listToAttrs (map mkUserAttrSet users);
+        in
+        nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules =
+            [
+              ./hosts/${hostname}/configuration.nix
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.backupFileExtension = "bak";
+                home-manager.extraSpecialArgs = { inherit inputs; };
+                home-manager.users = userHomes;
+              }
+            ]
+            ++ userModules
+            ++ extraModules;
+        };
     in
     {
       nixosConfigurations = {
-        yggdrasil = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+        yggdrasil = mkNixOs {
+          hostname = "yggdrasil";
           modules = [
-            ./modules/common
-            ./modules/graphical
-            ./modules/gaming
-            ./modules/nvidia.nix
-            ./users/kuritsu.nix
-            ./hosts/yggdrasil/configuration.nix
-
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "bak";
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.kuritsu = ./home/kuritsu;
-            }
+            "common"
+            "graphical"
+            "gaming"
+            "nvidia.nix"
           ];
+          users = [ "kuritsu" ];
         };
 
-        asuka = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+        asuka = mkNixOs {
+          hostname = "asuka";
           modules = [
-            ./modules/common
-            ./modules/graphical
-            ./users/kuritsu.nix
-            ./hosts/asuka/configuration.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "bak";
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.kuritsu = ./home/kuritsu;
-            }
+            "common"
+            "graphical"
           ];
+          users = [ "kuritsu" ];
         };
       };
 
@@ -83,6 +98,7 @@
         default = pkgs.mkShell {
           packages = with pkgs; [
             nixfmt-rfc-style
+            nixd
           ];
         };
       });
