@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -39,83 +39,6 @@
       ];
     };
   };
-
-  # User
-  users.users.kuritsu = {
-    isNormalUser = true;
-    description = "kuritsu";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "docker"
-    ];
-    shell = pkgs.zsh;
-  };
-
-  # Programs
-  programs = {
-    gamescope.enable = true;
-    gamemode.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      gamescopeSession.enable = true;
-    };
-  };
-
-  environment.systemPackages = with pkgs; [
-    # system utilities
-    wget
-    git
-    fastfetch
-    onefetch
-    mangohud
-    btop
-    htop
-    gdb
-    valgrind
-    nvidia-vaapi-driver
-    tmux
-    fzf
-    ueberzugpp
-    bubblewrap
-
-    # basic apps
-    papers
-    mpv
-    nautilus
-    loupe
-    gnome-calendar
-    thunderbird
-    rnote
-    gnome-text-editor
-    file-roller
-
-    # apps
-    spotify
-    vesktop
-    vscode
-    android-studio
-    obs-studio
-    heroic
-    prismlauncher
-    osu-lazer-bin
-
-    # for hyprland
-    grim
-    slurp
-    dunst
-    wofi
-    wl-clipboard
-    wf-recorder
-    waybar
-    pavucontrol
-    hyprpaper
-    hypridle
-    hyprlock
-    hyprpicker
-    hyprpolkitagent
-  ];
 
   system.stateVersion = "24.11";
 }

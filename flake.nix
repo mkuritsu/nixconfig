@@ -41,8 +41,10 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./modules/common
+            ./modules/graphical
+            ./modules/gaming
             ./modules/nvidia.nix
-            ./modules/aagl.nix
+            ./users/kuritsu.nix
             ./hosts/yggdrasil/configuration.nix
 
             home-manager.nixosModules.home-manager
@@ -60,6 +62,8 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./modules/common
+            ./modules/graphical
+            ./users/kuritsu.nix
             ./hosts/asuka/configuration.nix
             home-manager.nixosModules.home-manager
             {

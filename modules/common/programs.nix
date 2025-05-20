@@ -1,18 +1,26 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs = {
     zsh.enable = true;
-    firefox.enable = true;
-    hyprland.enable = true;
-    neovim.enable = true;
+    nix-ld.enable = true;
     vim = {
       enable = true;
       defaultEditor = true;
     };
-    foot = {
-      enable = true;
-      enableZshIntegration = false;
-    };
-    nix-ld.enable = true;
+    neovim.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    wget
+    git
+    fastfetch
+    onefetch
+    mangohud
+    btop
+    htop
+    tmux
+    fzf
+    ueberzugpp
+    wl-clipboard
+  ];
 }
