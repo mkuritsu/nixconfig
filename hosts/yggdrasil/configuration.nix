@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -38,6 +38,10 @@
         }
       ];
     };
+  };
+
+  programs = {
+    coolercontrol.enable = true;
   };
 
   system.stateVersion = "24.11";
