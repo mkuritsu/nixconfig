@@ -18,7 +18,6 @@
       self,
       nixpkgs,
       home-manager,
-      aagl,
       ...
     }@inputs:
     let
@@ -37,11 +36,8 @@
         );
     in
     {
-      nixosConfigurations.yggdrasil =
-        let
-          pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        in
-        nixpkgs.lib.nixosSystem {
+      nixosConfigurations = {
+        yggdrasil = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
             ./modules/common
@@ -59,6 +55,23 @@
             }
           ];
         };
+
+        asuka = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./modules/common
+            ./hosts/asuka/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "bak";
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.kuritsu = ./home/kuritsu;
+            }
+          ];
+        };
+      };
 
       formatter = forAllSystems (pkgs: pkgs.nixfmt-rfc-style);
 
