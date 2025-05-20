@@ -14,8 +14,8 @@
     };
   };
 
-  services.power-profiles-daemon.enable = true;
   powerManagement.enable = true;
+  services.thermald.enable = true;
   services.tlp.enable = true;
 
   system.stateVersion = "24.11";
