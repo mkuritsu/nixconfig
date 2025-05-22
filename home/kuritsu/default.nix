@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   home.stateVersion = "24.11";
 
@@ -14,6 +14,7 @@
     ./tmux
     ./scripts
     ./starship
+    ./firefox
   ];
 
   programs = {
