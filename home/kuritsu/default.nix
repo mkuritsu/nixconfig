@@ -15,6 +15,7 @@
     ./scripts
     ./starship
     ./firefox
+    ./ags
   ];
 
   programs = {
