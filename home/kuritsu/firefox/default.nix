@@ -15,7 +15,6 @@
       };
 
       settings = {
-        "dom.security.https_only_mode" = true;
         "extensions.autoDisableScopes" = 0;
       };
     };
