@@ -21,35 +21,9 @@
     };
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      ...
-    }@inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
     let
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-      ];
-
-      forAllSystems =
-        fn:
-        nixpkgs.lib.genAttrs systems (
-          system:
-          let
-            pkgs = nixpkgs.legacyPackages.${system};
-          in
-          fn pkgs
-        );
-
-      mkNixOs =
-        {
-          hostname,
-          users,
-          modules,
-        }:
+      mkNixOs = { hostname, users, modules }: 
         let
           extraModules = map (module: ./modules/${module}) modules;
           userModules = map (user: ./users/${user}.nix) users;
@@ -99,17 +73,6 @@
           users = [ "kuritsu" ];
         };
       };
-
-      formatter = forAllSystems (pkgs: pkgs.nixfmt-rfc-style);
-
-      devShells = forAllSystems (pkgs: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [
-            nixfmt-rfc-style
-            nixd
-          ];
-        };
-      });
 
       templates = {
         rust = {
