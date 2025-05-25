@@ -26,5 +26,7 @@
     brightnessctl
     blueman
     networkmanagerapplet
+    nixfmt-rfc-style
+    nixd
   ];
 }
