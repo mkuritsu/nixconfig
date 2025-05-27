@@ -7,6 +7,7 @@
       enable = true;
       enableZshIntegration = false;
     };
+    noisetorch.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
