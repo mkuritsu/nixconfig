@@ -25,6 +25,7 @@
     (discord.override {
       withVencord = true;
     })
+    pkgs.easyeffects
     vscode
     android-studio
 
