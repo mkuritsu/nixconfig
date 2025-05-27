@@ -22,6 +22,9 @@
     file-roller
     spotify
     vesktop
+    (discord.override {
+      withVencord = true;
+    })
     vscode
     android-studio
 
