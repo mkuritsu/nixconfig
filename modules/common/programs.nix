@@ -16,18 +16,10 @@
     git
     fastfetch
     onefetch
-    mangohud
     btop
     htop
     tmux
     fzf
-    ueberzugpp
     wl-clipboard
-    brightnessctl
-    blueman
-    networkmanagerapplet
-    alejandra
-    nixfmt-rfc-style
-    nixd
   ];
 }
