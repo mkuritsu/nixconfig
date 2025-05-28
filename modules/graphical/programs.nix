@@ -11,6 +11,18 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # system utilities
+    mangohud
+    ueberzugpp
+    blueman
+    networkmanagerapplet
+    brightnessctl
+    alejandra
+    nixfmt-rfc-style
+    nixd
+    ffmpeg-full
+    imagemagick
+
     # programs
     papers
     mpv
