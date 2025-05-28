@@ -81,7 +81,8 @@
         "format": "● {}",
         "interval": 1,
         "exec": "echo REC",
-        "exec-if": "pgrep wf-recorder"
+        "exec-if": "pgrep wf-recorder",
+        "on-click": "pkill wf-recorder"
     },
     "custom/notifications-bell": {
         "format": "{}",
