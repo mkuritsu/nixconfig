@@ -21,5 +21,9 @@
     tmux
     fzf
     wl-clipboard
+    zip
+    unzip
+    jq
+    less
   ];
 }
