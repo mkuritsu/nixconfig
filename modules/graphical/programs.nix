@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ self, pkgs, ... }:
 {
   programs = {
     firefox.enable = true;
@@ -55,5 +55,6 @@
     hyprlock
     hyprpicker
     hyprpolkitagent
+    self.packages.${pkgs.system}.hyprpaper-switcher
   ];
 }

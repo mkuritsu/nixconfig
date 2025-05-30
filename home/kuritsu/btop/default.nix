@@ -1,5 +1,13 @@
 { ... }:
 {
-  home.file.".config/btop/btop.conf".source = ./btop.conf;
-  home.file.".config/btop/themes/catppuccin_mocha.theme".source = ./themes/catppuccin_mocha.theme;
+  programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "catppuccin_mocha";
+      theme_background = false;
+    };
+    themes = {
+      catppuccin_mocha = builtins.readFile ./catppuccin_mocha.theme;
+    };
+  };
 }
