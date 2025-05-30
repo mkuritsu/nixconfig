@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ self, pkgs, ... }:
 {
   programs = {
     zsh.enable = true;
@@ -25,5 +25,6 @@
     unzip
     jq
     less
+    self.packages.${pkgs.system}.tmux-sessionizer
   ];
 }

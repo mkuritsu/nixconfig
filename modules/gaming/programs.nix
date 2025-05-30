@@ -14,6 +14,5 @@
     heroic
     prismlauncher
     osu-lazer-bin
-    bubblewrap
   ];
 }

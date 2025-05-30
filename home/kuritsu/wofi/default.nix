@@ -1,5 +1,11 @@
 { ... }:
 {
-  home.file.".config/wofi/config".source = ./config;
-  home.file.".config/wofi/style.css".source = ./style.css;
+  programs.wofi = {
+    enable = true;
+    settings = {
+      allow_images = true;
+      no_actions = true;
+    };
+    style = builtins.readFile ./style.css;
+  };
 }

@@ -19,11 +19,27 @@
       url = "github:aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    systems.url = "github:nix-systems/default";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      systems,
+      ...
+    }@inputs:
     let
-      mkNixOs = { hostname, users, modules }: 
+      eachSystem =
+        fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
+
+      mkNixOs =
+        {
+          hostname,
+          users,
+          modules,
+        }:
         let
           extraModules = map (module: ./modules/${module}) modules;
           userModules = map (user: ./users/${user}.nix) users;
@@ -34,7 +50,7 @@
           userHomes = builtins.listToAttrs (map mkUserAttrSet users);
         in
         nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
+          specialArgs = { inherit inputs self; };
           modules =
             [
               ./hosts/${hostname}/configuration.nix
@@ -73,6 +89,13 @@
           users = [ "kuritsu" ];
         };
       };
+
+      packages = eachSystem (pkgs: {
+        hyprpaper-switcher = pkgs.callPackage ./packages/hyprpaper-switcher { };
+        tmux-sessionizer = pkgs.callPackage ./packages/tmux-sessionizer { };
+      });
+
+      formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
 
       templates = {
         rust = {

@@ -7,10 +7,10 @@
       "flakes"
     ];
     optimise.automatic = true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
+  };
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
   };
 }

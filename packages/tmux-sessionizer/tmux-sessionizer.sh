@@ -1,3 +1,5 @@
+# Taken and modified from ThePrimeagen
+
 #!/usr/bin/env bash
 
 if [[ $# -eq 1 ]]; then

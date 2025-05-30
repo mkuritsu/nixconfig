@@ -4,19 +4,18 @@
 
   imports = [
     ./btop
-    ./dunst
-    ./foot
     ./hypr
     ./waybar
     ./wofi
-    ./tmux
-    ./scripts
-    ./starship
     ./ags.nix
     ./direnv.nix
+    ./dunst.nix
     ./firefox.nix
+    ./foot.nix
     ./git.nix
     ./gtk.nix
+    ./starship.nix
+    ./tmux.nix
     ./xdg.nix
     ./zsh.nix
   ];
