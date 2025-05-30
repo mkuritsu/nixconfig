@@ -18,7 +18,11 @@ UB_PID=$(cat "$UB_PID_FILE")
 
 export SOCKET="$UEBERZUG_TMP_DIR"/ueberzugpp-"$UB_PID".socket
 
-wallpaper="$(find ~/Pictures/wallbangers/desktop | fzf --preview="ueberzugpp cmd -s $SOCKET -i fzfpreview -a add \
+image_dir="$HOME/Pictures/wallbangers/desktop"
+if [ ! -z "$1" ]; then
+    image_dir=$1
+fi
+wallpaper="$(find "$image_dir" | fzf --preview="ueberzugpp cmd -s $SOCKET -i fzfpreview -a add \
                             -x \$FZF_PREVIEW_LEFT -y \$FZF_PREVIEW_TOP \
                             --max-width \$FZF_PREVIEW_COLUMNS --max-height \$FZF_PREVIEW_LINES \
                             -f {}")"
