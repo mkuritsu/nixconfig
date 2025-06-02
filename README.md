@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://nixos.org/favicon.svg" width="256px" height="256px"/>
+<img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-colours.svg" width="256px" height="256px"/>
 <br>
 <h1>kuritsu's nixconfig</h1>
 </div>
