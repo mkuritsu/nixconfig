@@ -11,6 +11,9 @@
 
   programs.nh = {
     enable = true;
-    clean.enable = true;
+    clean = {
+      enable = true;
+      extraArgs = "--nogcroots";
+    };
   };
 }
