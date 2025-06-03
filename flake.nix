@@ -19,6 +19,10 @@
       url = "github:aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wiremix = {
+      url = "github:tsowell/wiremix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     systems.url = "github:nix-systems/default";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };

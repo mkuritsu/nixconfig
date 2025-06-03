@@ -1,4 +1,9 @@
-{ self, pkgs, ... }:
+{
+  self,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   programs = {
     zsh.enable = true;
@@ -26,5 +31,6 @@
     jq
     less
     self.packages.${pkgs.system}.tmux-sessionizer
+    inputs.wiremix.packages.${pkgs.system}.default
   ];
 }
