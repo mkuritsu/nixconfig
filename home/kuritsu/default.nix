@@ -10,7 +10,7 @@
     ./ags.nix
     ./direnv.nix
     ./dunst.nix
-    ./firefox.nix
+    ./browser.nix
     ./foot.nix
     ./git.nix
     ./gtk.nix
