@@ -39,6 +39,7 @@
     pkgs.easyeffects
     vscode
     android-studio
+    youtube-music
 
     # for hyprland
     grim
@@ -54,6 +55,5 @@
     hyprpicker
     hyprpolkitagent
     self.packages.${pkgs.system}.hyprpaper-switcher
-    self.packages.${pkgs.system}.youtube-music
   ];
 }
