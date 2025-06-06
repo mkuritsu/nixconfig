@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
-
 # code snippets from: https://github.com/jstkdng/ueberzugpp/blob/master/scripts/fzfub
+
+#!/usr/bin/env bash
 
 case "$(uname -a)" in
     *Darwin*) UEBERZUG_TMP_DIR="$TMPDIR" ;;

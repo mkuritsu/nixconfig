@@ -196,7 +196,8 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "systems": "systems",
-        "wiremix": "wiremix"
+        "wiremix": "wiremix",
+        "youtube-music": "youtube-music"
       }
     },
     "rust-overlay": {
@@ -266,6 +267,22 @@
       "original": {
         "owner": "tsowell",
         "repo": "wiremix",
+        "type": "github"
+      }
+    },
+    "youtube-music": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1749093937,
+        "narHash": "sha256-oMJE7ztTETzW2BMNSBKUyv3sLeFCeOcectg1Ck/5djM=",
+        "owner": "th-ch",
+        "repo": "youtube-music",
+        "rev": "dadca8b1c490465da2b4df539947c999e06d11f7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "th-ch",
+        "repo": "youtube-music",
         "type": "github"
       }
     }

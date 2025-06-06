@@ -54,5 +54,6 @@
     hyprpicker
     hyprpolkitagent
     self.packages.${pkgs.system}.hyprpaper-switcher
+    self.packages.${pkgs.system}.youtube-music
   ];
 }
