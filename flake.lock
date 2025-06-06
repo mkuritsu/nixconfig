@@ -126,11 +126,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749176423,
-        "narHash": "sha256-EmP2YFB0GvSwNXleRddtfXCDnSas0hpNpgNtdjIyaFk=",
+        "lastModified": 1749178927,
+        "narHash": "sha256-bXcEx1aZUNm5hMLVJeuofcOrZyOiapzvQ7K36HYK3YQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0ee810c839ee73b2d3973f5683f9a3bf8d430e8a",
+        "rev": "91287a0e9d42570754487b7e38c6697e15a9aab2",
         "type": "github"
       },
       "original": {
@@ -196,8 +196,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "systems": "systems",
-        "wiremix": "wiremix",
-        "youtube-music": "youtube-music"
+        "wiremix": "wiremix"
       }
     },
     "rust-overlay": {
@@ -267,22 +266,6 @@
       "original": {
         "owner": "tsowell",
         "repo": "wiremix",
-        "type": "github"
-      }
-    },
-    "youtube-music": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1749093937,
-        "narHash": "sha256-oMJE7ztTETzW2BMNSBKUyv3sLeFCeOcectg1Ck/5djM=",
-        "owner": "th-ch",
-        "repo": "youtube-music",
-        "rev": "dadca8b1c490465da2b4df539947c999e06d11f7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "th-ch",
-        "repo": "youtube-music",
         "type": "github"
       }
     }
