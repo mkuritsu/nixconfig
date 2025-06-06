@@ -23,6 +23,10 @@
       url = "github:tsowell/wiremix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    youtube-music = {
+      url = "github:th-ch/youtube-music";
+      flake = false;
+    };
     systems.url = "github:nix-systems/default";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
@@ -98,6 +102,7 @@
       packages = eachSystem (pkgs: {
         hyprpaper-switcher = pkgs.callPackage ./packages/hyprpaper-switcher { };
         tmux-sessionizer = pkgs.callPackage ./packages/tmux-sessionizer { };
+        youtube-music = pkgs.callPackage ./packages/youtube-music.nix { };
       });
 
       formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
