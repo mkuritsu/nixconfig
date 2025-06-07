@@ -1,4 +1,9 @@
-{ self, pkgs, ... }:
+{
+  self,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   programs = {
     firefox.enable = true;
@@ -55,5 +60,15 @@
     hyprpicker
     hyprpolkitagent
     self.packages.${pkgs.system}.hyprpaper-switcher
+    inputs.wiremix.packages.${pkgs.system}.default
+    (inputs.quickshell.packages.${pkgs.system}.default.override {
+      withJemalloc = true;
+      withQtSvg = true;
+      withWayland = true;
+      withX11 = true;
+      withPipewire = true;
+      withPam = true;
+      withHyprland = true;
+    })
   ];
 }
