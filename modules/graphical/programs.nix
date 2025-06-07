@@ -16,6 +16,8 @@
     noisetorch.enable = true;
   };
 
+  qt.enable = true;
+
   environment.systemPackages = with pkgs; [
     # system utilities
     mangohud
