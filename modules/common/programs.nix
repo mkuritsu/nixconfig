@@ -1,7 +1,6 @@
 {
   self,
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -31,6 +30,5 @@
     jq
     less
     self.packages.${pkgs.system}.tmux-sessionizer
-    inputs.wiremix.packages.${pkgs.system}.default
   ];
 }

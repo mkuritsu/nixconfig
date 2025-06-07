@@ -7,7 +7,6 @@
     ./hypr
     ./waybar
     ./wofi
-    ./ags.nix
     ./direnv.nix
     ./dunst.nix
     ./browser.nix
