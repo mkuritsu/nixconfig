@@ -5,6 +5,5 @@
     ./graphics.nix
     ./programs.nix
     ./services.nix
-    ./flatpak.nix
   ];
 }
