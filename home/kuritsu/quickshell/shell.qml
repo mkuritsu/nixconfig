@@ -1,3 +1,5 @@
+// Currently still using waybar until I learn to use quickshell and replace it.
+
 import Quickshell // for ShellRoot and PanelWindow
 import QtQuick // for Text
 
