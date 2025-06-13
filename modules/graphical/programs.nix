@@ -17,6 +17,11 @@
   };
 
   qt.enable = true;
+  xdg.mime.enable = true;
+  xdg.menus.enable = true;
+
+  environment.etc."/xdg/menus/applications.menu".text =
+    builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   environment.systemPackages = with pkgs; [
     # system utilities
@@ -47,6 +52,23 @@
     vscode
     android-studio
     youtube-music
+
+    kdePackages.dolphin
+    kdePackages.kio
+    kdePackages.kdf
+    kdePackages.kio-fuse
+    kdePackages.kio-extras
+    kdePackages.kio-admin
+    kdePackages.qtwayland
+    kdePackages.plasma-integration
+    kdePackages.kdegraphics-thumbnailers
+    kdePackages.breeze-icons
+    kdePackages.qtsvg
+    kdePackages.kservice
+    shared-mime-info
+
+    kdePackages.okular
+    kdePackages.kate
 
     # for hyprland
     grim
