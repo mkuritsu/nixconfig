@@ -1,23 +1,8 @@
-// Currently still using waybar until I learn to use quickshell and replace it.
-
-import Quickshell // for ShellRoot and PanelWindow
-import QtQuick // for Text
+//@ pragma UseQApplication
+import QtQuick
+import Quickshell
+import "components"
 
 ShellRoot {
-  PanelWindow {
-    anchors {
-      top: true
-      left: true
-      right: true
-    }
-
-    implicitHeight: 30
-
-    Text {
-      // center the bar in its parent component (the window)
-      anchors.centerIn: parent
-
-      text: "hello world"
-    }
-  }
+  Bar {}
 }

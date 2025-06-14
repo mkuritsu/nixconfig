@@ -5,19 +5,15 @@
   imports = [
     ./btop
     ./hypr
-    ./waybar
     ./wofi
-    ./direnv.nix
-    ./dunst.nix
     ./browser.nix
+    ./dunst.nix
     ./foot.nix
     ./git.nix
     ./gtk.nix
-    ./starship.nix
+    ./quickshell.nix
+    ./shell.nix
     ./tmux.nix
     ./xdg.nix
-    ./zsh.nix
   ];
-
-  programs.home-manager.enable = true;
 }
