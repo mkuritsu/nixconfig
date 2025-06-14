@@ -76,8 +76,6 @@
     dunst
     wofi
     wf-recorder
-    waybar
-    pavucontrol
     hyprpaper
     hypridle
     hyprlock
