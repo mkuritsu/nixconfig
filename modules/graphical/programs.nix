@@ -69,11 +69,11 @@
 
     kdePackages.okular
     kdePackages.kate
+    kdePackages.qtmultimedia
 
     # for hyprland
     grim
     slurp
-    dunst
     wofi
     wf-recorder
     hyprpaper

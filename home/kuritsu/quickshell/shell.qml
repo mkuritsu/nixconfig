@@ -5,4 +5,5 @@ import "components"
 
 ShellRoot {
   Bar {}
+  NotificationPanel {}
 }
