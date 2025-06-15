@@ -74,9 +74,7 @@
     # for hyprland
     grim
     slurp
-    wofi
     wf-recorder
-    hyprpaper
     hypridle
     hyprlock
     hyprpicker

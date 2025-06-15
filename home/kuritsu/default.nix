@@ -5,7 +5,6 @@
   imports = [
     ./btop
     ./hypr
-    ./wofi
     ./browser.nix
     ./foot.nix
     ./git.nix
