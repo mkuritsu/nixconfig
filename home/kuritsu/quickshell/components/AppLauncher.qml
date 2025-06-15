@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import Quickshell
 import Quickshell.Hyprland
+import Quickshell.Wayland
 
 Scope {
     GlobalShortcut {
@@ -19,6 +20,7 @@ Scope {
         PanelWindow {
             id: appLauncher
             color: "#4d000000"
+            WlrLayershell.layer: WlrLayer.Overlay
             anchors {
                 top: true
                 bottom: true
