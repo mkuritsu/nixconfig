@@ -67,7 +67,7 @@ Scope {
                             Keys.onPressed: event => {
                                 if (event.key == Qt.Key_Down) {
                                     appList.forceActiveFocus()
-                                    appList.currentIndex = 1
+                                    appList.currentIndex = Math.min(1, appList.model.length - 1)
                                 } else if (event.key == Qt.Key_Enter - 1) {
                                     appList.model[appList.currentIndex].execute()
                                     appLauncherLoader.active = false
@@ -85,7 +85,7 @@ Scope {
                         ListView {
                             id: appList
                             anchors.fill: parent
-                            model: DesktopEntries.applications.values.filter(a => !a.noDisplay).filter(a => a.name.includes(container.searchQuery)).sort((a, b) => a.name.localeCompare(b.name))
+                            model: DesktopEntries.applications.values.filter(a => !a.noDisplay).filter(a => a.name.toLowerCase().includes(container.searchQuery.toLowerCase())).sort((a, b) => a.name.localeCompare(b.name))
 
                             Keys.onPressed: event => {
                                 if (event.key == Qt.Key_Enter - 1) {
