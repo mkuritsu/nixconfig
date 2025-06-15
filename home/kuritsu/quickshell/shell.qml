@@ -1,9 +1,9 @@
 //@ pragma UseQApplication
-import QtQuick
 import Quickshell
 import "components"
 
 ShellRoot {
-  Bar {}
-  NotificationPanel {}
+    Background { }
+    Bar { }
+    AppLauncher { }
 }
