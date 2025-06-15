@@ -7,7 +7,6 @@
     ./hypr
     ./wofi
     ./browser.nix
-    ./dunst.nix
     ./foot.nix
     ./git.nix
     ./gtk.nix
