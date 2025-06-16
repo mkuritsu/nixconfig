@@ -9,11 +9,6 @@
     firefox.enable = true;
     chromium.enable = true;
     hyprland.enable = true;
-    foot = {
-      enable = true;
-      enableZshIntegration = false;
-    };
-    noisetorch.enable = true;
   };
 
   qt.enable = true;
@@ -30,48 +25,34 @@
     blueman
     networkmanagerapplet
     brightnessctl
-    alejandra
     nixfmt-rfc-style
     nixd
     ffmpeg-full
     imagemagick
 
     # programs
-    papers
+    ghostty
     mpv
-    nautilus
-    loupe
-    gnome-calendar
     thunderbird
     rnote
-    gnome-text-editor
-    file-roller
     spotify
     vesktop
-    pkgs.easyeffects
+    easyeffects
     vscode
     android-studio
     youtube-music
 
-    kdePackages.dolphin
-    kdePackages.kio
-    kdePackages.kdf
-    kdePackages.kio-fuse
-    kdePackages.kio-extras
-    kdePackages.kio-admin
-    kdePackages.qtwayland
-    kdePackages.plasma-integration
-    kdePackages.kdegraphics-thumbnailers
-    kdePackages.breeze-icons
-    kdePackages.qtsvg
-    kdePackages.kservice
-    shared-mime-info
+    gnome-calendar
 
+    kdePackages.dolphin
+    kdePackages.kdegraphics-thumbnailers
+    kdePackages.qtwayland
     kdePackages.okular
     kdePackages.kate
+    kdePackages.ark
+    kdePackages.gwenview
     kdePackages.qtmultimedia
 
-    # for hyprland
     grim
     slurp
     wf-recorder
@@ -79,6 +60,7 @@
     hyprlock
     hyprpicker
     hyprpolkitagent
+
     self.packages.${pkgs.system}.hyprpaper-switcher
     inputs.wiremix.packages.${pkgs.system}.default
     (inputs.quickshell.packages.${pkgs.system}.default.override {
