@@ -11,6 +11,7 @@
     ./gtk.nix
     ./quickshell.nix
     ./shell.nix
+    ./terminal.nix
     ./tmux.nix
     ./xdg.nix
   ];
