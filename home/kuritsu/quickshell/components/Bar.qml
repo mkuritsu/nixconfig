@@ -1,6 +1,8 @@
 import Quickshell
+import QtQuick
 import QtQuick.Layouts
 import "root:/widgets"
+import "root:/services"
 
 Scope {
   Variants {
@@ -10,46 +12,52 @@ Scope {
       property var modelData
       screen: modelData
       color: "#181825"
-
+      implicitHeight: 30
       anchors {
         top: true
         left: true
         right: true
       }
 
-      implicitHeight: 30
-
       RowLayout {
-        height: 30
-        spacing: 20
-        anchors {
-          left: parent.left
-          verticalCenter: parent.verticalCenter
+        anchors.fill: parent
+        spacing: 0
+
+        RowLayout { // left
+          Layout.fillHeight: true
+          Layout.fillWidth: true
+          spacing: 5
+
+          WorkspacesWidget {
+            screen: modelData
+          }
+
+          WindowTitleWidget { }
         }
-        WorkspacesWidget {
-          screen: modelData
+
+        RowLayout { // middle
+          Layout.fillHeight: true
+          Layout.fillWidth: true
+          spacing: 5
         }
-        WindowTitleWidget { }
+
+        RowLayout { // right
+          Layout.fillHeight: true
+          Layout.fillWidth: true
+          spacing: 5
+
+          Text {
+            text: `${Battery.percentage}%`
+            color: "white"
+          }
+
+          TrayWidget { }
+
+          AudioWidget { }
+
+          ClockWidget { }
+        }
       }
-
-      RowLayout {
-        height: 30
-        spacing: 20
-        anchors {
-          right: parent.right
-          verticalCenter: parent.verticalCenter
-          rightMargin: 18
-        }
-        TrayWidget {
-
-        }
-        AudioWidget {
-          
-        }
-        ClockWidget {
-        }
-      }
-
     }
   }
 }

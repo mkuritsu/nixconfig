@@ -92,12 +92,7 @@ Scope {
                             }
 
                             Keys.onPressed: event => {
-                                if (event.key == Qt.Key_Enter - 1) {
-                                    this.model[this.currentIndex].execute()
-                                    appLauncherLoader.active = false
-                                } else if (event.key == Qt.Key_Escape) {
-                                    searchField.focus = true
-                                } else if (event.key == Qt.Key_Up && this.currentIndex == 0) {
+                                if (event.key == Qt.Key_Escape || (event.key == Qt.Key_Up && this.currentIndex == 0)) {
                                     searchField.focus = true
                                 }
                             }
@@ -119,6 +114,13 @@ Scope {
                                     }
                                     onPressed: {
                                         modelData.execute()
+                                        appLauncherLoader.active = false
+                                    }
+                                }
+
+                                Keys.onPressed: event => {
+                                    if (event.key == Qt.Key_Enter - 1) {
+                                        appList.model.values[appList.currentIndex].execute()
                                         appLauncherLoader.active = false
                                     }
                                 }
