@@ -4,9 +4,10 @@
     enable = true;
     settings = {
       font-size = 11;
-      font-famility = "jetbrains mono nf";
+      font-family = "jetbrains mono nf";
       theme = "catppuccin-mocha";
-      background-opacity = 0.95;
+      background-opacity = 0.9;
+      confirm-close-surface = false;
     };
   };
 }
