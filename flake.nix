@@ -121,6 +121,11 @@
           path = ./templates/c-cpp;
         };
 
+        python = {
+          description = "Python starting template";
+          path = ./templates/python;
+        };
+
         minimal = {
           description = "Minimal starting template for other things";
           path = ./templates/minimal;
