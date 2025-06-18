@@ -120,6 +120,11 @@
           description = "C/C++ starting template";
           path = ./templates/c-cpp;
         };
+
+        minimal = {
+          description = "Minimal starting template for other things";
+          path = ./templates/minimal;
+        };
       };
     };
 }

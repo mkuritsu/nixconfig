@@ -14,14 +14,6 @@
       {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            cmake
-            ninja
-            pkg-config
-            ccache
-            clang-tools
-            clang
-            gdb
-            valgrind
           ];
         };
       }
