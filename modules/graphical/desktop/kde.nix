@@ -18,6 +18,7 @@
     kdePackages.kcolorchooser
     kdePackages.ksystemlog
     kdePackages.kolourpaint
+    kdePackages.discover
     haruna
   ];
 }
