@@ -19,6 +19,7 @@
     kdePackages.ksystemlog
     kdePackages.kolourpaint
     kdePackages.discover
+    kdePackages.kmail
     haruna
   ];
 }
