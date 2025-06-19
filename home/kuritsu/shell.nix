@@ -16,7 +16,8 @@
       bindkey  "^[[3~"  delete-char
       bindkey "\e\x7f" backward-kill-word
 
-      bindkey -s "^f" "tmux-sessionizer\n"
+      bindkey -s "^t" "tmux-sessionizer\n"
+      bindkey -s "^f" "cd \$(find ~/ ~/Dev . -mindepth 1 -maxdepth 1 -type d | fzf)\n"
     '';
   };
 
