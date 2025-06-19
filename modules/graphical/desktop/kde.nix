@@ -20,6 +20,7 @@
     kdePackages.kolourpaint
     kdePackages.discover
     kdePackages.kmail
+    kdePackages.full
     haruna
   ];
 }
