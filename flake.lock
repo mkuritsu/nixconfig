@@ -88,11 +88,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1751030396,
-        "narHash": "sha256-Qb7x35dr4p04zKafV0ukcHOSlSN6n1/j2lox5UsEaY0=",
+        "lastModified": 1751034747,
+        "narHash": "sha256-OAEdg8IuR3iWOUpNb6X7lYGbIXKmKEtlQX6NIBM6nLM=",
         "owner": "mkuritsu",
         "repo": "kushell",
-        "rev": "92b3a61060affb289e001695bd1a72a033709f79",
+        "rev": "d91ff129547e4a1d3454ae356a94bdc54f08ada8",
         "type": "github"
       },
       "original": {
@@ -138,26 +138,6 @@
         "type": "github"
       }
     },
-    "quickshell_2": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1751022554,
-        "narHash": "sha256-+REvWf68WLbwacOsjs4CmJauE2vF+sPh++Jcxn3wSeQ=",
-        "owner": "quickshell-mirror",
-        "repo": "quickshell",
-        "rev": "1d02292fbf24c41f947cf72dd7de57f6dedf2173",
-        "type": "github"
-      },
-      "original": {
-        "owner": "quickshell-mirror",
-        "repo": "quickshell",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "aagl": "aagl",
@@ -165,7 +145,6 @@
         "home-manager": "home-manager",
         "kushell": "kushell",
         "nixpkgs": "nixpkgs",
-        "quickshell": "quickshell_2",
         "spicetify-nix": "spicetify-nix",
         "systems": "systems_3",
         "wiremix": "wiremix"
