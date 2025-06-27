@@ -12,6 +12,7 @@
     ./quickshell.nix
     ./shell.nix
     ./spicetify.nix
+    ./theming.nix
     ./tmux.nix
     ./xdg.nix
   ];
