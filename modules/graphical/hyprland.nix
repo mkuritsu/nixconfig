@@ -1,11 +1,9 @@
 {
   self,
   pkgs,
-  inputs,
   ...
 }:
 {
-
   programs.hyprland.enable = true;
 
   environment.etc."/xdg/menus/applications.menu".text =
@@ -19,7 +17,7 @@
     kdePackages.kate
     kdePackages.ark
     kdePackages.gwenview
-    kdePackages.qtmultimedia
+    haruna
 
     grim
     slurp
@@ -29,14 +27,5 @@
     hyprpicker
     hyprpolkitagent
     self.packages.${pkgs.system}.hyprpaper-switcher
-    (inputs.quickshell.packages.${pkgs.system}.default.override {
-      withJemalloc = true;
-      withQtSvg = true;
-      withWayland = true;
-      withX11 = true;
-      withPipewire = true;
-      withPam = true;
-      withHyprland = true;
-    })
   ];
 }

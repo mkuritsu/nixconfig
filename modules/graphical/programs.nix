@@ -23,11 +23,11 @@
 
     # programs
     alacritty
+    vesktop
     mpv
     thunderbird
     rnote
     spotify
-    vesktop
     easyeffects
     vscode
     android-studio

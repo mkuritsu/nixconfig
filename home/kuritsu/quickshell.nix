@@ -1,4 +1,8 @@
-{ ... }:
+{ inputs, ... }:
 {
-  home.file.".config/quickshell".source = ./quickshell;
+  imports = [
+    inputs.kushell.homeModules.kushell
+  ];
+
+  programs.kushell.enable = true;
 }
