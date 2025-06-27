@@ -84,15 +84,14 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "quickshell": "quickshell",
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1751034747,
-        "narHash": "sha256-OAEdg8IuR3iWOUpNb6X7lYGbIXKmKEtlQX6NIBM6nLM=",
+        "lastModified": 1751037586,
+        "narHash": "sha256-7fvoC8L33fVhdPn7g0MDsvszLPmD/ggSz+zigq9AlH0=",
         "owner": "mkuritsu",
         "repo": "kushell",
-        "rev": "d91ff129547e4a1d3454ae356a94bdc54f08ada8",
+        "rev": "4454352015d1968e7288d75abedd384d15eaf4c6",
         "type": "github"
       },
       "original": {
@@ -120,7 +119,6 @@
     "quickshell": {
       "inputs": {
         "nixpkgs": [
-          "kushell",
           "nixpkgs"
         ]
       },
@@ -145,6 +143,7 @@
         "home-manager": "home-manager",
         "kushell": "kushell",
         "nixpkgs": "nixpkgs",
+        "quickshell": "quickshell",
         "spicetify-nix": "spicetify-nix",
         "systems": "systems_3",
         "wiremix": "wiremix"

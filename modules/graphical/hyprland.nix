@@ -1,5 +1,6 @@
 {
   self,
+  inputs,
   pkgs,
   ...
 }:
@@ -17,6 +18,8 @@
     kdePackages.kate
     kdePackages.ark
     kdePackages.gwenview
+    kdePackages.qtmultimedia
+    kdePackages.full
     haruna
 
     grim
@@ -27,5 +30,14 @@
     hyprpicker
     hyprpolkitagent
     self.packages.${pkgs.system}.hyprpaper-switcher
+    (inputs.quickshell.packages.${pkgs.system}.default.override {
+      withJemalloc = true;
+      withQtSvg = true;
+      withWayland = true;
+      withX11 = true;
+      withPipewire = true;
+      withPam = true;
+      withHyprland = true;
+    })
   ];
 }

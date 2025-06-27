@@ -24,6 +24,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    quickshell = {
+      url = "github:quickshell-mirror/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     kushell = {
       url = "github:mkuritsu/kushell";
       inputs.nixpkgs.follows = "nixpkgs";
