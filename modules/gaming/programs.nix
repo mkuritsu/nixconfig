@@ -1,10 +1,4 @@
-{ pkgs, inputs, ... }:
-let
-  pkgs-unstable = import inputs.nixpkgs-unstable {
-    system = pkgs.system;
-    config.allowUnfree = true;
-  };
-in
+{ pkgs, ... }:
 {
   programs = {
     gamescope.enable = true;
@@ -18,6 +12,6 @@ in
   environment.systemPackages = with pkgs; [
     heroic
     prismlauncher
-    pkgs-unstable.osu-lazer-bin
+    osu-lazer-bin
   ];
 }
