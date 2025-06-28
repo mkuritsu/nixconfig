@@ -1,12 +1,6 @@
 { pkgs, ... }:
 let
-  custom-qt = {
-    name = "catppuccin-mocha-mauve";
-    package = pkgs.catppuccin-kvantum.override {
-      accent = "mauve";
-      variant = "mocha";
-    };
-  };
+  qt-theme-name = "catppuccin-mocha-mauve";
 in
 {
   dconf.settings = {
@@ -23,11 +17,17 @@ in
   };
 
   home.packages = with pkgs; [
-    custom-qt.package
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
   ];
+
+  xdg.configFile."Kvantum/${qt-theme-name}".source = ./qt-theme;
+
+  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
+    [General]
+    theme=${qt-theme-name}
+  '';
 
   qt = {
     enable = true;
