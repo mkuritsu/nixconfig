@@ -14,5 +14,6 @@
   environment.systemPackages = with pkgs; [
     catppuccin-sddm
     bibata-cursors
+    catppuccin-sddm
   ];
 }

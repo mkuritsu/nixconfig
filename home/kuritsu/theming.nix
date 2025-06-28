@@ -13,6 +13,17 @@
     size = 24;
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "qtct";
+    style.name = "kvantum";
+  };
+
+  xdg.configFile = {
+    "Kvantum/ArcDark".source = "${pkgs.catppuccin-kvantum}/share/Kvantum/catppuccin-mocha-mauve";
+    "Kvantum/kvantum.kvconfig".text = "[General]\ntheme=catppuccin-mocha-mauve";
+  };
+
   gtk = {
     enable = true;
     theme = {
