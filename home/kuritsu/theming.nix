@@ -1,4 +1,13 @@
 { pkgs, ... }:
+let
+  custom-qt = {
+    name = "catppuccin-mocha-mauve";
+    package = pkgs.catppuccin-kvantum.override {
+      accent = "mauve";
+      variant = "mocha";
+    };
+  };
+in
 {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -13,15 +22,16 @@
     size = 24;
   };
 
+  home.packages = with pkgs; [
+    custom-qt.package
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.qt6ct
+    libsForQt5.qtstyleplugin-kvantum
+  ];
+
   qt = {
     enable = true;
-    platformTheme = "qtct";
-    style.name = "kvantum";
-  };
-
-  xdg.configFile = {
-    "Kvantum/ArcDark".source = "${pkgs.catppuccin-kvantum}/share/Kvantum/catppuccin-mocha-mauve";
-    "Kvantum/kvantum.kvconfig".text = "[General]\ntheme=catppuccin-mocha-mauve";
+    platformTheme.name = "qtct";
   };
 
   gtk = {
