@@ -21,12 +21,6 @@
     ffmpeg-full
     imagemagick
 
-    kdePackages.full
-    kdePackages.qt6ct
-    kdePackages.kv
-    libsForQt5.qt5ct
-    libsForQt5.qtstyleplugin-kvantum
-
     # programs
     alacritty
     vesktop
