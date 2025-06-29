@@ -3,7 +3,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "catppuccin-mocha";
+    theme = "black_hole";
     settings = {
       Theme = {
         CursorTheme = "Bibata-Modern-Classic";
@@ -12,8 +12,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    catppuccin-sddm
+    sddm-astronaut
     bibata-cursors
-    catppuccin-sddm
   ];
 }

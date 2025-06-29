@@ -24,10 +24,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     kushell = {
       url = "github:mkuritsu/kushell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -87,7 +83,6 @@
             "common"
             "graphical"
             "gaming"
-            "amd.nix"
           ];
           users = [ "kuritsu" ];
         };
@@ -101,11 +96,6 @@
           users = [ "kuritsu" ];
         };
       };
-
-      packages = eachSystem (pkgs: {
-        hyprpaper-switcher = pkgs.callPackage ./packages/hyprpaper-switcher { };
-        tmux-sessionizer = pkgs.callPackage ./packages/tmux-sessionizer { };
-      });
 
       formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
 

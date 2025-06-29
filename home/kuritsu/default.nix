@@ -4,6 +4,9 @@
 
   programs.home-manager.enable = true;
 
+  home.username = "kuritsu";
+  home.homeDirectory = "/home/kuritsu";
+
   imports = [
     ./btop
     ./hypr

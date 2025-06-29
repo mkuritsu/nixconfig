@@ -19,7 +19,6 @@ in
   home.packages = with pkgs; [
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct
-    libsForQt5.qtstyleplugin-kvantum
   ];
 
   xdg.configFile."Kvantum/${qt-theme-name}".source = ./qt-theme;
