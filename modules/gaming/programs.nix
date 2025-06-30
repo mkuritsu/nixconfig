@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   programs = {
     gamescope.enable = true;
@@ -12,6 +12,6 @@
   environment.systemPackages = with pkgs; [
     heroic
     prismlauncher
-    osu-lazer-bin
+    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
   ];
 }

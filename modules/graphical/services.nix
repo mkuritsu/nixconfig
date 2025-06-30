@@ -1,8 +1,11 @@
 { ... }:
 {
   hardware.opentabletdriver.enable = true;
-  services.flatpak.enable = true;
+
+  services.upower.enable = true;
+
   xdg.mime.enable = true;
   xdg.menus.enable = true;
-  services.upower.enable = true;
+
+  boot.plymouth.enable = true;
 }

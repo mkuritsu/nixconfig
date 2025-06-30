@@ -7,6 +7,10 @@
   programs = {
     firefox.enable = true;
     chromium.enable = true;
+    foot = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -22,15 +26,12 @@
     imagemagick
 
     # programs
-    alacritty
     vesktop
     mpv
     thunderbird
     rnote
     spotify
-    easyeffects
     vscode
-    android-studio
 
     inputs.wiremix.packages.${pkgs.system}.default
   ];

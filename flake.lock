@@ -29,11 +29,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1751169806,
-        "narHash": "sha256-bq+FVbQZ61yhQP0Bb2bgBtu1Bidn4iaJfMCDqNkEQmQ=",
+        "lastModified": 1751256218,
+        "narHash": "sha256-WC1YSV4lFT41AaEhpiQZRuofe+2WLI9PNuuqgdRmjVM=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "0dc3533f67cde2f338b5dd8c8b382c95c3287785",
+        "rev": "fa40d85b15cbfb1a488ef9a119ff2d40a481c8da",
         "type": "gitlab"
       },
       "original": {
@@ -59,6 +59,24 @@
         "type": "github"
       }
     },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1749398372,
+        "narHash": "sha256-tYBdgS56eXYaWVW3fsnPQ/nFlgWi/Z2Ymhyu21zVM98=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "9305fe4e5c2a6fcf5ba6a3ff155720fbe4076569",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -66,11 +84,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751146119,
-        "narHash": "sha256-gvjG95TCnUVJkvQvLMlnC4NqiqFyBdJk3o8/RwuHeaU=",
+        "lastModified": 1751296747,
+        "narHash": "sha256-/nHOfmB0C972nYX0xVF0zWmbt8ooA9TCczfeKHNvwqI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "76d0c31fce2aa0c71409de953e2f9113acd5b656",
+        "rev": "0f21ed5182a158d2f84e9136f6bf8539fd9a6890",
         "type": "github"
       },
       "original": {
@@ -101,6 +119,27 @@
         "type": "github"
       }
     },
+    "nix-gaming": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1751163021,
+        "narHash": "sha256-BZGuvFape+quvsfFm+RJdjABUu/xMWnRNd+mzvfrj30=",
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "rev": "094da7499257ec96bb1708f76cf221687a9aa498",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1751011381,
@@ -114,6 +153,21 @@
         "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1748740939,
+        "narHash": "sha256-rQaysilft1aVMwF14xIdGS3sj1yHlI6oKQNBRTF40cc=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "656a64127e9d791a334452c6b6606d17539476e2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
         "type": "github"
       }
     },
@@ -144,6 +198,7 @@
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "kushell": "kushell",
+        "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs",
         "spicetify-nix": "spicetify-nix",
         "systems": "systems_3",
@@ -239,16 +294,17 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1751083675,
-        "narHash": "sha256-uDXnA0E3FzzDnzhPC5YoOFwvoGdlHpbx/t2DI+ZIENk=",
+        "lastModified": 1749616676,
+        "narHash": "sha256-SVT9Cp2DxsvdTeK/zjKA18hIULtuCNz1SXBJhj3dyrg=",
         "owner": "tsowell",
         "repo": "wiremix",
-        "rev": "bc03f8a0ee9eca68961159ab789e7c8a60c52868",
+        "rev": "d2bfc3870f67d47cef013990b012bd00b32679cb",
         "type": "github"
       },
       "original": {
         "owner": "tsowell",
         "repo": "wiremix",
+        "rev": "d2bfc3870f67d47cef013990b012bd00b32679cb",
         "type": "github"
       }
     }

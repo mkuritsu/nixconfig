@@ -1,6 +1,7 @@
 { ... }:
 {
   nixpkgs.config.allowUnfree = true;
+
   nix = {
     settings.experimental-features = [
       "nix-command"
@@ -13,7 +14,7 @@
     enable = true;
     clean = {
       enable = true;
-      extraArgs = "--nogcroots";
+      extraArgs = "--nogcroots"; # so it doesn't delete my direnvs
     };
   };
 }
