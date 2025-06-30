@@ -1,18 +1,12 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  services.displayManager.sddm = {
+  services.displayManager.ly = {
     enable = true;
-    wayland.enable = true;
-    theme = "black_hole";
     settings = {
-      Theme = {
-        CursorTheme = "Bibata-Modern-Classic";
-      };
+      load = false;
+      save = false;
+      bigclock = true;
+      animation = "gameoflife";
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    sddm-astronaut
-    bibata-cursors
-  ];
 }

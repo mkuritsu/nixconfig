@@ -14,17 +14,16 @@
   environment.systemPackages = with pkgs; [
     wget
     git
-    fastfetch
-    onefetch
-    btop
-    htop
-    tmux
     fzf
-    wl-clipboard
+    less
+    jq
     zip
     unzip
-    jq
-    less
+    btop
+    fastfetch
+    onefetch
+    wl-clipboard
+    tmux
     tmux-sessionizer
   ];
 }

@@ -16,13 +16,7 @@ in
     size = 24;
   };
 
-  home.packages = with pkgs; [
-    kdePackages.qtstyleplugin-kvantum
-    kdePackages.qt6ct
-  ];
-
   xdg.configFile."Kvantum/${qt-theme-name}".source = ./qt-theme;
-
   xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
     [General]
     theme=${qt-theme-name}
@@ -30,7 +24,8 @@ in
 
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
+    platformTheme.name = "qt5ct";
+    #style.name = "kvantum";
   };
 
   gtk = {
@@ -44,11 +39,11 @@ in
       name = "Adwaita";
     };
     gtk3.bookmarks = [
-      "file:///home/kuritsu/Documents"
-      "file:///home/kuritsu/Music"
-      "file:///home/kuritsu/Pictures"
-      "file:///home/kuritsu/Videos"
-      "file:///home/kuritsu/Downloads"
+      "file:///home/kuritsu/documents"
+      "file:///home/kuritsu/music"
+      "file:///home/kuritsu/pictures"
+      "file:///home/kuritsu/videos"
+      "file:///home/kuritsu/downloads"
     ];
   };
 }

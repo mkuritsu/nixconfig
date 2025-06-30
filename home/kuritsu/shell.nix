@@ -17,7 +17,7 @@
       bindkey "\e\x7f" backward-kill-word
 
       bindkey -s "^t" "tmux-sessionizer\n"
-      bindkey -s "^f" "cd \$(find ~/ ~/Dev . -mindepth 1 -maxdepth 1 -type d | fzf)\n"
+      bindkey -s "^f" "cd \$(find ~/ ~/dev . -mindepth 1 -maxdepth 1 -type d | fzf)\n"
     '';
   };
 
