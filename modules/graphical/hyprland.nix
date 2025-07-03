@@ -13,9 +13,8 @@
 
   environment.systemPackages = with pkgs; [
     kdePackages.dolphin
-    kdePackages.okular
     kdePackages.ark
-    kdePackages.gwenview
+    imv
     kdePackages.kdegraphics-thumbnailers
     kdePackages.qtsvg
     kdePackages.ffmpegthumbs

@@ -6,7 +6,6 @@
 {
   programs = {
     firefox.enable = true;
-    chromium.enable = true;
     foot = {
       enable = true;
       enableZshIntegration = true;

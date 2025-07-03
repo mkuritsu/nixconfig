@@ -2,6 +2,7 @@
 {
   programs.firefox = {
     enable = true;
+    package = null;
 
     profiles.default = {
       extensions = {
@@ -22,13 +23,13 @@
 
   programs.chromium = {
     enable = true;
+    package = null;
     extensions = [
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
       "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privacy badger
       "gebbhagfogifgggkldgodflihgfeippi" # return youtube dislike
       "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsor block
       "ddkjiahejlhfcafbddmgiahcphecmpfh" # ublock origin lite
-      "kehjfphhkfppnnjhdfhanmehkegdppho" # youtube row fixer
     ];
   };
 }

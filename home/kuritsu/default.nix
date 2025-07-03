@@ -1,11 +1,10 @@
 { ... }:
 {
   home.stateVersion = "24.11";
-
-  programs.home-manager.enable = true;
-
   home.username = "kuritsu";
   home.homeDirectory = "/home/kuritsu";
+
+  programs.home-manager.enable = true;
 
   imports = [
     ./btop

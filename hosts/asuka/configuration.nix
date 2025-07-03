@@ -7,8 +7,10 @@
   # Networking
   networking = {
     hostName = "asuka";
+    wireless.iwd.enable = true;
     networkmanager.enable = true;
     networkmanager.dns = "none";
+    networkmanager.wifi.backend = "iwd";
     useDHCP = false;
     dhcpcd.enable = false;
     nameservers = [
