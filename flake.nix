@@ -81,8 +81,8 @@
     in
     {
       nixosConfigurations = {
-        yggdrasil = mkNixOs {
-          hostname = "yggdrasil";
+        zaphkiel = mkNixOs {
+          hostname = "zaphkiel";
           modules = [
             "common"
             "graphical"
@@ -91,8 +91,8 @@
           users = [ "kuritsu" ];
         };
 
-        asuka = mkNixOs {
-          hostname = "asuka";
+        camael = mkNixOs {
+          hostname = "camael";
           modules = [
             "common"
             "graphical"
