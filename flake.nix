@@ -32,6 +32,10 @@
       url = "github:mkuritsu/kushell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    frzscr = {
+      url = "github:heather7283/frzscr";
+      flake = false;
+    };
   };
 
   outputs =
@@ -102,6 +106,10 @@
       };
 
       formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
+
+      packages = eachSystem (pkgs: {
+        frzscr = pkgs.callPackage (import ./packages/frzscr.nix inputs) { };
+      });
 
       templates = {
         rust = {
