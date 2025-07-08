@@ -1,4 +1,5 @@
 {
+  self,
   pkgs,
   inputs,
   ...
@@ -34,5 +35,6 @@
     vscodium
 
     inputs.wiremix.packages.${pkgs.system}.default
+    self.packages.${pkgs.system}.frzscr
   ];
 }

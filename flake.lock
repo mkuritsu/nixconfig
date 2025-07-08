@@ -77,6 +77,22 @@
         "type": "github"
       }
     },
+    "frzscr": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1751126383,
+        "narHash": "sha256-F64w/LxMVvTQJxGHyoR2WplYDJbBCtCDXw23sLvTxS8=",
+        "owner": "heather7283",
+        "repo": "frzscr",
+        "rev": "9ae7e9fb3e3085db3a48becf03f935c1182df5f7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "heather7283",
+        "repo": "frzscr",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -106,11 +122,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1752000121,
-        "narHash": "sha256-k7AqjUU+4NX/feiIKwPsnmvOdLunQpqWeLtU96LIBdI=",
+        "lastModified": 1752000898,
+        "narHash": "sha256-FRg+Q1b0rqCF2UzNFZbRFBniIpbEOl9zl3s+WDcZEdo=",
         "owner": "mkuritsu",
         "repo": "kushell",
-        "rev": "0c7d5732e802f253c3c5725f47486b842c0775f3",
+        "rev": "740790177f678bf5a7a9cda5d29e7073b0f48653",
         "type": "github"
       },
       "original": {
@@ -196,6 +212,7 @@
       "inputs": {
         "aagl": "aagl",
         "firefox-addons": "firefox-addons",
+        "frzscr": "frzscr",
         "home-manager": "home-manager",
         "kushell": "kushell",
         "nix-gaming": "nix-gaming",
