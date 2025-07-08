@@ -1,21 +1,20 @@
 { ... }:
 {
-  home.stateVersion = "24.11";
-  home.username = "kuritsu";
-  home.homeDirectory = "/home/kuritsu";
+  home = {
+    stateVersion = "24.11";
+    username = "kuritsu";
+    homeDirectory = "/home/kuritsu";
+  };
 
   programs.home-manager.enable = true;
 
   imports = [
-    ./btop
-    ./hypr
     ./browser.nix
+    ./btop.nix
+    ./desktop.nix
     ./git.nix
-    ./quickshell.nix
-    ./shell.nix
     ./spicetify.nix
+    ./terminal.nix
     ./theming.nix
-    ./tmux.nix
-    ./xdg.nix
   ];
 }

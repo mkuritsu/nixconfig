@@ -3,11 +3,11 @@
   programs.btop = {
     enable = true;
     settings = {
-      color_theme = "catppuccin_mocha";
+      color_theme = "everforest";
       theme_background = false;
     };
     themes = {
-      catppuccin_mocha = builtins.readFile ./catppuccin_mocha.theme;
+      everforest = builtins.readFile ./btop/everforest.theme;
     };
   };
 }

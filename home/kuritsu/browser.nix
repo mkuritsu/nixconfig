@@ -2,7 +2,6 @@
 {
   programs.firefox = {
     enable = true;
-    package = null;
 
     profiles.default = {
       extensions = {
@@ -16,14 +15,14 @@
       };
 
       settings = {
-        "extensions.autoDisableScopes" = 0;
+        "extensions.autoDisableScopes" = 0; # needed t his so extensions actually get installed
       };
     };
   };
 
   programs.chromium = {
     enable = true;
-    package = null;
+
     extensions = [
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
       "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" # privacy badger

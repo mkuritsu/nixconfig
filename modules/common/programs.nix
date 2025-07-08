@@ -24,6 +24,5 @@
     onefetch
     wl-clipboard
     tmux
-    tmux-sessionizer
   ];
 }

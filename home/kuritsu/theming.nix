@@ -16,7 +16,7 @@ in
     size = 24;
   };
 
-  xdg.configFile."Kvantum/${qt-theme-name}".source = ./qt-theme;
+  xdg.configFile."Kvantum/${qt-theme-name}".source = ./kvantum;
   xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
     [General]
     theme=${qt-theme-name}
@@ -39,11 +39,11 @@ in
       name = "Adwaita";
     };
     gtk3.bookmarks = [
-      "file:///home/kuritsu/documents"
-      "file:///home/kuritsu/music"
-      "file:///home/kuritsu/pictures"
-      "file:///home/kuritsu/videos"
-      "file:///home/kuritsu/downloads"
+      "file:///home/kuritsu/Documents"
+      "file:///home/kuritsu/Music"
+      "file:///home/kuritsu/Pictures"
+      "file:///home/kuritsu/Videos"
+      "file:///home/kuritsu/Downloads"
     ];
   };
 }

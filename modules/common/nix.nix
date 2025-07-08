@@ -14,7 +14,7 @@
     enable = true;
     clean = {
       enable = true;
-      extraArgs = "--nogcroots"; # so it doesn't delete my direnvs
+      extraArgs = "--nogcroots"; # so it doesn't delete my devshell direnvs
     };
   };
 }

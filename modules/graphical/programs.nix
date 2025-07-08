@@ -6,6 +6,7 @@
 {
   programs = {
     firefox.enable = true;
+    chromium.enable = true;
     foot = {
       enable = true;
       enableZshIntegration = true;
@@ -30,7 +31,7 @@
     thunderbird
     rnote
     spotify
-    vscode
+    vscodium
 
     inputs.wiremix.packages.${pkgs.system}.default
   ];
