@@ -7,6 +7,4 @@
 
   xdg.mime.enable = true;
   xdg.menus.enable = true;
-
-  boot.plymouth.enable = true;
 }

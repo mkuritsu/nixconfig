@@ -6,11 +6,9 @@
 
   # Networking
   networking = {
-    hostName = "asuka";
-    wireless.iwd.enable = true;
+    hostName = "camael";
     networkmanager.enable = true;
     networkmanager.dns = "none";
-    networkmanager.wifi.backend = "iwd";
     useDHCP = false;
     dhcpcd.enable = false;
     nameservers = [
@@ -25,11 +23,11 @@
     ];
     firewall = {
       enable = true;
-      allowedTCPPorts = [ ];
+      allowedTCPPorts = [
+        5555 # adb
+      ];
     };
   };
-
-  services.thermald.enable = true;
 
   system.stateVersion = "24.11";
 }

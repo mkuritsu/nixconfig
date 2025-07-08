@@ -10,7 +10,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    heroic
     prismlauncher
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
   ];
