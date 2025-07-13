@@ -6,9 +6,11 @@
 
   # Networking
   networking = {
-    hostName = "camael";
+    hostName = "zaphkiel";
+    wireless.iwd.enable = true;
     networkmanager.enable = true;
     networkmanager.dns = "none";
+    networkmanager.wifi.backend = "iwd";
     useDHCP = false;
     dhcpcd.enable = false;
     nameservers = [
@@ -23,9 +25,7 @@
     ];
     firewall = {
       enable = true;
-      allowedTCPPorts = [
-        5555 # adb
-      ];
+      allowedTCPPorts = [ ];
     };
   };
 

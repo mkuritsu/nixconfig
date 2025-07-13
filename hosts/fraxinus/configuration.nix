@@ -12,7 +12,13 @@
   boot.loader.generic-extlinux-compatible.enable = true;
 
   networking = {
-    hostName = "fraxinus";
+    hostName = "zaphkiel";
+    wireless.iwd.enable = true;
+    networkmanager.enable = true;
+    networkmanager.dns = "none";
+    networkmanager.wifi.backend = "iwd";
+    useDHCP = false;
+    dhcpcd.enable = false;
     nameservers = [
       "1.1.1.1"
       "1.0.0.1"
