@@ -6,7 +6,7 @@
 
   # Networking
   networking = {
-    hostName = "zaphkiel";
+    hostName = "camael";
     wireless.iwd.enable = true;
     networkmanager.enable = true;
     networkmanager.dns = "none";
