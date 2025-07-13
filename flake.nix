@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     wiremix = {
-      url = "github:tsowell/wiremix?rev=d2bfc3870f67d47cef013990b012bd00b32679cb";
+      url = "github:tsowell/wiremix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {

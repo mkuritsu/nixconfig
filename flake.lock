@@ -311,17 +311,16 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1749616676,
-        "narHash": "sha256-SVT9Cp2DxsvdTeK/zjKA18hIULtuCNz1SXBJhj3dyrg=",
+        "lastModified": 1752202660,
+        "narHash": "sha256-eA+6U1xV+SvbNMmIPD2trZ4dMzeBzPuGGoaqL9WBF9k=",
         "owner": "tsowell",
         "repo": "wiremix",
-        "rev": "d2bfc3870f67d47cef013990b012bd00b32679cb",
+        "rev": "509573a02848755946863fd0c95b3a5432f6700d",
         "type": "github"
       },
       "original": {
         "owner": "tsowell",
         "repo": "wiremix",
-        "rev": "d2bfc3870f67d47cef013990b012bd00b32679cb",
         "type": "github"
       }
     }
