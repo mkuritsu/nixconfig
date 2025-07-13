@@ -7,6 +7,8 @@
     syntaxHighlighting.enable = true;
     history.share = false;
     initContent = ''
+      alias code='code --ozone-platform-hint=wayland'
+
       bindkey "^[[1;3C" forward-word
       bindkey "^[[1;3D" backward-word
       bindkey "^[[1;5C" forward-word
