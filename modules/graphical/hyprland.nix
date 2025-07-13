@@ -26,5 +26,6 @@
     wf-recorder
     hyprpicker
     hyprshot
+    hyprpolkitagent
   ];
 }
