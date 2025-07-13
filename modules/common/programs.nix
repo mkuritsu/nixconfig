@@ -24,5 +24,6 @@
     onefetch
     wl-clipboard
     tmux
+    distrobox
   ];
 }
