@@ -7,6 +7,6 @@
   programs.honkers-railway-launcher.enable = true;
 
   environment.systemPackages = with pkgs; [
-    bubblewrap
+    bubblewrap # for sandboxing
   ];
 }

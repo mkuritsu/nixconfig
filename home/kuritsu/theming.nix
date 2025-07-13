@@ -31,8 +31,8 @@ in
   gtk = {
     enable = true;
     theme = {
-      name = "rose-pine";
-      package = pkgs.rose-pine-gtk-theme;
+      name = "everforest";
+      package = pkgs.everforest-gtk-theme;
     };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
@@ -40,10 +40,10 @@ in
     };
     gtk3.bookmarks = [
       "file:///home/kuritsu/Documents"
+      "file:///home/kuritsu/Downloads"
       "file:///home/kuritsu/Music"
       "file:///home/kuritsu/Pictures"
       "file:///home/kuritsu/Videos"
-      "file:///home/kuritsu/Downloads"
     ];
   };
 }
