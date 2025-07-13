@@ -32,7 +32,7 @@
     thunderbird
     rnote
     spotify
-    vscodium
+    vscode
 
     inputs.wiremix.packages.${pkgs.system}.default
     self.packages.${pkgs.system}.frzscr

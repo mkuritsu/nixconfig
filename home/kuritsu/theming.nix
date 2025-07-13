@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  qt-theme-name = "catppuccin-mocha-mauve";
+  qt-theme-name = "Everforest";
 in
 {
   dconf.settings = {
@@ -25,13 +25,13 @@ in
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
-    #style.name = "kvantum";
+    #style.name = "Kvantum";
   };
 
   gtk = {
     enable = true;
     theme = {
-      name = "everforest";
+      name = "Everforest-Dark";
       package = pkgs.everforest-gtk-theme;
     };
     iconTheme = {

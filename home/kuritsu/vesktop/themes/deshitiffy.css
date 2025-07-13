@@ -1,0 +1,12 @@
+.bar_c38106 {
+    display: none;
+}
+
+:root {
+    --custom-app-top-bar-height: 10px;
+}
+
+[class*="membersGroup"]:has([role=button]),
+[class*="member"] [class*="container"]:has([class*="badges"]) {
+    display: none;
+}
