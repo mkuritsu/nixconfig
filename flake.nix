@@ -70,31 +70,6 @@
         frzscr = pkgs.callPackage (import ./packages/frzscr.nix inputs) { };
       });
 
-      templates = {
-        rust = {
-          description = "Rust starting template";
-          path = ./templates/rust;
-        };
-
-        java = {
-          description = "Java starting template";
-          path = ./templates/java;
-        };
-
-        c-cpp = {
-          description = "C/C++ starting template";
-          path = ./templates/c-cpp;
-        };
-
-        python = {
-          description = "Python starting template";
-          path = ./templates/python;
-        };
-
-        minimal = {
-          description = "Minimal starting template for other things";
-          path = ./templates/minimal;
-        };
-      };
+      templates = import ./templates;
     };
 }
