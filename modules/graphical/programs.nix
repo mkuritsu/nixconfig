@@ -33,6 +33,7 @@
     rnote
     spotify
     vscode
+    ani-cli
 
     inputs.wiremix.packages.${pkgs.system}.default
     self.packages.${pkgs.system}.frzscr
