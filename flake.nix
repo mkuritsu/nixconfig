@@ -102,7 +102,7 @@
           users = [ "kuritsu" ];
         };
 
-        fraxinus = mkNixOs "fraxinus";
+        fraxinus = mkNixOs "fraxinus" { };
       };
 
       formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
