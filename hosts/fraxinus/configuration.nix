@@ -12,13 +12,10 @@
   boot.loader.generic-extlinux-compatible.enable = true;
 
   networking = {
-    hostName = "zaphkiel";
-    wireless.iwd.enable = true;
-    networkmanager.enable = true;
-    networkmanager.dns = "none";
-    networkmanager.wifi.backend = "iwd";
+    hostName = "fraxinus";
     useDHCP = false;
     dhcpcd.enable = false;
+    useNetworkd = true;
     nameservers = [
       "1.1.1.1"
       "1.0.0.1"
@@ -32,6 +29,18 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [ 22 ];
+    };
+    interfaces.end0 = {
+      ipv4.addresses = [
+        {
+          address = "192.168.1.80";
+          prefixLength = 24;
+        }
+      ];
+    };
+    defaultGateway = {
+      address = "192.168.1.254";
+      interface = "end0";
     };
   };
 
