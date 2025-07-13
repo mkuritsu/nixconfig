@@ -13,6 +13,7 @@
     ./btop.nix
     ./desktop.nix
     ./git.nix
+    ./neovim.nix
     ./spicetify.nix
     ./terminal.nix
     ./theming.nix
