@@ -122,11 +122,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1752397635,
-        "narHash": "sha256-I0O7R71iw6d2uLR9HLnfZW2NPpVPqnaCg7nblg5RrIY=",
+        "lastModified": 1752398037,
+        "narHash": "sha256-mhDtzWT+Uf/9a9WV5q7p+iHnjM3RZfUHoMAnVdg/Qyc=",
         "owner": "mkuritsu",
         "repo": "kushell",
-        "rev": "d1bb17b3f0e28b31412fafd0cca4d92359dddd17",
+        "rev": "d32c2fdd8ee4e908642270e9d600e6c949b4a645",
         "type": "github"
       },
       "original": {
