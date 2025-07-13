@@ -39,53 +39,12 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      systems,
-      ...
-    }@inputs:
-    let
-      eachSystem =
-        fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
+    { self, ... }@inputs:
+    rec {
+      lib = import ./lib.nix { inherit self inputs; };
 
-      mkNixOs =
-        hostname:
-        {
-          users ? [ ],
-          modules ? [ ],
-        }:
-        let
-          extraModules = map (module: ./modules/${module}) modules;
-          userModules = map (user: ./users/${user}.nix) users;
-          mkUserAttrSet = username: {
-            name = "${username}";
-            value = ./home/${username};
-          };
-          userHomes = builtins.listToAttrs (map mkUserAttrSet users);
-        in
-        nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs self; };
-          modules =
-            [
-              ./hosts/${hostname}/configuration.nix
-              home-manager.nixosModules.home-manager
-              {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.backupFileExtension = "backup";
-                home-manager.extraSpecialArgs = { inherit inputs; };
-                home-manager.users = userHomes;
-              }
-            ]
-            ++ userModules
-            ++ extraModules;
-        };
-    in
-    {
       nixosConfigurations = {
-        zaphkiel = mkNixOs "zaphkiel" {
+        zaphkiel = lib.mkNixOs "zaphkiel" {
           modules = [
             "common"
             "graphical"
@@ -94,7 +53,7 @@
           users = [ "kuritsu" ];
         };
 
-        camael = mkNixOs "camael" {
+        camael = lib.mkNixOs "camael" {
           modules = [
             "common"
             "graphical"
@@ -102,12 +61,12 @@
           users = [ "kuritsu" ];
         };
 
-        fraxinus = mkNixOs "fraxinus" { };
+        fraxinus = lib.mkNixOs "fraxinus" { };
       };
 
-      formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
+      formatter = lib.eachSystem (pkgs: pkgs.nixfmt-rfc-style);
 
-      packages = eachSystem (pkgs: {
+      packages = lib.eachSystem (pkgs: {
         frzscr = pkgs.callPackage (import ./packages/frzscr.nix inputs) { };
       });
 
