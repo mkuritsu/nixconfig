@@ -15,7 +15,7 @@
       };
 
       settings = {
-        "extensions.autoDisableScopes" = 0; # needed t his so extensions actually get installed
+        "extensions.autoDisableScopes" = 0; # needed this so extensions actually get installed
       };
     };
   };
