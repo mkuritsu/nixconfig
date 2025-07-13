@@ -51,10 +51,10 @@
         fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
 
       mkNixOs =
+        hostname:
         {
-          hostname,
-          users,
-          modules,
+          users ? [ ],
+          modules ? [ ],
         }:
         let
           extraModules = map (module: ./modules/${module}) modules;
@@ -85,8 +85,7 @@
     in
     {
       nixosConfigurations = {
-        zaphkiel = mkNixOs {
-          hostname = "zaphkiel";
+        zaphkiel = mkNixOs "zaphkiel" {
           modules = [
             "common"
             "graphical"
@@ -95,14 +94,15 @@
           users = [ "kuritsu" ];
         };
 
-        camael = mkNixOs {
-          hostname = "camael";
+        camael = mkNixOs "camael" {
           modules = [
             "common"
             "graphical"
           ];
           users = [ "kuritsu" ];
         };
+
+        fraxinus = mkNixOs "fraxinus";
       };
 
       formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
