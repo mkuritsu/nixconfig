@@ -16,5 +16,6 @@
     ./spicetify.nix
     ./terminal.nix
     ./theming.nix
+    ./vesktop.nix
   ];
 }

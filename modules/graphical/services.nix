@@ -3,6 +3,7 @@
   hardware.opentabletdriver.enable = true;
 
   services.upower.enable = true;
+  services.udisks2.enable = true;
   services.displayManager.ly = {
     enable = true;
     settings = {
