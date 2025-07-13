@@ -25,5 +25,6 @@
     slurp
     wf-recorder
     hyprpicker
+    hyprshot
   ];
 }
