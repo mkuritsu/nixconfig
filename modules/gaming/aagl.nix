@@ -4,7 +4,11 @@
     inputs.aagl.nixosModules.default
   ];
 
-  programs.honkers-railway-launcher.enable = true;
+  programs = {
+    honkers-railway-launcher.enable = true;
+    an-anime-game-launcher.enable = true;
+    sleepy-launcher.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     bubblewrap # for sandboxing
