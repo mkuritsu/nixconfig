@@ -25,7 +25,6 @@ in
       specialArgs = { inherit inputs self; };
       modules =
         [
-          inputs.agenix.nixosModules.default
           ./hosts/${hostname}/configuration.nix
           home-manager.nixosModules.home-manager
           {

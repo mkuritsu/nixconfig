@@ -7,6 +7,7 @@
     ./networking.nix
     ./nix.nix
     ./programs.nix
+    ./secrets.nix
     ./services.nix
   ];
 }

@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -20,6 +20,16 @@
       address = "192.168.1.254";
       interface = "enp34s0";
     };
+  };
+
+  services.tailscale = {
+    enable = true;
+    authKeyFile = config.age.secrets.zaphkiel-tailscale.path;
+  };
+
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
   };
 
   system.stateVersion = "24.11";
