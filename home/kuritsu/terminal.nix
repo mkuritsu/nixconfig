@@ -66,6 +66,11 @@
     terminal = "screen-256color";
   };
 
+  programs.foot = {
+    enable = true;
+    server.enable = true;
+  };
+
   xdg.configFile."foot/foot.ini".source = ./foot/foot.ini;
   xdg.configFile."foot/colors.ini".source = ./foot/colors.ini;
 }
