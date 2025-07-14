@@ -37,10 +37,6 @@
       url = "github:quickshell-mirror/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    frzscr = {
-      url = "github:heather7283/frzscr";
-      flake = false;
-    };
   };
 
   outputs =
@@ -70,10 +66,6 @@
       };
 
       formatter = lib.eachSystem (pkgs: pkgs.nixfmt-rfc-style);
-
-      packages = lib.eachSystem (pkgs: {
-        frzscr = pkgs.callPackage (import ./packages/frzscr.nix inputs) { };
-      });
 
       templates = import ./templates;
     };
