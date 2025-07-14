@@ -52,6 +52,8 @@ btrfs subvolume create /mnt/home
 btrfs subvolume create /mnt/nix
 btrfs subvolume create /mnt/log
 
+btrfs subvolume snapshot -r /mnt/root /mnt/root-blank
+
 umount /mnt
 
 
