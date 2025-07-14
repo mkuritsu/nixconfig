@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -28,6 +28,10 @@
       allowedTCPPorts = [ ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    networkmanagerapplet
+  ];
 
   system.stateVersion = "24.11";
 }
