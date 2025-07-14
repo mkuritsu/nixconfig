@@ -17,13 +17,10 @@
   environment.systemPackages = with pkgs; [
     # system utilities
     mangohud
-    ueberzugpp
     blueman
-    networkmanagerapplet
     brightnessctl
     nixfmt-rfc-style
     nixd
-    ffmpeg-full
     imagemagick
 
     # programs
