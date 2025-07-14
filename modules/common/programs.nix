@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   programs = {
     zsh.enable = true;
@@ -25,5 +25,6 @@
     wl-clipboard
     tmux
     distrobox
+    inputs.agenix.packages.${pkgs.system}.default
   ];
 }
