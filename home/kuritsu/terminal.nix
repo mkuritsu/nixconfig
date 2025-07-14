@@ -8,6 +8,9 @@
     history.share = false;
     initContent = ''
       alias code='code --ozone-platform-hint=wayland'
+      alias ls='ls --color=auto'
+      alias ip='ip --color=auto'
+      alias grep='grep --color=auto'
 
       bindkey "^[[1;3C" forward-word
       bindkey "^[[1;3D" backward-word
