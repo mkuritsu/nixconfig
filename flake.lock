@@ -208,6 +208,26 @@
         "type": "github"
       }
     },
+    "quickshell_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1752486994,
+        "narHash": "sha256-/11zPRDdPPn61GXDyvDes9otFTP5lLqmETAtwMdeYWI=",
+        "owner": "quickshell-mirror",
+        "repo": "quickshell",
+        "rev": "5ac9096c1c63f6940c6b95f1118b540dfe029278",
+        "type": "github"
+      },
+      "original": {
+        "owner": "quickshell-mirror",
+        "repo": "quickshell",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "aagl": "aagl",
@@ -217,6 +237,7 @@
         "kushell": "kushell",
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs",
+        "quickshell": "quickshell_2",
         "spicetify-nix": "spicetify-nix",
         "systems": "systems_3",
         "wiremix": "wiremix"
