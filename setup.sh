@@ -10,6 +10,7 @@
 
 if [ -z "$1" ]; then
     echo "Empty disk argument!"
+    exit 1
 fi
 
 DISK=$1
