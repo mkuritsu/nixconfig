@@ -1,20 +1,5 @@
 { inputs, pkgs, ... }:
 {
-  imports = [
-    inputs.kushell.homeModules.kushell
-  ];
-
-  programs.kushell = {
-    enable = true;
-    package = (
-      inputs.quickshell.packages.${pkgs.system}.default.override {
-        withX11 = false;
-        withPam = false;
-        withI3 = false;
-      }
-    );
-  };
-
   programs.imv = {
     enable = true;
     settings = {
@@ -33,4 +18,8 @@
     BROWSER = "chromium";
     TERMINAL = "footclient";
   };
+
+  home.packages = [
+    inputs.kushell.packages.${pkgs.system}.default
+  ];
 }
