@@ -32,11 +32,6 @@
       url = "github:mkuritsu/kushell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # here so it can be updated with the rest of the system
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
