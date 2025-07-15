@@ -4,15 +4,7 @@
   ...
 }:
 {
-  programs = {
-    firefox.enable = true;
-    chromium.enable = true;
-    foot = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-    noisetorch.enable = true;
-  };
+  programs.noisetorch.enable = true;
 
   environment.systemPackages = with pkgs; [
     # system utilities
@@ -35,6 +27,8 @@
     vscode
     ani-cli
     imv
+    inputs.wiremix.packages.${pkgs.system}.default
+
     kdePackages.dolphin
     kdePackages.ark
     kdePackages.kdegraphics-thumbnailers
@@ -44,7 +38,5 @@
     kdePackages.qtwayland
     kdePackages.qtsvg
     kdePackages.qt6ct
-
-    inputs.wiremix.packages.${pkgs.system}.default
   ];
 }
