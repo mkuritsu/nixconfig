@@ -18,5 +18,6 @@
     hyprpicker
     hyprshot
     hyprpolkitagent
+    fuzzel
   ];
 }
