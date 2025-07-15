@@ -12,15 +12,6 @@
     builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   environment.systemPackages = with pkgs; [
-    kdePackages.dolphin
-    kdePackages.ark
-    imv
-    kdePackages.kdegraphics-thumbnailers
-    kdePackages.qtsvg
-    kdePackages.ffmpegthumbs
-    kdePackages.qtstyleplugin-kvantum
-    kdePackages.qt6ct
-
     grim
     slurp
     wf-recorder

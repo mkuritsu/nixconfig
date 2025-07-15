@@ -11,6 +11,7 @@
       enable = true;
       enableZshIntegration = true;
     };
+    noisetorch.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -24,12 +25,26 @@
 
     # programs
     vesktop
+    (discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
     mpv
     thunderbird
     rnote
     spotify
     vscode
     ani-cli
+    imv
+    kdePackages.dolphin
+    kdePackages.ark
+    kdePackages.kdegraphics-thumbnailers
+    kdePackages.ffmpegthumbs
+    kdePackages.qtsvg
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.qtwayland
+    kdePackages.qtsvg
+    kdePackages.qt6ct
 
     inputs.wiremix.packages.${pkgs.system}.default
   ];
