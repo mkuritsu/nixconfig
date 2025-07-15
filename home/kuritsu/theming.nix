@@ -25,7 +25,7 @@ in
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
-    #style.name = "Kvantum";
+    style.name = "kvantum";
   };
 
   gtk = {

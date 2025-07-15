@@ -18,5 +18,6 @@
     ./spicetify.nix
     ./terminal.nix
     ./theming.nix
+    ./uwsm.nix
   ];
 }
