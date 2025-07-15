@@ -30,10 +30,6 @@ in
 
   gtk = {
     enable = true;
-    theme = {
-      name = "Everforest-Dark-BL-LB";
-      package = pkgs.everforest-gtk-theme;
-    };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
