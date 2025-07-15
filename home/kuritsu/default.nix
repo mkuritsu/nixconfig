@@ -12,11 +12,11 @@
     ./browser.nix
     ./btop.nix
     ./desktop.nix
+    ./discord.nix
     ./git.nix
     ./neovim.nix
     ./spicetify.nix
     ./terminal.nix
     ./theming.nix
-    ./vesktop.nix
   ];
 }
