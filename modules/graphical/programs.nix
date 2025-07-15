@@ -26,7 +26,6 @@
     # programs
     vesktop
     (discord.override {
-      withOpenASAR = true;
       withVencord = true;
     })
     mpv
