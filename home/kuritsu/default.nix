@@ -6,8 +6,6 @@
     homeDirectory = "/home/kuritsu";
   };
 
-  programs.home-manager.enable = true;
-
   imports = [
     ./browser.nix
     ./btop.nix
