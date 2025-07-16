@@ -7,7 +7,7 @@
     };
   };
 
-  xdg.configFile."hypr/hyprland.conf".source = ./hypr/hyprland.conf;
+  home.file.".config/hypr/hyprland.conf".source = ./hypr/hyprland.conf;
 
   xdg.userDirs = {
     enable = true;

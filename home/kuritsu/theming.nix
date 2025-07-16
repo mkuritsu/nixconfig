@@ -16,8 +16,8 @@ in
     size = 24;
   };
 
-  xdg.configFile."Kvantum/${qt-theme-name}".source = ./kvantum;
-  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
+  home.file.".config/Kvantum/${qt-theme-name}".source = ./kvantum;
+  home.file.".config/Kvantum/kvantum.kvconfig".text = ''
     [General]
     theme=${qt-theme-name}
   '';
