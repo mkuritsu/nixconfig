@@ -10,7 +10,12 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # prismlauncher
+    (prismlauncher.override {
+      jdks = [
+        jdk17
+        jdk21
+      ];
+    })
     (inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin.override {
       pipewire_latency = "128/48000"; # default value causes audio cracks for me
     })
