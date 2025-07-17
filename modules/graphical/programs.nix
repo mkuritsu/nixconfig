@@ -1,10 +1,10 @@
 { pkgs, ... }:
 {
   programs.noisetorch.enable = true;
-
-  # fix dolphin not showing apps
-  environment.etc."/xdg/menus/applications.menu".text =
-    builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "footclient";
+  };
 
   environment.systemPackages = with pkgs; [
     # system utilities
@@ -30,15 +30,11 @@
     imv
     wiremix
     yazi
+    nautilus
+    file-roller
 
-    kdePackages.dolphin
-    kdePackages.ark
-    kdePackages.kdegraphics-thumbnailers
-    kdePackages.ffmpegthumbs
-    kdePackages.qtsvg
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qtwayland
-    kdePackages.qtsvg
     kdePackages.qt6ct
   ];
 }
