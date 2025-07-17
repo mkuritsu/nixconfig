@@ -6,18 +6,6 @@
         "deshitiffy.css"
     ],
     "plugins": {
-        "CommandsAPI": {
-            "enabled": true
-        },
-        "MessageAccessoriesAPI": {
-            "enabled": true
-        },
-        "MessageEventsAPI": {
-            "enabled": true
-        },
-        "UserSettingsAPI": {
-            "enabled": true
-        },
         "FakeNitro": {
             "enabled": "true"
         },
@@ -27,19 +15,9 @@
         "VolumeBooster": {
             "enabled": true
         },
-        "BadgeAPI": {
-            "enabled": true
-        },
-        "NoTrack": {
-            "enabled": true,
-            "disableAnalytics": true
-        },
         "Settings": {
             "enabled": true,
             "settingsLocation": "aboveNitro"
-        },
-        "SupportHelper": {
-            "enabled": true
         }
     },
     "notifications": {

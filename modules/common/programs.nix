@@ -3,11 +3,11 @@
   programs = {
     zsh.enable = true;
     nix-ld.enable = true;
-    vim = {
+    vim.enable = true;
+    neovim = {
       enable = true;
       defaultEditor = true;
     };
-    neovim.enable = true;
     adb.enable = true;
   };
 

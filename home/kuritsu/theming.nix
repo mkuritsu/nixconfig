@@ -1,7 +1,4 @@
 { pkgs, ... }:
-let
-  qt-theme-name = "Everforest";
-in
 {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -16,11 +13,12 @@ in
     size = 24;
   };
 
-  home.file.".config/Kvantum/${qt-theme-name}".source = ./kvantum;
+  home.file.".config/Kvantum/Everforest".source = ./qt/themes/Everforest;
   home.file.".config/Kvantum/kvantum.kvconfig".text = ''
     [General]
-    theme=${qt-theme-name}
+    theme=Everforest
   '';
+  home.file.".config/qt6ct/qt6ct.conf".source = ./qt/qt6ct.conf;
 
   qt = {
     enable = true;
@@ -29,6 +27,10 @@ in
 
   gtk = {
     enable = true;
+    theme = {
+      package = pkgs.rose-pine-gtk-theme;
+      name = "rose-pine";
+    };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
