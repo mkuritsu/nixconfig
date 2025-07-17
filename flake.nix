@@ -19,6 +19,7 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
     };
     nix-gaming = {
       url = "github:fufexan/nix-gaming";

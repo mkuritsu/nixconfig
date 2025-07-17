@@ -11,9 +11,7 @@
     theme = "sddm-astronaut-theme";
     package = pkgs.kdePackages.sddm;
     extraPackages = with pkgs; [
-      (sddm-astronaut.override {
-        embeddedTheme = "black_hole";
-      })
+      sddm-astronaut
     ];
   };
 

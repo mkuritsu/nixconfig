@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}:
+{ pkgs, ... }:
 {
   programs.noisetorch.enable = true;
 
@@ -16,11 +12,11 @@
     blueman
     brightnessctl
     nixfmt-rfc-style
+    nixfmt-tree
     nixd
     imagemagick
 
     # programs
-    vesktop
     (discord.override {
       withOpenASAR = true;
       withVencord = true;
@@ -33,6 +29,7 @@
     ani-cli
     imv
     wiremix
+    yazi
 
     kdePackages.dolphin
     kdePackages.ark
