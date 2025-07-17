@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   programs.hyprland = {
     enable = true;
@@ -14,6 +14,6 @@
     hyprpicker
     hyprshot
     hyprpolkitagent
-    fuzzel
+    inputs.quickshell.packages.${pkgs.system}.default
   ];
 }
