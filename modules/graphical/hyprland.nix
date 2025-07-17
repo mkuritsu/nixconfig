@@ -14,6 +14,7 @@
     hyprpicker
     hyprshot
     hyprpolkitagent
+    walker
     inputs.quickshell.packages.${pkgs.system}.default
   ];
 }

@@ -32,7 +32,7 @@
     vscode
     ani-cli
     imv
-    inputs.wiremix.packages.${pkgs.system}.default
+    wiremix
 
     kdePackages.dolphin
     kdePackages.ark
