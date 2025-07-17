@@ -29,11 +29,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1752638600,
-        "narHash": "sha256-Y833l/KT+yKjW8fv1wMMW1ZR187hwuBo7k+CAvwYpTI=",
+        "lastModified": 1752701647,
+        "narHash": "sha256-aaL53zN58rduP4K96ElJCHLm00t2TnEuCvEw/GZo5Hc=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "24b604cfc91b1450035c438b5df4a1fe786900d2",
+        "rev": "488fa03304c2992af0a3e03ed551148f1a9e4c35",
         "type": "gitlab"
       },
       "original": {
@@ -102,14 +102,16 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "quickshell": "quickshell"
+        "quickshell": [
+          "quickshell"
+        ]
       },
       "locked": {
-        "lastModified": 1752575533,
-        "narHash": "sha256-dwa5HQ7+QrG7JD7Bx8SmoyKGSQUQfL3oL98sIR0ewaU=",
+        "lastModified": 1752671755,
+        "narHash": "sha256-BKuTOn5+K/BIGNiPu95Q2me+RlnG1i5EjsGlGNL8OMQ=",
         "owner": "mkuritsu",
         "repo": "kushell",
-        "rev": "484cc41c993fb9943dc32849ce314d52bc879e72",
+        "rev": "8576354b60d209bab3c5749893ab51a8c017cc64",
         "type": "github"
       },
       "original": {
@@ -126,11 +128,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752631802,
-        "narHash": "sha256-t65TV28ZatEKVyFoTmExQgb8LECvrj/3Wuogn5PxfYI=",
+        "lastModified": 1752717975,
+        "narHash": "sha256-/yuraCMP4VsL7mQzh703y9AP0xozG4oeAZcDAyI+HAU=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "b8834a847dee8875e06e218830f33a3486f0185e",
+        "rev": "65715ab87f085344df210c568f8c5b0000f68ab8",
         "type": "github"
       },
       "original": {
@@ -141,11 +143,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1751984180,
-        "narHash": "sha256-LwWRsENAZJKUdD3SpLluwDmdXY9F45ZEgCb0X+xgOL0=",
+        "lastModified": 1752480373,
+        "narHash": "sha256-JHQbm+OcGp32wAsXTE/FLYGNpb+4GLi5oTvCxwSoBOA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+        "rev": "62e0f05ede1da0d54515d4ea8ce9c733f12d9f08",
         "type": "github"
       },
       "original": {
@@ -173,16 +175,15 @@
     "quickshell": {
       "inputs": {
         "nixpkgs": [
-          "kushell",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1752486994,
-        "narHash": "sha256-/11zPRDdPPn61GXDyvDes9otFTP5lLqmETAtwMdeYWI=",
+        "lastModified": 1752735992,
+        "narHash": "sha256-mwV3kdv77JyqDTEa5w6fSrmvYIPDZEkdBm+WQiJkzL4=",
         "owner": "quickshell-mirror",
         "repo": "quickshell",
-        "rev": "5ac9096c1c63f6940c6b95f1118b540dfe029278",
+        "rev": "e50e53465b57572c883e2b536f89092581a71f8a",
         "type": "github"
       },
       "original": {
@@ -199,6 +200,7 @@
         "kushell": "kushell",
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs",
+        "quickshell": "quickshell",
         "spicetify-nix": "spicetify-nix",
         "systems": "systems_2",
         "wiremix": "wiremix"
