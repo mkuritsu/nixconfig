@@ -18,6 +18,9 @@
         "UserSettingsAPI": {
             "enabled": true
         },
+        "FakeNitro": {
+            "enabled": "true"
+        },
         "CrashHandler": {
             "enabled": true
         },
