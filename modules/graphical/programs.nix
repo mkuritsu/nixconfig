@@ -18,7 +18,6 @@
 
     # programs
     (discord.override {
-      withOpenASAR = true;
       withVencord = true;
     })
     mpv
