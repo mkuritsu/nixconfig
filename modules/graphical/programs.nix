@@ -36,7 +36,6 @@ in
     mpv
     thunderbird
     rnote
-    vscode
     ani-cli
     imv
     wiremix
