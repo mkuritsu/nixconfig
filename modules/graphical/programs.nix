@@ -9,8 +9,6 @@
   environment.systemPackages = with pkgs; [
     # system utilities
     mangohud
-    blueman
-    brightnessctl
     nixfmt-rfc-style
     nixfmt-tree
     nixd

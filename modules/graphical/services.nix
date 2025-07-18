@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   hardware.opentabletdriver.enable = true;
 
@@ -6,14 +6,11 @@
   services.udisks2.enable = true;
   services.gvfs.enable = true;
   services.printing.enable = true;
-  services.displayManager.sddm = {
+  services.displayManager.ly = {
     enable = true;
-    wayland.enable = true;
-    theme = "sddm-astronaut-theme";
-    package = pkgs.kdePackages.sddm;
-    extraPackages = with pkgs; [
-      sddm-astronaut
-    ];
+    settings = {
+      session_log = ".ly-session.log";
+    };
   };
 
   hardware.bluetooth.enable = true;
