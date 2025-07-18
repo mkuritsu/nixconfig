@@ -1,9 +1,24 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+in
 {
-  programs.noisetorch.enable = true;
-  programs.nautilus-open-any-terminal = {
-    enable = true;
-    terminal = "footclient";
+  imports = [
+    inputs.spicetify-nix.nixosModules.default
+  ];
+
+  programs = {
+    noisetorch.enable = true;
+    nautilus-open-any-terminal = {
+      enable = true;
+      terminal = "footclient";
+    };
+    spicetify = {
+      enable = true;
+      enabledExtensions = with spicePkgs.extensions; [
+        adblock
+      ];
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -21,7 +36,6 @@
     mpv
     thunderbird
     rnote
-    spotify
     vscode
     ani-cli
     imv

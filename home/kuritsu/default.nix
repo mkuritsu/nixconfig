@@ -13,7 +13,6 @@
     ./discord.nix
     ./git.nix
     ./neovim.nix
-    ./spicetify.nix
     ./terminal.nix
     ./theming.nix
     ./uwsm.nix
