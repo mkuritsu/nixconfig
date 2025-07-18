@@ -7,7 +7,7 @@
     syntaxHighlighting.enable = true;
     history.share = false;
     initContent = ''
-      alias code='code --ozone-platform-hint=wayland'
+      alias code='codium --ozone-platform-hint=wayland'
       alias ls='ls --color=auto'
       alias ip='ip --color=auto'
       alias grep='grep --color=auto'

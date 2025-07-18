@@ -15,6 +15,6 @@
     ./neovim.nix
     ./terminal.nix
     ./theming.nix
-    ./uwsm.nix
+    ./vscode.nix
   ];
 }
