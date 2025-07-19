@@ -20,11 +20,6 @@
   '';
   home.file.".config/qt6ct/qt6ct.conf".source = ./qt/qt6ct.conf;
 
-  qt = {
-    enable = true;
-    platformTheme.name = "qt6ct";
-  };
-
   gtk = {
     enable = true;
     theme = {

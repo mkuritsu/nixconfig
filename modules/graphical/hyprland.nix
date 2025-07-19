@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   programs.hyprland = {
     enable = true;
@@ -16,5 +16,6 @@
     hyprpicker
     hyprshot
     hyprpolkitagent
+    inputs.kushell.packages.${pkgs.system}.default
   ];
 }
