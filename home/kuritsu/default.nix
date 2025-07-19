@@ -9,9 +9,11 @@
   imports = [
     ./browser.nix
     ./btop.nix
-    ./desktop.nix
     ./discord.nix
     ./git.nix
+    ./hyprland.nix
+    ./imv.nix
+    ./misc.nix
     ./neovim.nix
     ./terminal.nix
     ./theming.nix

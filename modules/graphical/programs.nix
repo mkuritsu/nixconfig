@@ -20,6 +20,12 @@ in
     };
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "qt5ct";
+    style = "kvantum";
+  };
+
   environment.systemPackages = with pkgs; [
     # system utilities
     mangohud
@@ -42,6 +48,7 @@ in
     nautilus
     file-roller
     easyeffects
+    stremio
 
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qtwayland
