@@ -8,7 +8,6 @@ in
   ];
 
   programs = {
-    noisetorch.enable = true;
     nautilus-open-any-terminal = {
       enable = true;
       terminal = "footclient";
@@ -42,6 +41,7 @@ in
     yazi
     nautilus
     file-roller
+    easyeffects
 
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qtwayland
