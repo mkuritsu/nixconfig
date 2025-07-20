@@ -75,5 +75,5 @@
   };
 
   home.file.".config/foot/foot.ini".source = ./foot/foot.ini;
-  home.file.".config/foot/colors.ini".source = ./foot/colors.ini;
+  home.file.".config/foot/colors.ini".source = ./foot/tokyonight.ini;
 }

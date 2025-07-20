@@ -11,8 +11,8 @@
         theme = {
           enable = true;
           transparent = true;
-          name = "everforest";
-          style = "medium";
+          name = "tokyonight";
+          style = "night";
         };
         lsp.enable = true;
         statusline.lualine.enable = true;

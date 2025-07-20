@@ -23,8 +23,8 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.rose-pine-gtk-theme;
-      name = "rose-pine";
+      package = pkgs.tokyonight-gtk-theme;
+      name = "Tokyonight-Dark";
     };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
