@@ -5,6 +5,7 @@
     settings = {
       color_theme = "tokyo-night";
       theme_background = false;
+      update_ms = 300;
     };
     themes = {
       everforest = builtins.readFile ./btop/everforest.theme;
