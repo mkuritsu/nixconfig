@@ -21,6 +21,7 @@
     unzip
     btop
     fastfetch
+    microfetch
     onefetch
     wl-clipboard
     tmux
