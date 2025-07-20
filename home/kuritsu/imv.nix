@@ -3,7 +3,7 @@
   programs.imv = {
     enable = true;
     settings = {
-      options.background = "#2b3339";
+      options.background = "#1a1b26";
     };
   };
 }

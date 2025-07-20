@@ -2,7 +2,7 @@
     "autoUpdate": true,
     "autoUpdateNotification": "true",
     "enabledThemes": [
-        "Everforest.css",
+        "Tokyonight.css",
         "deshitiffy.css"
     ],
     "plugins": {
