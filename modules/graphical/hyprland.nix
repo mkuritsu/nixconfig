@@ -13,6 +13,7 @@
     grim
     slurp
     wf-recorder
+    gpu-screen-recorder
     hyprpicker
     hyprshot
     hyprpolkitagent
