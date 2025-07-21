@@ -6,7 +6,7 @@
   };
 
   home.sessionVariables = {
-    BROWSER = "chromium";
+    BROWSER = "firefox";
     TERMINAL = "footclient";
   };
 }
