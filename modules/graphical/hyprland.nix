@@ -2,7 +2,7 @@
 {
   programs.hyprland = {
     enable = true;
-    withUWSM = false;
+    withUWSM = true;
   };
   services.hypridle.enable = true;
   programs.hyprlock.enable = true;
