@@ -43,6 +43,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.darwin.follows = "";
     };
+    istannouncements = {
+      url = "github:mkuritsu/ISTAnnouncements";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
   };
 
   outputs =

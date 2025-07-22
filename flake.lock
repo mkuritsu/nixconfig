@@ -199,6 +199,29 @@
         "type": "github"
       }
     },
+    "istannouncements": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753193351,
+        "narHash": "sha256-sLXTCYssd7gjze6DsCugtXGxOaS+BXXYhjtSInHkNow=",
+        "owner": "mkuritsu",
+        "repo": "ISTAnnouncements",
+        "rev": "6463e3fa279187638fb212217b111efd8b0627d4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkuritsu",
+        "repo": "ISTAnnouncements",
+        "type": "github"
+      }
+    },
     "kushell": {
       "inputs": {
         "nixpkgs": [
@@ -304,6 +327,7 @@
         "agenix": "agenix",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager_2",
+        "istannouncements": "istannouncements",
         "kushell": "kushell",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
