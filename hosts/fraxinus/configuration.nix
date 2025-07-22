@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  lib,
   ...
 }:
 
@@ -51,7 +52,7 @@
     username = "Penix IST";
     # agenix says to not do this but this isn't a sensitive secret, its only encrypted to avoid potential spam in the discord channel by unauthorized parties
     # since my nxiconfig is public in github, with that this getting put in plain text inside the nix store is fine
-    # webhook_url = builtins.readFile config.age.secrets.istannouncements-webhook.path;
+    webhook_url = lib.fileContents config.age.secrets.istannouncements-webhook.path;
   };
 
   system.stateVersion = "25.11";
