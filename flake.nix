@@ -77,7 +77,6 @@
           modules = [
             "common"
           ];
-          users = [ "kuritsu" ];
         };
       };
 
