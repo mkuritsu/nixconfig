@@ -50,6 +50,7 @@ in
     file-roller
     easyeffects
     stremio
+    scrcpy
 
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qtwayland
