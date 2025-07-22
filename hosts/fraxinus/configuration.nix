@@ -52,5 +52,10 @@
     username = "Penix IST";
   };
 
+  services.tailscale = {
+    enable = true;
+    authKeyFile = config.age.secrets.fraxinus-tailscale.path;
+  };
+
   system.stateVersion = "25.11";
 }

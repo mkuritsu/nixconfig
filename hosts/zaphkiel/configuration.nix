@@ -34,7 +34,6 @@
 
   services.tailscale = {
     enable = true;
-    openFirewall = true;
     authKeyFile = config.age.secrets.zaphkiel-tailscale.path;
   };
 
