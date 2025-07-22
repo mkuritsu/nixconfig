@@ -48,8 +48,8 @@
   services.istannouncements = {
     enable = true;
     openFirewall = true;
-    username = "Penix IST";
     webhook_url_file = config.age.secrets.istannouncements-webhook.path;
+    username = "Penix IST";
   };
 
   system.stateVersion = "25.11";
