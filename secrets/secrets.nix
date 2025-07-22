@@ -4,4 +4,5 @@ let
 in
 {
   "zaphkiel-tailscale.age".publicKeys = [ zaphkiel ];
+  "istannouncements-webhook.age".publicKeys = [ fraxinus ];
 }
