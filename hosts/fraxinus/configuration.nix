@@ -28,32 +28,10 @@
     };
   };
 
-  time.timeZone = "Europe/Lisbon";
-  i18n.defaultLocale = "en_US.UTF-8";
-
   services.openssh = {
     enable = true;
     openFirewall = true;
   };
-
-  users.users.kuritsu = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-  };
-
-  nix = {
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    optimise.automatic = true;
-  };
-
-  environment.systemPackages = with pkgs; [
-    btop
-    vim
-    git
-  ];
 
   system.stateVersion = "25.11";
 }

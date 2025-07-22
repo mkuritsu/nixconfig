@@ -63,7 +63,12 @@
           users = [ "kuritsu" ];
         };
 
-        fraxinus = lib.mkNixOs "fraxinus" { };
+        fraxinus = lib.mkNixOs "fraxinus" {
+          modules = [
+            "common"
+          ];
+          users = [ "kuritsu" ];
+        };
       };
 
       formatter = lib.eachSystem (pkgs: pkgs.nixfmt-rfc-style);
