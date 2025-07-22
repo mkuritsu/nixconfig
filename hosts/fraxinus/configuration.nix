@@ -1,7 +1,6 @@
 {
   config,
   inputs,
-  lib,
   ...
 }:
 
@@ -50,7 +49,7 @@
     enable = true;
     openFirewall = true;
     username = "Penix IST";
-    webhookFile = config.age.secrets.istannouncements-webhook.path;
+    webhook_url_file = config.age.secrets.istannouncements-webhook.path;
   };
 
   system.stateVersion = "25.11";
