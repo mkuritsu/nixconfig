@@ -16,7 +16,7 @@
   networking = {
     hostName = "fraxinus";
     useNetworkd = true;
-    interfaces.enp34s0 = {
+    interfaces.end0 = {
       ipv4.addresses = [
         {
           address = "192.168.1.80";
@@ -26,7 +26,7 @@
     };
     defaultGateway = {
       address = "192.168.1.254";
-      interface = "enp34s0";
+      interface = "end0";
     };
   };
 
