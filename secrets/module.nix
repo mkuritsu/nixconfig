@@ -8,6 +8,9 @@
 
   age.secrets = {
     zaphkiel-tailscale.file = ./zaphkiel-tailscale.age;
-    istannouncements-webhook.file = ./istannouncements-webhook.age;
+    istannouncements-webhook = {
+      file = ./istannouncements-webhook.age;
+      owner = "istannouncements";
+    };
   };
 }
