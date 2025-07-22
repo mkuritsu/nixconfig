@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -30,6 +30,12 @@
   services.openssh = {
     enable = true;
     openFirewall = true;
+  };
+
+  services.tailscale = {
+    enable = true;
+    openFirewall = true;
+    authKeyFile = config.age.secrets.zaphkiel-tailscale.path;
   };
 
   system.stateVersion = "24.11";
