@@ -18,6 +18,4 @@
     hyprpolkitagent
     inputs.kushell.packages.${pkgs.system}.default
   ];
-
-  systemd.user.services.hyprpolkitagent.enable = true;
 }
