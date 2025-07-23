@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 {
-  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
 
   services.upower.enable = true;
   services.udisks2.enable = true;
