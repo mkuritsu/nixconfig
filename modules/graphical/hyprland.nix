@@ -5,7 +5,6 @@
     withUWSM = true;
   };
   services.hypridle.enable = true;
-  programs.hyprlock.enable = true;
 
   environment.systemPackages = with pkgs; [
     blueman
@@ -19,4 +18,6 @@
     hyprpolkitagent
     inputs.kushell.packages.${pkgs.system}.default
   ];
+
+  systemd.user.services.hyprpolkitagent.enable = true;
 }

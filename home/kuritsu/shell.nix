@@ -58,21 +58,4 @@
     enableZshIntegration = true;
     nix-direnv.enable = true;
   };
-
-  programs.tmux = {
-    enable = true;
-    mouse = true;
-    newSession = true;
-    prefix = "C-Space";
-    baseIndex = 1;
-    terminal = "screen-256color";
-  };
-
-  programs.foot = {
-    enable = true;
-    server.enable = true;
-  };
-
-  home.file.".config/foot/foot.ini".source = ./foot/foot.ini;
-  home.file.".config/foot/colors.ini".source = ./foot/tokyonight.ini;
 }

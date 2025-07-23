@@ -10,14 +10,15 @@
     ./browser.nix
     ./btop.nix
     ./discord.nix
+    ./foot.nix
     ./git.nix
     ./hyprland.nix
     ./imv.nix
     ./misc.nix
     ./neovim.nix
-    ./terminal.nix
+    ./shell.nix
     ./theming.nix
-    ./uwsm.nix
+    ./tmux.nix
     ./vscode.nix
   ];
 }
