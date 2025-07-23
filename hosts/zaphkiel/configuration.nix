@@ -2,6 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./secrets.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -34,7 +35,7 @@
 
   services.tailscale = {
     enable = true;
-    authKeyFile = config.age.secrets.zaphkiel-tailscale.path;
+    authKeyFile = config.age.secrets.tailscale.path;
   };
 
   system.stateVersion = "24.11";

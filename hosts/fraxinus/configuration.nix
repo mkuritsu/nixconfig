@@ -7,6 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./secrets.nix
     inputs.istannouncements.nixosModules.default
   ];
 
@@ -54,7 +55,7 @@
 
   services.tailscale = {
     enable = true;
-    authKeyFile = config.age.secrets.fraxinus-tailscale.path;
+    authKeyFile = config.age.secrets.tailscale.path;
   };
 
   system.stateVersion = "25.11";

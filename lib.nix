@@ -25,13 +25,12 @@ in
       specialArgs = { inherit inputs self; };
       modules = [
         ./hosts/${hostname}/configuration.nix
-        ./secrets/module.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.extraSpecialArgs = { inherit inputs self; };
           home-manager.users = userHomes;
         }
       ]
