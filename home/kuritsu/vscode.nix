@@ -27,6 +27,8 @@
         theqtcompany.qt-core
         theqtcompany.qt-cpp
         theqtcompany.qt-ui
+        ms-toolsai.jupyter
+        ms-toolsai.jupyter-keymap
       ];
       userSettings = {
         "workbench.iconTheme" = "material-icon-theme";
