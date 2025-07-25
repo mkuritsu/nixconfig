@@ -27,6 +27,9 @@ in
     style = "kvantum";
   };
 
+  environment.etc."/xdg/menus/applications.menu".text =
+    builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
   environment.systemPackages = with pkgs; [
     # system utilities
     mangohud
@@ -46,12 +49,14 @@ in
     imv
     wiremix
     yazi
-    nautilus
-    file-roller
     easyeffects
     stremio
     scrcpy
 
+    kdePackages.dolphin
+    kdePackages.ark
+    kdePackages.okular
+    kdePackages.kdegraphics-thumbnailers
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qtwayland
     kdePackages.qt6ct

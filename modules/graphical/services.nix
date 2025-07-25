@@ -7,7 +7,6 @@
 
   services.upower.enable = true;
   services.udisks2.enable = true;
-  services.gvfs.enable = true;
   services.printing.enable = true;
 
   # https://ryjelsum.me/homelab/greetd-session-choose/
