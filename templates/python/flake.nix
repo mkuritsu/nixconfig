@@ -25,9 +25,8 @@
       devShells = eachSystem (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            python3.withPackages
-            (pypkgs: [
-            ])
+            (python3.withPackages (pypkgs: [
+            ]))
           ];
         };
       });
