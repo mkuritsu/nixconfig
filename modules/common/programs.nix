@@ -26,6 +26,7 @@
     wl-clipboard
     tmux
     distrobox
+    helix
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }
