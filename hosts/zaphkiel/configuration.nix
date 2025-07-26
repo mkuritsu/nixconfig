@@ -33,10 +33,10 @@
     openFirewall = true;
   };
 
-  services.tailscale = {
-    enable = true;
-    authKeyFile = config.age.secrets.tailscale.path;
-  };
+  # services.tailscale = {
+  #   enable = true;
+  #   authKeyFile = config.age.secrets.tailscale.path;
+  # };
 
   system.stateVersion = "24.11";
 }

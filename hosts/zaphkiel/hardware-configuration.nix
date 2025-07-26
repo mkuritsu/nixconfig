@@ -84,8 +84,6 @@
     options = [
       "noatime"
       "compress=zstd"
-      "user"
-      "rw"
       "nofail"
     ];
   };
@@ -96,8 +94,6 @@
     options = [
       "noatime"
       "compress=zstd"
-      "user"
-      "rw"
       "nofail"
     ];
   };
