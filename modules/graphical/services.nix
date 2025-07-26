@@ -8,6 +8,7 @@
   services.upower.enable = true;
   services.udisks2.enable = true;
   services.printing.enable = true;
+  services.playerctld.enable = true;
 
   # https://ryjelsum.me/homelab/greetd-session-choose/
   services.greetd = {
