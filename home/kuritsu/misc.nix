@@ -6,7 +6,13 @@
   };
 
   home.sessionVariables = {
-    BROWSER = "firefox";
+    BROWSER = "chromium";
     TERMINAL = "footclient";
   };
+
+  # changes the terminal that dolphin uses
+  home.file.".config/kdeglobals".text = ''
+    [General]
+    TerminalApplication=footclient
+  '';
 }
