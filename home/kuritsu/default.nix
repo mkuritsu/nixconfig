@@ -12,6 +12,7 @@
     ./discord.nix
     ./foot.nix
     ./git.nix
+    ./helix.nix
     ./hyprland.nix
     ./imv.nix
     ./misc.nix
