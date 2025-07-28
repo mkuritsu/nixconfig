@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   users.users.kuritsu = {
     isNormalUser = true;
     description = "kuritsu";

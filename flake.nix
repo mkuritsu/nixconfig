@@ -42,38 +42,36 @@
     };
   };
 
-  outputs =
-    { self, ... }@inputs:
-    rec {
-      lib = import ./lib.nix { inherit self inputs; };
+  outputs = {self, ...} @ inputs: rec {
+    lib = import ./lib.nix {inherit self inputs;};
 
-      nixosConfigurations = {
-        zaphkiel = lib.mkNixOs "zaphkiel" {
-          modules = [
-            "common"
-            "graphical"
-            "gaming"
-          ];
-          users = [ "kuritsu" ];
-        };
-
-        camael = lib.mkNixOs "camael" {
-          modules = [
-            "common"
-            "graphical"
-          ];
-          users = [ "kuritsu" ];
-        };
-
-        fraxinus = lib.mkNixOs "fraxinus" {
-          modules = [
-            "common"
-          ];
-        };
+    nixosConfigurations = {
+      zaphkiel = lib.mkNixOs "zaphkiel" {
+        modules = [
+          "common"
+          "graphical"
+          "gaming"
+        ];
+        users = ["kuritsu"];
       };
 
-      formatter = lib.eachSystem (pkgs: pkgs.nixfmt-rfc-style);
+      camael = lib.mkNixOs "camael" {
+        modules = [
+          "common"
+          "graphical"
+        ];
+        users = ["kuritsu"];
+      };
 
-      templates = import ./templates;
+      fraxinus = lib.mkNixOs "fraxinus" {
+        modules = [
+          "common"
+        ];
+      };
     };
+
+    formatter = lib.eachSystem (pkgs: pkgs.alejandra);
+
+    templates = import ./templates;
+  };
 }

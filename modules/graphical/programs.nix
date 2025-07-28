@@ -1,17 +1,15 @@
-{ inputs, pkgs, ... }:
-let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in
 {
+  inputs,
+  pkgs,
+  ...
+}: let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+in {
   imports = [
     inputs.spicetify-nix.nixosModules.default
   ];
 
   programs = {
-    nautilus-open-any-terminal = {
-      enable = true;
-      terminal = "footclient";
-    };
     spicetify = {
       enable = true;
       enabledExtensions = with spicePkgs.extensions; [
