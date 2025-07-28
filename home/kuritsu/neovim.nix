@@ -39,6 +39,28 @@
         visuals = {
           nvim-web-devicons.enable = true;
         };
+        keymaps = [
+          {
+            key = "<M-BS>";
+            mode = "i";
+            action = "<C-w>";
+          }
+          {
+            key = "<C-`>";
+            mode = "i";
+            action = "<Cmd>ToggleTerm<CR>";
+          }
+          {
+            key = "<C-`>";
+            mode = "t";
+            action = "<Cmd>ToggleTerm<CR>";
+          }
+          {
+            key = "<C-`>";
+            mode = "n";
+            action = "<Cmd>ToggleTerm<CR>";
+          }
+        ];
         globals.editorconfig = true;
         statusline.lualine.enable = true;
         telescope.enable = true;
