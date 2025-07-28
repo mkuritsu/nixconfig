@@ -17,7 +17,6 @@
     ./imv.nix
     ./kitty.nix
     ./misc.nix
-    ./neovim.nix
     ./shell.nix
     ./theming.nix
     ./tmux.nix
