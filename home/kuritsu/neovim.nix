@@ -62,7 +62,7 @@
           {
             key = "<C-b>";
             mode = "n";
-            action = "<Cmd>Neotree toggle<CR>";
+            action = "<Cmd>Neotree focus<CR>";
           }
         ];
         globals.editorconfig = true;
