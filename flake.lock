@@ -169,11 +169,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753206353,
-        "narHash": "sha256-fCY/SGMxGZUGTcgKL+imtvdR25ih1Wyvl0xy5+stfIA=",
+        "lastModified": 1753743424,
+        "narHash": "sha256-Z2wpWv7BpQsSge8T7XD6mzlsHk/0gALLxIq65JKg4+k=",
         "owner": "mkuritsu",
         "repo": "ISTAnnouncements",
-        "rev": "c79dc01b48f6240c5c85a8e9bface0df32cd1c7b",
+        "rev": "a140d0a3e99efd8f6ccb796015637bc38ec46a3b",
         "type": "github"
       },
       "original": {
