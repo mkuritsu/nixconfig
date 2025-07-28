@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.nvf.homeManagerModules.default
   ];
@@ -63,7 +67,16 @@
         ];
         globals.editorconfig = true;
         statusline.lualine.enable = true;
-        telescope.enable = true;
+        telescope = {
+          enable = true;
+          extensions = [
+            {
+              name = "fzf";
+              packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
+              setup = {fzf = {fuzzy = true;};};
+            }
+          ];
+        };
         autocomplete.blink-cmp.enable = true;
         presence.neocord.enable = true;
         autopairs.nvim-autopairs.enable = true;
