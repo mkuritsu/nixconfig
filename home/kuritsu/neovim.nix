@@ -99,7 +99,13 @@
           enableTreesitter = true;
           enableFormat = true;
           markdown.enable = true;
-          nix.enable = true;
+          nix = {
+            enable = true;
+            format = {
+              enable = true;
+              type = "nixfmt";
+            };
+          };
           rust = {
             enable = true;
             crates.enable = true;

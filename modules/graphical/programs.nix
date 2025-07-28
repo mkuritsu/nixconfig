@@ -33,9 +33,6 @@ in
   environment.systemPackages = with pkgs; [
     # system utilities
     mangohud
-    nixfmt-rfc-style
-    nixfmt-tree
-    nixd
     imagemagick
 
     # programs
