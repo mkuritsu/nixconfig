@@ -2,9 +2,10 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
-    inputs.nvf.homeManagerModules.default
+    inputs.nvf.nixosModules.default
   ];
 
   programs.nvf = {
@@ -72,8 +73,12 @@
           extensions = [
             {
               name = "fzf";
-              packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
-              setup = {fzf = {fuzzy = true;};};
+              packages = [ pkgs.vimPlugins.telescope-fzf-native-nvim ];
+              setup = {
+                fzf = {
+                  fuzzy = true;
+                };
+              };
             }
           ];
         };
