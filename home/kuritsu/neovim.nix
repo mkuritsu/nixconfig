@@ -47,11 +47,6 @@
           }
           {
             key = "<C-`>";
-            mode = "i";
-            action = "<Cmd>ToggleTerm<CR>";
-          }
-          {
-            key = "<C-`>";
             mode = "t";
             action = "<Cmd>ToggleTerm<CR>";
           }
@@ -59,6 +54,11 @@
             key = "<C-`>";
             mode = "n";
             action = "<Cmd>ToggleTerm<CR>";
+          }
+          {
+            key = "<C-b>";
+            mode = "n";
+            action = "<Cmd>Neotree toggle<CR>";
           }
         ];
         globals.editorconfig = true;
@@ -68,7 +68,7 @@
         presence.neocord.enable = true;
         autopairs.nvim-autopairs.enable = true;
         formatter.conform-nvim.enable = true;
-        #filetree.neo-tree.enable = true;
+        filetree.neo-tree.enable = true;
         comments.comment-nvim.enable = true;
         terminal.toggleterm.enable = true;
         binds = {
