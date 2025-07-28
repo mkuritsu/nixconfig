@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     inputs.nvf.nixosModules.default
   ];
@@ -73,7 +72,7 @@
           extensions = [
             {
               name = "fzf";
-              packages = [ pkgs.vimPlugins.telescope-fzf-native-nvim ];
+              packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
               setup = {
                 fzf = {
                   fuzzy = true;
@@ -108,7 +107,6 @@
             enable = true;
             format = {
               enable = true;
-              type = "nixfmt";
             };
           };
           rust = {

@@ -2,9 +2,7 @@
   config,
   inputs,
   ...
-}:
-
-{
+}: {
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix

@@ -1,8 +1,6 @@
-{ ... }:
-let
+{...}: let
   terminalApp = "kitty";
-in
-{
+in {
   xdg.userDirs = {
     enable = true;
     createDirectories = true;

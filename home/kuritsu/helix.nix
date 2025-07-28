@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.helix = {
     enable = true;
     extraPackages = with pkgs; [
@@ -12,7 +11,7 @@
     themes = {
       tokyonight-nobg = {
         inherits = "tokyonight";
-        "ui.background" = { };
+        "ui.background" = {};
       };
     };
     settings = {
