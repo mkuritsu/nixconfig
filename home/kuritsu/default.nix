@@ -21,6 +21,5 @@
     ./shell.nix
     ./theming.nix
     ./tmux.nix
-    ./vscode.nix
   ];
 }
