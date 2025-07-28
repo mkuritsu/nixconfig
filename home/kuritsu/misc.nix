@@ -1,4 +1,7 @@
 { ... }:
+let
+  terminalApp = "kitty";
+in
 {
   xdg.userDirs = {
     enable = true;
@@ -7,12 +10,12 @@
 
   home.sessionVariables = {
     BROWSER = "chromium";
-    TERMINAL = "footclient";
+    TERMINAL = "${terminalApp}";
   };
 
   # changes the terminal that dolphin uses
   home.file.".config/kdeglobals".text = ''
     [General]
-    TerminalApplication=footclient
+    TerminalApplication=${terminalApp}
   '';
 }

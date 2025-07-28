@@ -15,6 +15,7 @@
     ./helix.nix
     ./hyprland.nix
     ./imv.nix
+    ./kitty.nix
     ./misc.nix
     ./neovim.nix
     ./shell.nix
