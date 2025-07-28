@@ -71,6 +71,11 @@
         filetree.neo-tree.enable = true;
         comments.comment-nvim.enable = true;
         terminal.toggleterm.enable = true;
+        treesitter = {
+          enable = true;
+          indent.enable = true;
+          textobjects.enable = true;
+        };
         binds = {
           whichKey.enable = true;
           cheatsheet.enable = true;
