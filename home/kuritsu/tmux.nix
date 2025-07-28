@@ -6,6 +6,10 @@
     newSession = true;
     prefix = "C-Space";
     baseIndex = 1;
-    terminal = "screen-256color";
+    secureSocket = true;
+    extraConfig = ''
+      bind-key & kill-window
+      bind-key x kill-pane
+    '';
   };
 }
