@@ -56,5 +56,10 @@
     authKeyFile = config.age.secrets.tailscale.path;
   };
 
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+  };
+
   system.stateVersion = "25.11";
 }
