@@ -1,14 +1,16 @@
-{ inputs, pkgs, ... }:
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   programs = {
     zsh.enable = true;
     nix-ld.enable = true;
-    vim.enable = true;
+    adb.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
     };
-    adb.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
