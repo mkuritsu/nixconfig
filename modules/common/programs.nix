@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs = {
     zsh.enable = true;
     nix-ld.enable = true;
@@ -29,6 +30,7 @@
     tmux
     distrobox
     helix
+    zellij
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }
