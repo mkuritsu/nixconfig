@@ -80,6 +80,7 @@
         comments.comment-nvim.enable = true;
         notes.todo-comments.enable = true;
         terminal.toggleterm.enable = true;
+        autocomplete.blink-cmp.enable = true;
         telescope = {
           enable = true;
           extensions = [
@@ -93,13 +94,6 @@
               };
             }
           ];
-        };
-        autocomplete.blink-cmp = {
-          enable = true;
-          mappings = {
-            next = "<Down>";
-            previous = "<Up>";
-          };
         };
         treesitter = {
           enable = true;
