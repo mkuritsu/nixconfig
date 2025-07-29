@@ -40,9 +40,7 @@
           smartindent = true;
           guifont = "CaskaydiaMono Nerd Font Mono";
         };
-        visuals = {
-          nvim-web-devicons.enable = true;
-        };
+        visuals.nvim-web-devicons.enable = true;
         keymaps = [
           {
             key = "<M-BS>";
@@ -81,7 +79,13 @@
             }
           ];
         };
-        autocomplete.blink-cmp.enable = true;
+        autocomplete.blink-cmp = {
+          enable = true;
+          mappings = {
+            next = "<Down>";
+            previous = "<Up>";
+          };
+        };
         presence.neocord.enable = true;
         autopairs.nvim-autopairs.enable = true;
         formatter.conform-nvim.enable = true;
