@@ -20,7 +20,7 @@
       bindkey  "^[[3~"  delete-char
       bindkey "\e\x7f" backward-kill-word
 
-      bindkey -s "^f" "cd \$(find ~/ ~/Dev . -mindepth 1 -maxdepth 1 -type d | fzf)\n"
+      bindkey -s "^f" "dir=\$(find ~/ ~/Dev . -mindepth 1 -maxdepth 1 -type d | fzf) && [ -n \$dir ] && cd \$dir\n"
     '';
   };
 
