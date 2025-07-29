@@ -134,7 +134,10 @@
           html.enable = true;
           java.enable = true;
           lua.enable = true;
-          markdown.enable = true;
+          markdown = {
+            enable = true;
+            format.enable = false;
+          };
           nix.enable = true;
           python.enable = true;
           rust.enable = true;
