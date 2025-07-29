@@ -29,6 +29,7 @@
     tmux
     distrobox
     helix
+    yt-dlp
     zellij
     inputs.agenix.packages.${pkgs.system}.default
   ];
