@@ -40,7 +40,6 @@
           smartindent = true;
           guifont = "CaskaydiaMono Nerd Font Mono";
         };
-        visuals.nvim-web-devicons.enable = true;
         keymaps = [
           {
             key = "<M-BS>";
@@ -63,8 +62,24 @@
             action = "<Cmd>Neotree focus<CR>";
           }
         ];
+        diagnostics = {
+          enable = true;
+          config = {
+            virtual_text = true;
+          };
+        };
         globals.editorconfig = true;
+
+        visuals.nvim-web-devicons.enable = true;
         statusline.lualine.enable = true;
+        presence.neocord.enable = true;
+        autopairs.nvim-autopairs.enable = true;
+        formatter.conform-nvim.enable = true;
+        filetree.neo-tree.enable = true;
+        utility.multicursors.enable = true;
+        comments.comment-nvim.enable = true;
+        notes.todo-comments.enable = true;
+        terminal.toggleterm.enable = true;
         telescope = {
           enable = true;
           extensions = [
@@ -86,12 +101,6 @@
             previous = "<Up>";
           };
         };
-        presence.neocord.enable = true;
-        autopairs.nvim-autopairs.enable = true;
-        formatter.conform-nvim.enable = true;
-        filetree.neo-tree.enable = true;
-        comments.comment-nvim.enable = true;
-        terminal.toggleterm.enable = true;
         treesitter = {
           enable = true;
           indent.enable = true;
@@ -116,29 +125,27 @@
           whichKey.enable = true;
           cheatsheet.enable = true;
         };
-        utility.multicursors.enable = true;
-        notes.todo-comments.enable = true;
+
         languages = {
           enableTreesitter = true;
           enableFormat = true;
-          markdown.enable = true;
-          nix = {
-            enable = true;
-            format = {
-              enable = true;
-            };
-          };
-          rust = {
-            enable = true;
-            crates.enable = true;
-          };
+          enableDAP = true;
+          enableExtraDiagnostics = true;
+
+          astro.enable = true;
+          bash.enable = true;
           clang.enable = true;
-          python.enable = true;
-          html.enable = true;
+          csharp.enable = true;
           css.enable = true;
-          ts.enable = true;
-          lua.enable = true;
+          html.enable = true;
           java.enable = true;
+          lua.enable = true;
+          markdown.enable = true;
+          nix.enable = true;
+          python.enable = true;
+          rust.enable = true;
+          sql.enable = true;
+          ts.enable = true;
           typst.enable = true;
         };
       };
