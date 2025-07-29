@@ -34,6 +34,7 @@
       "gebbhagfogifgggkldgodflihgfeippi" # return youtube dislike
       "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsor block
       "ddkjiahejlhfcafbddmgiahcphecmpfh" # ublock origin lite
+      "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
     ];
   };
 }
