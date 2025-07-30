@@ -34,6 +34,7 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.darwin.follows = "";
+      inputs.home-manager.follows = "";
     };
     istannouncements = {
       url = "github:mkuritsu/ISTAnnouncements";

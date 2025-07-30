@@ -6,7 +6,7 @@
       name = "CaskaydiaMono Nerd Font Mono";
       size = 11;
     };
-    settings.background_opacity = 0.95;
+    settings.background_opacity = 0.90;
     themeFile = "tokyo_night_night";
     keybindings = {
       "ctrl+shift+enter" = "new_window_with_cwd";
