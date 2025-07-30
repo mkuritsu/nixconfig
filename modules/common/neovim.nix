@@ -76,11 +76,18 @@
         autopairs.nvim-autopairs.enable = true;
         formatter.conform-nvim.enable = true;
         filetree.neo-tree.enable = true;
-        utility.multicursors.enable = true;
+        utility = {
+          multicursors.enable = true;
+          motion.flash-nvim.enable = true;
+        };
         comments.comment-nvim.enable = true;
         notes.todo-comments.enable = true;
         terminal.toggleterm.enable = true;
         autocomplete.blink-cmp.enable = true;
+        tabline.nvimBufferline = {
+          enable = true;
+          mappings.closeCurrent = "<leader>bd";
+        };
         telescope = {
           enable = true;
           extensions = [
