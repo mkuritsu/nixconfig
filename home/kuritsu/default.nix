@@ -9,7 +9,6 @@
     ./browser.nix
     ./btop.nix
     ./discord.nix
-    ./foot.nix
     ./git.nix
     ./helix.nix
     ./hyprland.nix
