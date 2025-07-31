@@ -7,7 +7,7 @@
     history.share = false;
     initContent = ''
       alias code='codium --ozone-platform-hint=wayland'
-      alias ls='ls --color=auto'
+      alias ls='ls --color=auto --hyperlink=auto'
       alias ip='ip --color=auto'
       alias grep='grep --color=auto'
 
