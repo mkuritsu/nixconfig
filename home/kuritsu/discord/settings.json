@@ -18,6 +18,21 @@
         "Settings": {
             "enabled": true,
             "settingsLocation": "aboveNitro"
+        },
+        "Summaries": {
+            "enabled": true
+        },
+        "RoleColorEverywhere": {
+            "enabled": true
+        },
+        "TypingTweaks": {
+            "enabled": true
+        },
+        "TypingIndicator": {
+            "enabled": true
+        },
+        "NoTypingAnimation": {
+            "enabled": true
         }
     },
     "notifications": {
