@@ -1,4 +1,8 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix
@@ -32,10 +36,11 @@
     openFirewall = true;
   };
 
-  # services.tailscale = {
-  #   enable = true;
-  #   authKeyFile = config.age.secrets.tailscale.path;
-  # };
+  services.ratbagd.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    piper
+  ];
 
   system.stateVersion = "24.11";
 }
