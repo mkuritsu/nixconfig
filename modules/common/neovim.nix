@@ -9,6 +9,7 @@
 
   programs.nvf = {
     enable = true;
+    defaultEditor = true;
     settings = {
       vim = {
         theme = {
@@ -20,6 +21,7 @@
         lsp = {
           enable = true;
           formatOnSave = true;
+          lspconfig.enable = true;
         };
         clipboard = {
           enable = true;
@@ -133,114 +135,28 @@
           enableDAP = true;
           enableExtraDiagnostics = true;
 
-          astro = {
-            enable = true;
-            extraDiagnostics.enable = true;
-            format.enable = true;
-            lsp.enable = true;
-          };
-
-          bash = {
-            enable = true;
-            extraDiagnostics.enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          clang = {
-            enable = true;
-            dap.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          csharp = {
-            enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          css = {
-            enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          html = {
-            enable = true;
-            treesitter.enable = true;
-          };
-
-          java = {
-            enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          lua = {
-            enable = true;
-            extraDiagnostics.enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
+          astro.enable = true;
+          bash.enable = true;
+          clang.enable = true;
+          csharp.enable = true;
+          css.enable = true;
+          html.enable = true;
+          java.enable = true;
+          lua.enable = true;
           markdown = {
             enable = true;
-            extraDiagnostics.enable = true;
             format.enable = false;
-            lsp.enable = true;
-            treesitter.enable = true;
           };
-
-          nix = {
-            enable = true;
-            extraDiagnostics.enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          python = {
-            enable = true;
-            dap.enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
+          nix.enable = true;
+          python.enable = true;
           rust = {
             enable = true;
             crates.enable = true;
-            dap.enable = true;
             format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
           };
-
-          sql = {
-            enable = true;
-            extraDiagnostics.enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          ts = {
-            enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
-
-          typst = {
-            enable = true;
-            format.enable = true;
-            lsp.enable = true;
-            treesitter.enable = true;
-          };
+          sql.enable = true;
+          ts.enable = true;
+          typst.enable = true;
         };
       };
     };
