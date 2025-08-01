@@ -37,6 +37,7 @@ in {
     (discord.override {
       withVencord = true;
     })
+    vesktop
     mpv
     thunderbird
     rnote
