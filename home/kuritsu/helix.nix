@@ -7,6 +7,8 @@
       jdt-language-server
       marksman
       lua-language-server
+      typescript-language-server
+      deno
     ];
     themes = {
       tokyonight-nobg = {
