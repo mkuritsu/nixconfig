@@ -73,7 +73,10 @@
         globals.editorconfig = true;
 
         visuals.nvim-web-devicons.enable = true;
-        statusline.lualine.enable = true;
+        statusline.lualine = {
+          enable = true;
+          theme = "tokyonight";
+        };
         presence.neocord.enable = true;
         autopairs.nvim-autopairs.enable = true;
         formatter.conform-nvim.enable = true;
@@ -82,8 +85,6 @@
           multicursors.enable = true;
           motion.flash-nvim.enable = true;
         };
-        comments.comment-nvim.enable = true;
-        notes.todo-comments.enable = true;
         terminal.toggleterm.enable = true;
         autocomplete.blink-cmp.enable = true;
         tabline.nvimBufferline = {
