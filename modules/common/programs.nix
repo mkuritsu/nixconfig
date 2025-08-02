@@ -7,10 +7,6 @@
     zsh.enable = true;
     nix-ld.enable = true;
     adb.enable = true;
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
   };
 
   environment.systemPackages = with pkgs; [
