@@ -63,6 +63,11 @@
             mode = "n";
             action = "<Cmd>Neotree focus<CR>";
           }
+          {
+            key = "<leader>fd";
+            mode = "n";
+            action = ":Telescope file_browser<CR>";
+          }
         ];
         diagnostics = {
           enable = true;
@@ -79,18 +84,12 @@
         };
         presence.neocord.enable = true;
         autopairs.nvim-autopairs.enable = true;
-        formatter.conform-nvim.enable = true;
-        filetree.neo-tree.enable = true;
         utility = {
           multicursors.enable = true;
           motion.flash-nvim.enable = true;
         };
         terminal.toggleterm.enable = true;
         autocomplete.blink-cmp.enable = true;
-        tabline.nvimBufferline = {
-          enable = true;
-          mappings.closeCurrent = "<leader>bd";
-        };
         telescope = {
           enable = true;
           extensions = [
@@ -100,6 +99,15 @@
               setup = {
                 fzf = {
                   fuzzy = true;
+                };
+              };
+            }
+            {
+              name = "file_browser";
+              packages = [pkgs.vimPlugins.telescope-file-browser-nvim];
+              setup = {
+                file_browser = {
+                  hijack_netrw = true;
                 };
               };
             }
