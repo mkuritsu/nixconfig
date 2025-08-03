@@ -25,7 +25,6 @@
         };
         clipboard = {
           enable = true;
-          providers.wl-copy.enable = true;
           registers = "unnamedplus";
         };
         debugger = {
@@ -167,6 +166,14 @@
           ts.enable = true;
           typst.enable = true;
         };
+
+        extraPackages = with pkgs; [
+          kdePackages.qtdeclarative
+        ];
+
+        luaConfigPost = ''
+          require("lspconfig").qmlls.setup {}
+        '';
       };
     };
   };
