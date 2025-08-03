@@ -1,11 +1,14 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
     inputs.mnw.nixosModules.default
   ];
+
+  environment.variables.EDITOR = lib.mkOverride 900 "nvim";
 
   programs.mnw = {
     enable = true;
