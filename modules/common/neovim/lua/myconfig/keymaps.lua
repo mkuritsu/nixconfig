@@ -25,3 +25,6 @@ vim.keymap.set({ "n", "i" }, "<C-b>", "<cmd>Neotree focus<CR>")
 vim.keymap.set("n", "s", function()
   require("flash").jump()
 end)
+
+-- misc
+vim.keymap.set("n", "<leader>w", ":w<CR>")
