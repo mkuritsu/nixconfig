@@ -32,6 +32,7 @@
       jdt-language-server
       vscode-langservers-extracted # html,css,json
       astro-language-server
+      prettier
     ];
     plugins = {
       start = with pkgs; [
