@@ -35,23 +35,24 @@
       prettier
     ];
     plugins = {
-      start = with pkgs; [
-        vimPlugins.telescope-nvim
-        vimPlugins.telescope-fzf-native-nvim
-        vimPlugins.neocord
-        vimPlugins.nvim-autopairs
-        vimPlugins.toggleterm-nvim
-        vimPlugins.nvim-treesitter.withAllGrammars
-        vimPlugins.nvim-treesitter-textobjects
-        vimPlugins.tokyonight-nvim
-        vimPlugins.lualine-nvim
-        vimPlugins.nvim-lspconfig
-        vimPlugins.lazydev-nvim
-        vimPlugins.blink-cmp
-        vimPlugins.which-key-nvim
-        vimPlugins.cheatsheet-nvim
-        vimPlugins.neo-tree-nvim
-        vimPlugins.flash-nvim
+      start = with pkgs.vimPlugins; [
+        telescope-nvim
+        telescope-fzf-native-nvim
+        neocord
+        nvim-autopairs
+        toggleterm-nvim
+        nvim-treesitter.withAllGrammars
+        nvim-treesitter-textobjects
+        tokyonight-nvim
+        lualine-nvim
+        nvim-lspconfig
+        lazydev-nvim
+        blink-cmp
+        which-key-nvim
+        cheatsheet-nvim
+        neo-tree-nvim
+        flash-nvim
+        nvim-web-devicons
       ];
 
       dev.myconfig.pure = ./neovim;
