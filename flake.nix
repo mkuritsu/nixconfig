@@ -16,7 +16,6 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.systems.follows = "systems";
     };
     quickshell = {
       url = "github:quickshell-mirror/quickshell";
@@ -36,7 +35,6 @@
     istannouncements = {
       url = "github:mkuritsu/ISTAnnouncements";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.systems.follows = "systems";
     };
   };
 
