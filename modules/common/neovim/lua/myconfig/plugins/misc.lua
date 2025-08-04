@@ -16,3 +16,9 @@ require("neocord").setup({
 require("which-key").setup {
   preset = "modern"
 }
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
