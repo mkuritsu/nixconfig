@@ -8,7 +8,6 @@
   imports = [
     ./browser.nix
     ./btop.nix
-    ./discord.nix
     ./git.nix
     ./helix.nix
     ./hyprland.nix
