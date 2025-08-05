@@ -11,6 +11,7 @@ require("blink-cmp").setup {
     auto_show_delay_ms = 500
   },
   completion = {
+    list = { selection = { auto_insert = false } },
     ghost_text = {
       enabled = true,
       show_with_menu = true
