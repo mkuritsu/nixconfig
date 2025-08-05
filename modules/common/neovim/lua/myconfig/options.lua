@@ -9,5 +9,6 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.wrap = false
+vim.opt.swapfile = false
 
 vim.diagnostic.config({ virtual_text = true })
