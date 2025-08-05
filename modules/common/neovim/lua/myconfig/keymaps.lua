@@ -19,7 +19,7 @@ vim.keymap.set("n", "<leader>g", require("telescope.builtin").live_grep)
 vim.keymap.set("n", "<leader>th", require("telescope.builtin").builtin)
 
 -- file tree
-vim.keymap.set({ "n", "i" }, "<C-b>", "<cmd>Neotree focus<CR>")
+vim.keymap.set("n", "<leader>b", "<cmd>Neotree float<CR>")
 
 -- flash
 vim.keymap.set("n", "s", function()
