@@ -1,16 +1,4 @@
-local lspconfig = require("lspconfig")
-lspconfig.lua_ls.setup {}
-lspconfig.ts_ls.setup {}
-lspconfig.clangd.setup {}
-lspconfig.pyright.setup {}
-lspconfig.qmlls.setup {}
-lspconfig.rust_analyzer.setup {}
-lspconfig.jdtls.setup {}
-lspconfig.marksman.setup {}
-lspconfig.html.setup {}
-lspconfig.cssls.setup {}
-lspconfig.astro.setup {}
-lspconfig.nil_ls.setup {
+vim.lsp.config("nil_ls", {
   settings = {
     ["nil"] = {
       formatting = {
@@ -18,8 +6,14 @@ lspconfig.nil_ls.setup {
       }
     }
   }
-}
+})
 
+vim.lsp.enable({
+  "lua_ls", "ts_ls", "clangd", "pyright", "qmlls", "rust_analyzer", "jdtls", "marksman", "html", "cssls", "astro",
+  "nil_ls"
+})
+
+-- auto format on save
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
