@@ -10,8 +10,11 @@ require("blink-cmp").setup {
     auto_show = true,
     auto_show_delay_ms = 500
   },
-  ghost_text = {
-    enabled = true
+  completion = {
+    ghost_text = {
+      enabled = true,
+      show_with_menu = true
+    }
   },
   fuzzy = {
     implementation = "prefer_rust_with_warning"
