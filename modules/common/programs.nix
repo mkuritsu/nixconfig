@@ -23,6 +23,7 @@
     onefetch
     wl-clipboard
     tmux
+    yazi
     distrobox
     helix
     yt-dlp

@@ -48,6 +48,7 @@ in {
     easyeffects
     stremio
     scrcpy
+    zathura
 
     kdePackages.dolphin
     kdePackages.ark
