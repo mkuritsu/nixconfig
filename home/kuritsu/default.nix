@@ -9,7 +9,6 @@
     ./browser.nix
     ./btop.nix
     ./git.nix
-    ./helix.nix
     ./hyprland.nix
     ./imv.nix
     ./kitty.nix
