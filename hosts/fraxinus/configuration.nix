@@ -14,7 +14,6 @@
 
   networking = {
     hostName = "fraxinus";
-    useNetworkd = true;
     interfaces.end0 = {
       ipv4.addresses = [
         {
