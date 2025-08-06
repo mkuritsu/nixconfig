@@ -49,6 +49,7 @@ in {
     stremio
     scrcpy
     zathura
+    ghostty
 
     kdePackages.dolphin
     kdePackages.ark
