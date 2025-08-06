@@ -69,7 +69,13 @@
       };
       blocking = {
         denylists = {
-          ads = ["https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"];
+          ads = [
+            "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+            "https://easylist.to/easylist/easylist.txt"
+            "https://easylist.to/easylist/easyprivacy.txt"
+            "https://malware-filter.gitlab.io/malware-filter/urlhaus-filter.txt"
+            "https://raw.githubusercontent.com/uBlockOrigin/uAssets/refs/heads/master/filters/filters-2025.txt"
+          ];
         };
         clientGroupsBlock = {
           default = ["ads"];
