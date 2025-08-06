@@ -8,7 +8,6 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 
 -- Visual
-vim.opt.guifont = "CaskaydiaMono Nerd Font Mono"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
