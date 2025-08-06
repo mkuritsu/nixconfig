@@ -56,11 +56,7 @@
     authKeyFile = config.age.secrets.tailscale.path;
   };
 
-  networking.firewall.allowedTCPPorts = [6600];
-  services.mpd = {
-    enable = true;
-    network.listenAddress = "any";
-  };
+  networking.firewall.allowedTCPPorts = [8123 53];
 
   system.stateVersion = "25.11";
 }
