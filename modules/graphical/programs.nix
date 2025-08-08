@@ -55,9 +55,6 @@ in {
     kdePackages.ark
     kdePackages.okular
     kdePackages.kdegraphics-thumbnailers
-    kdePackages.qtstyleplugin-kvantum
-    kdePackages.qtwayland
-    kdePackages.qt6ct
     kdePackages.ffmpegthumbs
   ];
 }
