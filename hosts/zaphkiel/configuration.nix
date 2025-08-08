@@ -31,6 +31,7 @@
   services.openssh = {
     enable = true;
     openFirewall = true;
+    settings.PasswordAuthentication = false;
   };
 
   services.ratbagd.enable = true;
