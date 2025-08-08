@@ -49,7 +49,7 @@ in {
     stremio
     scrcpy
     zathura
-    ghostty
+    wl-clipboard
 
     kdePackages.dolphin
     kdePackages.ark

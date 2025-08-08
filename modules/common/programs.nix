@@ -21,7 +21,6 @@
     fastfetch
     microfetch
     onefetch
-    wl-clipboard
     tmux
     yazi
     distrobox
