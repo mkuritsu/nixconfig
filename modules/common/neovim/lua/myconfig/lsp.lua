@@ -10,7 +10,7 @@ vim.lsp.config("nil_ls", {
 
 vim.lsp.enable({
   "lua_ls", "ts_ls", "clangd", "pyright", "qmlls", "rust_analyzer", "jdtls", "marksman", "html", "cssls", "astro",
-  "nil_ls"
+  "nil_ls", "cmake"
 })
 
 -- auto format on save
