@@ -28,14 +28,14 @@
     };
   };
 
-  programs.coolercontrol.enable = true;
-
   services.openssh = {
     enable = true;
     openFirewall = true;
   };
 
   services.ratbagd.enable = true;
+
+  programs.corectrl.enable = true;
 
   environment.systemPackages = with pkgs; [
     piper
