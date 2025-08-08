@@ -14,7 +14,6 @@
   # Networking
   networking = {
     hostName = "zaphkiel";
-    useNetworkd = true;
     interfaces.enp34s0 = {
       ipv4.addresses = [
         {
