@@ -21,14 +21,14 @@
 
   gtk = {
     enable = true;
-    # theme = {
-    #   package = pkgs.tokyonight-gtk-theme;
-    #   name = "Tokyonight-Dark";
-    # };
-    # iconTheme = {
-    #   package = pkgs.adwaita-icon-theme;
-    #   name = "Adwaita";
-    # };
+    gtk3.theme = {
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
+    };
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
     gtk3.bookmarks = [
       "file:///home/kuritsu/Documents"
       "file:///home/kuritsu/Downloads"

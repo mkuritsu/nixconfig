@@ -5,13 +5,12 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     history.share = false;
+    shellAliases = {
+      ls = "ls --color=auto --hyperlink=auto";
+      ip = "ip --color=auto";
+      grep = "grep --color=auto";
+    };
     initContent = ''
-      alias code='codium --ozone-platform-hint=wayland'
-      alias ls='ls --color=auto --hyperlink=auto'
-      alias ip='ip --color=auto'
-      alias grep='grep --color=auto'
-
-      bindkey "^[[1;3C" forward-word
       bindkey "^[[1;3D" backward-word
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
