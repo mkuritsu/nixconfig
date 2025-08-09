@@ -56,36 +56,8 @@
     authKeyFile = config.age.secrets.tailscale.path;
   };
 
-  # https://wiki.nixos.org/wiki/Blocky
-  services.blocky = {
-    enable = true;
-    settings = {
-      ports.dns = 53;
-      upstreams.groups.default = [
-        "https://one.one.one.one/dns-query"
-      ];
-      bootstrapDns = {
-        upstream = "https://one.one.one.one/dns-query";
-        ips = ["1.1.1.1" "1.0.0.1"];
-      };
-      blocking = {
-        denylists = {
-          ads = [
-            "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
-            "https://easylist.to/easylist/easylist.txt"
-            "https://easylist.to/easylist/easyprivacy.txt"
-            "https://malware-filter.gitlab.io/malware-filter/urlhaus-filter.txt"
-            "https://raw.githubusercontent.com/uBlockOrigin/uAssets/refs/heads/master/filters/filters-2025.txt"
-          ];
-        };
-        clientGroupsBlock = {
-          default = ["ads"];
-        };
-      };
-    };
-  };
-  networking.firewall.allowedTCPPorts = [53];
-  networking.firewall.allowedUDPPorts = [53];
+  networking.firewall.allowedTCPPorts = [53 80];
+  networking.firewall.allowedUDPPorts = [53 67 547];
 
   system.stateVersion = "25.11";
 }
