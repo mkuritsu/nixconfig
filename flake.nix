@@ -41,8 +41,8 @@
   outputs = {self, ...} @ inputs: rec {
     lib = import ./lib.nix {inherit self inputs;};
 
-    nixosConfigurations = {
-      zaphkiel = lib.mkNixOs "zaphkiel" {
+    nixosConfigurations = lib.mkNixOsSystems {
+      zaphkiel = {
         modules = [
           "common"
           "graphical"
@@ -51,7 +51,7 @@
         users = ["kuritsu"];
       };
 
-      camael = lib.mkNixOs "camael" {
+      camael = {
         modules = [
           "common"
           "graphical"
@@ -59,7 +59,7 @@
         users = ["kuritsu"];
       };
 
-      fraxinus = lib.mkNixOs "fraxinus" {
+      fraxinus = {
         modules = [
           "common"
         ];
