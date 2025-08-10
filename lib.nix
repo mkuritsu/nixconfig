@@ -3,7 +3,7 @@
   inputs,
 }: let
   inherit (inputs) nixpkgs systems home-manager;
-in {
+in rec {
   eachSystem = fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
 
   mkNixOs = hostname: {
@@ -35,4 +35,6 @@ in {
         ++ userModules
         ++ extraModules;
     };
+
+  mkNixOsSystems = hostnames: builtins.mapAttrs (host: attrs: mkNixOs host attrs) hostnames;
 }
