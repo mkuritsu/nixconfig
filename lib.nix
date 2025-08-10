@@ -22,6 +22,7 @@ in rec {
       specialArgs = {inherit inputs self;};
       modules =
         [
+          {networking.hostName = hostname;}
           ./hosts/${hostname}/configuration.nix
           home-manager.nixosModules.home-manager
           {
