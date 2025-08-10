@@ -26,9 +26,10 @@
       rustfmt
       clippy
       marksman
-      nil
-      kdePackages.qtdeclarative
+      nixd
+      nixfmt-rfc-style
       alejandra
+      kdePackages.qtdeclarative
       jdt-language-server
       vscode-langservers-extracted # html,css,json
       astro-language-server

@@ -1,6 +1,6 @@
-vim.lsp.config("nil_ls", {
+vim.lsp.config("nixd", {
   settings = {
-    ["nil"] = {
+    nixd = {
       formatting = {
         command = { "alejandra", "--quiet" }
       }
@@ -10,7 +10,7 @@ vim.lsp.config("nil_ls", {
 
 vim.lsp.enable({
   "lua_ls", "ts_ls", "clangd", "pyright", "qmlls", "rust_analyzer", "jdtls", "marksman", "html", "cssls", "astro",
-  "nil_ls", "cmake"
+  "nixd", "cmake"
 })
 
 -- auto format on save
