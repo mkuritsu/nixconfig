@@ -13,7 +13,6 @@
 
   # Networking
   networking = {
-    hostName = "zaphkiel";
     interfaces.enp34s0 = {
       ipv4.addresses = [
         {

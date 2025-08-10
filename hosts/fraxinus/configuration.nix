@@ -13,7 +13,6 @@
   boot.loader.generic-extlinux-compatible.enable = true;
 
   networking = {
-    hostName = "fraxinus";
     interfaces.end0 = {
       ipv4.addresses = [
         {

@@ -8,7 +8,6 @@
 
   # Networking
   networking = {
-    hostName = "camael";
     wireless.iwd.enable = true;
     networkmanager.enable = true;
     networkmanager.dns = "none";
