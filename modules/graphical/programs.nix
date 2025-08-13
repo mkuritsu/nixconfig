@@ -15,7 +15,6 @@ in {
       enabledExtensions = with spicePkgs.extensions; [
         adblock
       ];
-      theme = spicePkgs.themes.hazy;
     };
   };
 

@@ -112,11 +112,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754458556,
-        "narHash": "sha256-DIojKVwNTmJ/GOKTbHEz3+rHcbk1EGEIJC3t72T2gts=",
+        "lastModified": 1755077788,
+        "narHash": "sha256-kyEOmS+dRkLEuzNcy/F+gyHqk17DGBd1trjzv75MazE=",
         "owner": "mkuritsu",
         "repo": "kushell",
-        "rev": "f741c8f7a9cc93d441af60097777cdf301443636",
+        "rev": "efce405d7d5cdec2eb1f2d9d99cb378fe2d2af43",
         "type": "github"
       },
       "original": {
