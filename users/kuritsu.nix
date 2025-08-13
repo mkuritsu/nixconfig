@@ -6,7 +6,6 @@
       "networkmanager"
       "wheel"
       "adbusers"
-      "jellyfin"
     ];
     shell = pkgs.zsh;
   };
