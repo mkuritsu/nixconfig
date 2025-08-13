@@ -13,6 +13,7 @@
     ./imv.nix
     ./kitty.nix
     ./misc.nix
+    ./mpd.nix
     ./shell.nix
     ./theming.nix
     ./tmux.nix
