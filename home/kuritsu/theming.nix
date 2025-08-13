@@ -21,9 +21,9 @@
 
   gtk = {
     enable = true;
-    gtk3.theme = {
-      name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
+    theme = {
+      name = "rose-pine";
+      package = pkgs.rose-pine-gtk-theme;
     };
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
