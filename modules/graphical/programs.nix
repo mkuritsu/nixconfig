@@ -54,7 +54,6 @@ in {
     zathura
     wl-clipboard
     newsflash
-    rmpc
 
     kdePackages.dolphin
     kdePackages.ark

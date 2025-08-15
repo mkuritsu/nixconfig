@@ -18,6 +18,7 @@
     [General]
     theme=Tokyonight
   '';
+  home.file.".config/qt6ct/qt6ct.conf".source = ./qt/qt6ct.conf;
 
   gtk = {
     enable = true;
