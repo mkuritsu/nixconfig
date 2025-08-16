@@ -40,5 +40,7 @@
     piper
   ];
 
+  services.xserver.videoDrivers = ["amdgpu"];
+
   system.stateVersion = "24.11";
 }
