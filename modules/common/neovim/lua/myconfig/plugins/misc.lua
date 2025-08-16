@@ -8,6 +8,22 @@ require("toggleterm").setup {}
 require("lualine").setup {
   options = {
     globalstatus = true,
+  },
+  sections = {
+    lualine_x = {
+      { 'encoding' },
+      { 'fileformat' },
+      { 'filetype' },
+      {
+        'lsp_status',
+        icon = '',
+        symbols = {
+          spinner = { '⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏' },
+          done = '✓',
+          separator = ' ',
+        }
+      }
+    }
   }
 }
 require('nvim-web-devicons').setup {}
