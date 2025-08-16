@@ -1,4 +1,5 @@
 {
+  self,
   inputs,
   pkgs,
   ...
@@ -54,6 +55,7 @@ in {
     zathura
     wl-clipboard
     newsflash
+    self.packages.${pkgs.system}.reverb-toggle
 
     kdePackages.dolphin
     kdePackages.ark

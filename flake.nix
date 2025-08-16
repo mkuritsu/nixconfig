@@ -66,6 +66,10 @@
       };
     };
 
+    packages = lib.eachSystem (pkgs: {
+      reverb-toggle = pkgs.callPackage ./packages/reverb-toggle {};
+    });
+
     formatter = lib.eachSystem (pkgs: pkgs.alejandra);
 
     templates = import ./templates;
