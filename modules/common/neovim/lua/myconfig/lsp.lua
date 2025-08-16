@@ -1,3 +1,5 @@
+require("lazydev").setup {}
+
 local function set_lsp_formatter(lsp, command)
   vim.lsp.config(lsp, {
     settings = {
