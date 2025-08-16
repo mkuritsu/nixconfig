@@ -7,5 +7,4 @@ writeShellScriptBin "reverb-toggle" ''
   else
     dconf write /com/github/wwmm/easyeffects/streaminputs/reverb/0/bypass true
   fi
-
 ''
