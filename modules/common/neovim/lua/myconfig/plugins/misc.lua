@@ -3,10 +3,13 @@ require("tokyonight").setup {
 }
 vim.cmd.colorscheme("tokyonight")
 
-require("lazydev").setup {}
 require("nvim-autopairs").setup {}
 require("toggleterm").setup {}
-require("lualine").setup {}
+require("lualine").setup {
+  options = {
+    globalstatus = true,
+  }
+}
 require('nvim-web-devicons').setup {}
 
 require("neocord").setup({
@@ -14,7 +17,7 @@ require("neocord").setup({
 })
 
 require("which-key").setup {
-  preset = "modern"
+  preset = "helix"
 }
 
 vim.api.nvim_create_autocmd("TextYankPost", {
