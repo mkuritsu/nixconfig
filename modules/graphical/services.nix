@@ -10,6 +10,7 @@
 
   services.upower.enable = true;
   services.udisks2.enable = true;
+  services.gvfs.enable = true;
   services.printing.enable = true;
   services.playerctld.enable = true;
   services.flatpak.enable = true;

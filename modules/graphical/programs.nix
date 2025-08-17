@@ -38,9 +38,7 @@ in {
     imagemagick
 
     # programs
-    (discord.override {
-      withVencord = true;
-    })
+    discord
     vesktop
     mpv
     thunderbird
@@ -56,6 +54,7 @@ in {
     wl-clipboard
     newsflash
     self.packages.${pkgs.system}.reverb-toggle
+    rmpc
 
     kdePackages.dolphin
     kdePackages.ark
