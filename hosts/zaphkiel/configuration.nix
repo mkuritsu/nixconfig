@@ -34,13 +34,19 @@
   };
 
   services.lact.enable = true;
-
-  services.ratbagd.enable = true;
-  environment.systemPackages = with pkgs; [
-    piper
+  hardware.amdgpu.overdrive.enable = true;
+  hardware.graphics.extraPackages = with pkgs; [
+    vaapiVdpau
+    libvdpau-va-gl
   ];
 
   services.xserver.videoDrivers = ["amdgpu"];
+  boot.initrd.kernelModules = ["amdgpu"];
+
+  environment.variables = {
+    "VDPAU_DRIVER" = "radeonsi";
+    "LIBVA_DRIVER_NAME" = "radeonsi";
+  };
 
   system.stateVersion = "24.11";
 }
