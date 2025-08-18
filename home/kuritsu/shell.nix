@@ -1,31 +1,24 @@
 {lib, ...}: {
-  programs.zsh = {
+  programs.fish = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    history.share = false;
-    shellAliases = {
-      ls = "ls --color=auto --hyperlink=auto";
-      ip = "ip --color=auto";
-      grep = "grep --color=auto";
+    functions = {
+      cd_fzf = ''
+        set dir $(find ~/ ~/Dev . -mindepth 1 -maxdepth 1 -type d | fzf)
+        if test -n "$dir"
+          cd $dir
+          commandline -f repaint
+        end
+      '';
+      fish_greeting = "";
     };
-    initContent = ''
-      bindkey "^[[1;3D" backward-word
-      bindkey "^[[1;5C" forward-word
-      bindkey "^[[1;5D" backward-word
-      bindkey  "^[[H"   beginning-of-line
-      bindkey  "^[[F"   end-of-line
-      bindkey  "^[[3~"  delete-char
-      bindkey "\e\x7f" backward-kill-word
-
-      bindkey -s "^f" "dir=\$(find ~/ ~/Dev . -mindepth 1 -maxdepth 1 -type d | fzf) && [ -n \$dir ] && cd \$dir\n"
-    '';
+    binds = {
+      "ctrl-f".command = "cd_fzf";
+    };
   };
 
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
     settings = {
       add_newline = false;
       format = lib.concatStrings [
@@ -44,15 +37,14 @@
         format = "[$symbol$branch(:$remote_branch)]($style) ";
       };
       character = {
-        success_symbol = "[λ](bold green)";
-        error_symbol = "[λ](bold red)";
+        success_symbol = "[~>](bold green)";
+        error_symbol = "[~>](bold red)";
       };
     };
   };
 
   programs.direnv = {
     enable = true;
-    enableZshIntegration = true;
     nix-direnv.enable = true;
   };
 }

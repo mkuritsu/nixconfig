@@ -1,13 +1,18 @@
-{...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.kitty = {
     enable = true;
-    shellIntegration.enableZshIntegration = true;
+    shellIntegration.enableFishIntegration = true;
     font = {
       name = "CaskaydiaMono Nerd Font";
       size = 11;
     };
     settings = {
       background_opacity = 0.9;
+      shell = "${lib.getExe pkgs.fish}";
     };
     themeFile = "tokyo_night_night";
     keybindings = {
