@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   users.users.kuritsu = {
     isNormalUser = true;
     description = "kuritsu";
@@ -7,6 +7,5 @@
       "wheel"
       "adbusers"
     ];
-    shell = pkgs.zsh;
   };
 }
