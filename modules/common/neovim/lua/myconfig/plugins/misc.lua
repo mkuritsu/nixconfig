@@ -4,7 +4,9 @@ require("tokyonight").setup {
 vim.cmd.colorscheme("tokyonight")
 
 require("nvim-autopairs").setup {}
-require("toggleterm").setup {}
+require("toggleterm").setup {
+  shell = "fish"
+}
 require("lualine").setup {
   options = {
     globalstatus = true,
