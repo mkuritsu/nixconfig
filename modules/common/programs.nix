@@ -6,6 +6,7 @@
   programs = {
     nix-ld.enable = true;
     adb.enable = true;
+    fish.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
