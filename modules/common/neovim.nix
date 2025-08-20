@@ -46,6 +46,7 @@
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
         tokyonight-nvim
+        catppuccin-nvim
         lualine-nvim
         nvim-lspconfig
         lazydev-nvim
@@ -55,6 +56,7 @@
         neo-tree-nvim
         flash-nvim
         nvim-web-devicons
+        mini-indentscope
       ];
 
       dev.myconfig.pure = ./neovim;

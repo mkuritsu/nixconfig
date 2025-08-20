@@ -5,6 +5,7 @@
 }: {
   programs.hyprland = {
     enable = true;
+    withUWSM = true;
   };
   services.hypridle.enable = true;
 
@@ -18,6 +19,7 @@
     hyprpicker
     hyprshot
     hyprpolkitagent
+    mako
     inputs.kushell.packages.${pkgs.system}.default
   ];
 }

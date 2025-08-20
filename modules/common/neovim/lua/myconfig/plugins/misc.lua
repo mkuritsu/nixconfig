@@ -1,9 +1,27 @@
 require("tokyonight").setup {
-  transparent = true
+  transparent = true,
+  styles = {
+    comments = { italic = false },
+    keywords = { italic = false },
+  }
 }
+
+require("catppuccin").setup {
+  transparent_background = true,
+  flavour = "mocha",
+  no_italic = true,
+  float = {
+    transparent = true,
+    solid = false
+  }
+}
+
 vim.cmd.colorscheme("tokyonight")
 
 require("nvim-autopairs").setup {}
+require('mini.indentscope').setup {
+  symbol = "│"
+}
 require("toggleterm").setup {
   shell = "fish"
 }
