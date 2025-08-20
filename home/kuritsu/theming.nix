@@ -6,6 +6,9 @@
   };
 
   home.pointerCursor = {
+    enable = true;
+    hyprcursor.enable = true;
+    x11.enable = true;
     gtk.enable = true;
     package = pkgs.catppuccin-cursors.mochaDark;
     name = "Catppuccin-Mocha-Dark-Cursors";
