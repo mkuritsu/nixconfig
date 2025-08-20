@@ -12,6 +12,7 @@
     ./hyprland.nix
     ./imv.nix
     ./kitty.nix
+    ./mako.nix
     ./misc.nix
     ./mpd.nix
     ./shell.nix
