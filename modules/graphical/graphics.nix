@@ -1,13 +1,4 @@
-{pkgs, ...}: {
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "us";
-      variant = "altgr-intl";
-    };
-    excludePackages = [pkgs.xterm];
-  };
-
+{...}: {
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
