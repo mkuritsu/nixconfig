@@ -14,12 +14,13 @@
     brightnessctl
     grim
     slurp
-    wf-recorder
     gpu-screen-recorder
     hyprpicker
     hyprshot
     hyprpolkitagent
     mako
+    walker
+    swww
     inputs.kushell.packages.${pkgs.system}.default
   ];
 }
