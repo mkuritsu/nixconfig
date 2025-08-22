@@ -26,6 +26,10 @@ vim.keymap.set("n", "s", function()
   require("flash").jump()
 end)
 
+-- lsp
+vim.keymap.set({ "v", "n" }, "<leader>ca", require("actions-preview").code_actions)
+vim.keymap.set("i", "<C-.>", require("actions-preview").code_actions)
+
 -- misc
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")

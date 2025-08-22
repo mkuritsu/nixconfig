@@ -57,6 +57,7 @@
         flash-nvim
         nvim-web-devicons
         mini-indentscope
+        actions-preview-nvim
       ];
 
       dev.myconfig.pure = ./neovim;
