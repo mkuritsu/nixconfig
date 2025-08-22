@@ -19,6 +19,7 @@ require("catppuccin").setup {
 vim.cmd.colorscheme("tokyonight")
 
 require("nvim-autopairs").setup {}
+require("actions-preview").setup {}
 require('mini.indentscope').setup {
   symbol = "│"
 }
