@@ -31,6 +31,8 @@
       "subvol=root"
       "noatime"
       "compress=zstd"
+      "x-gvfs-show"
+      "x-gvfs-name=NIXOS"
     ];
   };
 
@@ -82,6 +84,8 @@
       "noatime"
       "compress=zstd"
       "nofail"
+      "x-gvfs-show"
+      "x-gvfs-name=HDD"
     ];
   };
 
@@ -92,6 +96,8 @@
       "noatime"
       "compress=zstd"
       "nofail"
+      "x-gvfs-show"
+      "x-gvfs-name=SSD2"
     ];
   };
 
