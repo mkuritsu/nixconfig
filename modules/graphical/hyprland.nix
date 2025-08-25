@@ -19,7 +19,7 @@
     hyprshot
     hyprpolkitagent
     mako
-    walker
+    rofi-wayland
     swww
     inputs.kushell.packages.${pkgs.system}.default
   ];
