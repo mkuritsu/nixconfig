@@ -32,6 +32,11 @@ in {
     TERMINAL = "kitty";
   };
 
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "kitty";
+  };
+
   environment.systemPackages = with pkgs; [
     # system utilities
     mangohud
@@ -56,9 +61,12 @@ in {
     self.packages.${pkgs.system}.reverb-toggle
     rmpc
 
+    nautilus
+    file-roller
+
+    kdePackages.okular
     kdePackages.dolphin
     kdePackages.ark
-    kdePackages.okular
     kdePackages.kdegraphics-thumbnailers
     kdePackages.ffmpegthumbs
   ];
