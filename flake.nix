@@ -68,6 +68,7 @@
 
     packages = lib.eachSystem (pkgs: {
       reverb-toggle = pkgs.callPackage ./packages/reverb-toggle {};
+      setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
     });
 
     formatter = lib.eachSystem (pkgs: pkgs.alejandra);
