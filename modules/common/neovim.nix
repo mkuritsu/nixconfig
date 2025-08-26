@@ -34,7 +34,7 @@
       vscode-langservers-extracted # html,css,json
       astro-language-server
       prettier
-      cmake-language-server
+      # cmake-language-server
     ];
     plugins = {
       start = with pkgs.vimPlugins; [

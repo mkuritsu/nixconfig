@@ -51,13 +51,11 @@ in {
     ani-cli
     imv
     wiremix
-    yazi
     easyeffects
     stremio
     scrcpy
     zathura
     wl-clipboard
-    newsflash
     self.packages.${pkgs.system}.reverb-toggle
     rmpc
 

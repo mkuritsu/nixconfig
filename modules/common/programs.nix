@@ -18,12 +18,9 @@
     unzip
     btop
     fastfetch
-    microfetch
     onefetch
     tmux
     yazi
-    distrobox
-    yt-dlp
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }
