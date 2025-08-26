@@ -58,29 +58,5 @@
   networking.firewall.allowedTCPPorts = [53 80 8080];
   networking.firewall.allowedUDPPorts = [53 67 547];
 
-  services.nginx = {
-    enable = true;
-    virtualHosts."192.168.1.80" = {
-      listen = [
-        {
-          addr = "0.0.0.0";
-          port = 80;
-        }
-      ];
-
-      locations = {
-        "/pihole" = {
-          proxyPass = "http://192.168.1.80:8080/admin";
-          proxyWebsockets = true;
-        };
-
-        "/istannouncements" = {
-          proxyPass = "http://192.168.1.80:8000";
-          proxyWebsockets = true;
-        };
-      };
-    };
-  };
-
   system.stateVersion = "25.11";
 }
