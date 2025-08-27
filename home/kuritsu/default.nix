@@ -8,11 +8,9 @@
   imports = [
     ./browser.nix
     ./btop.nix
+    ./files.nix
     ./git.nix
-    ./hyprland.nix
-    ./imv.nix
     ./kitty.nix
-    ./mako.nix
     ./misc.nix
     ./mpd.nix
     ./shell.nix
