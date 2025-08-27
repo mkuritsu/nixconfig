@@ -19,12 +19,6 @@ in {
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme = "qt5ct";
-    style = "kvantum";
-  };
-
   environment.etc."/xdg/menus/applications.menu".text =
     builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
@@ -52,7 +46,6 @@ in {
     imv
     wiremix
     easyeffects
-    stremio
     scrcpy
     zathura
     wl-clipboard

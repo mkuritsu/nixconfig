@@ -22,5 +22,7 @@
     rofi-wayland
     swww
     inputs.kushell.packages.${pkgs.system}.default
+    kdePackages.qtstyleplugin-kvantum
+    qt6ct
   ];
 }
