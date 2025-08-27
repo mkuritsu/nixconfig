@@ -19,10 +19,10 @@
     hyprshot
     hyprpolkitagent
     mako
-    rofi-wayland
+    fuzzel
     swww
-    inputs.kushell.packages.${pkgs.system}.default
-    kdePackages.qtstyleplugin-kvantum
     qt6ct
+    kdePackages.qtstyleplugin-kvantum
+    inputs.kushell.packages.${pkgs.system}.default
   ];
 }

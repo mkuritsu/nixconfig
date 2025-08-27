@@ -32,11 +32,7 @@ in {
   };
 
   environment.systemPackages = with pkgs; [
-    # system utilities
     mangohud
-    imagemagick
-
-    # programs
     discord
     vesktop
     mpv
@@ -51,10 +47,8 @@ in {
     wl-clipboard
     self.packages.${pkgs.system}.reverb-toggle
     rmpc
-
     nautilus
     file-roller
-
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.ark

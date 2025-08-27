@@ -17,7 +17,5 @@
     })
     osu-lazer-bin
     heroic
-    mindustry
-    bottles
   ];
 }

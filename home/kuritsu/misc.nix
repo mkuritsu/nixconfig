@@ -5,11 +5,13 @@
       enable = true;
       createDirectories = true;
     };
+    terminal-exec = {
+      enable = true;
+      settings = {
+        default = [
+          "kitty.desktop"
+        ];
+      };
+    };
   };
-
-  # changes the terminal that dolphin uses
-  home.file.".config/kdeglobals".text = ''
-    [General]
-    TerminalApplication=kitty
-  '';
 }

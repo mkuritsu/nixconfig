@@ -7,21 +7,11 @@
 
   home.pointerCursor = {
     enable = true;
-    hyprcursor.enable = true;
-    x11.enable = true;
     gtk.enable = true;
     package = pkgs.catppuccin-cursors.mochaDark;
     name = "catppuccin-mocha-dark-cursors";
     size = 24;
   };
-
-  home.file.".config/Kvantum/Everforest".source = ./qt/themes/Everforest;
-  home.file.".config/Kvantum/Tokyonight".source = ./qt/themes/Tokyonight;
-  home.file.".config/Kvantum/kvantum.kvconfig".text = ''
-    [General]
-    theme=Tokyonight
-  '';
-  home.file.".config/qt6ct/qt6ct.conf".source = ./qt/qt6ct.conf;
 
   gtk = {
     enable = true;
