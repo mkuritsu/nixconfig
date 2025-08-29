@@ -38,7 +38,7 @@ in {
     mpv
     thunderbird
     rnote
-    ani-cli
+    inputs.viu.packages.${pkgs.system}.default
     imv
     wiremix
     easyeffects

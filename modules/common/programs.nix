@@ -6,7 +6,6 @@
   programs = {
     nix-ld.enable = true;
     adb.enable = true;
-    fish.enable = true;
     direnv = {
       enable = true;
       nix-direnv.enable = true;

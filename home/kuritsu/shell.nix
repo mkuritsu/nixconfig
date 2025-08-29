@@ -1,6 +1,7 @@
 {lib, ...}: {
   programs.fish = {
     enable = true;
+    generateCompletions = false;
     functions = {
       cd_fzf = ''
         set dir $(find ~/ ~/Dev . -mindepth 1 -maxdepth 1 -type d | fzf)
@@ -41,5 +42,10 @@
         error_symbol = "[~>](bold red)";
       };
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
   };
 }

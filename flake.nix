@@ -17,20 +17,18 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    kushell = {
-      url = "github:mkuritsu/kushell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.follows = "quickshell";
-    };
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.darwin.follows = "";
       inputs.home-manager.follows = "";
+    };
+    viu = {
+      url = "github:viu-media/viu";
+    };
+    kushell = {
+      url = "github:mkuritsu/kushell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     istannouncements = {
       url = "github:mkuritsu/ISTAnnouncements";
