@@ -26,6 +26,7 @@
     tmux
     yazi
     ripgrep
+    distrobox
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }
