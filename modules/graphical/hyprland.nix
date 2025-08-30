@@ -22,6 +22,7 @@
     fuzzel
     swww
     qt6ct
+    app2unit
     kdePackages.qtstyleplugin-kvantum
     inputs.kushell.packages.${pkgs.system}.default
   ];
