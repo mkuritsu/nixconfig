@@ -45,6 +45,7 @@ in {
     scrcpy
     zathura
     wl-clipboard
+    vscode
     self.packages.${pkgs.system}.reverb-toggle
     rmpc
     nautilus
