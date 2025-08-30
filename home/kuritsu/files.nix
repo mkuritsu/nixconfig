@@ -22,5 +22,7 @@
     "fuzzel/fuzzel.ini".source = ./fuzzel/fuzzel.ini;
 
     "imv/config".source = ./imv/config;
+
+    "niri/config.kdl".source = ./niri/config.kdl;
   };
 }
