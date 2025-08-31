@@ -17,6 +17,14 @@ in {
         adblock
       ];
     };
+    obs-studio = {
+      enable = true;
+      enableVirtualCamera = true;
+    };
+    nautilus-open-any-terminal = {
+      enable = true;
+      terminal = "kitty";
+    };
   };
 
   environment.etc."/xdg/menus/applications.menu".text =
@@ -24,11 +32,6 @@ in {
 
   environment.sessionVariables = {
     TERMINAL = "kitty";
-  };
-
-  programs.nautilus-open-any-terminal = {
-    enable = true;
-    terminal = "kitty";
   };
 
   environment.systemPackages = with pkgs; [
