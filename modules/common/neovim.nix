@@ -34,7 +34,7 @@
       vscode-langservers-extracted # html,css,json
       astro-language-server
       prettier
-      # cmake-language-server
+      cmake-language-server
     ];
     plugins = {
       start = with pkgs.vimPlugins; [
@@ -45,8 +45,6 @@
         toggleterm-nvim
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
-        tokyonight-nvim
-        catppuccin-nvim
         lualine-nvim
         nvim-lspconfig
         lazydev-nvim
@@ -58,6 +56,10 @@
         nvim-web-devicons
         mini-indentscope
         actions-preview-nvim
+        bufferline-nvim
+
+        catppuccin-nvim
+        tokyonight-nvim
       ];
 
       dev.myconfig.pure = ./neovim;

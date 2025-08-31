@@ -1,5 +1,9 @@
 require("blink-cmp").setup {
-  keymap = { preset = 'enter' },
+  keymap = {
+    preset = "enter",
+    ["<C-k>"] = false,
+    ['<C-y>'] = { 'show_signature', 'hide_signature', 'fallback' },
+  },
   appearance = {
     nerd_font_variant = 'mono'
   },

@@ -139,6 +139,7 @@ binds {
     Mod+Q { spawn "kitty"; }
     Mod+R { spawn "fuzzel" "--launch-prefix" "niri msg action spawn --"; }
     Mod+E { spawn "nautilus"; }
+    Mod+Y { spawn "hyprpicker" "--lowercase-hex" "--autocopy"; }
 
     // workspaces
     Mod+1 { focus-workspace "1"; }
