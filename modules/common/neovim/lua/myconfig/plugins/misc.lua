@@ -10,25 +10,72 @@ require("catppuccin").setup {
   transparent_background = true,
   flavour = "mocha",
   no_italic = true,
-  float = {
-    transparent = true,
-    solid = false
+  integrations = {
+    treesitter = true,
+    telescope = true,
+    blink_cmp = {
+      style = 'bordered',
+    },
+    flash = true,
+    mini = {
+      enable = true
+    },
+    neotree = true,
+    native_lsp = {
+      enabled = true,
+      virtual_text = {
+        errors = { "italic" },
+        hints = { "italic" },
+        warnings = { "italic" },
+        information = { "italic" },
+        ok = { "italic" },
+      },
+      underlines = {
+        errors = { "underline" },
+        hints = { "underline" },
+        warnings = { "underline" },
+        information = { "underline" },
+        ok = { "underline" },
+      },
+      inlay_hints = {
+        background = true,
+      },
+    },
+    treesitter_context = true,
+    which_key = true,
   }
 }
-
-vim.cmd.colorscheme("tokyonight")
+vim.cmd("colorscheme catppuccin")
 
 require("nvim-autopairs").setup {}
 require("actions-preview").setup {}
+require("nvim-web-devicons").setup {}
+require("bufferline").setup {
+  options = {
+    offsets = {
+      {
+        filetype = "neo-tree",
+        text = "Neotree",
+        separator = true,
+        text_align = "center",
+      },
+    }
+  },
+}
+
+
 require('mini.indentscope').setup {
   symbol = "│"
 }
+
 require("toggleterm").setup {
   shell = "fish"
 }
+
 require("lualine").setup {
   options = {
     globalstatus = true,
+    theme = "catppuccin",
   },
   sections = {
     lualine_x = {
@@ -47,7 +94,6 @@ require("lualine").setup {
     }
   }
 }
-require('nvim-web-devicons').setup {}
 
 require("neocord").setup({
   logo_tooltip = "The superior text editor",

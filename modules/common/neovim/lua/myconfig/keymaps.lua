@@ -4,10 +4,10 @@ vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 -- arrow keys
-vim.keymap.set("i", "<M-h>", "<left>")
-vim.keymap.set("i", "<M-j>", "<down>")
-vim.keymap.set("i", "<M-k>", "<up>")
-vim.keymap.set("i", "<M-l>", "<right>")
+vim.keymap.set("i", "<C-h>", "<left>")
+vim.keymap.set("i", "<C-j>", "<down>")
+vim.keymap.set("i", "<C-k>", "<up>")
+vim.keymap.set("i", "<C-l>", "<right>")
 
 -- terminal
 vim.keymap.set({ "n", "t" }, "<C-`>", "<cmd>ToggleTerm<CR>")
@@ -19,7 +19,7 @@ vim.keymap.set("n", "<leader>g", require("telescope.builtin").live_grep)
 vim.keymap.set("n", "<leader>th", require("telescope.builtin").builtin)
 
 -- file tree
-vim.keymap.set("n", "<leader>d", "<cmd>Neotree float<CR>")
+vim.keymap.set("n", "<leader>d", "<cmd>Neotree toggle<CR>")
 
 -- flash
 vim.keymap.set("n", "s", function()
@@ -33,3 +33,4 @@ vim.keymap.set("i", "<C-.>", require("actions-preview").code_actions)
 -- misc
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>bd", ":bd")

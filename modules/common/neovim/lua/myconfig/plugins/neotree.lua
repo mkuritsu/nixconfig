@@ -6,12 +6,12 @@ require("neo-tree").setup {
       hide_hidden = false
     }
   },
-  event_handlers = {
-    {
-      event = "file_open_requested",
-      handler = function()
-        vim.cmd("Neotree close")
-      end
-    }
-  }
+  -- event_handlers = {
+  --   {
+  --     event = "file_open_requested",
+  --     handler = function()
+  --       vim.cmd("Neotree close")
+  --     end
+  --   }
+  -- }
 }
