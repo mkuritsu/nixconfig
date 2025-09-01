@@ -23,6 +23,7 @@ in {
       ./modules/gtk.nix
       ./modules/misc.nix
       ./modules/services.nix
+      ./modules/neovim.nix
     ];
 
     xdg.configFile = {

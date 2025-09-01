@@ -1,0 +1,8 @@
+require("mkuritsu.options")
+require("mkuritsu.keymaps")
+require("mkuritsu.lsp")
+require("mkuritsu.plugins.blink-cmp")
+require("mkuritsu.plugins.misc")
+require("mkuritsu.plugins.neotree")
+require("mkuritsu.plugins.telescope")
+require("mkuritsu.plugins.treesitter")

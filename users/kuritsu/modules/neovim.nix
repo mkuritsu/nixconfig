@@ -5,15 +5,15 @@
   ...
 }: {
   imports = [
-    inputs.mnw.nixosModules.default
+    inputs.mnw.homeManagerModules.default
   ];
 
-  environment.variables.EDITOR = lib.mkOverride 900 "nvim";
+  home.sessionVariables.EDITOR = lib.mkOverride 900 "nvim";
 
   programs.mnw = {
     enable = true;
     initLua = ''
-      require("myconfig")
+      require("mkuritsu")
     '';
     extraBinPath = with pkgs; [
       fzf
@@ -62,7 +62,7 @@
         tokyonight-nvim
       ];
 
-      dev.myconfig.pure = ./neovim;
+      dev.mkuritsu.pure = ./../dotfiles/nvim;
     };
   };
 }
