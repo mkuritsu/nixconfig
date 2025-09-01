@@ -1,4 +1,4 @@
-{...}: let
+{pkgs, ...}: let
   username = "kuritsu";
 in {
   users.users.${username} = {
@@ -20,10 +20,28 @@ in {
 
     imports = [
       ./modules/browser.nix
-      ./modules/gtk.nix
-      ./modules/misc.nix
       ./modules/services.nix
       ./modules/neovim.nix
+    ];
+
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
+    };
+
+    xdg = {
+      enable = true;
+      userDirs = {
+        enable = true;
+        createDirectories = true;
+      };
+    };
+
+    home.packages = with pkgs; [
+      catppuccin-cursors.mochaDark
+      adw-gtk3
+      adwaita-icon-theme
     ];
 
     xdg.configFile = {
@@ -36,7 +54,6 @@ in {
       "mako/config".source = ./dotfiles/mako/config;
 
       "hypr/hyprland.conf".source = ./dotfiles/hypr/hyprland.conf;
-      "hypr/colors.conf".source = ./dotfiles/hypr/tokyonight.conf;
       "hypr/hypridle.conf".source = ./dotfiles/hypr/hypridle.conf;
       "uwsm/env".source = ./dotfiles/uwsm/env;
 
@@ -65,6 +82,10 @@ in {
 
       "user-dirs.dirs".source = ./dotfiles/user-dirs.dirs;
       "xdg-terminals.list".source = ./dotfiles/xdg-terminals.list;
+
+      "gtk-3.0/bookmarks".source = ./dotfiles/gtk-3.0/bookmarks;
+      "gtk-3.0/settings.ini".source = ./dotfiles/gtk-3.0/settings.ini;
+      "gtk-4.0/settings.ini".source = ./dotfiles/gtk-4.0/settings.ini;
     };
   };
 }
