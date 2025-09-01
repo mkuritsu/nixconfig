@@ -38,6 +38,12 @@ input {
     focus-follows-mouse max-scroll-amount="95%"
 }
 
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 layout {
     gaps 8
     center-focused-column "never"
