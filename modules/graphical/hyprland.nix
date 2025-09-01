@@ -23,6 +23,7 @@
     swww
     qt6ct
     app2unit
+    kitty
     kdePackages.qtstyleplugin-kvantum
     inputs.kushell.packages.${pkgs.system}.default
   ];

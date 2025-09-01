@@ -22,7 +22,7 @@ vim.keymap.set("n", "<leader>th", require("telescope.builtin").builtin)
 vim.keymap.set("n", "<leader>d", "<cmd>Neotree toggle<CR>")
 
 -- flash
-vim.keymap.set("n", "s", function()
+vim.keymap.set("n", "<leader>s", function()
   require("flash").jump()
 end)
 
@@ -33,4 +33,4 @@ vim.keymap.set("i", "<C-.>", require("actions-preview").code_actions)
 -- misc
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<leader>bd", ":bd")
+vim.keymap.set("n", "<leader>bd", ":bd<CR>")
