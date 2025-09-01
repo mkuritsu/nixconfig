@@ -1,8 +1,0 @@
-require("myconfig.options")
-require("myconfig.keymaps")
-require("myconfig.lsp")
-require("myconfig.plugins.blink-cmp")
-require("myconfig.plugins.misc")
-require("myconfig.plugins.neotree")
-require("myconfig.plugins.telescope")
-require("myconfig.plugins.treesitter")
