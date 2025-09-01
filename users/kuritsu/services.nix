@@ -1,4 +1,12 @@
-{...}: {
+_: {
+  xdg = {
+    enable = true;
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
+
   services = {
     mpd = {
       enable = true;
