@@ -10,6 +10,7 @@
       enable = true;
       nix-direnv.enable = true;
     };
+    fish.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -24,6 +25,7 @@
     fastfetch
     onefetch
     tmux
+    starship
     yazi
     ripgrep
     distrobox

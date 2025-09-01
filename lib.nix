@@ -11,12 +11,7 @@ in rec {
     modules ? [],
   }: let
     extraModules = map (module: ./modules/${module}) modules;
-    userModules = map (user: ./users/${user}.nix) users;
-    mkUserAttrSet = username: {
-      name = "${username}";
-      value = ./home/${username};
-    };
-    userHomes = builtins.listToAttrs (map mkUserAttrSet users);
+    userModules = map (user: ./users/${user}/user.nix) users;
   in
     nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs self;};
@@ -30,7 +25,6 @@ in rec {
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = {inherit inputs self;};
-            home-manager.users = userHomes;
           }
         ]
         ++ userModules
