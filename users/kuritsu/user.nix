@@ -11,6 +11,12 @@ in {
     ];
   };
 
+  environment.systemPackages = with pkgs; [
+    catppuccin-cursors.mochaDark
+    adw-gtk3
+    adwaita-icon-theme
+  ];
+
   home-manager.users.kuritsu = {
     home = {
       stateVersion = "24.11";
@@ -30,6 +36,11 @@ in {
       };
     };
 
+    home.sessionVariables = {
+      XCURSOR_SIZE = 24;
+      XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+    };
+
     xdg = {
       enable = true;
       userDirs = {
@@ -37,12 +48,6 @@ in {
         createDirectories = true;
       };
     };
-
-    home.packages = with pkgs; [
-      catppuccin-cursors.mochaDark
-      adw-gtk3
-      adwaita-icon-theme
-    ];
 
     xdg.configFile = {
       "Kvantum/Tokyonight".source = ./dotfiles/Kvantum/Tokyonight;

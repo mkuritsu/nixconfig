@@ -7,6 +7,11 @@ environment {
     DISPLAY ":0"
 }
 
+cursor {
+    xcursor-theme "catppuccin-mocha-dark-cursors"
+    xcursor-size 24
+}
+
 output "DP-1" {
     mode "1920x1080@144.001"
     scale 1
