@@ -1,5 +1,5 @@
 require("tokyonight").setup {
-  transparent = true,
+  transparent = false,
   styles = {
     comments = { italic = false },
     keywords = { italic = false },
@@ -7,7 +7,7 @@ require("tokyonight").setup {
 }
 
 require("catppuccin").setup {
-  transparent_background = true,
+  transparent_background = false,
   flavour = "mocha",
   no_italic = true,
   integrations = {

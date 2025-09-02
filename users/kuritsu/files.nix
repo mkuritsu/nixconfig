@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   xdg.configFile = {
     "Kvantum/Tokyonight".source = ./dotfiles/Kvantum/Tokyonight;
     "Kvantum/kvantum.kvconfig".source = ./dotfiles/Kvantum/kvantum.kvconfig;
