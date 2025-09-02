@@ -8,6 +8,7 @@
   home.sessionVariables = {
     XCURSOR_SIZE = 24;
     XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+    GTK_THEME = "adw-gtk3-dark";
   };
 
   home.packages = with pkgs; [
