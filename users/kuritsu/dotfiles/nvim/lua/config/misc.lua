@@ -1,25 +1,9 @@
-require("lazydev").setup {}
-
-local function set_lsp_formatter(lsp, command)
-  vim.lsp.config(lsp, {
-    settings = {
-      [lsp] = {
-        formatting = {
-          command = command
-        }
-      }
-    }
-  })
-end
-
-set_lsp_formatter("nixd", { "alejandra", "--quiet" })
-
-vim.lsp.enable({
-  "lua_ls", "ts_ls", "clangd", "pyright", "qmlls", "rust_analyzer", "jdtls", "marksman", "html", "cssls", "astro",
-  "nixd", "cmake"
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
 
--- auto format on save
 local no_format_list = { "cmake", "marksman" }
 
 local function should_format(client)
@@ -39,7 +23,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         and client:supports_method('textDocument/formatting')
         and should_format(client) then
       vim.api.nvim_create_autocmd('BufWritePre', {
-        group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
         buffer = args.buf,
         callback = function()
           vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
@@ -48,3 +31,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end
 })
+
+vim.diagnostic.config({ virtual_text = true })
+vim.cmd.colorscheme "catppuccin"

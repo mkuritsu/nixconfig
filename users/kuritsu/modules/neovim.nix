@@ -3,7 +3,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     inputs.mnw.homeManagerModules.default
   ];
@@ -12,9 +13,7 @@
 
   programs.mnw = {
     enable = true;
-    initLua = ''
-      require("mkuritsu")
-    '';
+    luaFiles = [ ../dotfiles/nvim/init.lua ];
     extraBinPath = with pkgs; [
       fzf
       ripgrep
@@ -38,31 +37,32 @@
     ];
     plugins = {
       start = with pkgs.vimPlugins; [
-        telescope-nvim
-        telescope-fzf-native-nvim
-        neocord
-        nvim-autopairs
-        toggleterm-nvim
-        nvim-treesitter.withAllGrammars
-        nvim-treesitter-textobjects
-        lualine-nvim
-        nvim-lspconfig
-        lazydev-nvim
-        blink-cmp
-        which-key-nvim
-        cheatsheet-nvim
-        neo-tree-nvim
-        flash-nvim
-        nvim-web-devicons
-        mini-indentscope
-        actions-preview-nvim
-        bufferline-nvim
-
-        catppuccin-nvim
-        tokyonight-nvim
+        lazy-nvim
+        plenary-nvim
       ];
 
-      dev.mkuritsu.pure = ./../dotfiles/nvim;
+      opt = with pkgs.vimPlugins; [
+        telescope-nvim
+        catppuccin-nvim
+        tokyonight-nvim
+        lualine-nvim
+        nvim-web-devicons
+        nvim-lspconfig
+        neocord
+        which-key-nvim
+        telescope-fzf-native-nvim
+        lazydev-nvim
+        blink-cmp
+        bufferline-nvim
+        snacks-nvim
+        mini-pairs
+        mini-indentscope
+        nvim-treesitter.withAllGrammars
+        nvim-treesitter-textobjects
+        neo-tree-nvim
+      ];
+
+      dev.myconfig.pure = ../dotfiles/nvim;
     };
   };
 }
