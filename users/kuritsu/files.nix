@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   xdg.configFile = {
     "Kvantum/Tokyonight".source = ./dotfiles/Kvantum/Tokyonight;
     "Kvantum/kvantum.kvconfig".source = ./dotfiles/Kvantum/kvantum.kvconfig;
@@ -32,14 +33,11 @@
 
     "fish/config.fish".source = ./dotfiles/fish/config.fish;
     "fish/functions/cd_fzf.fish".source = ./dotfiles/fish/functions/cd_fzf.fish;
-    "fish/functions/fish_user_key_bindings.fish".source = ./dotfiles/fish/functions/fish_user_key_bindings.fish;
+    "fish/functions/fish_user_key_bindings.fish".source =
+      ./dotfiles/fish/functions/fish_user_key_bindings.fish;
     "fish/functions/fish_greeting.fish".source = ./dotfiles/fish/functions/fish_greeting.fish;
 
     "user-dirs.dirs".source = ./dotfiles/user-dirs.dirs;
     "xdg-terminals.list".source = ./dotfiles/xdg-terminals.list;
-
-    "gtk-3.0/bookmarks".source = ./dotfiles/gtk-3.0/bookmarks;
-    "gtk-3.0/settings.ini".source = ./dotfiles/gtk-3.0/settings.ini;
-    "gtk-4.0/settings.ini".source = ./dotfiles/gtk-4.0/settings.ini;
   };
 }
