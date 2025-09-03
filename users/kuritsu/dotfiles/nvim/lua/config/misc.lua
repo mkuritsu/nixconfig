@@ -21,4 +21,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.diagnostic.config({ virtual_text = true })
-vim.cmd.colorscheme "tokyonight"
+vim.cmd.colorscheme "catppuccin"

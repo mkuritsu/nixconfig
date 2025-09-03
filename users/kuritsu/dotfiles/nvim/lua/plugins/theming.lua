@@ -3,7 +3,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = {
-      transparent = true,
+      transparent = false,
       style = "moon",
       styles = {
         comments = { italic = false },
@@ -19,8 +19,25 @@ return {
     config = function()
       require("catppuccin").setup {
         flavour = "mocha",
+        transparent_background = false,
+        float = {
+          solid = false,
+          transparent = true
+        },
         no_italic = true,
-        auto_integrations = true
+        auto_integrations = true,
+        integrations = {
+          blink_cmp = {
+            enabled = true,
+            style = "bordered"
+          },
+          flash = true,
+          treesitter = true,
+          snacks = {
+            enabled = true
+          },
+          which_key = true
+        }
       }
     end
   }

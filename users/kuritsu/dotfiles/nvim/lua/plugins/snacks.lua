@@ -4,9 +4,6 @@ return {
     Snacks.toggle.profiler():map("<leader>pp")
     Snacks.toggle.profiler_highlights():map("<leader>ph")
 
-    vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none", nocombine = true })
-    vim.api.nvim_set_hl(0, "SnacksPickerBorder", { bg = "none", nocombine = true })
-
     return {
       indent = {
         enabled = true
