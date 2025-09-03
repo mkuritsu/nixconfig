@@ -1,10 +1,11 @@
 return {
   {
     "nvim-tressiter/nvim-treesitter",
+    branch = "master",
     build = ":TSUpdate",
     lazy = false,
     dependencies = {
-        "nvim-treesitter/nvim-treesitter-textobjects"
+      "nvim-treesitter/nvim-treesitter-textobjects"
     },
     opts = {
       ensure_installed = { "rust", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
