@@ -1,6 +1,8 @@
-{...}: let
+{ ... }:
+let
   username = "kuritsu";
-in {
+in
+{
   users.users.${username} = {
     isNormalUser = true;
     description = username;
@@ -20,6 +22,7 @@ in {
 
     imports = [
       ./modules/browser.nix
+      ./modules/gtk.nix
       ./modules/neovim.nix
       ./env.nix
       ./files.nix
