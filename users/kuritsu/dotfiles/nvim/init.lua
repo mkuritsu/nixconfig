@@ -1,5 +1,5 @@
-vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
-vim.g.mapleader = " "
+require("config.options")
+require("config.keymaps")
 
 if mnw ~= nil then
   require("lazy").setup({
@@ -50,8 +50,6 @@ else
 end
 
 require("config.misc")
-require("config.options")
-require("config.keymaps")
 
 
 if vim.env.PROF then

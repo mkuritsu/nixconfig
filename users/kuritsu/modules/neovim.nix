@@ -34,32 +34,32 @@
       astro-language-server
       prettier
       cmake-language-server
+      ruff
     ];
     plugins = {
       start = with pkgs.vimPlugins; [
         lazy-nvim
-        plenary-nvim
       ];
 
       opt = with pkgs.vimPlugins; [
-        telescope-nvim
+        # dependencies
+        plenary-nvim
+        nui-nvim
+
         catppuccin-nvim
         tokyonight-nvim
         lualine-nvim
         nvim-web-devicons
         nvim-lspconfig
-        neocord
+        cord-nvim
         which-key-nvim
-        telescope-fzf-native-nvim
         lazydev-nvim
         blink-cmp
         bufferline-nvim
         snacks-nvim
-        mini-pairs
-        mini-indentscope
+        nvim-autopairs
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
-        neo-tree-nvim
       ];
 
       dev.myconfig.pure = ../dotfiles/nvim;

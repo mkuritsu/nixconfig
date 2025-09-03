@@ -4,24 +4,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-local no_format_list = { "cmake", "marksman" }
-
-local function should_format(client)
-  for _, lsp in ipairs(no_format_list) do
-    if client.name == lsp then
-      return false
-    end
-  end
-  return true
-end
-
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
     if not client:supports_method('textDocument/willSaveWaitUntil')
-        and client:supports_method('textDocument/formatting')
-        and should_format(client) then
+        and client:supports_method('textDocument/formatting') then
       vim.api.nvim_create_autocmd('BufWritePre', {
         buffer = args.buf,
         callback = function()
@@ -33,4 +21,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.diagnostic.config({ virtual_text = true })
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "tokyonight"

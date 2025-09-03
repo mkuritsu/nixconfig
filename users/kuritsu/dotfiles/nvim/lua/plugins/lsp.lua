@@ -5,7 +5,7 @@ return {
     config = function()
       vim.lsp.enable({
         "lua_ls", "ts_ls", "clangd", "pyright", "qmlls", "rust_analyzer", "jdtls", "marksman", "html", "cssls", "astro",
-        "nixd", "cmake"
+        "nixd", "cmake", "ruff"
       })
     end
   },

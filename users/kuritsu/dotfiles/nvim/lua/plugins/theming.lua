@@ -2,26 +2,25 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { 
+    opts = {
+      transparent = true,
       style = "moon",
       styles = {
         comments = { italic = false },
         keywords = { italic = false }
       }
     },
-  },  
+  },
 
   {
     "catppuccin/nvim",
     name = "catppuccin-nvim",
     lazy = true,
-    config = function() 
+    config = function()
       require("catppuccin").setup {
         flavour = "mocha",
         no_italic = true,
-        integrations = {
-          telescope = true
-        }
+        auto_integrations = true
       }
     end
   }
