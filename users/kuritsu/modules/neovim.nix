@@ -19,7 +19,7 @@
       ripgrep
       lua-language-server
       clang-tools
-      pyright
+      basedpyright
       typescript-language-server
       rust-analyzer
       rustfmt
