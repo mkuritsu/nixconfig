@@ -6,7 +6,7 @@ if mnw ~= nil then
     dev = {
       path = mnw.configDir .. "/pack/mnw/opt",
       patterns = { "" },
-      fallback = false,
+      fallback = true,
     },
 
     performance = {

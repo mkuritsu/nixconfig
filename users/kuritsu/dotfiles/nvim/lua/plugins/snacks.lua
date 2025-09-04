@@ -43,6 +43,12 @@ return {
       function()
         Snacks.explorer()
       end
+    },
+    {
+      "<leader>r",
+      function()
+        Snacks.picker.buffers()
+      end
     }
   }
 }
