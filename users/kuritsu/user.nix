@@ -24,9 +24,7 @@ in
       ./modules/browser.nix
       ./modules/gtk.nix
       ./modules/neovim.nix
-      ./env.nix
       ./files.nix
-      ./services.nix
     ];
   };
 }
