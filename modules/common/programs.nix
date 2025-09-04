@@ -2,12 +2,14 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs = {
     nix-ld.enable = true;
     adb.enable = true;
     direnv = {
       enable = true;
+      silent = true;
       nix-direnv.enable = true;
     };
     fish.enable = true;

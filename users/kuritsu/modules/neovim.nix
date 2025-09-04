@@ -15,8 +15,12 @@
     enable = true;
     luaFiles = [ ../dotfiles/nvim/init.lua ];
     extraBinPath = with pkgs; [
+      # tools
       fzf
       ripgrep
+      fd
+
+      # LSPs
       lua-language-server
       clang-tools
       basedpyright
@@ -28,7 +32,6 @@
       nixd
       nixfmt-rfc-style
       alejandra
-      kdePackages.qtdeclarative
       jdt-language-server
       vscode-langservers-extracted # html,css,json
       astro-language-server
@@ -60,6 +63,7 @@
         nvim-autopairs
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
+        mason-nvim
       ];
 
       dev.myconfig.pure = ../dotfiles/nvim;
