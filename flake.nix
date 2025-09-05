@@ -19,7 +19,7 @@
       inputs.home-manager.follows = "";
     };
     viu = {
-      url = "github:mkuritsu/viu"; # using my fork until my PR (https://github.com/viu-media/viu/pull/141) is merged
+      url = "github:viu-media/viu";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     kushell = {
