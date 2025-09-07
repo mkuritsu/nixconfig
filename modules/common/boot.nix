@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
@@ -8,12 +9,13 @@
       themePackages = with pkgs; [
         # By default we would install all themes
         (adi1090x-plymouth-themes.override {
-          selected_themes = ["rings"];
+          selected_themes = [ "rings" ];
         })
       ];
     };
 
     consoleLogLevel = 3;
+    loader.timeout = 0;
     initrd.verbose = false;
     kernelParams = [
       "quiet"
