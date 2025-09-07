@@ -1,13 +1,16 @@
 {
-  self,
-  inputs,
+  # self,
+  sources,
   pkgs,
   ...
-}: let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in {
+}:
+let
+  spicetify-nix = import sources.spicetify-nix { };
+  spicePkgs = spicetify-nix.packages;
+in
+{
   imports = [
-    inputs.spicetify-nix.nixosModules.default
+    spicetify-nix.nixosModules.default
   ];
 
   programs = {
@@ -43,7 +46,9 @@ in {
     mpv
     thunderbird
     rnote
-    inputs.viu.packages.${pkgs.system}.default
+    # inputs.viu.packages.${pkgs.system}.default
+    # self.packages.${pkgs.system}.reverb-toggle
+    pkgs.mypkgs.reverb-toggle
     imv
     wiremix
     easyeffects
@@ -51,8 +56,6 @@ in {
     zathura
     wl-clipboard
     vscode
-    self.packages.${pkgs.system}.reverb-toggle
-    rmpc
     nautilus
     file-roller
     kdePackages.okular

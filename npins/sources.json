@@ -1,0 +1,44 @@
+{
+  "pins": {
+    "aagl": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ezkea",
+        "repo": "aagl-gtk-on-nix"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "7566a0bcc55dbfaeb28791c06aa02060cf5bd0bf",
+      "url": "https://github.com/ezkea/aagl-gtk-on-nix/archive/7566a0bcc55dbfaeb28791c06aa02060cf5bd0bf.tar.gz",
+      "hash": "0nyj3vvvapbr7x71s9f9rxkrvnq8kr4mcdid4x00v2397ia3jimg"
+    },
+    "nixpkgs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nixos",
+        "repo": "nixpkgs"
+      },
+      "branch": "nixos-unstable",
+      "submodules": false,
+      "revision": "8eb28adfa3dc4de28e792e3bf49fcf9007ca8ac9",
+      "url": "https://github.com/nixos/nixpkgs/archive/8eb28adfa3dc4de28e792e3bf49fcf9007ca8ac9.tar.gz",
+      "hash": "0vi9nycvag2a9142n6gi5migp7fl5wdzsi1xk8p8542ki2sd9sil"
+    },
+    "spicetify-nix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "gerg-l",
+        "repo": "spicetify-nix"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "404130798716449bbd02e5f1b54272be55218644",
+      "url": "https://github.com/gerg-l/spicetify-nix/archive/404130798716449bbd02e5f1b54272be55218644.tar.gz",
+      "hash": "09ml6s9nal27wkdnkn83zc3vi36y5bwak7bklsff8gfbyji9m63f"
+    }
+  },
+  "version": 5
+}

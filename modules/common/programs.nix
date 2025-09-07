@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }:
@@ -32,6 +31,5 @@
     ripgrep
     distrobox
     npins
-    inputs.agenix.packages.${pkgs.system}.default
   ];
 }

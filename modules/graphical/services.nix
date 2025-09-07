@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -23,16 +22,6 @@
     '';
   };
 
-  # # https://ryjelsum.me/homelab/greetd-session-choose/
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     default_session = {
-  #       command = "${pkgs.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session --asterisks";
-  #       user = "greeter";
-  #     };
-  #   };
-  # };
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 

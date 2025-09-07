@@ -1,8 +1,8 @@
 {
-  config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix
@@ -40,8 +40,8 @@
     libvdpau-va-gl
   ];
 
-  services.xserver.videoDrivers = ["amdgpu"];
-  boot.initrd.kernelModules = ["amdgpu"];
+  services.xserver.videoDrivers = [ "amdgpu" ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
   environment.variables = {
     "VDPAU_DRIVER" = "radeonsi";

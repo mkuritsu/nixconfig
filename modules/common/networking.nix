@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   networking = {
     useDHCP = false;
     dhcpcd.enable = false;

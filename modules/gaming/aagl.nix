@@ -1,10 +1,11 @@
 {
-  inputs,
+  sources,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
-    inputs.aagl.nixosModules.default
+    (import sources.aagl).module
   ];
 
   programs = {

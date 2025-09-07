@@ -1,8 +1,8 @@
 {
-  inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -25,6 +25,5 @@
     app2unit
     kitty
     kdePackages.qtstyleplugin-kvantum
-    inputs.kushell.packages.${pkgs.system}.default
   ];
 }

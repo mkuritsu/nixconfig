@@ -1,13 +1,14 @@
 {
   self,
-  inputs,
+  # inputs,
   ...
-}: {
-  imports = [
-    inputs.agenix.nixosModules.default
-  ];
-
-  age.secrets = {
-    tailscale.file = "${self}/secrets/zaphkiel-tailscale.age";
-  };
+}:
+{
+  # imports = [
+  #   inputs.agenix.nixosModules.default
+  # ];
+  #
+  # age.secrets = {
+  #   tailscale.file = "${self}/secrets/zaphkiel-tailscale.age";
+  # };
 }
