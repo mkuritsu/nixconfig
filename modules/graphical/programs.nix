@@ -3,9 +3,11 @@
   inputs,
   pkgs,
   ...
-}: let
+}:
+let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in {
+in
+{
   imports = [
     inputs.spicetify-nix.nixosModules.default
   ];
@@ -27,10 +29,8 @@ in {
     };
   };
 
-  xdg.terminal-exec.enable = true;
-
-  environment.etc."/xdg/menus/applications.menu".text =
-    builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  # environment.etc."/xdg/menus/applications.menu".text =
+  #   builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   environment.sessionVariables = {
     TERMINAL = "kitty";
@@ -43,22 +43,18 @@ in {
     mpv
     thunderbird
     rnote
-    inputs.viu.packages.${pkgs.system}.default
     imv
     wiremix
     easyeffects
     scrcpy
     zathura
     wl-clipboard
-    vscode
-    self.packages.${pkgs.system}.reverb-toggle
     rmpc
     nautilus
     file-roller
+    papers
     kdePackages.okular
-    kdePackages.dolphin
-    kdePackages.ark
-    kdePackages.kdegraphics-thumbnailers
-    kdePackages.ffmpegthumbs
+    self.packages.${pkgs.system}.reverb-toggle
+    inputs.viu.packages.${pkgs.system}.default
   ];
 }

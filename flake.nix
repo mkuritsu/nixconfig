@@ -22,8 +22,8 @@
       url = "github:viu-media/viu";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    kushell = {
-      url = "github:mkuritsu/kushell";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     istannouncements = {
@@ -32,41 +32,44 @@
     };
   };
 
-  outputs = {self, ...} @ inputs: rec {
-    lib = import ./lib.nix {inherit self inputs;};
+  outputs =
+    { self, ... }@inputs:
+    rec {
+      lib = import ./lib.nix { inherit self inputs; };
 
-    nixosConfigurations = lib.mkNixOsSystems {
-      zaphkiel = {
-        modules = [
-          "common"
-          "graphical"
-          "gaming"
-        ];
-        users = ["kuritsu"];
+      nixosConfigurations = lib.mkNixOsSystems {
+        zaphkiel = {
+          modules = [
+            "common"
+            "graphical"
+            "gaming"
+            "graphical/amd.nix"
+          ];
+          users = [ "kuritsu" ];
+        };
+
+        camael = {
+          modules = [
+            "common"
+            "graphical"
+          ];
+          users = [ "kuritsu" ];
+        };
+
+        fraxinus = {
+          modules = [
+            "common"
+          ];
+        };
       };
 
-      camael = {
-        modules = [
-          "common"
-          "graphical"
-        ];
-        users = ["kuritsu"];
-      };
+      packages = lib.eachSystem (pkgs: {
+        reverb-toggle = pkgs.callPackage ./packages/reverb-toggle { };
+        setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
+      });
 
-      fraxinus = {
-        modules = [
-          "common"
-        ];
-      };
+      formatter = lib.eachSystem (pkgs: pkgs.alejandra);
+
+      templates = import ./templates;
     };
-
-    packages = lib.eachSystem (pkgs: {
-      reverb-toggle = pkgs.callPackage ./packages/reverb-toggle {};
-      setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
-    });
-
-    formatter = lib.eachSystem (pkgs: pkgs.alejandra);
-
-    templates = import ./templates;
-  };
 }

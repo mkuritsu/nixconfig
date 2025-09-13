@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
@@ -9,8 +10,5 @@
     adwaita-fonts
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
-    nerd-fonts.fira-code
-    nerd-fonts.iosevka
-    nerd-fonts.zed-mono
   ];
 }

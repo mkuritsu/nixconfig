@@ -1,8 +1,5 @@
+{ ... }:
 {
-  config,
-  pkgs,
-  ...
-}: {
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix
@@ -31,21 +28,6 @@
     enable = true;
     openFirewall = true;
     settings.PasswordAuthentication = false;
-  };
-
-  services.lact.enable = true;
-  hardware.amdgpu.overdrive.enable = true;
-  hardware.graphics.extraPackages = with pkgs; [
-    vaapiVdpau
-    libvdpau-va-gl
-  ];
-
-  services.xserver.videoDrivers = ["amdgpu"];
-  boot.initrd.kernelModules = ["amdgpu"];
-
-  environment.variables = {
-    "VDPAU_DRIVER" = "radeonsi";
-    "LIBVA_DRIVER_NAME" = "radeonsi";
   };
 
   system.stateVersion = "24.11";

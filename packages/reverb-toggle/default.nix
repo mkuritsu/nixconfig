@@ -1,4 +1,4 @@
-{writeShellScriptBin}:
+{ writeShellScriptBin }:
 writeShellScriptBin "reverb-toggle" ''
   value=$(dconf read /com/github/wwmm/easyeffects/streaminputs/reverb/0/bypass)
 
