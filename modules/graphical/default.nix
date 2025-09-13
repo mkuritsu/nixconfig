@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./devtools.nix
     ./fonts.nix
     ./graphics.nix
     ./hyprland.nix
