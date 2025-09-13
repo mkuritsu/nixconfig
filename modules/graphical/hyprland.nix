@@ -11,7 +11,6 @@
   services.hypridle.enable = true;
 
   environment.systemPackages = with pkgs; [
-    blueman
     brightnessctl
     grim
     slurp

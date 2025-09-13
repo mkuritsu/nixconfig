@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ ... }:
+{
   imports = [
     ./hardware-configuration.nix
   ];
@@ -15,10 +16,6 @@
   };
 
   services.thermald.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    networkmanagerapplet
-  ];
 
   services.openssh.enable = true;
 
