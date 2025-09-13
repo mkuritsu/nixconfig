@@ -7,3 +7,5 @@
 ### The rabbit hole
 
 This repository holds my never-ending journey to have all my systems configurable by nix. At this point I'm already too deep in the nix rabbit hole to ever go back.
+
+My dotfiles are inside my [user directory](https://github.com/mkuritsu/nixconfig/tree/main/users/kuritsu).

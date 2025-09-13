@@ -17,7 +17,7 @@ rec {
     }:
     let
       extraModules = map (module: ./modules/${module}) modules;
-      userModules = map (user: ./users/${user}.nix) users;
+      userModules = map (user: ./users/${user}/user.nix) users;
     in
     nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs self; };
