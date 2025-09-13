@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -8,13 +7,19 @@
     enable = true;
     daemon.enable = true;
   };
+  hardware.bluetooth.enable = true;
 
-  services.upower.enable = true;
-  services.udisks2.enable = true;
-  services.gvfs.enable = true;
-  services.printing.enable = true;
-  services.playerctld.enable = true;
-  services.flatpak.enable = true;
+  services = {
+    upower.enable = true;
+    udisks2.enable = true;
+    gvfs.enable = true;
+    printing.enable = true;
+    playerctld.enable = true;
+    flatpak.enable = true;
+    displayManager.gdm.enable = true;
+    gnome.gnome-keyring.enable = true;
+  };
+
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
     path = [ pkgs.flatpak ];
@@ -23,21 +28,11 @@
     '';
   };
 
-  # # https://ryjelsum.me/homelab/greetd-session-choose/
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     default_session = {
-  #       command = "${pkgs.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session --asterisks";
-  #       user = "greeter";
-  #     };
-  #   };
-  # };
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
 
-  hardware.bluetooth.enable = true;
-
-  xdg.mime.enable = true;
-  xdg.menus.enable = true;
+  xdg = {
+    mime.enable = true;
+    menus.enable = true;
+    terminal-exec.enable = true;
+  };
 }
