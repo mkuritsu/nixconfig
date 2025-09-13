@@ -142,9 +142,6 @@ workspace "8" {
 workspace "9" {
     open-on-output "DP-1"
 }
-workspace "10" {
-    open-on-output "DP-1"
-}
 
 binds {
     // launching/closing apps
