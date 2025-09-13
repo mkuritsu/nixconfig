@@ -13,9 +13,9 @@ in
     ];
   };
 
-  # home-manager.users.${username} = {
-  #   imports = [
-  #     (import ./home.nix username homeDirectory true)
-  #   ];
-  # };
+  home-manager.users.${username} = {
+    imports = [
+      (import ./home.nix username homeDirectory true)
+    ];
+  };
 }
