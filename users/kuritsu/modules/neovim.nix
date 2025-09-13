@@ -53,10 +53,6 @@ in
       ];
 
       opt = with pkgs.vimPlugins; [
-        # dependencies
-        plenary-nvim
-        nui-nvim
-
         catppuccin-nvim
         tokyonight-nvim
         lualine-nvim
@@ -72,7 +68,6 @@ in
         nvim-treesitter.withAllGrammars
         nvim-treesitter-textobjects
         mason-nvim
-        neo-tree-nvim
       ];
 
       dev.myconfig = {

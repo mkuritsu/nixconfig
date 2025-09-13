@@ -16,5 +16,7 @@
     dotnet-sdk
     pkg-config
     uv
+    wayland
+    openssl
   ];
 }
