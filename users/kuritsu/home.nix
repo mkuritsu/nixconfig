@@ -1,5 +1,8 @@
 username: homeDirectory: isNixOS:
 { lib, pkgs, ... }:
+let
+  useSymlinks = !isNixOS;
+in
 {
   home = {
     stateVersion = "25.05";
@@ -7,7 +10,7 @@ username: homeDirectory: isNixOS:
   };
 
   imports = [
-    ./files.nix
+    (import ./files.nix useSymlinks)
     ./modules/gtk.nix
     ./modules/xdg.nix
   ]
