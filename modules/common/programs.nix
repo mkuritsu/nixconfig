@@ -13,6 +13,11 @@
       nix-direnv.enable = true;
     };
     fish.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+    chromium.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
