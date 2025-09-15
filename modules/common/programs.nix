@@ -12,7 +12,10 @@
       silent = true;
       nix-direnv.enable = true;
     };
-    fish.enable = true;
+    fish = {
+      enable = true;
+      generateCompletions = false;
+    };
     neovim = {
       enable = true;
       defaultEditor = true;
