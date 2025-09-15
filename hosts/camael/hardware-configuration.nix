@@ -7,7 +7,9 @@
   pkgs,
   modulesPath,
   ...
-}: {
+}:
+
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -19,54 +21,55 @@
     "sd_mod"
     "rtsx_pci_sdmmc"
   ];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
-  boot.extraModulePackages = [];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ];
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/ef3b1896-afa2-4909-adbf-4244a0fcd973";
+    device = "/dev/disk/by-uuid/8fcf7f79-b061-45a2-9100-c223e49a9d49";
     fsType = "btrfs";
     options = [
       "subvol=root"
-      "noatime"
       "compress=zstd"
+      "noatime"
     ];
   };
 
-  boot.initrd.luks.devices."NIXCRYPT".device = "/dev/disk/by-uuid/7d037757-3bcd-4ef7-a7ad-e344f2867651";
+  boot.initrd.luks.devices."NIXCRYPT".device =
+    "/dev/disk/by-uuid/2b0a4bbd-eeb0-436c-81c8-57bde68e2695";
 
   fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/ef3b1896-afa2-4909-adbf-4244a0fcd973";
+    device = "/dev/disk/by-uuid/8fcf7f79-b061-45a2-9100-c223e49a9d49";
     fsType = "btrfs";
     options = [
       "subvol=home"
-      "noatime"
       "compress=zstd"
+      "noatime"
     ];
   };
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/ef3b1896-afa2-4909-adbf-4244a0fcd973";
+    device = "/dev/disk/by-uuid/8fcf7f79-b061-45a2-9100-c223e49a9d49";
     fsType = "btrfs";
     options = [
       "subvol=nix"
-      "noatime"
       "compress=zstd"
+      "noatime"
     ];
   };
 
   fileSystems."/var/log" = {
-    device = "/dev/disk/by-uuid/ef3b1896-afa2-4909-adbf-4244a0fcd973";
+    device = "/dev/disk/by-uuid/8fcf7f79-b061-45a2-9100-c223e49a9d49";
     fsType = "btrfs";
     options = [
       "subvol=log"
-      "noatime"
       "compress=zstd"
+      "noatime"
     ];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/651A-C934";
+    device = "/dev/disk/by-uuid/BA84-2D86";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -75,7 +78,7 @@
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/30403751-9bef-4791-a49d-2ce827b6ca2e";}
+    { device = "/dev/disk/by-uuid/c3efe23b-99ad-46a7-bbbb-da3299f23b4e"; }
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
