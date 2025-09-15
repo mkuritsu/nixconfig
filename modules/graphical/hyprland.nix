@@ -24,6 +24,7 @@
     qt6ct
     app2unit
     kitty
+    matugen
     kdePackages.qtstyleplugin-kvantum
     inputs.noctalia.packages.${pkgs.system}.default
   ];
