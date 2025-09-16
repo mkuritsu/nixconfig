@@ -7,14 +7,11 @@
   programs = {
     nix-ld.enable = true;
     adb.enable = true;
+    fish.enable = true;
     direnv = {
       enable = true;
       silent = true;
       nix-direnv.enable = true;
-    };
-    fish = {
-      enable = true;
-      generateCompletions = false;
     };
     neovim = {
       enable = true;
@@ -22,6 +19,8 @@
     };
     chromium.enable = true;
   };
+
+  documentation.man.generateCaches = false;
 
   environment.systemPackages = with pkgs; [
     wget
