@@ -54,6 +54,7 @@ in
     file-roller
     papers
     kdePackages.okular
+    vscode
     self.packages.${pkgs.system}.reverb-toggle
     inputs.viu.packages.${pkgs.system}.default
   ];
