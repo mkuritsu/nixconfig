@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./devtools.nix
     ./fonts.nix
     ./gnome.nix
     ./graphics.nix
