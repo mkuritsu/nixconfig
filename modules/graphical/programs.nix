@@ -49,12 +49,12 @@ in
     scrcpy
     zathura
     wl-clipboard
-    rmpc
     nautilus
     file-roller
     papers
     kdePackages.okular
     vscode
+    ghostty
     self.packages.${pkgs.system}.reverb-toggle
     inputs.viu.packages.${pkgs.system}.default
   ];
