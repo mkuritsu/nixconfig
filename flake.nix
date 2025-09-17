@@ -48,6 +48,7 @@
             "graphical"
             "gaming"
             "hardware/amd.nix"
+            "desktop/all.nix"
           ];
           users = [ "kuritsu" ];
         };
@@ -56,6 +57,7 @@
           modules = [
             "common"
             "graphical"
+            "desktop/all.nix"
           ];
           users = [ "kuritsu" ];
         };
