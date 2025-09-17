@@ -30,6 +30,8 @@
 
   security.pam.services.login.enableGnomeKeyring = true;
 
+  services.fprintd.enable = true;
+
   xdg = {
     mime.enable = true;
     menus.enable = true;
