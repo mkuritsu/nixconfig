@@ -17,7 +17,6 @@
       enable = true;
       defaultEditor = true;
     };
-    chromium.enable = true;
   };
 
   documentation.man.generateCaches = false;
