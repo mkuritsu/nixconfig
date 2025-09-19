@@ -1,24 +1,10 @@
 {
   self,
-  inputs,
   pkgs,
   ...
 }:
-let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in
 {
-  imports = [
-    inputs.spicetify-nix.nixosModules.default
-  ];
-
   programs = {
-    spicetify = {
-      enable = true;
-      enabledExtensions = with spicePkgs.extensions; [
-        adblock
-      ];
-    };
     obs-studio = {
       enable = true;
       enableVirtualCamera = true;
@@ -56,6 +42,5 @@ in
     vscode
     ghostty
     self.packages.${pkgs.system}.reverb-toggle
-    inputs.viu.packages.${pkgs.system}.default
   ];
 }
