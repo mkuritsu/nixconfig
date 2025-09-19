@@ -5,3 +5,5 @@ status is-interactive; and begin
 end
 
 fish_add_path $HOME/.local/bin/
+
+set -gx SHELL "fish"
