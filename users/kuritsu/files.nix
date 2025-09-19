@@ -1,11 +1,31 @@
 useSymlinks:
-{ config, ... }:
+{
+  config,
+  lib,
+  ...
+}:
 let
   inherit (config.lib.file) mkOutOfStoreSymlink;
   sourceFile = path: if useSymlinks then mkOutOfStoreSymlink path else path;
+
+  stripPath = path: str: builtins.replaceStrings [ (builtins.toString path) ] [ "" ] str;
+  substr1 = str: builtins.substring 1 (builtins.stringLength str) str;
+  recurseFileStrings = path: map builtins.toString (lib.filesystem.listFilesRecursive path);
+  scriptPathToAttrs = path: {
+    name = ''${substr1 (stripPath ./dotfiles path)}'';
+    value = {
+      source = path;
+    };
+  };
+
+  nvimFiles = map scriptPathToAttrs (recurseFileStrings ./dotfiles/nvim);
 in
 {
   xdg.configFile = {
+    "nvim-test".text = ''
+      ${builtins.toString (map (n: n.name) nvimFiles)}
+    '';
+
     "Kvantum/Tokyonight".source = sourceFile ./dotfiles/Kvantum/Tokyonight;
     "Kvantum/kvantum.kvconfig".source = sourceFile ./dotfiles/Kvantum/kvantum.kvconfig;
     "qt6ct/qt6ct.conf".source = sourceFile ./dotfiles/qt6ct/qt6ct.conf;
@@ -43,9 +63,8 @@ in
     "fish/functions/fish_greeting.fish".source =
       sourceFile ./dotfiles/fish/functions/fish_greeting.fish;
 
-    "nvim".source = sourceFile ./dotfiles/nvim;
-
     "xdg-desktop-portal/Hyprland-portals.conf".source =
       ./dotfiles/xdg-desktop-portal/Hyprland-portals.conf;
-  };
+  }
+  // builtins.listToAttrs nvimFiles;
 }
