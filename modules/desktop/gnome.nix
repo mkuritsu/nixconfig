@@ -14,5 +14,11 @@
     showtime
     papers
     amberol
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.resource-monitor
+    gnomeExtensions.alphabetical-app-grid
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.just-perfection
+    gnomeExtensions.appindicator
   ];
 }
