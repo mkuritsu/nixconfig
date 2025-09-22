@@ -55,6 +55,7 @@ in
 
     "kitty/kitty.conf".source = sourceFile ./dotfiles/kitty/kitty.conf;
     "kitty/themes".source = sourceFile ./dotfiles/kitty/themes;
+    "ghostty/config".source = sourceFile ./dotfiles/ghostty/config;
 
     "fish/config.fish".source = sourceFile ./dotfiles/fish/config.fish;
     "fish/functions/cd_fzf.fish".source = sourceFile ./dotfiles/fish/functions/cd_fzf.fish;

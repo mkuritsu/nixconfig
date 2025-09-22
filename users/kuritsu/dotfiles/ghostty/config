@@ -1,0 +1,4 @@
+font-family = "CaskaydiaMono Nerd Font"
+font-size = 11
+theme = "TokyoNight"
+command = "fish"
