@@ -7,8 +7,6 @@
 let
   sources = import ../npins;
   mnw = import sources.mnw;
-
-  inherit (config.lib.file) mkOutOfStoreSymlink;
 in
 {
   imports = [
@@ -20,7 +18,7 @@ in
   programs.mnw = {
     enable = true;
     luaFiles = [
-      (mkOutOfStoreSymlink ../dotfiles/nvim/init.lua)
+      ../dotfiles/nvim/init.lua
     ];
     extraBinPath = with pkgs; [
       # tools
@@ -70,10 +68,7 @@ in
         mason-nvim
       ];
 
-      dev.myconfig = {
-        pure = ../dotfiles/nvim;
-        impure = mkOutOfStoreSymlink ../dotfiles/nvim;
-      };
+      dev.myconfig.pure = ../dotfiles/nvim;
     };
   };
 }
