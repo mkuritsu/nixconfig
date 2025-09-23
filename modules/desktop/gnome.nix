@@ -8,12 +8,14 @@
     rhythmbox
     gnome-music
     geary
+    gnome-tour
   ];
 
   environment.systemPackages = with pkgs; [
     showtime
     papers
     amberol
+    ghostty
     gnomeExtensions.dash-to-dock
     gnomeExtensions.resource-monitor
     gnomeExtensions.alphabetical-app-grid
