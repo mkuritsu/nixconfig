@@ -1,13 +1,12 @@
+{ ... }:
 {
-  pkgs,
-  ...
-}:
-{
-  hardware.opentabletdriver = {
-    enable = true;
-    daemon.enable = true;
+  hardware = {
+    bluetooth.enable = true;
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
   };
-  hardware.bluetooth.enable = true;
 
   services = {
     upower.enable = true;
@@ -18,19 +17,10 @@
     flatpak.enable = true;
     displayManager.gdm.enable = true;
     gnome.gnome-keyring.enable = true;
-  };
-
-  systemd.services.flatpak-repo = {
-    wantedBy = [ "multi-user.target" ];
-    path = [ pkgs.flatpak ];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
+    fprintd.enable = true;
   };
 
   security.pam.services.login.enableGnomeKeyring = true;
-
-  services.fprintd.enable = true;
 
   xdg = {
     mime.enable = true;

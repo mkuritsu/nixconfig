@@ -15,13 +15,6 @@
     };
   };
 
-  # environment.etc."/xdg/menus/applications.menu".text =
-  #   builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
-
-  environment.sessionVariables = {
-    TERMINAL = "kitty";
-  };
-
   environment.systemPackages = with pkgs; [
     mangohud
     discord
@@ -33,14 +26,12 @@
     wiremix
     easyeffects
     scrcpy
-    zathura
     wl-clipboard
     nautilus
     file-roller
     papers
     kdePackages.okular
     vscode
-    ghostty
     self.packages.${pkgs.system}.reverb-toggle
   ];
 }

@@ -1,5 +1,5 @@
 status is-interactive; and begin
-    if test "$TERM" != dum
+    if test "$TERM" != dumb && type -q $starship
         starship init fish | source
     end
 end
