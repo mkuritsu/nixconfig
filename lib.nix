@@ -3,11 +3,15 @@
   inputs,
 }:
 let
-  inherit (inputs) nixpkgs systems;
+  inherit (inputs) nixpkgs;
+
+  systems = [
+    "x86_64-linux"
+    "aarch64-linux"
+  ];
 in
 rec {
-  eachSystem =
-    fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
+  eachSystem = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
 
   mkNixOs =
     hostname:
@@ -28,7 +32,7 @@ rec {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";
-          home-manager.extraSpecialArgs = {inherit inputs self; };
+          home-manager.extraSpecialArgs = { inherit inputs self; };
         }
         ./hosts/${hostname}/configuration.nix
       ]
