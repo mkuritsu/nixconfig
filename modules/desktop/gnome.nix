@@ -7,7 +7,6 @@
     evince
     rhythmbox
     gnome-music
-    geary
     gnome-tour
     epiphany
     malcontent

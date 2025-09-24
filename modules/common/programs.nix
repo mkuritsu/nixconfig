@@ -7,7 +7,6 @@
   programs = {
     nix-ld.enable = true;
     adb.enable = true;
-    fish.enable = true;
     direnv = {
       enable = true;
       silent = true;
@@ -38,6 +37,7 @@
     ripgrep
     distrobox
     npins
+    fish
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }
