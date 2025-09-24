@@ -1,5 +1,4 @@
 {
-  self,
   pkgs,
   ...
 }:
@@ -17,14 +16,12 @@
 
   environment.systemPackages = with pkgs; [
     mangohud
-    discord
     vesktop
     mpv
     thunderbird
     rnote
     imv
     wiremix
-    easyeffects
     scrcpy
     wl-clipboard
     nautilus
@@ -32,6 +29,5 @@
     papers
     kdePackages.okular
     vscode
-    self.packages.${pkgs.system}.reverb-toggle
   ];
 }
