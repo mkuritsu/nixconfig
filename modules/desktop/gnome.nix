@@ -9,6 +9,12 @@
     gnome-music
     geary
     gnome-tour
+    epiphany
+    malcontent
+    rygel
+    gnome-maps
+    gnome-user-docs
+    yelp
   ];
 
   environment.systemPackages = with pkgs; [
