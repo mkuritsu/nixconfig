@@ -14,6 +14,7 @@
     gnome-maps
     gnome-user-docs
     yelp
+    geary
   ];
 
   environment.systemPackages = with pkgs; [

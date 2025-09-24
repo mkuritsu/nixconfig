@@ -39,7 +39,8 @@
             "graphical"
             "gaming"
             "hardware/amd.nix"
-            "desktop/all.nix"
+            "desktop/hyprland.nix"
+            "desktop/niri.nix"
           ];
           users = [ "kuritsu" ];
         };
