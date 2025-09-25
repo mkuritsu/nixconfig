@@ -14,7 +14,7 @@ let
   scriptPathToAttrs = path: {
     name = ''${substr1 (stripPath ./dotfiles path)}'';
     value = {
-      source = path;
+      source = sourceFile path;
     };
   };
 

@@ -1,16 +1,12 @@
 {
-  config,
+  inputs,
   pkgs,
   lib,
   ...
 }:
-let
-  sources = import ../npins;
-  mnw = import sources.mnw;
-in
 {
   imports = [
-    mnw.homeManagerModules.default
+    inputs.mnw.homeManagerModules.default
   ];
 
   home.sessionVariables.EDITOR = lib.mkOverride 900 "nvim";
