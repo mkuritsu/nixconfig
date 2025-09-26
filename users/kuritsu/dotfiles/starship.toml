@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
-format = "$username$directory$git_branch$character"
+format = "$container$username$directory$git_branch$character"
 line_break = false
 
 [character]
@@ -15,3 +15,6 @@ symbol = " "
 [username]
 format = "[$user]($style) "
 show_always = true
+
+[container]
+symbol = "📦"
