@@ -1,5 +1,8 @@
 status is-interactive; and begin
-    if test "$TERM" != dumb
+    if type -q direnv
+        direnv hook fish | source
+    end
+    if test "$TERM" != dumb; and type -q starship
         starship init fish | source
     end
 end
