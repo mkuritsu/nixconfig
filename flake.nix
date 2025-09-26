@@ -50,7 +50,8 @@
           modules = [
             "common"
             "graphical"
-            "desktop/all.nix"
+            "desktop/hyprland.nix"
+            "desktop/niri.nix"
           ];
           users = [ "kuritsu" ];
         };
