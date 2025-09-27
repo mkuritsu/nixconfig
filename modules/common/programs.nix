@@ -38,6 +38,7 @@
     distrobox
     npins
     fish
+    openssl
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }
