@@ -17,6 +17,8 @@
   environment.systemPackages = with pkgs; [
     mangohud
     vesktop
+    discord
+    easyeffects
     mpv
     thunderbird
     rnote
