@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -8,9 +8,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
-  networking = {
-    networkmanager.enable = true;
-    networkmanager.dns = "none";
+  networking.networkmanager = {
+    enable = true;
+    dns = "none";
+    plugins = with pkgs; [
+      networkmanager-strongswan
+    ];
   };
 
   services.thermald.enable = true;
