@@ -20,5 +20,9 @@
 
   services.openssh.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    networkmanagerapplet
+  ];
+
   system.stateVersion = "24.11";
 }
