@@ -31,5 +31,6 @@
     papers
     kdePackages.okular
     vscode
+    zotero
   ];
 }
