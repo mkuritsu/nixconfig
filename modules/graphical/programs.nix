@@ -32,5 +32,7 @@
     kdePackages.okular
     vscode
     zotero
+    libreoffice-fresh
+    gimp
   ];
 }
