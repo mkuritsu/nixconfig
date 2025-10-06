@@ -21,6 +21,7 @@
       fzf
       ripgrep
       fd
+      ghostscript
 
       # LSPs
       lua-language-server
