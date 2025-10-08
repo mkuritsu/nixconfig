@@ -1,11 +1,16 @@
 username: homeDirectory: isNixOS:
-{ lib, pkgs, ... }:
+{
+  lib,
+  pkgs,
+  osConfig,
+  ...
+}:
 let
   useSymlinks = !isNixOS;
 in
 {
   home = {
-    stateVersion = "25.05";
+    stateVersion = osConfig.system.stateVersion;
     inherit username homeDirectory;
   };
 

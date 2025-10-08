@@ -1,7 +1,8 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
+    inputs.watt.nixosModules.default
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -16,9 +17,10 @@
     ];
   };
 
-  services.thermald.enable = true;
-
-  services.openssh.enable = true;
+  services = {
+    openssh.enable = true;
+    watt.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet

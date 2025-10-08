@@ -200,7 +200,8 @@
         "istannouncements": "istannouncements",
         "mnw": "mnw",
         "nixpkgs": "nixpkgs_2",
-        "noctalia": "noctalia"
+        "noctalia": "noctalia",
+        "watt": "watt"
       }
     },
     "rust-overlay": {
@@ -263,6 +264,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "watt": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754314403,
+        "narHash": "sha256-pETi/Fs+8FF2ZuE+JyK9+NcFaDPMHx71UdWgmzjxvkQ=",
+        "owner": "notashelf",
+        "repo": "watt",
+        "rev": "f68a9795616699870d213dc9e641dab655aa434a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "notashelf",
+        "repo": "watt",
         "type": "github"
       }
     }
