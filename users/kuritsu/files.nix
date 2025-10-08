@@ -22,10 +22,6 @@ let
 in
 {
   xdg.configFile = {
-    "nvim-test".text = ''
-      ${builtins.toString (map (n: n.name) nvimFiles)}
-    '';
-
     "Kvantum/Tokyonight".source = sourceFile ./dotfiles/Kvantum/Tokyonight;
     "Kvantum/kvantum.kvconfig".source = sourceFile ./dotfiles/Kvantum/kvantum.kvconfig;
     "qt6ct/qt6ct.conf".source = sourceFile ./dotfiles/qt6ct/qt6ct.conf;

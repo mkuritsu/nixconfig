@@ -16,5 +16,6 @@
     matugen
     kdePackages.qtstyleplugin-kvantum
     inputs.noctalia.packages.${pkgs.system}.default
+    ghostty
   ];
 }
