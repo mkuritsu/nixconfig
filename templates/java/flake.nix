@@ -14,7 +14,7 @@
     }:
     let
       eachSystem =
-        fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.lib.legacyPackages.${system});
+        fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
     in
     {
       devShells = eachSystem (pkgs: {
