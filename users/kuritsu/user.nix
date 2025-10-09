@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 let
   username = "kuritsu";
   homeDirectory = "/home/${username}";
@@ -13,9 +13,9 @@ in
     ];
   };
 
-  home-manager.users.${username} = {
-    imports = [
-      (import ./home.nix username homeDirectory true)
-    ];
-  };
+  # home-manager.users.${username} = {
+  #   imports = [
+  #     (import inputs.dotfiles.home username homeDirectory true)
+  #   ];
+  # };
 }

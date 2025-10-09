@@ -39,6 +39,7 @@
     npins
     fish
     openssl
+    home-manager
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }
