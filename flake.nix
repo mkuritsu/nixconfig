@@ -3,12 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # mnw.url = "github:Gerg-L/mnw";
-    # dotfiles.url = "git+file:./users/kuritsu/dotfiles";
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    mnw.url = "github:Gerg-L/mnw";
+    dotfiles.url = "git+file:users/kuritsu/dotfiles";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -1,4 +1,7 @@
-{ inputs, ... }:
+{
+  inputs,
+  ...
+}:
 let
   username = "kuritsu";
   homeDirectory = "/home/${username}";
@@ -13,9 +16,16 @@ in
     ];
   };
 
-  # home-manager.users.${username} = {
-  #   imports = [
-  #     (import inputs.dotfiles.home username homeDirectory true)
-  #   ];
-  # };
+  home-manager.users.${username} =
+    { osConfig, ... }:
+    {
+      home = {
+        stateVersion = osConfig.system.stateVersion;
+        inherit username homeDirectory;
+      };
+
+      imports = [
+        inputs.dotfiles.homeManagerModules.full
+      ];
+    };
 }

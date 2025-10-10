@@ -1,4 +1,4 @@
 [submodule "users/kuritsu/dotfiles"]
 	path = users/kuritsu/dotfiles
 	url = git@github.com:mkuritsu/dotfiles.git
-    branch = "main"
+	branch = main
