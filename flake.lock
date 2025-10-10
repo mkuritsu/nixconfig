@@ -47,10 +47,11 @@
     },
     "dotfiles": {
       "locked": {
-        "lastModified": 1760059765,
-        "narHash": "sha256-trcJq4wDCSWrCSWVjbkTtGh9aYx/OIJA9MgY5HcI6YA=",
-        "rev": "0e09390346a0d161151cfa6ce4fb62dcdd2ad674",
-        "revCount": 48,
+        "lastModified": 1760061288,
+        "narHash": "sha256-iQPfFfSw37YFKANoAO0qRriipJJ+W6HOaik+wHppreU=",
+        "ref": "refs/heads/main",
+        "rev": "54746912e28acc72d885d3ebc0248a1c82924ae6",
+        "revCount": 49,
         "type": "git",
         "url": "file:users/kuritsu/dotfiles"
       },
