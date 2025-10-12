@@ -19,16 +19,16 @@
       inputs.darwin.follows = "";
       inputs.home-manager.follows = "";
     };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     istannouncements = {
       url = "github:mkuritsu/ISTAnnouncements";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     watt = {
       url = "github:notashelf/watt";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dankmaterialshell = {
+      url = "github:avengemedia/dankmaterialshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -46,7 +46,6 @@
             "gaming"
             "hardware/amd.nix"
             "desktop/hyprland.nix"
-            "desktop/niri.nix"
           ];
           users = [ "kuritsu" ];
         };
@@ -56,7 +55,6 @@
             "common"
             "graphical"
             "desktop/hyprland.nix"
-            "desktop/niri.nix"
           ];
           users = [ "kuritsu" ];
         };

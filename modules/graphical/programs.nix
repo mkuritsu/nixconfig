@@ -16,7 +16,6 @@
 
   environment.systemPackages = with pkgs; [
     mangohud
-    vesktop
     discord
     easyeffects
     mpv
@@ -34,5 +33,6 @@
     zotero
     libreoffice-fresh
     gimp
+    kdePackages.kdenlive
   ];
 }

@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     brightnessctl
@@ -15,7 +11,6 @@
     kitty
     matugen
     kdePackages.qtstyleplugin-kvantum
-    inputs.noctalia.packages.${pkgs.system}.default
     ghostty
   ];
 }

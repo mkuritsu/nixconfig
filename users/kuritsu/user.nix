@@ -26,6 +26,12 @@ in
 
       imports = [
         inputs.dotfiles.homeManagerModules.full
+        inputs.dankmaterialshell.homeModules.dankMaterialShell.default
       ];
+
+      programs.dankMaterialShell = {
+        enable = true;
+        enableSystemd = true;
+      };
     };
 }
