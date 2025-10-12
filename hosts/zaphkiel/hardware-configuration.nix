@@ -88,17 +88,17 @@
     ];
   };
 
-  # fileSystems."/mnt/ssd2" = {
-  #   device = "/dev/disk/by-uuid/d3311dec-fc4b-4103-8347-2b9afc23bdc1";
-  #   fsType = "btrfs";
-  #   options = [
-  #     "noatime"
-  #     "compress=zstd"
-  #     "nofail"
-  #     "x-gvfs-show"
-  #     "x-gvfs-name=SSD2"
-  #   ];
-  # };
+  fileSystems."/mnt/ssd2" = {
+    device = "/dev/disk/by-uuid/8e785b66-4d55-477c-a877-5d63c60948d9";
+    fsType = "btrfs";
+    options = [
+      "noatime"
+      "compress=zstd"
+      "nofail"
+      "x-gvfs-show"
+      "x-gvfs-name=ssd2"
+    ];
+  };
 
   swapDevices = [
     { device = "/dev/disk/by-uuid/09f965c6-2f0f-4886-9fde-2ed07db928cc"; }
