@@ -14,6 +14,9 @@
     };
   };
 
+  environment.etc."/xdg/menus/applications.menu".text =
+    builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
   environment.systemPackages = with pkgs; [
     mangohud
     discord
@@ -25,14 +28,18 @@
     wiremix
     scrcpy
     wl-clipboard
-    nautilus
-    file-roller
-    papers
-    kdePackages.okular
     vscode
     zotero
     libreoffice-fresh
     gimp
+
+    nautilus
+    file-roller
+    papers
+
+    kdePackages.okular
     kdePackages.kdenlive
+    kdePackages.dolphin
+    kdePackages.ark
   ];
 }

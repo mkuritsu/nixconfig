@@ -25,8 +25,10 @@ in
       };
 
       imports = [
-        inputs.dotfiles.homeManagerModules.full
+        inputs.dotfiles.homeModules.default
         inputs.dankmaterialshell.homeModules.dankMaterialShell.default
+        ./modules/browser.nix
+        ./modules/neovim.nix
       ];
 
       programs.dankMaterialShell = {
