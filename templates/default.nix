@@ -23,4 +23,9 @@
     description = "Minimal starting template for other things";
     path = ./minimal;
   };
+
+  maximal = {
+    description = "Maximal template to serve as a 'global' shell";
+    path = ./maximal;
+  };
 }

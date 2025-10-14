@@ -5,7 +5,6 @@
 }:
 {
   programs = {
-    nix-ld.enable = true;
     adb.enable = true;
     direnv = {
       enable = true;
