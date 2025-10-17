@@ -35,11 +35,9 @@
     yazi
     ripgrep
     distrobox
-    npins
     fish
     openssl
     just
-    home-manager
     inputs.agenix.packages.${pkgs.system}.default
   ];
 }

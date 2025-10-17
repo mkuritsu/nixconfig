@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    mnw.url = "github:Gerg-L/mnw";
     dotfiles.url = "git+file:users/kuritsu/dotfiles";
     home-manager = {
       url = "github:nix-community/home-manager";
