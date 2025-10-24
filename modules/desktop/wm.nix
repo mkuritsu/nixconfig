@@ -10,6 +10,7 @@
     fuzzel
     qt6ct
     kitty
+    ghostty
     matugen
     kdePackages.qtstyleplugin-kvantum
 

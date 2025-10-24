@@ -26,14 +26,9 @@ in
 
       imports = [
         inputs.dotfiles.homeModules.default
-        inputs.dankmaterialshell.homeModules.dankMaterialShell.default
         ./modules/browser.nix
         ./modules/neovim.nix
+        ./modules/shell.nix
       ];
-
-      programs.dankMaterialShell = {
-        enable = true;
-        enableSystemd = true;
-      };
     };
 }

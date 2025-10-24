@@ -29,6 +29,7 @@
       prettier
       cmake-language-server
       ruff
+      cargo
     ];
   };
 }
