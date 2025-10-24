@@ -17,10 +17,6 @@ in
       enable = true;
       enableVirtualCamera = true;
     };
-    nautilus-open-any-terminal = {
-      enable = true;
-      terminal = "ghostty";
-    };
   };
 
   environment.systemPackages = with pkgs; [
