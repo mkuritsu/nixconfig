@@ -54,11 +54,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761344786,
-        "narHash": "sha256-8+HQptgaCWNxy4jkvEa5FRTDV4du+0fHs5Zu//J6GcA=",
+        "lastModified": 1761417307,
+        "narHash": "sha256-KEuDZatC5MP8Wixt8WLG69i5a0F6TcJTSgwG5PW4aNM=",
         "owner": "avengemedia",
         "repo": "dankmaterialshell",
-        "rev": "1e5e8cd246b43c57d778af40e1a24963c2cb927d",
+        "rev": "6ab96898a38a8677012856d29d5e76d7f2520a33",
         "type": "github"
       },
       "original": {
@@ -112,11 +112,11 @@
     },
     "dotfiles": {
       "locked": {
-        "lastModified": 1761373631,
-        "narHash": "sha256-Xg+ckR+t4N0Fq//OaXs3iAbaObfp6h54VEKlq8pqG1Y=",
+        "lastModified": 1761435017,
+        "narHash": "sha256-pNBhWzBG3jP0seIGU2Kje2bN4R1kO7KDUPZE15QBoRk=",
         "ref": "refs/heads/main",
-        "rev": "1c6ad14ada2962461b8fd518f0919340d0708f28",
-        "revCount": 60,
+        "rev": "c7431801ee4805bd6849fbbdf89704d8fde360bd",
+        "revCount": 61,
         "type": "git",
         "url": "file:users/kuritsu/dotfiles"
       },
@@ -190,11 +190,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761344779,
-        "narHash": "sha256-6LNSptFYhiAd0M/maJoixJw7V0Kp5BSoMRtIahcfu3M=",
+        "lastModified": 1761395627,
+        "narHash": "sha256-9wQpgBRW2PzYw1wx+MgCt1IbPAYz93csApLMgSZOJCk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c644cb018f9fdec55f5ac2afb4713a8c7beb757c",
+        "rev": "7296022150cd775917e4c831c393026eae7c2427",
         "type": "github"
       },
       "original": {
