@@ -2,7 +2,8 @@
   config,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix
@@ -55,8 +56,16 @@
     authKeyFile = config.age.secrets.tailscale.path;
   };
 
-  networking.firewall.allowedTCPPorts = [53 80 8080];
-  networking.firewall.allowedUDPPorts = [53 67 547];
+  networking.firewall.allowedTCPPorts = [
+    53
+    80
+    8080
+  ];
+  networking.firewall.allowedUDPPorts = [
+    53
+    67
+    547
+  ];
 
   system.stateVersion = "25.11";
 }

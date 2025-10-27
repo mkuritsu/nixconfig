@@ -2,7 +2,8 @@
   self,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.agenix.nixosModules.default
   ];

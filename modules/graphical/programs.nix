@@ -32,6 +32,8 @@ in
     libreoffice-fresh
     gimp
     kdePackages.kdenlive
+    kdePackages.ffmpegthumbs
+    kdePackages.kdegraphics-thumbnailers
     vscodium-marketplace
   ];
 }

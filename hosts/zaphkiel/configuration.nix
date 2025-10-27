@@ -2,7 +2,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./secrets.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
