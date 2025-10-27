@@ -7,7 +7,6 @@
       "nix-command"
       "flakes"
     ];
-    optimise.automatic = true;
   };
 
   programs.nh = {

@@ -9,11 +9,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1759319421,
-        "narHash": "sha256-45yE92tDGtCX/vdyUuD3ckCqyZ3pwP0yrTorjvL80fc=",
+        "lastModified": 1761560263,
+        "narHash": "sha256-TRtS+tXvvPFsfjrKVR/3/WZFCFaqga/F9mMEy05tIjE=",
         "owner": "ezKEa",
         "repo": "aagl-gtk-on-nix",
-        "rev": "37bf87881ae7a68bccdd383fef345c748a23d3b7",
+        "rev": "f586654f0e1c6f7e4104b839bde72ada0f1b7dad",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761488344,
-        "narHash": "sha256-MjhgmV7UdqcXDzmIvIrAU+v9M0QEHedKg/ERryKRY/U=",
+        "lastModified": 1761579857,
+        "narHash": "sha256-3x2iNh1hbvS2Kl1+jaO7fFSm/Lmg8xzkTL9JvGxHzBo=",
         "owner": "avengemedia",
         "repo": "dankmaterialshell",
-        "rev": "1981a83e824c72e38732f059537b590da86913ea",
+        "rev": "f0a1cb6525e1e7a8fe14951fd1ee265a122dedfb",
         "type": "github"
       },
       "original": {
@@ -108,21 +108,6 @@
         "owner": "AvengeMedia",
         "repo": "danklinux",
         "type": "github"
-      }
-    },
-    "dotfiles": {
-      "locked": {
-        "lastModified": 1761435017,
-        "narHash": "sha256-pNBhWzBG3jP0seIGU2Kje2bN4R1kO7KDUPZE15QBoRk=",
-        "ref": "refs/heads/main",
-        "rev": "c7431801ee4805bd6849fbbdf89704d8fde360bd",
-        "revCount": 61,
-        "type": "git",
-        "url": "file:users/kuritsu/dotfiles"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:users/kuritsu/dotfiles"
       }
     },
     "flake-compat": {
@@ -190,11 +175,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761513701,
-        "narHash": "sha256-w7qOcQb1FSMZASvWe01r99QqZ5LnHO0k3rgs5ryyig0=",
+        "lastModified": 1761574406,
+        "narHash": "sha256-MoqeKxVuql6Bnj6CE/CG2CKcC0GJ2EgqYxUrYPRABdY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "255b6a0ef2f488a2fad051361699cc67db57338c",
+        "rev": "aa888ffc10cad3ab6595039342f97d524fd620bf",
         "type": "github"
       },
       "original": {
@@ -261,7 +246,6 @@
         "aagl": "aagl",
         "agenix": "agenix",
         "dankmaterialshell": "dankmaterialshell",
-        "dotfiles": "dotfiles",
         "home-manager": "home-manager",
         "istannouncements": "istannouncements",
         "nixpkgs": "nixpkgs_2",

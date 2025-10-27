@@ -25,7 +25,7 @@ in
       };
 
       imports = [
-        inputs.dotfiles.homeModules.default
+        ./dotfiles/home.nix
         ./modules/browser.nix
         ./modules/neovim.nix
         ./modules/shell.nix

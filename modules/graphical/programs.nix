@@ -31,9 +31,11 @@ in
     zotero
     libreoffice-fresh
     gimp
+    imv
     kdePackages.kdenlive
     kdePackages.ffmpegthumbs
     kdePackages.kdegraphics-thumbnailers
+    kdePackages.gwenview
     vscodium-marketplace
   ];
 }
