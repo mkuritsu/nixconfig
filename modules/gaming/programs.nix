@@ -14,6 +14,7 @@
       jdks = [
         jdk17
         jdk21
+        jdk25
       ];
     })
     osu-lazer-bin
