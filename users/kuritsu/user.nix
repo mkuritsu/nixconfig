@@ -25,10 +25,12 @@ in
       };
 
       imports = [
-        ./dotfiles/home.nix
+        ./home.nix
         ./modules/browser.nix
         ./modules/neovim.nix
         ./modules/shell.nix
+        ./modules/gtk.nix
+        ./modules/xdg.nix
       ];
     };
 }

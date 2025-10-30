@@ -1,7 +1,7 @@
 {
-  rust = {
-    description = "Rust starting template";
-    path = ./rust;
+  c-cpp = {
+    description = "C/C++ starting template";
+    path = ./c-cpp;
   };
 
   java = {
@@ -9,14 +9,9 @@
     path = ./java;
   };
 
-  c-cpp = {
-    description = "C/C++ starting template";
-    path = ./c-cpp;
-  };
-
-  python = {
-    description = "Python starting template";
-    path = ./python;
+  maximal = {
+    description = "Maximal template to serve as a 'global' shell";
+    path = ./maximal;
   };
 
   minimal = {
@@ -24,8 +19,13 @@
     path = ./minimal;
   };
 
-  maximal = {
-    description = "Maximal template to serve as a 'global' shell";
-    path = ./maximal;
+  python = {
+    description = "Python starting template";
+    path = ./python;
+  };
+
+  rust = {
+    description = "Rust starting template";
+    path = ./rust;
   };
 }

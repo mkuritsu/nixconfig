@@ -14,7 +14,7 @@ let
     else
       builtins.replaceStrings
         [ (builtins.toString ./.) ]
-        [ "${builtins.getEnv "FLAKE_ROOT"}/users/kuritsu/dotfiles" ]
+        [ "${builtins.getEnv "FLAKE_ROOT"}/users/kuritsu" ]
         (builtins.toString path);
 
   sourceFile = path: mkOutOfStoreSymlink (parsePath path);
@@ -32,11 +32,6 @@ let
   nvimFiles = map scriptPathToAttrs (recurseFileStrings ./dots/nvim);
 in
 {
-  imports = [
-    ./modules/gtk.nix
-    ./modules/xdg.nix
-  ];
-
   home.packages = with pkgs; [
     app2unit # here because not commonly packaged in other distros
   ];
