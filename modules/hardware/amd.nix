@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   hardware.graphics.extraPackages = with pkgs; [
-    vaapiVdpau
+    libva-vdpau-driver
     libvdpau-va-gl
   ];
   services.xserver.videoDrivers = [ "amdgpu" ];
@@ -11,4 +11,7 @@
     "LIBVA_DRIVER_NAME" = "radeonsi";
   };
 
+  environment.systemPackages = with pkgs; [
+    btop-rocm
+  ];
 }
