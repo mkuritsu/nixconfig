@@ -25,7 +25,6 @@
     jq
     zip
     unzip
-    btop
     fastfetch
     onefetch
     tmux

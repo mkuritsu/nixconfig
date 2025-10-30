@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 let
   inherit (config.lib.file) mkOutOfStoreSymlink;
 
@@ -56,7 +61,7 @@ in
     "niri/config.kdl".source = sourceFile ./dots/niri/config.kdl;
 
     # don't use sourceFile for btop to force to stay in nix-store since btop likes to write to config file for some reason
-    "btop/btop.conf".source = ./dots/btop/btop.conf;
+    "btop/btop.conf".source = sourceFile ./dots/btop/btop.conf;
     "btop/themes".source = sourceFile ./dots/btop/themes;
 
     "git/config".source = sourceFile ./dots/git/config;
@@ -75,7 +80,13 @@ in
       ./dots/fish/functions/fish_user_key_bindings.fish;
     "fish/functions/fish_greeting.fish".source = sourceFile ./dots/fish/functions/fish_greeting.fish;
 
+    "foot/foot.ini".source = sourceFile ./dots/foot/foot.ini;
+
     "xdg-desktop-portal/Hyprland-portals.conf".source = ./dots/xdg-desktop-portal/Hyprland-portals.conf;
   }
   // builtins.listToAttrs nvimFiles;
+
+  home.file = {
+    ".wezterm.lua".source = sourceFile ./dots/wezterm.lua;
+  };
 }

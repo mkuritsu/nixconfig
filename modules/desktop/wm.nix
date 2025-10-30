@@ -8,14 +8,15 @@
     gpu-screen-recorder
     hyprpicker
     fuzzel
-    qt6ct
     kitty
     ghostty
+    foot
+    wezterm
     matugen
-    kdePackages.qtstyleplugin-kvantum
-
     mpv
     imv
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.qt6ct
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.ark
