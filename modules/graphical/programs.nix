@@ -37,5 +37,6 @@ in
     kdePackages.kdegraphics-thumbnailers
     kdePackages.gwenview
     vscodium-marketplace
+    obsidian
   ];
 }
