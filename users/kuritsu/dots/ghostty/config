@@ -10,4 +10,8 @@ window-padding-balance = false
 quit-after-last-window-closed = false
 gtk-single-instance = true
 window-inherit-working-directory = false
-font-codepoint-map = U+E000-U+F8FF=Symbols Only Nerd Font
+
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right

@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}:
+{ ... }:
 let
   username = "kuritsu";
   homeDirectory = "/home/${username}";
@@ -28,7 +25,7 @@ in
         ./home.nix
         ./modules/browser.nix
         ./modules/neovim.nix
-        ./modules/shell.nix
+        ./modules/desktop-shell.nix
         ./modules/gtk.nix
         ./modules/xdg.nix
       ];

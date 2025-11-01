@@ -54,11 +54,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761847893,
-        "narHash": "sha256-XTIjrTNeQl9rB+sYfat5ciDGjGOP22e8nBMyVP9ZYfE=",
+        "lastModified": 1761926762,
+        "narHash": "sha256-LDstkyr7eev8w3Wmhl1zubQVnwAPjumjEAyy6CJ9ZlQ=",
         "owner": "avengemedia",
         "repo": "dankmaterialshell",
-        "rev": "b27f362b44a65c506cadaa77e89bd09855cf4284",
+        "rev": "92926331b5386e0a8f7c5bd076484f872624579d",
         "type": "github"
       },
       "original": {
@@ -175,11 +175,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761845621,
-        "narHash": "sha256-d+R4MHsGmdebvSMsYUFWONsZSlUbOo8Zq/wjMdMiIac=",
+        "lastModified": 1761878381,
+        "narHash": "sha256-lCRaipHgszaFZ1Cs8fdGJguVycCisBAf2HEFgip5+xU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "97e3022a8d2c09313fa49847f6da4d76abcfc72d",
+        "rev": "4ac96eb21c101a3e5b77ba105febc5641a8959aa",
         "type": "github"
       },
       "original": {
@@ -241,6 +241,26 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1761897390,
+        "narHash": "sha256-er4gYrIoThYLjlsOMTysoRfn67d1Gci+ZpqDrtQxrA0=",
+        "ref": "refs/heads/master",
+        "rev": "fc704e6b5d445899a1565955268c91942a4f263f",
+        "revCount": 700,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "root": {
       "inputs": {
         "aagl": "aagl",
@@ -249,6 +269,7 @@
         "home-manager": "home-manager",
         "istannouncements": "istannouncements",
         "nixpkgs": "nixpkgs_2",
+        "quickshell": "quickshell",
         "watt": "watt"
       }
     },
