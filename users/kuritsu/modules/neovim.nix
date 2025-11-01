@@ -1,12 +1,13 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
-  programs.neovim = {
+  imports = [
+    inputs.mnw.homeManagerModules.default
+  ];
+
+  programs.mnw = {
     enable = true;
-    defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
-      nvim-treesitter.withAllGrammars
-    ];
-    extraPackages = with pkgs; [
+    luaFiles = [ ../dots/nvim/init.lua ];
+    extraBinPath = with pkgs; [
       fzf
       ripgrep
       fd
@@ -30,5 +31,29 @@
       cmake-language-server
       ruff
     ];
+    plugins = {
+      start = with pkgs.vimPlugins; [
+        lazy-nvim
+      ];
+
+      opt = with pkgs.vimPlugins; [
+        snacks-nvim
+        nvim-treesitter.withAllGrammars
+        cord-nvim
+        flash-nvim
+        lualine-nvim
+        nvim-autopairs
+        nvim-lspconfig
+        nvim-treesitter-textobjects
+        nvim-web-devicons
+        which-key-nvim
+        inputs.blink-cmp.packages.${pkgs.system}.default
+
+        catppuccin-nvim
+        tokyonight-nvim
+      ];
+
+      dev.myconfig.pure = ../dots/nvim;
+    };
   };
 }
