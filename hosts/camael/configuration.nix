@@ -8,13 +8,17 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Networking
   networking.networkmanager = {
     enable = true;
     dns = "none";
     plugins = with pkgs; [
       networkmanager-strongswan
     ];
+    wifi = {
+      powersave = true;
+      macAddress = "random";
+      scanRandMacAddress = true;
+    };
   };
 
   services = {
