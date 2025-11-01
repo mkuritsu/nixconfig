@@ -1,7 +1,6 @@
 return {
   "saghen/blink.cmp",
   event = "VeryLazy",
-  build = "cargo build --release",
   opts = {
     keymap = {
       preset = "enter",
