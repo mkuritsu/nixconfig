@@ -48,15 +48,16 @@ in
     "hypr/hyprland.conf".source = sourceFile ./dots/hypr/hyprland.conf;
     "hypr/hypridle.conf".source = sourceFile ./dots/hypr/hypridle.conf;
     "uwsm/env".source = sourceFile ./dots/uwsm/env;
+    "xdg-desktop-portal/Hyprland-portals.conf".source = ./dots/xdg-desktop-portal/Hyprland-portals.conf;
+
+    "niri/config.kdl".source = sourceFile ./dots/niri/config.kdl;
 
     "fuzzel/fuzzel.ini".source = sourceFile ./dots/fuzzel/fuzzel.ini;
 
     "imv/config".source = sourceFile ./dots/imv/config;
 
-    "niri/config.kdl".source = sourceFile ./dots/niri/config.kdl;
-
     # don't use sourceFile for btop to force to stay in nix-store since btop likes to write to config file for some reason
-    "btop/btop.conf".source = sourceFile ./dots/btop/btop.conf;
+    "btop/btop.conf".source = ./dots/btop/btop.conf;
     "btop/themes".source = sourceFile ./dots/btop/themes;
 
     "git/config".source = sourceFile ./dots/git/config;
@@ -68,20 +69,13 @@ in
     "kitty/kitty.conf".source = sourceFile ./dots/kitty/kitty.conf;
     "kitty/themes".source = sourceFile ./dots/kitty/themes;
     "ghostty/config".source = sourceFile ./dots/ghostty/config;
+    "foot/foot.ini".source = sourceFile ./dots/foot/foot.ini;
 
     "fish/config.fish".source = sourceFile ./dots/fish/config.fish;
     "fish/functions/cd_fzf.fish".source = sourceFile ./dots/fish/functions/cd_fzf.fish;
     "fish/functions/fish_user_key_bindings.fish".source =
       ./dots/fish/functions/fish_user_key_bindings.fish;
     "fish/functions/fish_greeting.fish".source = sourceFile ./dots/fish/functions/fish_greeting.fish;
-
-    "foot/foot.ini".source = sourceFile ./dots/foot/foot.ini;
-
-    "xdg-desktop-portal/Hyprland-portals.conf".source = ./dots/xdg-desktop-portal/Hyprland-portals.conf;
   }
   // builtins.listToAttrs nvimFiles;
-
-  home.file = {
-    ".wezterm.lua".source = sourceFile ./dots/wezterm.lua;
-  };
 }

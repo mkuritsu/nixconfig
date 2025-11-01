@@ -11,7 +11,6 @@
     kitty
     ghostty
     foot
-    wezterm
     matugen
     mpv
     imv
