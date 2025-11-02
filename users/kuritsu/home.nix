@@ -9,15 +9,13 @@ let
 
   parsePath =
     path:
-    if builtins.getEnv "FLAKE_ROOT" == "" then
-      path
-    else
-      builtins.replaceStrings
-        [ (builtins.toString ./.) ]
-        [ "${builtins.getEnv "FLAKE_ROOT"}/users/kuritsu" ]
-        (builtins.toString path);
+    builtins.replaceStrings
+      [ (builtins.toString ./.) ]
+      [ "${builtins.getEnv "FLAKE_ROOT"}/users/kuritsu" ]
+      (builtins.toString path);
 
-  sourceFile = path: mkOutOfStoreSymlink (parsePath path);
+  sourceFile =
+    path: if builtins.getEnv "FLAKE_ROOT" == "" then path else mkOutOfStoreSymlink (parsePath path);
 
   stripPath = path: str: builtins.replaceStrings [ (builtins.toString path) ] [ "" ] str;
   substr1 = str: builtins.substring 1 (builtins.stringLength str) str;
