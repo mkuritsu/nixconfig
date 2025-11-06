@@ -38,6 +38,7 @@ in
     fish
     openssl
     just
+    libqalculate
     inputs.agenix.packages.${system}.default
   ];
 }
