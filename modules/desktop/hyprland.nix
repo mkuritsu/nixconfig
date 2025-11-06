@@ -13,7 +13,7 @@
   environment.systemPackages = with pkgs; [
     grim
     slurp
-    hyprshot
+    grimblast
     hyprpolkitagent
     app2unit
   ];
