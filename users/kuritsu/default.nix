@@ -1,3 +1,4 @@
+# This file is only used for standalone installation of the dotfiles
 { ... }:
 let
   username =
