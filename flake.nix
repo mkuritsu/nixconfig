@@ -5,8 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     mnw.url = "github:gerg-l/mnw";
     blink-cmp = {
-        url = "github:saghen/blink.cmp";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:saghen/blink.cmp";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";

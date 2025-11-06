@@ -1,4 +1,7 @@
 { inputs, pkgs, ... }:
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
   imports = [
     inputs.mnw.homeManagerModules.default
@@ -47,7 +50,7 @@
         nvim-treesitter-textobjects
         nvim-web-devicons
         which-key-nvim
-        inputs.blink-cmp.packages.${pkgs.system}.default
+        inputs.blink-cmp.packages.${system}.default
 
         catppuccin-nvim
         tokyonight-nvim

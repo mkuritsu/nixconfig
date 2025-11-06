@@ -3,6 +3,9 @@
   pkgs,
   ...
 }:
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
   programs = {
     adb.enable = true;
@@ -35,6 +38,6 @@
     fish
     openssl
     just
-    inputs.agenix.packages.${pkgs.system}.default
+    inputs.agenix.packages.${system}.default
   ];
 }
