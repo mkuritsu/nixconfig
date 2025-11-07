@@ -76,11 +76,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762394954,
-        "narHash": "sha256-x3/H5To2Cy+pVdUFKg2gumS4IxAxWvOzNz/6kPyDadY=",
+        "lastModified": 1762472889,
+        "narHash": "sha256-j6NaLe0HXflSlxQDCQybGh07/dG5Z7Vc2NlbLn5SFRg=",
         "owner": "avengemedia",
         "repo": "dankmaterialshell",
-        "rev": "87d0aed4ade409a146a7cbd210adf1bf2b377872",
+        "rev": "898e9e67d08d5b4d8a001e0114cd01af49f287cb",
         "type": "github"
       },
       "original": {
@@ -237,11 +237,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762367206,
-        "narHash": "sha256-c/164YOPkV09BH8KIUdvVvJs3VF2LNIbE2piKGgXPxk=",
+        "lastModified": 1762463325,
+        "narHash": "sha256-33YUsWpPyeBZEWrKQ2a1gkRZ7i0XCC/2MYpU6BVeQSU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "af119feb17cb242398e0fb97f92b867d25882522",
+        "rev": "0562fef070a1027325dd4ea10813d64d2c967b39",
         "type": "github"
       },
       "original": {
@@ -273,11 +273,11 @@
     },
     "mnw": {
       "locked": {
-        "lastModified": 1762392116,
-        "narHash": "sha256-6OOo7nfYQlXzIn/hCtNskMZDxxSY7p2yhunwLCt67v4=",
+        "lastModified": 1762397075,
+        "narHash": "sha256-OkkHf2tUm7RDkq55haCvtAJWS7nnfr02FnHp7zWlea4=",
         "owner": "gerg-l",
         "repo": "mnw",
-        "rev": "86bd3ecb8909ec2d2a4f9c298250ffc63ee76d53",
+        "rev": "362b2a7ca74a26caf4de50b8626b376158e70a1d",
         "type": "github"
       },
       "original": {
@@ -343,11 +343,11 @@
         "rev": "fc704e6b5d445899a1565955268c91942a4f263f",
         "revCount": 700,
         "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
       },
       "original": {
         "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
       }
     },
     "root": {
