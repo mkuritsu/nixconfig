@@ -9,11 +9,5 @@
     ];
   };
 
-  programs.nh = {
-    enable = true;
-    clean = {
-      enable = true;
-      extraArgs = "--nogcroots --keep-since 7d"; # --nogcroots so it doesn't delete my devshell direnvs
-    };
-  };
+  programs.nh.enable = true;
 }
