@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -27,6 +27,14 @@
     openFirewall = true;
     settings.PasswordAuthentication = false;
   };
+
+  hardware.openrazer.enable = true;
+  environment.systemPackages = with pkgs; [
+    openrazer-daemon
+    polychromatic
+  ];
+
+  users.users.kuritsu.extraGroups = [ "openrazer" ];
 
   system.stateVersion = "24.11";
 }
