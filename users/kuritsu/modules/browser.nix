@@ -11,19 +11,26 @@ let
         };
       }) extensions
     );
+
+  firefoxExtensionsPolicy = {
+    ExtensionSettings = mkFirefoxExtensions [
+      "{446900e4-71c2-419f-a6a7-df9c091e268b}" # bitwarden
+      "sponsorBlocker@ajay.app"
+      "uBlock0@raymondhill.net"
+      "addon@darkreader.org"
+      "{d7742d87-e61d-4b78-b8a1-b469842139fa}" # vimium
+    ];
+  };
 in
 {
   programs.firefox = {
     enable = true;
+    policies = firefoxExtensionsPolicy;
+  };
 
-    policies = {
-      ExtensionSettings = mkFirefoxExtensions [
-        "{446900e4-71c2-419f-a6a7-df9c091e268b}" # bitwarden
-        "sponsorBlocker@ajay.app"
-        "uBlock0@raymondhill.net"
-        "{d7742d87-e61d-4b78-b8a1-b469842139fa}" # vimium
-      ];
-    };
+  programs.librewolf = {
+    enable = true;
+    policies = firefoxExtensionsPolicy;
   };
 
   programs.chromium = {
@@ -31,7 +38,6 @@ in
     package = pkgs.chromium.override {
       enableWideVine = true;
     };
-
     extensions = [
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
       "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsor block
