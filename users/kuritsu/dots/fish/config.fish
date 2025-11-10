@@ -10,3 +10,4 @@ end
 fish_add_path $HOME/.local/bin/
 
 set -gx SHELL "fish"
+set -gx GPG_TTY "$tty"

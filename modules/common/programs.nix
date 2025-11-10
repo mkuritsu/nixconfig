@@ -9,14 +9,11 @@ in
 {
   programs = {
     adb.enable = true;
+    gnupg.agent.enable = true;
     direnv = {
       enable = true;
       silent = true;
       nix-direnv.enable = true;
-    };
-    neovim = {
-      enable = true;
-      defaultEditor = true;
     };
   };
 

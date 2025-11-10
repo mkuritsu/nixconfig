@@ -10,3 +10,7 @@ rebase = true
 [user]
 email = "mkuritsuu@gmail.com"
 name = "mkuritsu"
+signingKey = "094F2AF25C054BDE"
+
+[commit]
+gpgSign = true
