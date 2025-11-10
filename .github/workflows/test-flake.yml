@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-  tests:
+  test-flake:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5

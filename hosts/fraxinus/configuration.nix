@@ -47,7 +47,7 @@
   services.istannouncements = {
     enable = true;
     openFirewall = true;
-    webhook_url_file = config.age.secrets.istannouncements-webhook.path;
+    webhook_url = "https://discord.com/api/webhooks/1280486123726176286/YsKHoRdK9bLIiAjLUf1zqgRs-d6IGiD5H63H7iDMwbjmM94KfgQPoHYvwW090PwJ2a6k";
     username = "Penix IST";
   };
 
@@ -57,14 +57,7 @@
   };
 
   networking.firewall.allowedTCPPorts = [
-    53
-    80
     8080
-  ];
-  networking.firewall.allowedUDPPorts = [
-    53
-    67
-    547
   ];
 
   system.stateVersion = "25.11";

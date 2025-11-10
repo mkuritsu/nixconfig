@@ -215,11 +215,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1757192294,
-        "narHash": "sha256-k7RJY1W7brL8K4JnnSgu7i5oL7nw6aZAO23tBk1DY8Q=",
+        "lastModified": 1762794495,
+        "narHash": "sha256-ByIYQ4hcV/6ewHxveJ1zYrmTmVgibLt3u9h1nl7IiPY=",
         "owner": "mkuritsu",
         "repo": "ISTAnnouncements",
-        "rev": "f812319b1c02a2235bd1d3dff921d4c066ce3e49",
+        "rev": "9b70e46a83830503aa79ba70f4ab41c0faffc6f5",
         "type": "github"
       },
       "original": {
