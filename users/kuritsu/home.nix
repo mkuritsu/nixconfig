@@ -67,7 +67,6 @@ in
     "kitty/kitty.conf".source = sourceFile ./dots/kitty/kitty.conf;
     "kitty/themes".source = sourceFile ./dots/kitty/themes;
     "ghostty/config".source = sourceFile ./dots/ghostty/config;
-    "foot/foot.ini".source = sourceFile ./dots/foot/foot.ini;
 
     "fish/config.fish".source = sourceFile ./dots/fish/config.fish;
     "fish/functions/cd_fzf.fish".source = sourceFile ./dots/fish/functions/cd_fzf.fish;

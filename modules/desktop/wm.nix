@@ -10,7 +10,6 @@
     fuzzel
     kitty
     ghostty
-    foot
     matugen
     mpv
     imv
