@@ -13,6 +13,7 @@ let
 in
 {
   programs = {
+    virt-manager.enable = true;
     obs-studio = {
       enable = true;
       enableVirtualCamera = true;
@@ -38,5 +39,6 @@ in
     kdePackages.gwenview
     vscodium-marketplace
     obsidian
+    vagrant
   ];
 }

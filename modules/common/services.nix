@@ -1,9 +1,13 @@
 { pkgs, ... }:
 {
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    autoPrune.enable = true;
+
+  virtualisation = {
+    libvirtd.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      autoPrune.enable = true;
+    };
   };
 
   zramSwap.enable = true;
