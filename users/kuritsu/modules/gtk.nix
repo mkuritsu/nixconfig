@@ -9,8 +9,8 @@
   home.pointerCursor = {
     enable = true;
     gtk.enable = true;
-    package = pkgs.apple-cursor;
-    name = "macOS";
+    package = pkgs.catppuccin-cursors.mochaDark;
+    name = "Catppuccin-Mocha-Dark-Cursors";
     size = 24;
   };
 
