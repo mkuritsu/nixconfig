@@ -7,7 +7,6 @@
     brightnessctl
     gpu-screen-recorder
     hyprpicker
-    fuzzel
     kitty
     ghostty
     matugen
@@ -18,5 +17,8 @@
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.ark
+    kdePackages.ffmpegthumbs
+    kdePackages.kdegraphics-thumbnailers
+    kdePackages.gwenview
   ];
 }

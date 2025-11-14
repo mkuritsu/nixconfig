@@ -21,24 +21,21 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    wiremix
+    scrcpy
+    wl-clipboard
+
     mangohud
+    obsidian
     discord
     easyeffects
     thunderbird
     rnote
-    wiremix
-    scrcpy
-    wl-clipboard
     zotero
     libreoffice-fresh
     gimp
-    imv
     kdePackages.kdenlive
-    kdePackages.ffmpegthumbs
-    kdePackages.kdegraphics-thumbnailers
-    kdePackages.gwenview
     vscodium-marketplace
-    obsidian
     vagrant
   ];
 }

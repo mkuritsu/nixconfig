@@ -8,7 +8,6 @@
     enable = true;
     withUWSM = true;
   };
-  services.hypridle.enable = true;
 
   environment.systemPackages = with pkgs; [
     grim
