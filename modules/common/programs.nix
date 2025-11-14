@@ -9,7 +9,10 @@ in
 {
   programs = {
     adb.enable = true;
-    gnupg.agent.enable = true;
+    gnupg.agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-curses;
+    };
     direnv = {
       enable = true;
       silent = true;
