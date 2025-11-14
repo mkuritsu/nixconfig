@@ -21,7 +21,6 @@
       url = "github:mkuritsu/ISTAnnouncements";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    mnw.url = "github:gerg-l/mnw";
     watt = {
       url = "github:notashelf/watt";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,12 +33,12 @@
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    blink-cmp = {
-      url = "github:saghen/blink.cmp";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     spicetify-nix = {
       url = "github:gerg-l/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvf = {
+      url = "github:notashelf/nvf/v0.8";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
