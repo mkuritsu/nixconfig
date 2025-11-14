@@ -27,6 +27,7 @@ in
         ./modules/neovim.nix
         ./modules/desktop-shell.nix
         ./modules/gtk.nix
+        ./modules/spicetify.nix
         ./modules/xdg.nix
       ];
     };
