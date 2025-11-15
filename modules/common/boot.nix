@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-    loader.timeout = 0;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    loader.timeout = 5;
   };
 
   hardware.enableRedistributableFirmware = true;
