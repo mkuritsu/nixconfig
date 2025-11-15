@@ -69,6 +69,7 @@
           nix.format.type = "nixfmt";
           python.enable = true;
           rust.enable = true;
+          rust.extensions.crates-nvim.enable = true;
           sql.enable = true;
           ts.enable = true;
           typst.enable = true;
