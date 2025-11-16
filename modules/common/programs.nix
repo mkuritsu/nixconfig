@@ -4,7 +4,7 @@
   ...
 }:
 let
-  system = pkgs.stdenv.hostPlatform.system;
+  inherit (pkgs.stdenv.hostPlatform) system;
 in
 {
   programs = {

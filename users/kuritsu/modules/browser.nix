@@ -12,7 +12,7 @@ let
       }) extensions
     );
 
-  firefoxExtensionsPolicy = {
+  firefoxPolicies = {
     ExtensionSettings = mkFirefoxExtensions [
       "{446900e4-71c2-419f-a6a7-df9c091e268b}" # bitwarden
       "sponsorBlocker@ajay.app"
@@ -25,12 +25,7 @@ in
 {
   programs.firefox = {
     enable = true;
-    policies = firefoxExtensionsPolicy;
-  };
-
-  programs.librewolf = {
-    enable = true;
-    policies = firefoxExtensionsPolicy;
+    policies = firefoxPolicies;
   };
 
   programs.chromium = {

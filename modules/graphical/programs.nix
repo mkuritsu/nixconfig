@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 let
   vscode-product-json = "${pkgs.vscode}/lib/vscode/resources/app/product.json";
 

@@ -1,4 +1,3 @@
-{ ... }:
 {
   hardware.graphics = {
     enable = true;
