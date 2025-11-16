@@ -53,11 +53,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763236667,
-        "narHash": "sha256-JuZXXs6u7kVuIuIXnmpCjXRgMBmPcuwWQGHj0ESis9U=",
+        "lastModified": 1763268084,
+        "narHash": "sha256-sEMirsh4a965vVPCNH0kUxkz7TukjCUfyud2UAJ9lzg=",
         "owner": "avengemedia",
         "repo": "dankmaterialshell",
-        "rev": "d11868b99fcaa43379965fae0cb64c25b6c008ef",
+        "rev": "64ec5be91934bd4ce5125f251d167bb15f34d7f1",
         "type": "github"
       },
       "original": {
@@ -147,11 +147,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763228015,
-        "narHash": "sha256-1rYieMVUyZ3kK/cBIr8mOusxrOEJ1/+2MsOg0oJ7b3A=",
+        "lastModified": 1763313531,
+        "narHash": "sha256-yvdCYUL85zEDp2NzPUBmaNBXP6KnWEOhAk3j7PTfsKw=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "96156a9e86281c4bfc451236bc2ddfe4317e6f39",
+        "rev": "3670a78eee49deebe4825fc8ecc46b172d1a8391",
         "type": "github"
       },
       "original": {
@@ -239,11 +239,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1763183691,
-        "narHash": "sha256-BoWjsFOZGbhdYCU4riIQIW4o3c81d4mW5SWdmPqJUno=",
+        "lastModified": 1763309120,
+        "narHash": "sha256-NPNCPASGVHQsAJtHzXwKrnYebWiRT8FgnIeU9XccPyo=",
         "owner": "notashelf",
         "repo": "nvf",
-        "rev": "25aafc84f57973ed7f17528b60490a99ee539163",
+        "rev": "a87439ed3c9b99edc1512dc89acdd901cdc176c0",
         "type": "github"
       },
       "original": {
@@ -260,11 +260,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763115162,
-        "narHash": "sha256-TgHTFlFI9tZ4kp4yy8fcfy98srgcob9gcOeuKjs1Mw4=",
+        "lastModified": 1763257314,
+        "narHash": "sha256-R7HJSluErPrCQk+VXNWJrE2Pjq582VRNWDHAk6j6wQI=",
         "ref": "refs/heads/master",
-        "rev": "a00ff0394431d1fe3f33ae0934c981930e2a1efb",
-        "revCount": 701,
+        "rev": "fdbb86a06acd6d1af6049a319c87a5c0badc22dc",
+        "revCount": 705,
         "type": "git",
         "url": "https://git.outfoxxed.me/quickshell/quickshell"
       },
@@ -313,11 +313,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1762718300,
-        "narHash": "sha256-oOQimZTaV1jCw0OBmmK2g7Rdj3E8YGVpkJYD32BWKRQ=",
+        "lastModified": 1763267524,
+        "narHash": "sha256-CywB4iCpGr4CYZAD+WboFwBQ7Wnc7LdfSemFWuH/1Ro=",
         "owner": "gerg-l",
         "repo": "spicetify-nix",
-        "rev": "c7175bd485ed5052df5075fcdde395b631316e94",
+        "rev": "cf33e39bd1a21993a28ffee8be433e212ecf346a",
         "type": "github"
       },
       "original": {
