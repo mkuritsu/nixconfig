@@ -6,15 +6,17 @@
 }:
 {
   imports = [
+    inputs.istannouncements.nixosModules.default
     ./hardware-configuration.nix
     ./secrets.nix
-    inputs.istannouncements.nixosModules.default
   ];
 
   boot = {
-    loader.grub.enable = false;
-    loader.generic-extlinux-compatible.enable = true;
-    loader.timeout = 0;
+    loader = {
+      grub.enable = false;
+      generic-extlinux-compatible.enable = true;
+      timeout = 0;
+    };
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
@@ -43,26 +45,28 @@
     ];
   };
 
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
-    settings.PasswordAuthentication = false;
-  };
+  services = {
+    openssh = {
+      enable = true;
+      openFirewall = true;
+      settings.PasswordAuthentication = false;
+    };
 
-  services.istannouncements = {
-    enable = true;
-    openFirewall = true;
-    webhook_url = "https://discord.com/api/webhooks/1280486123726176286/YsKHoRdK9bLIiAjLUf1zqgRs-d6IGiD5H63H7iDMwbjmM94KfgQPoHYvwW090PwJ2a6k";
-    username = "Penix IST";
-  };
+    istannouncements = {
+      enable = true;
+      openFirewall = true;
+      webhook_url = "https://discord.com/api/webhooks/1280486123726176286/YsKHoRdK9bLIiAjLUf1zqgRs-d6IGiD5H63H7iDMwbjmM94KfgQPoHYvwW090PwJ2a6k";
+      username = "Penix IST";
+    };
 
-  services.tailscale = {
-    enable = true;
-    authKeyFile = config.age.secrets.tailscale.path;
+    tailscale = {
+      enable = true;
+      authKeyFile = config.age.secrets.tailscale.path;
+    };
   };
 
   networking.firewall.allowedTCPPorts = [
-    8080
+    8001
   ];
 
   system.stateVersion = "25.11";

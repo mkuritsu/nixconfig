@@ -10,6 +10,7 @@
       efi.canTouchEfiVariables = true;
       timeout = 0;
     };
+    binfmt.emulatedSystems = [ "aarch64-linux" ];
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
   };
 
@@ -35,14 +36,13 @@
   };
 
   hardware.openrazer.enable = true;
+
   environment.systemPackages = with pkgs; [
     openrazer-daemon
     polychromatic
   ];
 
   users.users.kuritsu.extraGroups = [ "openrazer" ];
-
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   system.stateVersion = "24.11";
 }
