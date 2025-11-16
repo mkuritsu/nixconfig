@@ -34,10 +34,13 @@
         statusline.lualine.enable = true;
         treesitter.enable = true;
         treesitter.textobjects.enable = true;
-        utility.snacks-nvim.enable = true;
-        utility.snacks-nvim.setupOpts.indent.enabled = true;
-        utility.motion.flash-nvim.enable = true;
         ui.borders.enable = true;
+
+        utility = {
+          snacks-nvim.enable = true;
+          snacks-nvim.setupOpts.indent.enabled = true;
+          motion.flash-nvim.enable = true;
+        };
 
         visuals = {
           nvim-web-devicons.enable = true;
@@ -85,6 +88,14 @@
             action = "function() Snacks.picker.files() end";
             lua = true;
             desc = "fuzzy finder";
+          }
+          {
+            key = "<leader>g";
+            mode = "n";
+            silent = true;
+            action = "function() Snacks.picker.grep() end";
+            lua = true;
+            desc = "live grep";
           }
           {
             key = "<leader>e";
