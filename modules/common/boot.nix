@@ -5,5 +5,4 @@
     loader.timeout = 5;
   };
 
-  hardware.enableRedistributableFirmware = true;
 }

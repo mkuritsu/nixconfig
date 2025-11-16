@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  pkgs,
   ...
 }:
 {
@@ -10,8 +11,12 @@
     inputs.istannouncements.nixosModules.default
   ];
 
-  boot.loader.grub.enable = false;
-  boot.loader.generic-extlinux-compatible.enable = true;
+  boot = {
+    loader.grub.enable = false;
+    loader.generic-extlinux-compatible.enable = true;
+    loader.timeout = 0;
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
 
   networking = {
     interfaces.end0 = {

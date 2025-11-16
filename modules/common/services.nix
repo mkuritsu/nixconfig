@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-
   virtualisation = {
     libvirtd.enable = true;
     podman = {
@@ -17,4 +16,6 @@
   ];
 
   systemd.services.NetworkManager-wait-online.enable = false;
+
+  hardware.enableRedistributableFirmware = true;
 }
