@@ -61,7 +61,7 @@
           enableFormat = true;
           enableTreesitter = true;
 
-          astro.enable = true;
+          # astro.enable = true;
           bash.enable = true;
           clang.enable = true;
           css.enable = true;
@@ -70,7 +70,10 @@
           lua.enable = true;
           markdown.enable = true;
           nix.enable = true;
-          nix.format.type = "nixfmt";
+          nix.format.type = [
+            "nixfmt"
+            "alejandra"
+          ];
           python.enable = true;
           rust.enable = true;
           rust.extensions.crates-nvim.enable = true;
