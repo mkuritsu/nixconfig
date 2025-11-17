@@ -29,6 +29,15 @@
     };
   };
 
+  networking.networkmanager = {
+    enable = true;
+    dns = "none";
+    plugins = with pkgs; [
+      networkmanager-strongswan
+      networkmanager-openvpn
+    ];
+  };
+
   services.openssh = {
     enable = true;
     openFirewall = true;
@@ -40,6 +49,7 @@
   environment.systemPackages = with pkgs; [
     openrazer-daemon
     polychromatic
+    networkmanagerapplet
   ];
 
   users.users.kuritsu.extraGroups = [ "openrazer" ];
