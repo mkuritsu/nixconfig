@@ -31,6 +31,7 @@
         notify.nvim-notify.enable = true;
         presence.neocord.enable = true;
         presence.neocord.setupOpts.logo_tooltip = "The Superior Text Editor";
+        presence.neocord.setupOpts.global_timer = true;
         statusline.lualine.enable = true;
         treesitter.enable = true;
         treesitter.textobjects.enable = true;
