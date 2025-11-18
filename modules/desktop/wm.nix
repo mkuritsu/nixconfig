@@ -8,12 +8,9 @@
     gpu-screen-recorder
     hyprpicker
     kitty
-    ghostty
     matugen
     mpv
     imv
-    kdePackages.qtstyleplugin-kvantum
-    kdePackages.qt6ct
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.ark

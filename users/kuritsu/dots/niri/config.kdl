@@ -142,8 +142,8 @@ hotkey-overlay {
 binds {
     // launching/closing apps
     Mod+C { close-window; }
-    Mod+Q { spawn "ghostty"; }
-    Mod+R { spawn "fuzzel" "--launch-prefix" "niri msg action spawn --"; }
+    Mod+Q { spawn "kitty" "--single-instance"; }
+    Mod+R { spawn "dms" "ipc" "call" "spotlight" "toggle" }
     Mod+E { spawn "dolphin"; }
     Mod+Y { spawn "hyprpicker" "--lowercase-hex" "--autocopy"; }
 

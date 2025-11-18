@@ -26,6 +26,10 @@
         };
 
         autocomplete.blink-cmp.enable = true;
+        autocomplete.blink-cmp.mappings = {
+          next = "<C-n>";
+          previous = "<C-p>";
+        };
         autopairs.nvim-autopairs.enable = true;
         binds.whichKey.enable = true;
         notify.nvim-notify.enable = true;
