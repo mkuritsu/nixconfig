@@ -55,7 +55,7 @@
             "graphical"
             "gaming"
             "hardware/amd.nix"
-            "desktop/hyprland.nix"
+            "desktop/all.nix"
           ];
           users = [ "kuritsu" ];
         };
@@ -64,7 +64,7 @@
           modules = [
             "common"
             "graphical"
-            "desktop/hyprland.nix"
+            "desktop/all.nix"
           ];
           users = [ "kuritsu" ];
         };
