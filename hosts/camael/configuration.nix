@@ -18,6 +18,7 @@
     enable = true;
     dns = "none";
     plugins = with pkgs; [
+      networkmanager-openvpn
       networkmanager-strongswan
     ];
     wifi = {
