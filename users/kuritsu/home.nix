@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }:
 let
@@ -16,18 +15,6 @@ let
 
   sourceFile =
     path: if builtins.getEnv "FLAKE_ROOT" == "" then path else mkOutOfStoreSymlink (parsePath path);
-
-  stripPath = path: str: builtins.replaceStrings [ (builtins.toString path) ] [ "" ] str;
-  substr1 = str: builtins.substring 1 (builtins.stringLength str) str;
-  recurseFileStrings = path: map builtins.toString (lib.filesystem.listFilesRecursive path);
-  scriptPathToAttrs = path: {
-    name = ''${substr1 (stripPath ./dots path)}'';
-    value = {
-      source = sourceFile path;
-    };
-  };
-
-  nvimFiles = map scriptPathToAttrs (recurseFileStrings ./dots/nvim);
 in
 {
   home.packages = with pkgs; [
@@ -65,6 +52,5 @@ in
     "fish/functions/fish_user_key_bindings.fish".source =
       ./dots/fish/functions/fish_user_key_bindings.fish;
     "fish/functions/fish_greeting.fish".source = sourceFile ./dots/fish/functions/fish_greeting.fish;
-  }
-  // builtins.listToAttrs nvimFiles;
+  };
 }

@@ -53,11 +53,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763494570,
-        "narHash": "sha256-NiwZCwXZ5yE+ZQsYmATQ9tUhq7Y/zsa9Gw/55tUtaQU=",
+        "lastModified": 1763597687,
+        "narHash": "sha256-nd1dXJRpIBon3hzknPSFhOoOvVbDJ6rd6gORBH1tGug=",
         "owner": "avengemedia",
         "repo": "dankmaterialshell",
-        "rev": "4e6f0d5e87a6062a8822f4ca963ff319a7f85345",
+        "rev": "2ed6c33c8342012f5bea2ec6794cc034e17bd104",
         "type": "github"
       },
       "original": {
@@ -239,11 +239,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1763382541,
-        "narHash": "sha256-w1UItE/xO8UeKTJg1IgOxdobFQcpauivUKrlpKx5Fa4=",
+        "lastModified": 1763583711,
+        "narHash": "sha256-CBFMgcR458Ltb6VDJztFjXvetds4Mk29GHE4cxWOnug=",
         "owner": "notashelf",
         "repo": "nvf",
-        "rev": "f71493ad33e62e4c5fde9d0d8496c89976073b95",
+        "rev": "913dd0dd417b695e811b708319dd87df61366f39",
         "type": "github"
       },
       "original": {
@@ -260,11 +260,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763446574,
-        "narHash": "sha256-7Xu61mmAjQb1usfIg096VIh6f26fFYd0Z9e6tNdII0w=",
+        "lastModified": 1763629934,
+        "narHash": "sha256-jWz10RbNAyylJbH4cUTLS/CsDjkd8gxfT8OsIgQIgEg=",
         "ref": "refs/heads/master",
-        "rev": "1ddb355121484bcac70f49edd4bd006b1d3a753e",
-        "revCount": 707,
+        "rev": "ed036d514b0fdbce03158a0b331305be166f4555",
+        "revCount": 708,
         "type": "git",
         "url": "https://git.outfoxxed.me/quickshell/quickshell"
       },

@@ -40,5 +40,6 @@ in
     just
     libqalculate
     inputs.agenix.packages.${system}.default
+    hyperfine
   ];
 }

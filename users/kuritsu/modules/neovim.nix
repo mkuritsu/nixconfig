@@ -20,25 +20,30 @@
         };
 
         options = {
-          shiftwidth = 4;
           tabstop = 4;
+          shiftwidth = 4;
           expandtab = true;
+          smartindent = true;
+          autoindent = true;
+          number = true;
+          relativenumber = true;
+          wrap = false;
+          scrolloff = 10;
+          swapfile = false;
+          clipboard = "unnamedplus";
         };
+        diagnostics.config.virtual_text = true;
 
         autocomplete.blink-cmp.enable = true;
         autocomplete.blink-cmp.mappings = {
           next = "<C-n>";
           previous = "<C-p>";
         };
+
         autopairs.nvim-autopairs.enable = true;
         binds.whichKey.enable = true;
         notify.nvim-notify.enable = true;
-        presence.neocord.enable = true;
-        presence.neocord.setupOpts.logo_tooltip = "The Superior Text Editor";
-        presence.neocord.setupOpts.global_timer = true;
         statusline.lualine.enable = true;
-        treesitter.enable = true;
-        treesitter.textobjects.enable = true;
         ui.borders.enable = true;
 
         utility = {
@@ -52,6 +57,29 @@
           fidget-nvim.enable = true;
           fidget-nvim.setupOpts.notification.window.winblend = 0;
           indent-blankline.enable = true;
+        };
+        presence.neocord = {
+          enable = true;
+          setupOpts.logo_tooltip = "The Superior Text Editor";
+          setupOpts.global_timer = true;
+        };
+
+        treesitter = {
+          enable = true;
+          textobjects.enable = true;
+          textobjects.setupOpts = {
+            select = {
+              enable = true;
+              keymaps = {
+                af = "@function.outer";
+                "if" = "@funtion.inner";
+                ac = "@class.outer";
+                ic = "@class.inner";
+                as = "@local.scope";
+              };
+              lookahead = true;
+            };
+          };
         };
 
         lsp = {
@@ -122,6 +150,43 @@
             action = "function() Snacks.terminal() end";
             lua = true;
             desc = "toggle terminal";
+          }
+          {
+            key = "<C-h>";
+            mode = "i";
+            silent = true;
+            action = "<left>";
+          }
+          {
+            key = "<C-j>";
+            mode = "i";
+            silent = true;
+            action = "<down>";
+          }
+          {
+            key = "<C-k>";
+            mode = "i";
+            silent = true;
+            action = "<up>";
+          }
+          {
+            key = "<C-l>";
+            mode = "i";
+            silent = true;
+            action = "<right>";
+          }
+          {
+            key = "<esc>";
+            mode = "t";
+            silent = true;
+            action = "<C-\\><C-n>";
+          }
+          {
+            key = "<leader>bd";
+            mode = "n";
+            silent = true;
+            action = ":bd<CR>";
+            desc = "close buffer";
           }
         ];
       };
