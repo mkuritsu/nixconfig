@@ -17,5 +17,6 @@
     kdePackages.ffmpegthumbs
     kdePackages.kdegraphics-thumbnailers
     kdePackages.gwenview
+    swappy
   ];
 }
