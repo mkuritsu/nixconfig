@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     inputs.nvf.homeManagerModules.default
@@ -45,11 +45,50 @@
         notify.nvim-notify.enable = true;
         statusline.lualine.enable = true;
         ui.borders.enable = true;
+        utility.motion.flash-nvim.enable = true;
+        terminal.toggleterm.enable = true;
+        terminal.toggleterm.mappings.open = null;
 
-        utility = {
-          snacks-nvim.enable = true;
-          snacks-nvim.setupOpts.indent.enabled = true;
-          motion.flash-nvim.enable = true;
+        filetree.neo-tree.enable = true;
+        filetree.neo-tree.setupOpts = {
+          git_status_async = true;
+        };
+
+        telescope = {
+          enable = true;
+          extensions = [
+            {
+              name = "fzf";
+              packages = [ pkgs.vimPlugins.telescope-fzf-native-nvim ];
+              setup = {
+                fzf = {
+                  fuzzy = true;
+                };
+              };
+            }
+          ];
+          mappings = {
+            findFiles = "<leader>f";
+            liveGrep = "<leader>g";
+            buffers = null;
+            diagnostics = null;
+            findProjects = null;
+            gitBranches = null;
+            gitBufferCommits = null;
+            gitCommits = null;
+            gitStash = null;
+            gitStatus = null;
+            helpTags = null;
+            lspDefinitions = null;
+            lspDocumentSymbols = null;
+            lspImplementations = null;
+            lspReferences = null;
+            lspTypeDefinitions = null;
+            lspWorkspaceSymbols = null;
+            open = null;
+            resume = null;
+            treesitter = null;
+          };
         };
 
         visuals = {
@@ -58,6 +97,7 @@
           fidget-nvim.setupOpts.notification.window.winblend = 0;
           indent-blankline.enable = true;
         };
+
         presence.neocord = {
           enable = true;
           setupOpts.logo_tooltip = "The Superior Text Editor";
@@ -117,27 +157,10 @@
 
         keymaps = [
           {
-            key = "<leader>f";
-            mode = "n";
-            silent = true;
-            action = "function() Snacks.picker.files() end";
-            lua = true;
-            desc = "fuzzy finder";
-          }
-          {
-            key = "<leader>g";
-            mode = "n";
-            silent = true;
-            action = "function() Snacks.picker.grep() end";
-            lua = true;
-            desc = "live grep";
-          }
-          {
             key = "<leader>e";
             mode = "n";
             silent = true;
-            action = "function() Snacks.explorer() end";
-            lua = true;
+            action = ":Neotree toggle<CR>";
             desc = "file tree";
           }
           {
@@ -147,7 +170,7 @@
               "t"
             ];
             silent = true;
-            action = "function() Snacks.terminal() end";
+            action = "function() require('toggleterm').toggle() end";
             lua = true;
             desc = "toggle terminal";
           }
