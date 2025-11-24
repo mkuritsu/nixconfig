@@ -32,7 +32,13 @@
           swapfile = false;
           clipboard = "unnamedplus";
         };
-        diagnostics.config.virtual_text = true;
+
+        diagnostics = {
+          enable = true;
+          config = {
+            virtual_text = true;
+          };
+        };
 
         autocomplete.blink-cmp.enable = true;
         autocomplete.blink-cmp.mappings = {
@@ -45,50 +51,12 @@
         notify.nvim-notify.enable = true;
         statusline.lualine.enable = true;
         ui.borders.enable = true;
-        utility.motion.flash-nvim.enable = true;
         terminal.toggleterm.enable = true;
         terminal.toggleterm.mappings.open = null;
 
         filetree.neo-tree.enable = true;
         filetree.neo-tree.setupOpts = {
           git_status_async = true;
-        };
-
-        telescope = {
-          enable = true;
-          extensions = [
-            {
-              name = "fzf";
-              packages = [ pkgs.vimPlugins.telescope-fzf-native-nvim ];
-              setup = {
-                fzf = {
-                  fuzzy = true;
-                };
-              };
-            }
-          ];
-          mappings = {
-            findFiles = "<leader>f";
-            liveGrep = "<leader>g";
-            buffers = null;
-            diagnostics = null;
-            findProjects = null;
-            gitBranches = null;
-            gitBufferCommits = null;
-            gitCommits = null;
-            gitStash = null;
-            gitStatus = null;
-            helpTags = null;
-            lspDefinitions = null;
-            lspDocumentSymbols = null;
-            lspImplementations = null;
-            lspReferences = null;
-            lspTypeDefinitions = null;
-            lspWorkspaceSymbols = null;
-            open = null;
-            resume = null;
-            treesitter = null;
-          };
         };
 
         visuals = {
@@ -122,6 +90,12 @@
           };
         };
 
+        utility = {
+          motion.flash-nvim.enable = true;
+          snacks-nvim.enable = true;
+          snacks-nvim.setupOpts.indent.enable = true;
+        };
+
         lsp = {
           enable = true;
           formatOnSave = true;
@@ -142,10 +116,7 @@
           lua.enable = true;
           markdown.enable = true;
           nix.enable = true;
-          nix.format.type = [
-            "nixfmt"
-            "alejandra"
-          ];
+          nix.format.type = [ "nixfmt" ];
           python.enable = true;
           rust.enable = true;
           sql.enable = true;
@@ -173,6 +144,22 @@
             action = "function() require('toggleterm').toggle() end";
             lua = true;
             desc = "toggle terminal";
+          }
+          {
+            key = "<leader>f";
+            mode = "n";
+            silent = true;
+            action = "function() Snacks.picker.files() end";
+            lua = true;
+            desc = "file picker";
+          }
+          {
+            key = "<leader>g";
+            mode = "n";
+            silent = true;
+            action = "function() Snacks.picker.grep() end";
+            lua = true;
+            desc = "grep";
           }
           {
             key = "<C-h>";
