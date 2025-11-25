@@ -17,7 +17,6 @@
       generic-extlinux-compatible.enable = true;
       timeout = 0;
     };
-    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking = {

@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader.timeout = 5;
+    tmp.cleanOnBoot = true;
+    kernelPackages = pkgs.linuxPackages_latest_hardened;
   };
-
 }
