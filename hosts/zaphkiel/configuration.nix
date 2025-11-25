@@ -27,6 +27,9 @@
   #   };
   # };
 
+  programs.localsend.enable = true;
+  programs.localsend.openFirewall = true;
+
   networking.networkmanager = {
     enable = true;
     dns = "none";

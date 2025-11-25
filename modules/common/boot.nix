@@ -3,6 +3,6 @@
   boot = {
     loader.timeout = 5;
     tmp.cleanOnBoot = true;
-    kernelPackages = pkgs.linuxPackages_latest_hardened;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 }
