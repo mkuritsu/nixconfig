@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     inputs.nvf.homeManagerModules.default
@@ -11,6 +11,10 @@
       vim = {
         globals.editorConfig = true;
         lazy.enable = true;
+
+        startPlugins = [
+          pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+        ];
 
         theme = {
           enable = true;
