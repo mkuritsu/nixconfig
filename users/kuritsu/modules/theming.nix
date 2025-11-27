@@ -1,4 +1,15 @@
 { config, pkgs, ... }:
+let
+  kde-theme = pkgs.catppuccin-kde.override {
+    flavour = [ "mocha" ];
+    accents = [ "blue" ];
+  };
+
+  kvantum-theme = pkgs.catppuccin-kvantum.override {
+    variant = "mocha";
+    accent = "blue";
+  };
+in
 {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -9,7 +20,6 @@
   home.pointerCursor = {
     enable = true;
     gtk.enable = true;
-    x11.enable = true;
     package = pkgs.catppuccin-cursors.mochaDark;
     name = "catppuccin-mocha-dark-cursors";
     size = 24;
@@ -21,7 +31,7 @@
       kdePackages.qtstyleplugin-kvantum
       darkly
     ];
-    style.name = "kvantum-dark";
+    style.name = "kvantum";
     platformTheme.name = "qtct";
   };
 
@@ -38,23 +48,11 @@
       ];
     };
 
-    "kdeglobals".text = ''
-      [UiSettings]
-      ColorScheme=*
-    ''
-    + (builtins.readFile ''${
-      pkgs.catppuccin-kde.override {
-        flavour = [ "mocha" ];
-        accents = [ "blue" ];
-      }
-    }/share/color-schemes/CatppuccinMochaBlue.colors'');
+    "kdeglobals".text =
+      (builtins.readFile ../dots/kdeglobals)
+      + (builtins.readFile ''${kde-theme}/share/color-schemes/CatppuccinMochaBlue.colors'');
 
-    "Kvantum/catppuccin-mocha-blue".source = "${
-      pkgs.catppuccin-kvantum.override {
-        variant = "mocha";
-        accent = "blue";
-      }
-    }/share/Kvantum/catppuccin-mocha-blue";
+    "Kvantum/catppuccin-mocha-blue".source = "${kvantum-theme}/share/Kvantum/catppuccin-mocha-blue";
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
       theme=catppuccin-mocha-blue
@@ -63,20 +61,25 @@
 
   gtk = {
     enable = true;
-    gtk3.theme = {
-      name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
-    };
+    gtk2.enable = false;
+
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
-    gtk3.bookmarks = [
-      "file:///home/kuritsu/Documents"
-      "file:///home/kuritsu/Downloads"
-      "file:///home/kuritsu/Music"
-      "file:///home/kuritsu/Pictures"
-      "file:///home/kuritsu/Videos"
-    ];
+
+    gtk3 = {
+      theme = {
+        name = "adw-gtk3-dark";
+        package = pkgs.adw-gtk3;
+      };
+      bookmarks = [
+        "file:///home/kuritsu/Documents"
+        "file:///home/kuritsu/Downloads"
+        "file:///home/kuritsu/Music"
+        "file:///home/kuritsu/Pictures"
+        "file:///home/kuritsu/Videos"
+      ];
+    };
   };
 }

@@ -22,6 +22,7 @@ in
 
       imports = [
         ./home.nix
+        ./modules/bash.nix
         ./modules/browser.nix
         ./modules/neovim.nix
         ./modules/desktop-shell.nix

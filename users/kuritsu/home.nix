@@ -21,10 +21,6 @@ in
     app2unit
   ];
 
-  home.sessionVariables = {
-    TERMINAL = "kitty";
-  };
-
   xdg.configFile = {
     "hypr/hyprland.conf".source = sourceFile ./dots/hypr/hyprland.conf;
     "hypr/hypridle.conf".source = sourceFile ./dots/hypr/hypridle.conf;
