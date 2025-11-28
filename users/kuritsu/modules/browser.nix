@@ -30,14 +30,12 @@ in
 
   programs.chromium = {
     enable = true;
-    package = pkgs.chromium.override {
-      enableWideVine = true;
-    };
     extensions = [
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
       "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsor block
       "ddkjiahejlhfcafbddmgiahcphecmpfh" # ublock origin lite
       "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
+      "eimadpbcbfnmbkopoojfekhnkhdbieeh" # dark reader
     ];
   };
 }
