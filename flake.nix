@@ -25,12 +25,8 @@
       url = "github:notashelf/watt";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dankmaterialshell = {
-      url = "github:avengemedia/dankmaterialshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
