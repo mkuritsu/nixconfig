@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, ... }:
 let
   mkFirefoxExtensions =
     extensions:
@@ -23,6 +23,15 @@ let
   };
 in
 {
+  imports = [
+    inputs.zen-browser.homeModules.beta
+  ];
+
+  programs.zen-browser = {
+    enable = true;
+    policies = firefoxPolicies;
+  };
+
   programs.firefox = {
     enable = true;
     policies = firefoxPolicies;
