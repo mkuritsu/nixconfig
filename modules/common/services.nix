@@ -15,7 +15,5 @@
     podman-compose
   ];
 
-  systemd.services.NetworkManager-wait-online.enable = false;
-
   hardware.enableRedistributableFirmware = true;
 }
