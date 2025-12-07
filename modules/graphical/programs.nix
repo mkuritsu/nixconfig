@@ -13,7 +13,7 @@ in
     virt-manager.enable = true;
     obs-studio = {
       enable = true;
-      # enableVirtualCamera = true;
+      enableVirtualCamera = true;
     };
   };
 
