@@ -2,8 +2,7 @@
   inputs,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     inputs.nvf.homeManagerModules.default
   ];
@@ -124,9 +123,9 @@
           lua.enable = true;
           markdown.enable = true;
           nix.enable = true;
-          nix.format.type = [ "alejandra" ];
+          nix.format.type = ["alejandra"];
           python.enable = true;
-          python.format.type = [ "ruff" ];
+          python.format.type = ["ruff"];
           rust.enable = true;
           sql.enable = true;
           ts.enable = true;

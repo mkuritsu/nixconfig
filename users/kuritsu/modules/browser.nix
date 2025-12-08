@@ -1,7 +1,5 @@
-{ inputs, ... }:
-let
-  mkFirefoxExtensions =
-    extensions:
+{inputs, ...}: let
+  mkFirefoxExtensions = extensions:
     builtins.listToAttrs (
       map (extensionId: {
         name = extensionId;
@@ -9,7 +7,8 @@ let
           "installation_mode" = "force_installed";
           "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/${extensionId}/latest.xpi";
         };
-      }) extensions
+      })
+      extensions
     );
 
   firefoxPolicies = {
@@ -21,8 +20,7 @@ let
       "addon@darkreader.org"
     ];
   };
-in
-{
+in {
   imports = [
     inputs.zen-browser.homeModules.beta
   ];

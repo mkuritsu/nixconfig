@@ -1,9 +1,11 @@
-{ inputs, pkgs, ... }:
-let
+{
+  inputs,
+  pkgs,
+  ...
+}: let
   system = pkgs.stdenv.hostPlatform.system;
   spicePkgs = inputs.spicetify-nix.legacyPackages.${system};
-in
-{
+in {
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
   ];

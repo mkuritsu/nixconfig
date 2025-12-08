@@ -2,8 +2,7 @@
   config,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     inputs.istannouncements.nixosModules.default
     ./hardware-configuration.nix

@@ -1,16 +1,18 @@
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   kde-theme = pkgs.catppuccin-kde.override {
-    flavour = [ "mocha" ];
-    accents = [ "blue" ];
+    flavour = ["mocha"];
+    accents = ["blue"];
   };
 
   kvantum-theme = pkgs.catppuccin-kvantum.override {
     variant = "mocha";
     accent = "blue";
   };
-in
-{
+in {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -36,8 +38,7 @@ in
   };
 
   xdg.configFile = {
-    "qt6ct/colors/Catppuccin-Mocha.conf".source =
-      "${pkgs.catppuccin-qt5ct}/themes/Catppuccin-Mocha.conf";
+    "qt6ct/colors/Catppuccin-Mocha.conf".source = "${pkgs.catppuccin-qt5ct}/themes/Catppuccin-Mocha.conf";
 
     "qt6ct/qt6ct.conf".source = pkgs.substitute {
       src = ../dots/qt6ct/qt6ct.conf;

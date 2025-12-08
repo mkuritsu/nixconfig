@@ -2,21 +2,20 @@
   config,
   pkgs,
   ...
-}:
-let
+}: let
   inherit (config.lib.file) mkOutOfStoreSymlink;
 
-  parsePath =
-    path:
+  parsePath = path:
     builtins.replaceStrings
-      [ (builtins.toString ./.) ]
-      [ "${builtins.getEnv "FLAKE_ROOT"}/users/kuritsu" ]
-      (builtins.toString path);
+    [(builtins.toString ./.)]
+    ["${builtins.getEnv "FLAKE_ROOT"}/users/kuritsu"]
+    (builtins.toString path);
 
-  sourceFile =
-    path: if builtins.getEnv "FLAKE_ROOT" == "" then path else mkOutOfStoreSymlink (parsePath path);
-in
-{
+  sourceFile = path:
+    if builtins.getEnv "FLAKE_ROOT" == ""
+    then path
+    else mkOutOfStoreSymlink (parsePath path);
+in {
   home.packages = with pkgs; [
     app2unit
   ];

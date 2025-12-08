@@ -44,43 +44,41 @@
     };
   };
 
-  outputs =
-    { self, ... }@inputs:
-    rec {
-      lib = import ./lib.nix { inherit self inputs; };
+  outputs = {self, ...} @ inputs: rec {
+    lib = import ./lib.nix {inherit self inputs;};
 
-      nixosConfigurations = lib.mkNixOsSystems {
-        zaphkiel = {
-          modules = [
-            "common"
-            "graphical"
-            "gaming"
-            "hardware/amd.nix"
-            "desktop/all.nix"
-          ];
-          users = [ "kuritsu" ];
-        };
-
-        camael = {
-          modules = [
-            "common"
-            "graphical"
-            "desktop/all.nix"
-          ];
-          users = [ "kuritsu" ];
-        };
-
-        fraxinus = {
-          modules = [
-            "common"
-          ];
-        };
+    nixosConfigurations = lib.mkNixOsSystems {
+      zaphkiel = {
+        modules = [
+          "common"
+          "graphical"
+          "gaming"
+          "hardware/amd.nix"
+          "desktop/all.nix"
+        ];
+        users = ["kuritsu"];
       };
 
-      packages = lib.eachSystem (pkgs: {
-        setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
-      });
+      camael = {
+        modules = [
+          "common"
+          "graphical"
+          "desktop/all.nix"
+        ];
+        users = ["kuritsu"];
+      };
 
-      templates = import ./templates;
+      fraxinus = {
+        modules = [
+          "common"
+        ];
+      };
     };
+
+    packages = lib.eachSystem (pkgs: {
+      setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
+    });
+
+    templates = import ./templates;
+  };
 }

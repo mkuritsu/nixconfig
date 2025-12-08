@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -10,7 +9,7 @@
       efi.canTouchEfiVariables = true;
       timeout = 0;
     };
-    binfmt.emulatedSystems = [ "aarch64-linux" ];
+    binfmt.emulatedSystems = ["aarch64-linux"];
   };
 
   # networking = {

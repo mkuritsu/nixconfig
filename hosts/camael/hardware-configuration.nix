@@ -3,9 +3,7 @@
   lib,
   modulesPath,
   ...
-}:
-
-{
+}: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -17,9 +15,9 @@
     "sd_mod"
     "rtsx_pci_sdmmc"
   ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.initrd.kernelModules = [];
+  boot.kernelModules = ["kvm-intel"];
+  boot.extraModulePackages = [];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/8fcf7f79-b061-45a2-9100-c223e49a9d49";
@@ -31,8 +29,7 @@
     ];
   };
 
-  boot.initrd.luks.devices."NIXCRYPT".device =
-    "/dev/disk/by-uuid/2b0a4bbd-eeb0-436c-81c8-57bde68e2695";
+  boot.initrd.luks.devices."NIXCRYPT".device = "/dev/disk/by-uuid/2b0a4bbd-eeb0-436c-81c8-57bde68e2695";
 
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/8fcf7f79-b061-45a2-9100-c223e49a9d49";
@@ -74,7 +71,7 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-uuid/c3efe23b-99ad-46a7-bbbb-da3299f23b4e"; }
+    {device = "/dev/disk/by-uuid/c3efe23b-99ad-46a7-bbbb-da3299f23b4e";}
   ];
 
   networking.useDHCP = lib.mkDefault true;

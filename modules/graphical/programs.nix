@@ -1,14 +1,14 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   vscode-product-json = "${pkgs.vscode}/lib/vscode/resources/app/product.json";
 
   vscodium-marketplace = pkgs.vscodium.overrideAttrs (oldAttrs: {
-    postInstall = (oldAttrs.postInstall or "") + ''
-      cp "${vscode-product-json}" $out/lib/vscode/resources/app/product.json
-    '';
+    postInstall =
+      (oldAttrs.postInstall or "")
+      + ''
+        cp "${vscode-product-json}" $out/lib/vscode/resources/app/product.json
+      '';
   });
-in
-{
+in {
   programs = {
     virt-manager.enable = true;
     obs-studio = {

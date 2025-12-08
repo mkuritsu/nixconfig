@@ -6,24 +6,20 @@
     systems.url = "github:nix-systems/default";
   };
 
-  outputs =
-    {
-      nixpkgs,
-      systems,
-      ...
-    }:
-    let
-      eachSystem =
-        fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
-    in
-    {
-      devShells = eachSystem (pkgs: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [
-            jdk21
-            maven
-          ];
-        };
-      });
-    };
+  outputs = {
+    nixpkgs,
+    systems,
+    ...
+  }: let
+    eachSystem = fn: nixpkgs.lib.genAttrs (import systems) (system: fn nixpkgs.legacyPackages.${system});
+  in {
+    devShells = eachSystem (pkgs: {
+      default = pkgs.mkShell {
+        packages = with pkgs; [
+          jdk21
+          maven
+        ];
+      };
+    });
+  };
 }

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs = {
     gamescope.enable = true;
     gamemode.enable = true;

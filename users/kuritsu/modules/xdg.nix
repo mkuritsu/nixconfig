@@ -7,7 +7,7 @@
     terminal-exec = {
       enable = true;
       settings = {
-        default = [ "kitty.desktop" ];
+        default = ["kitty.desktop"];
       };
     };
   };

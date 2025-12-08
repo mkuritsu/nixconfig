@@ -1,8 +1,7 @@
 let
   username = "kuritsu";
   homeDirectory = "/home/${username}";
-in
-{
+in {
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = [
@@ -12,23 +11,21 @@ in
     ];
   };
 
-  home-manager.users.${username} =
-    { osConfig, ... }:
-    {
-      home = {
-        stateVersion = osConfig.system.stateVersion;
-        inherit username homeDirectory;
-      };
-
-      imports = [
-        ./home.nix
-        ./modules/bash.nix
-        ./modules/browser.nix
-        ./modules/neovim.nix
-        ./modules/desktop-shell.nix
-        ./modules/spicetify.nix
-        ./modules/theming.nix
-        ./modules/xdg.nix
-      ];
+  home-manager.users.${username} = {osConfig, ...}: {
+    home = {
+      stateVersion = osConfig.system.stateVersion;
+      inherit username homeDirectory;
     };
+
+    imports = [
+      ./home.nix
+      ./modules/bash.nix
+      ./modules/browser.nix
+      ./modules/neovim.nix
+      ./modules/desktop-shell.nix
+      ./modules/spicetify.nix
+      ./modules/theming.nix
+      ./modules/xdg.nix
+    ];
+  };
 }

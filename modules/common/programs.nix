@@ -2,11 +2,9 @@
   inputs,
   pkgs,
   ...
-}:
-let
+}: let
   inherit (pkgs.stdenv.hostPlatform) system;
-in
-{
+in {
   programs = {
     adb.enable = true;
     gnupg.agent = {
