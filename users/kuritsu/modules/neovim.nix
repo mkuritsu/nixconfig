@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   pkgs,
   ...
 }: {
@@ -18,6 +19,17 @@
         startPlugins = [
           pkgs.vimPlugins.nvim-treesitter.withAllGrammars
         ];
+
+        lazy.plugins = {
+          "kanagawa.nvim" = {
+            package = pkgs.vimPlugins.kanagawa-nvim;
+            setupModule = "kanagawa";
+            setupOpts = {
+              transparent = false;
+              keywordStyle.italic = false;
+            };
+          };
+        };
 
         extraPackages = with pkgs; [
           fd
@@ -91,7 +103,7 @@
               enable = true;
               keymaps = {
                 af = "@function.outer";
-                "if" = "@funtion.inner";
+                "if" = "@function.inner";
                 ac = "@class.outer";
                 ic = "@class.inner";
                 as = "@local.scope";
@@ -137,6 +149,17 @@
           wgsl.enable = true;
           yaml.enable = true;
         };
+
+        autocmds = [
+          {
+            event = ["TextYankPost"];
+            callback = lib.generators.mkLuaInline ''
+              function()
+                vim.highlight.on_yank()
+              end
+            '';
+          }
+        ];
 
         keymaps = [
           {
