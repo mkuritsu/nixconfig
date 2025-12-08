@@ -1,4 +1,8 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  ...
+}:
 {
   imports = [
     inputs.nvf.homeManagerModules.default
@@ -70,11 +74,11 @@
           indent-blankline.enable = true;
         };
 
-        presence.neocord = {
-          enable = true;
-          setupOpts.logo_tooltip = "The Superior Text Editor";
-          setupOpts.global_timer = true;
-        };
+        # presence.neocord = {
+        #   enable = true;
+        #   setupOpts.logo_tooltip = "The Superior Text Editor";
+        #   setupOpts.global_timer = true;
+        # };
 
         treesitter = {
           enable = true;
@@ -120,8 +124,9 @@
           lua.enable = true;
           markdown.enable = true;
           nix.enable = true;
-          nix.format.type = [ "nixfmt" ];
+          nix.format.type = [ "alejandra" ];
           python.enable = true;
+          python.format.type = [ "ruff" ];
           rust.enable = true;
           sql.enable = true;
           ts.enable = true;
