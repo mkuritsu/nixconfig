@@ -37,9 +37,11 @@
 
         theme = {
           enable = true;
-          name = "catppuccin";
-          style = "mocha";
-          transparent = true;
+          name = "rose-pine";
+          style = "moon";
+          # name = "catppuccin";
+          # style = "mocha";
+          transparent = false;
         };
 
         options = {
@@ -77,11 +79,6 @@
         terminal.toggleterm.enable = true;
         terminal.toggleterm.mappings.open = null;
 
-        # filetree.neo-tree.enable = true;
-        # filetree.neo-tree.setupOpts = {
-        #   git_status_async = true;
-        # };
-
         visuals = {
           nvim-web-devicons.enable = true;
           fidget-nvim.enable = true;
@@ -89,11 +86,11 @@
           indent-blankline.enable = true;
         };
 
-        # presence.neocord = {
-        #   enable = true;
-        #   setupOpts.logo_tooltip = "The Superior Text Editor";
-        #   setupOpts.global_timer = true;
-        # };
+        presence.neocord = {
+          enable = true;
+          setupOpts.logo_tooltip = "The Superior Text Editor";
+          setupOpts.global_timer = true;
+        };
 
         treesitter = {
           enable = true;

@@ -29,6 +29,7 @@ in {
     fastfetch
     onefetch
     tmux
+    zellij
     starship
     yazi
     ripgrep
