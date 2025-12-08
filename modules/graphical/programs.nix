@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  inputs,
+  pkgs,
+  ...
+}: let
   vscode-product-json = "${pkgs.vscode}/lib/vscode/resources/app/product.json";
 
   vscodium-marketplace = pkgs.vscodium.overrideAttrs (oldAttrs: {
@@ -36,5 +40,7 @@ in {
     kdePackages.kdenlive
     vscodium-marketplace
     vagrant
+
+    inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

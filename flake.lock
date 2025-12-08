@@ -98,6 +98,26 @@
         "type": "github"
       }
     },
+    "helium": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765166535,
+        "narHash": "sha256-DN8Q8Zyk5cthfJlODgSUTNg8N1+pdFgeulOsldd95PQ=",
+        "owner": "mkuritsu",
+        "repo": "helium-flake",
+        "rev": "67278a8a2b01e6e818698bfe55302c6785ed52c2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkuritsu",
+        "repo": "helium-flake",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -235,6 +255,7 @@
       "inputs": {
         "aagl": "aagl",
         "agenix": "agenix",
+        "helium": "helium",
         "home-manager": "home-manager",
         "istannouncements": "istannouncements",
         "nixpkgs": "nixpkgs_2",
