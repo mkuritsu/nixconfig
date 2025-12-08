@@ -19,6 +19,10 @@
           pkgs.vimPlugins.nvim-treesitter.withAllGrammars
         ];
 
+        extraPackages = with pkgs; [
+          fd
+        ];
+
         theme = {
           enable = true;
           name = "catppuccin";
@@ -61,10 +65,10 @@
         terminal.toggleterm.enable = true;
         terminal.toggleterm.mappings.open = null;
 
-        filetree.neo-tree.enable = true;
-        filetree.neo-tree.setupOpts = {
-          git_status_async = true;
-        };
+        # filetree.neo-tree.enable = true;
+        # filetree.neo-tree.setupOpts = {
+        #   git_status_async = true;
+        # };
 
         visuals = {
           nvim-web-devicons.enable = true;
@@ -139,7 +143,8 @@
             key = "<leader>e";
             mode = "n";
             silent = true;
-            action = ":Neotree toggle<CR>";
+            lua = true;
+            action = "function() Snacks.explorer() end";
             desc = "file tree";
           }
           {
