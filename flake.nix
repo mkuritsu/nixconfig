@@ -64,6 +64,7 @@
 
     nixosConfigurations = lib.mkNixOsSystems {
       zaphkiel = {
+        system = "x86_64-linux";
         modules = [
           "common"
           "graphical"
@@ -75,6 +76,7 @@
       };
 
       camael = {
+        system = "x86_64-linux";
         modules = [
           "common"
           "graphical"
@@ -84,6 +86,7 @@
       };
 
       fraxinus = {
+        system = "aarch64-linux";
         modules = [
           "common"
         ];

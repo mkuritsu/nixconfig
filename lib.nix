@@ -11,7 +11,15 @@
 in rec {
   eachSystem = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
 
+  mkPkgs = system:
+    import nixpkgs {
+      inherit system;
+      overlays = [(import ./overlays/nm-applet.nix)];
+      config.allowUnfree = true;
+    };
+
   mkNixOs = hostname: {
+    system,
     users ? [],
     modules ? [],
   }: let
@@ -19,16 +27,21 @@ in rec {
     userModules = map (user: ./users/${user}/user.nix) users;
   in
     nixpkgs.lib.nixosSystem {
+      inherit system;
+
+      pkgs = mkPkgs system;
       specialArgs = {inherit inputs self;};
       modules =
         [
           {networking.hostName = hostname;}
           inputs.home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.extraSpecialArgs = {inherit inputs self;};
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "backup";
+              extraSpecialArgs = {inherit inputs self;};
+            };
           }
           ./hosts/${hostname}/configuration.nix
         ]
