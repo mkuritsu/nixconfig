@@ -40,7 +40,5 @@ in {
     kdePackages.kdenlive
     vscodium-marketplace
     vagrant
-
-    inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

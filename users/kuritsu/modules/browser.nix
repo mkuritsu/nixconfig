@@ -1,4 +1,10 @@
-{inputs, ...}: let
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (pkgs.stdenv.hostPlatform) system;
+
   mkFirefoxExtensions = extensions:
     builtins.listToAttrs (
       map (extensionId: {
@@ -30,14 +36,7 @@ in {
     policies = firefoxPolicies;
   };
 
-  programs.chromium = {
-    enable = true;
-    extensions = [
-      "nngceckbapebfimnlniiiahkandclblb" # bitwarden
-      "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsor block
-      "ddkjiahejlhfcafbddmgiahcphecmpfh" # ublock origin lite
-      "dbepggeogbaibhgnhhndojpepiihcmeb" # vimium
-      "eimadpbcbfnmbkopoojfekhnkhdbieeh" # dark reader
-    ];
-  };
+  home.packages = [
+    inputs.helium.packages.${system}.default
+  ];
 }
