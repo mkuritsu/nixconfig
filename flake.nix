@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -10,16 +11,24 @@
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay = {
+        url = "github:oxalica/rust-overlay";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
     agenix = {
       url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.darwin.follows = "";
-      inputs.home-manager.follows = "";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        darwin.follows = "";
+        home-manager.follows = "";
+        systems.follows = "systems";
+      };
     };
     istannouncements = {
       url = "github:mkuritsu/ISTAnnouncements";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
     };
     watt = {
       url = "github:notashelf/watt";
@@ -32,10 +41,12 @@
     spicetify-nix = {
       url = "github:gerg-l/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
     };
     nvf = {
       url = "github:notashelf/nvf/v0.8";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
