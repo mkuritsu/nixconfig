@@ -3,8 +3,6 @@ font-size = 11
 background-opacity = 0.9
 command = fish
 theme = TokyoNight
-window-padding-y = 3 
-window-padding-x = 3
 quit-after-last-window-closed = false
 
 window-theme = system
