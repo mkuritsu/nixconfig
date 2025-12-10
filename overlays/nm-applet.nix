@@ -1,11 +1,9 @@
 _: prev: {
-  networkmanagerapplet =
+  nm-connection-editor-only =
     prev.networkmanagerapplet.overrideAttrs
-    (oldAttrs: {
-      postPatch =
-        oldAttrs.postPatch
-        + ''
-          rm -rf $out/etc/xdg/autostart
-        '';
+    (_: {
+      postInstall = ''
+        rm -rf $out/etc/xdg/autostart
+      '';
     });
 }

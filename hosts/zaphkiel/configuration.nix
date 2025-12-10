@@ -12,21 +12,6 @@
     binfmt.emulatedSystems = ["aarch64-linux"];
   };
 
-  # networking = {
-  #   interfaces.enp34s0 = {
-  #     ipv4.addresses = [
-  #       {
-  #         address = "192.168.1.70";
-  #         prefixLength = 24;
-  #       }
-  #     ];
-  #   };
-  #   defaultGateway = {
-  #     address = "192.168.1.254";
-  #     interface = "enp34s0";
-  #   };
-  # };
-
   programs.localsend.enable = true;
   programs.localsend.openFirewall = true;
 
@@ -46,7 +31,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    networkmanagerapplet
+    nm-connection-editor-only
   ];
 
   system.stateVersion = "24.11";

@@ -36,7 +36,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    networkmanagerapplet
+    nm-connection-editor-only
   ];
 
   system.stateVersion = "24.11";
