@@ -3,31 +3,17 @@
 
   security.rtkit.enable = true;
 
-  services.pipewire = let
-    quantum = 1024;
-    rate = 48000;
-  in {
+  services.pipewire = {
     enable = true;
     audio.enable = true;
     alsa.enable = true;
     pulse.enable = true;
     jack.enable = true;
-    # extraConfig.pipewire = {
-    #   "10-clock-quantum" = {
-    #     "context.properties" = {
-    #       "default.clock.rate" = rate;
-    #       "default.clock.quantum" = quantum;
-    #       "default.clock.min-quantum" = quantum;
-    #       "default.clock.max-quantum" = quantum;
-    #       "default.clock.allowed-rates" = [ rate ];
-    #     };
-    #   };
-    # };
 
     wireplumber = {
       enable = true;
       extraConfig = {
-        "10-clock-quantum" = {
+        "10-alsa-rules" = {
           "monitor.alsa.rules" = [
             {
               matches = [

@@ -9,8 +9,4 @@
     "VDPAU_DRIVER" = "radeonsi";
     "LIBVA_DRIVER_NAME" = "radeonsi";
   };
-
-  environment.systemPackages = with pkgs; [
-    btop-rocm
-  ];
 }

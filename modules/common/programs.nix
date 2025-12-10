@@ -38,8 +38,16 @@ in {
     openssl
     just
     libqalculate
-    inputs.agenix.packages.${system}.default
     hyperfine
     bat
+    btop
+    inputs.agenix.packages.${system}.default
+
+    (python3.withPackages (pypkgs: [
+      pypkgs.requests
+      pypkgs.numpy
+      pypkgs.pandas
+      pypkgs.matplotlib
+    ]))
   ];
 }

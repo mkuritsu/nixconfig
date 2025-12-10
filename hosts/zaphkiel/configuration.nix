@@ -30,6 +30,8 @@
     settings.PasswordAuthentication = false;
   };
 
+  services.ratbagd.enable = true;
+
   environment.systemPackages = with pkgs; [
     nm-connection-editor-only
   ];

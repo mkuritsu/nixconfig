@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   vscode-product-json = "${pkgs.vscode}/lib/vscode/resources/app/product.json";
 
   vscodium-marketplace = pkgs.vscodium.overrideAttrs (oldAttrs: {

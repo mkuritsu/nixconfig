@@ -34,6 +34,5 @@
   xdg = {
     mime.enable = true;
     menus.enable = true;
-    terminal-exec.enable = true;
   };
 }
