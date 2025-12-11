@@ -1,5 +1,6 @@
 {
   inputs,
+  config,
   lib,
   pkgs,
   ...
@@ -25,7 +26,7 @@
             package = pkgs.vimPlugins.kanagawa-nvim;
             setupModule = "kanagawa";
             setupOpts = {
-              transparent = true;
+              inherit (config.programs.nvf.settings.vim.theme) transparent;
               keywordStyle.italic = false;
             };
           };
@@ -36,7 +37,7 @@
               variant = "moon";
               dim_inactive_windows = true;
               styles = {
-                transparency = false;
+                transparency = config.programs.nvf.settings.vim.theme.transparent;
                 italic = false;
               };
             };
@@ -51,6 +52,7 @@
           enable = true;
           name = "catppuccin";
           style = "mocha";
+
           transparent = true;
         };
 
@@ -83,11 +85,10 @@
 
         autopairs.nvim-autopairs.enable = true;
         binds.whichKey.enable = true;
+        binds.whichKey.setupOpts.preset = "helix";
         notify.nvim-notify.enable = true;
         statusline.lualine.enable = true;
         ui.borders.enable = true;
-        terminal.toggleterm.enable = true;
-        terminal.toggleterm.mappings.open = null;
 
         visuals = {
           nvim-web-devicons.enable = true;
@@ -184,7 +185,7 @@
               "t"
             ];
             silent = true;
-            action = "function() require('toggleterm').toggle() end";
+            action = "function() Snacks.terminal() end";
             lua = true;
             desc = "toggle terminal";
           }
