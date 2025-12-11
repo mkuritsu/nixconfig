@@ -25,8 +25,20 @@
             package = pkgs.vimPlugins.kanagawa-nvim;
             setupModule = "kanagawa";
             setupOpts = {
-              transparent = false;
+              transparent = true;
               keywordStyle.italic = false;
+            };
+          };
+          "rose-pine" = {
+            package = pkgs.vimPlugins.rose-pine;
+            setupModule = "rose-pine";
+            setupOpts = {
+              variant = "moon";
+              dim_inactive_windows = true;
+              styles = {
+                transparency = false;
+                italic = false;
+              };
             };
           };
         };
@@ -37,11 +49,9 @@
 
         theme = {
           enable = true;
-          name = "rose-pine";
-          style = "moon";
-          # name = "catppuccin";
-          # style = "mocha";
-          transparent = false;
+          name = "catppuccin";
+          style = "mocha";
+          transparent = true;
         };
 
         options = {
