@@ -156,6 +156,9 @@
           typst.enable = true;
           wgsl.enable = true;
           yaml.enable = true;
+          just.enable = true;
+          json.enable = true;
+          qml.enable = true;
         };
 
         autocmds = [

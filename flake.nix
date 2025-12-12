@@ -11,10 +11,7 @@
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.rust-overlay = {
-        url = "github:oxalica/rust-overlay";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
+      inputs.rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix = {
       url = "github:ryantm/agenix";
@@ -44,9 +41,12 @@
       inputs.systems.follows = "systems";
     };
     nvf = {
-      url = "github:notashelf/nvf/v0.8";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.systems.follows = "systems";
+      url = "github:notashelf/nvf";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        systems.follows = "systems";
+        ndg.inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
