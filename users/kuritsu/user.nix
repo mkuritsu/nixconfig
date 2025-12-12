@@ -13,7 +13,7 @@ in {
 
   home-manager.users.${username} = {osConfig, ...}: {
     home = {
-      stateVersion = osConfig.system.stateVersion;
+      inherit (osConfig.system) stateVersion;
       inherit username homeDirectory;
     };
 
@@ -21,6 +21,8 @@ in {
       ./home.nix
       ./modules/bash.nix
       ./modules/browser.nix
+      ./modules/imv.nix
+      ./modules/kitty.nix
       ./modules/neovim.nix
       ./modules/desktop-shell.nix
       ./modules/spicetify.nix

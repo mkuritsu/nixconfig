@@ -13,6 +13,7 @@
     imv
     kdePackages.okular
     kdePackages.dolphin
+    kdePackages.kio-extras
     kdePackages.ark
     kdePackages.ffmpegthumbs
     kdePackages.kdegraphics-thumbnailers

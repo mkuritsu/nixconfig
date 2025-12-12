@@ -27,7 +27,7 @@
             setupModule = "kanagawa";
             setupOpts = {
               inherit (config.programs.nvf.settings.vim.theme) transparent;
-              commentStyle.itacle = false;
+              commentStyle.italic = false;
               keywordStyle.italic = false;
             };
           };
@@ -51,8 +51,7 @@
 
         theme = {
           enable = true;
-          name = "catppuccin";
-          style = "mocha";
+          name = "mellow";
           transparent = true;
         };
 

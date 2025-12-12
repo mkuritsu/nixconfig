@@ -28,8 +28,6 @@ in {
 
     "niri/config.kdl".source = sourceFile ./dots/niri/config.kdl;
 
-    "imv/config".source = sourceFile ./dots/imv/config;
-
     "btop/btop.conf".source = ./dots/btop/btop.conf;
     "btop/themes".source = sourceFile ./dots/btop/themes;
 
@@ -40,9 +38,6 @@ in {
     "starship.toml".source = sourceFile ./dots/starship.toml;
 
     "foot/foot.ini".source = sourceFile ./dots/foot/foot.ini;
-
-    "kitty/kitty.conf".source = sourceFile ./dots/kitty/kitty.conf;
-    "kitty/themes".source = sourceFile ./dots/kitty/themes;
 
     "fish/config.fish".source = sourceFile ./dots/fish/config.fish;
     "fish/functions/cd_fzf.fish".source = sourceFile ./dots/fish/functions/cd_fzf.fish;
