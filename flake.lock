@@ -107,11 +107,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765304021,
-        "narHash": "sha256-cRDi+y62T3UJkNhMZoNWHUR6I8LZZ3t8BIpQ1BYk+PE=",
+        "lastModified": 1765566362,
+        "narHash": "sha256-t3/e/pBfWr7PA2CjNKiKK/StT6vKrGTfw0PbFYiQRos=",
         "owner": "mkuritsu",
         "repo": "helium-flake",
-        "rev": "2f765450861d6c673f8990a87e1aa5dbc0b703b7",
+        "rev": "228dd42974aac367df58d379ddd082c6de4bd721",
         "type": "github"
       },
       "original": {

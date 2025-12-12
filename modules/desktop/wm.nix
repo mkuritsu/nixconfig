@@ -8,7 +8,6 @@
     hyprpicker
     kitty
     foot
-    ghostty
     matugen
     mpv
     imv

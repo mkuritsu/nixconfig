@@ -27,6 +27,7 @@
             setupModule = "kanagawa";
             setupOpts = {
               inherit (config.programs.nvf.settings.vim.theme) transparent;
+              commentStyle.itacle = false;
               keywordStyle.italic = false;
             };
           };
@@ -52,7 +53,6 @@
           enable = true;
           name = "catppuccin";
           style = "mocha";
-
           transparent = true;
         };
 
@@ -182,17 +182,6 @@
             desc = "file tree";
           }
           {
-            key = "<C-`>";
-            mode = [
-              "n"
-              "t"
-            ];
-            silent = true;
-            action = "function() Snacks.terminal() end";
-            lua = true;
-            desc = "toggle terminal";
-          }
-          {
             key = "<leader>f";
             mode = "n";
             silent = true;
@@ -231,12 +220,6 @@
             mode = "i";
             silent = true;
             action = "<right>";
-          }
-          {
-            key = "<esc>";
-            mode = "t";
-            silent = true;
-            action = "<C-\\><C-n>";
           }
           {
             key = "<leader>bd";
