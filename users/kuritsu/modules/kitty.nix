@@ -3,9 +3,7 @@
     enable = true;
     font.name = "CaskaydiaMono Nerd Font";
     font.size = 11;
-    themeFile = "mellow";
-    # themeFile = "kanagawa_dragon";
-    # themeFile = "tokyo_night_night";
+    themeFile = "kanagawa";
     settings = {
       background_opacity = 0.90;
       shell = "fish";

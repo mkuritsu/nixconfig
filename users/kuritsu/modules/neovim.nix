@@ -17,6 +17,11 @@
         globals.editorConfig = true;
         lazy.enable = true;
 
+        diagnostics = {
+          enable = true;
+          config.virtual_text = true;
+        };
+
         startPlugins = [
           pkgs.vimPlugins.nvim-treesitter.withAllGrammars
         ];
@@ -31,6 +36,7 @@
               keywordStyle.italic = false;
             };
           };
+
           "rose-pine" = {
             package = pkgs.vimPlugins.rose-pine;
             setupModule = "rose-pine";
@@ -49,31 +55,15 @@
           fd
         ];
 
+        luaConfigPost = ''
+          vim.cmd.colorscheme "kanagawa-wave"
+        '';
+
         theme = {
           enable = true;
-          name = "mellow";
           transparent = true;
-        };
-
-        options = {
-          tabstop = 4;
-          shiftwidth = 4;
-          expandtab = true;
-          smartindent = true;
-          autoindent = true;
-          number = true;
-          relativenumber = true;
-          wrap = false;
-          scrolloff = 10;
-          swapfile = false;
-          clipboard = "unnamedplus";
-        };
-
-        diagnostics = {
-          enable = true;
-          config = {
-            virtual_text = true;
-          };
+          name = "everforest";
+          style = "hard";
         };
 
         autocomplete.blink-cmp.enable = true;

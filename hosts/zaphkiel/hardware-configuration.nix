@@ -25,10 +25,19 @@
     fsType = "ext4";
   };
 
-  fileSystems."/mnt/hdd" = {
-    device = "/dev/disk/by-uuid/052aa2b0-4797-43da-8752-9186e936531d";
+  fileSystems."/mnt/ssd3" = {
+    device = "/dev/disk/by-uuid/b65f344c-07ee-455b-9998-ccb57209c414";
     fsType = "ext4";
+    options = [
+      "nofail"
+      "x-gvfs-show=ssd3"
+    ];
   };
+
+  # fileSystems."/mnt/hdd" = {
+  #   device = "/dev/disk/by-uuid/052aa2b0-4797-43da-8752-9186e936531d";
+  #   fsType = "ext4";
+  # };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/88DC-AAB3";
