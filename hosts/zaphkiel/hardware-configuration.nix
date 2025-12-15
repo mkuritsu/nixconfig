@@ -23,21 +23,22 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/3faa5ab2-d7d0-4637-bd0a-e7538d9ecc4f";
     fsType = "ext4";
-  };
-
-  fileSystems."/mnt/ssd3" = {
-    device = "/dev/disk/by-uuid/b65f344c-07ee-455b-9998-ccb57209c414";
-    fsType = "ext4";
     options = [
-      "nofail"
-      "x-gvfs-show=ssd3"
+      "noatime"
     ];
   };
 
-  # fileSystems."/mnt/hdd" = {
-  #   device = "/dev/disk/by-uuid/052aa2b0-4797-43da-8752-9186e936531d";
-  #   fsType = "ext4";
-  # };
+  fileSystems."/mnt/ssd3" = {
+    device = "/dev/disk/by-uuid/48b48231-7090-4056-9836-e249b1fb55a6";
+    fsType = "btrfs";
+    options = [
+      "nofail"
+      "noatime"
+      "x-gvfs-show=ssd3"
+      "compress=zstd:3"
+      "discard=async"
+    ];
+  };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/88DC-AAB3";
