@@ -30,10 +30,16 @@
     settings.PasswordAuthentication = false;
   };
 
+  hardware.openrazer.enable = true;
+  users.users.kuritsu = {
+    extraGroups = ["openrazer"];
+  };
+
   services.ratbagd.enable = true;
 
   environment.systemPackages = with pkgs; [
     nm-connection-editor-only
+    polychromatic
   ];
 
   system.stateVersion = "24.11";
