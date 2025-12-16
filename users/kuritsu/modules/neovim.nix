@@ -22,6 +22,35 @@
           config.virtual_text = true;
         };
 
+        options = {
+          tabstop = 4;
+          shiftwidth = 4;
+          expandtab = true;
+          smartindent = true;
+          autoindent = true;
+          number = true;
+          relativenumber = true;
+          wrap = false;
+          scrolloff = 10;
+          swapfile = false;
+          # clipboard = "unnamedplus";
+        };
+
+        extraPackages = with pkgs; [
+          fd
+        ];
+
+        luaConfigPost = ''
+          vim.cmd.colorscheme "kanagawa-wave"
+        '';
+
+        theme = {
+          enable = true;
+          transparent = true;
+          name = "everforest";
+          style = "hard";
+        };
+
         startPlugins = [
           pkgs.vimPlugins.nvim-treesitter.withAllGrammars
         ];
@@ -49,21 +78,6 @@
               };
             };
           };
-        };
-
-        extraPackages = with pkgs; [
-          fd
-        ];
-
-        luaConfigPost = ''
-          vim.cmd.colorscheme "kanagawa-wave"
-        '';
-
-        theme = {
-          enable = true;
-          transparent = true;
-          name = "everforest";
-          style = "hard";
         };
 
         autocomplete.blink-cmp.enable = true;
@@ -127,7 +141,7 @@
           enableFormat = true;
           enableTreesitter = true;
 
-          # astro.enable = true;
+          astro.enable = true;
           bash.enable = true;
           clang.enable = true;
           css.enable = true;
