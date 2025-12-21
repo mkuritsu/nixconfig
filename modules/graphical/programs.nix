@@ -35,6 +35,5 @@ in {
     gimp
     kdePackages.kdenlive
     vscodium-marketplace
-    vagrant
   ];
 }

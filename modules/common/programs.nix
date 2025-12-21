@@ -41,6 +41,7 @@ in {
     hyperfine
     bat
     btop
+    pax-utils
     inputs.agenix.packages.${system}.default
 
     (python3.withPackages (pypkgs: [

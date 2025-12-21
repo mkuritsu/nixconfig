@@ -33,7 +33,7 @@
           wrap = false;
           scrolloff = 10;
           swapfile = false;
-          # clipboard = "unnamedplus";
+          clipboard = "unnamedplus";
         };
 
         extraPackages = with pkgs; [
@@ -141,7 +141,7 @@
           enableFormat = true;
           enableTreesitter = true;
 
-          astro.enable = true;
+          # astro.enable = true;
           bash.enable = true;
           clang.enable = true;
           css.enable = true;
