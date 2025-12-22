@@ -43,12 +43,5 @@ in {
     btop
     pax-utils
     inputs.agenix.packages.${system}.default
-
-    (python3.withPackages (pypkgs: [
-      pypkgs.requests
-      pypkgs.numpy
-      pypkgs.pandas
-      pypkgs.matplotlib
-    ]))
   ];
 }
