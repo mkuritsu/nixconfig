@@ -27,15 +27,10 @@ in {
     size = 24;
   };
 
-  qt = {
-    enable = true;
-    style.package = with pkgs; [
-      kdePackages.qtstyleplugin-kvantum
-      darkly
-    ];
-    style.name = "kvantum";
-    platformTheme.name = "qtct";
-  };
+  home.packages = with pkgs; [
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.qt6ct
+  ];
 
   xdg.configFile = {
     "qt6ct/colors/Catppuccin-Mocha.conf".source = "${pkgs.catppuccin-qt5ct}/themes/Catppuccin-Mocha.conf";
@@ -50,7 +45,7 @@ in {
     };
 
     "kdeglobals".text =
-      (builtins.readFile ../dots/kdeglobals)
+      builtins.readFile ../dots/kdeglobals
       + (builtins.readFile ''${kde-theme}/share/color-schemes/CatppuccinMochaBlue.colors'');
 
     "Kvantum/catppuccin-mocha-blue".source = "${kvantum-theme}/share/Kvantum/catppuccin-mocha-blue";

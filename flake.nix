@@ -71,7 +71,7 @@
           "gaming"
           "hardware/amd.nix"
           "desktop/hyprland.nix"
-          "desktop/kde.nix"
+          # "desktop/kde.nix"
         ];
         users = ["kuritsu"];
       };

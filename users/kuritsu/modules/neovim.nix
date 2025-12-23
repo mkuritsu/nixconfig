@@ -141,7 +141,7 @@
           enableFormat = true;
           enableTreesitter = true;
 
-          # astro.enable = true;
+          astro.enable = true;
           bash.enable = true;
           clang.enable = true;
           css.enable = true;

@@ -1,5 +1,5 @@
 [General]
-TerminalApplication=footclient
+TerminalApplication=kitty
 
 [UiSettings]
 ColorScheme=*
