@@ -9,6 +9,9 @@
     inputs.nvf.homeManagerModules.default
   ];
 
+  # Here so it can be used from inside distrobox
+  home.file.".local/bin/nvim".source = config.lib.file.mkOutOfStoreSymlink (lib.getExe config.programs.nvf.finalPackage);
+
   programs.nvf = {
     enable = true;
     defaultEditor = true;
