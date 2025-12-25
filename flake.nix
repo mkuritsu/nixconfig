@@ -82,6 +82,7 @@
           "common"
           "graphical"
           "desktop/hyprland.nix"
+          "desktop/niri.nix"
         ];
         users = ["kuritsu"];
       };
