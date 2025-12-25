@@ -19,7 +19,6 @@ in {
 
     imports = [
       ./home.nix
-      ./modules/bash.nix
       ./modules/ghostty.nix
       ./modules/browser.nix
       ./modules/imv.nix

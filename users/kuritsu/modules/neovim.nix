@@ -9,8 +9,7 @@
     inputs.nvf.homeManagerModules.default
   ];
 
-  # Here so it can be used from inside distrobox
-  home.file.".local/bin/nvim".source = config.lib.file.mkOutOfStoreSymlink (lib.getExe config.programs.nvf.finalPackage);
+  home.file.".local/bin/nvim".source = lib.getExe config.programs.nvf.finalPackage;
 
   programs.nvf = {
     enable = true;
@@ -43,13 +42,9 @@
           fd
         ];
 
-        # luaConfigPost = ''
-        #   vim.cmd.colorscheme "kanagawa-wave"
-        # '';
-
         theme = {
           enable = true;
-          transparent = true;
+          transparent = false;
           name = "everforest";
           style = "hard";
         };

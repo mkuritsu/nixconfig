@@ -8,11 +8,8 @@
     brightnessctl
     gpu-screen-recorder
     hyprpicker
-    kitty
-    ghostty
     matugen
     mpv
-    imv
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.kio-extras
