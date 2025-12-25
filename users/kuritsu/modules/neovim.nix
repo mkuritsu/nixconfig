@@ -43,9 +43,9 @@
           fd
         ];
 
-        luaConfigPost = ''
-          vim.cmd.colorscheme "kanagawa-wave"
-        '';
+        # luaConfigPost = ''
+        #   vim.cmd.colorscheme "kanagawa-wave"
+        # '';
 
         theme = {
           enable = true;

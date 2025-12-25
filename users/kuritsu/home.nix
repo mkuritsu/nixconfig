@@ -37,8 +37,6 @@ in {
 
     "starship.toml".source = sourceFile ./dots/starship.toml;
 
-    "foot/foot.ini".source = sourceFile ./dots/foot/foot.ini;
-
     "fish/config.fish".source = sourceFile ./dots/fish/config.fish;
     "fish/functions/cd_fzf.fish".source = sourceFile ./dots/fish/functions/cd_fzf.fish;
     "fish/functions/fish_user_key_bindings.fish".source =

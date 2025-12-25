@@ -2,7 +2,7 @@
   programs.bash.enable = true;
 
   home.sessionVariables = {
-    TERMINAL = "kitty";
+    TERMINAL = "ghostty";
     SHELL = "fish";
   };
 }

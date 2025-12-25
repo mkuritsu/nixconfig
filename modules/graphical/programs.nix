@@ -1,14 +1,5 @@
-{pkgs, ...}: let
-  vscode-product-json = "${pkgs.vscode}/lib/vscode/resources/app/product.json";
-
-  vscodium-marketplace = pkgs.vscodium.overrideAttrs (oldAttrs: {
-    postInstall =
-      (oldAttrs.postInstall or "")
-      + ''
-        cp "${vscode-product-json}" $out/lib/vscode/resources/app/product.json
-      '';
-  });
-in {
+{pkgs, ...}:
+{
   programs = {
     virt-manager.enable = true;
     obs-studio = {
@@ -34,6 +25,6 @@ in {
     libreoffice-fresh
     gimp
     kdePackages.kdenlive
-    vscodium-marketplace
+    zed-editor
   ];
 }
