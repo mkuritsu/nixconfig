@@ -6,5 +6,11 @@
     ];
   };
 
-  programs.nh.enable = true;
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      extraArgs = "--no-gcroots --optimise --keep-since 7d";
+    };
+  };
 }

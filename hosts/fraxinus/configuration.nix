@@ -66,5 +66,12 @@
     8001
   ];
 
+  system.autoUpgrade = {
+    enable = true;
+    flake = "github:mkuritsu/nixconfig";
+    dates = "05:00";
+    allowReboot = true;
+  };
+
   system.stateVersion = "25.11";
 }

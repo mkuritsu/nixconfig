@@ -76,6 +76,20 @@
               };
             };
           };
+
+          "catppuccin-nvim" = {
+            package = pkgs.vimPlugins.catppuccin-nvim;
+            setupModule = "catppuccin";
+            setupOpts = {
+              flavour = "mocha";
+              transparent_background = config.programs.nvf.settings.vim.theme.transparent;
+              no_italic = true;
+              styles = {
+                comments = [];
+                conditionals = [];
+              };
+            };
+          };
         };
 
         autocomplete.blink-cmp.enable = true;
