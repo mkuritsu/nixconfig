@@ -1,5 +1,5 @@
 spawn-sh-at-startup "easyeffects --gapplication-service"
-spawn-at-startup "noctalia-shell"
+spawn-sh-at-startup "systemctl start --user noctalia-shell.service"
 
 cursor {
     xcursor-theme "catppuccin-mocha-dark-cursors"

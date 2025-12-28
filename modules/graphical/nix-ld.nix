@@ -40,4 +40,6 @@
       sdl2-compat
     ];
   };
+
+  services.envfs.enable = true;
 }
