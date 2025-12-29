@@ -40,14 +40,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.systems.follows = "systems";
     };
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        systems.follows = "systems";
-        ndg.inputs.nixpkgs.follows = "nixpkgs";
-      };
-    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -71,7 +63,6 @@
           "gaming"
           "hardware/amd.nix"
           "desktop/hyprland.nix"
-          "desktop/niri.nix"
         ];
         users = ["kuritsu"];
       };
@@ -82,7 +73,6 @@
           "common"
           "graphical"
           "desktop/hyprland.nix"
-          "desktop/niri.nix"
         ];
         users = ["kuritsu"];
       };
@@ -94,6 +84,8 @@
         ];
       };
     };
+
+    formatter = lib.eachSystem (pkgs: pkgs.alejandra);
 
     packages = lib.eachSystem (pkgs: {
       setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);

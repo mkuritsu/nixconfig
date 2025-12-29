@@ -1,4 +1,4 @@
 {pkgs ? import <nixpkgs> {}}:
-pkgs.mkShell {
+pkgs.mkShellNoCC {
   env.FLAKE_ROOT = "${builtins.toString ./.}";
 }

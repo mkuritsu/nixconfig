@@ -18,5 +18,7 @@
     kdePackages.kdegraphics-thumbnailers
     kdePackages.gwenview
     swappy
+    ghostty
+    imv
   ];
 }

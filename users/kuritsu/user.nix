@@ -19,10 +19,7 @@ in {
 
     imports = [
       ./home.nix
-      ./modules/ghostty.nix
       ./modules/browser.nix
-      ./modules/imv.nix
-      # ./modules/kitty.nix
       ./modules/neovim.nix
       ./modules/desktop-shell.nix
       ./modules/spicetify.nix
