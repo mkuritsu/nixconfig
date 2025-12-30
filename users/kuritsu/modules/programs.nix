@@ -1,4 +1,29 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (pkgs.stdenv.hostPlatform) system;
+
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${system};
+  spicetify-package = inputs.spicetify-nix.lib.mkSpicetify pkgs {
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "mocha";
+    enabledExtensions = with spicePkgs.extensions; [
+      adblock
+      keyboardShortcut
+    ];
+  };
+in {
+  home.packages = [
+    inputs.helium.packages.${system}.default
+    inputs.zen-browser.packages.${system}.default
+    inputs.noctalia.packages.${system}.default
+    spicetify-package
+    pkgs.kdePackages.qtstyleplugin-kvantum
+    pkgs.kdePackages.qt6ct
+  ];
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;

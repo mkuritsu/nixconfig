@@ -19,12 +19,9 @@ in {
 
     imports = [
       ./home.nix
-      ./modules/browser.nix
-      ./modules/neovim.nix
-      ./modules/desktop-shell.nix
-      ./modules/spicetify.nix
+      ./modules/programs.nix
+      ./modules/services.nix
       ./modules/theming.nix
-      ./modules/xdg.nix
     ];
   };
 }
