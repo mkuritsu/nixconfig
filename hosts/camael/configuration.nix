@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    inputs.watt.nixosModules.default
   ];
 
   boot = {
@@ -32,7 +31,7 @@
 
   services = {
     openssh.enable = true;
-    watt.enable = true;
+    tlp.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
