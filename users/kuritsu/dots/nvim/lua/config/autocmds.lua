@@ -1,17 +1,6 @@
-vim.api.nvim_create_autocmd("FileType", {
-	callback = function(ev)
-		local bufnr = ev.buf
-		local lang = ev.match
-		if vim.treesitter.get_parser(bufnr, lang, { error = false }) then
-			vim.treesitter.start()
-		end
-	end,
-})
-
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function(args)
-		require("conform").format({ bufnr = args.buf })
+	callback = function(event)
+		require("conform").format({ bufnr = event.buf })
 	end,
 })
 
