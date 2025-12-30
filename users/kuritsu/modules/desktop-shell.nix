@@ -16,4 +16,6 @@
       Restart = "on-failure";
     };
   };
+
+  services.hypridle.enable = true;
 }
