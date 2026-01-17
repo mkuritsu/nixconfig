@@ -6,7 +6,6 @@
   inherit (pkgs.stdenv.hostPlatform) system;
 in {
   programs = {
-    adb.enable = true;
     gnupg.agent = {
       enable = true;
       pinentryPackage = pkgs.pinentry-curses;
