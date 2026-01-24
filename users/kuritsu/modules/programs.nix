@@ -47,7 +47,7 @@ in {
       clippy
       marksman
       nil
-      nixfmt-rfc-style
+      nixfmt
       alejandra
       jdt-language-server
       vscode-langservers-extracted # html,css,json
