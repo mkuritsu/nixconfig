@@ -18,10 +18,8 @@ in {
     };
 
     imports = [
-      ./files.nix
       ./modules/programs.nix
       ./modules/services.nix
-      ./modules/theming.nix
     ];
   };
 }

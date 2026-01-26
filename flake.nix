@@ -45,11 +45,6 @@
       url = "github:mkuritsu/helium-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {
-      url = "github:hyprwm/hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.systems.follows = "systems";
-    };
   };
 
   outputs = {self, ...} @ inputs: rec {

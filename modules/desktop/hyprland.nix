@@ -3,16 +3,15 @@
   pkgs,
   ...
 }: {
-  imports = [
-    inputs.hyprland.nixosModules.default
-  ];
-
   environment.etc."/xdg/menus/applications.menu".text =
     builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   services.gnome.gnome-keyring.enable = true;
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
   environment.systemPackages = with pkgs; [
     brightnessctl
@@ -26,6 +25,7 @@
     kdePackages.ffmpegthumbs
     kdePackages.kdegraphics-thumbnailers
     kdePackages.gwenview
+    nautilus
     swappy
     ghostty
     imv
