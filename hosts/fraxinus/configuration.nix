@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    inputs.istannouncements.nixosModules.default
     ./hardware-configuration.nix
     ./secrets.nix
   ];
@@ -47,13 +46,6 @@
       enable = true;
       openFirewall = true;
       # settings.PasswordAuthentication = false;
-    };
-
-    istannouncements = {
-      enable = true;
-      openFirewall = true;
-      webhook_url = "https://discord.com/api/webhooks/1280486123726176286/YsKHoRdK9bLIiAjLUf1zqgRs-d6IGiD5H63H7iDMwbjmM94KfgQPoHYvwW090PwJ2a6k";
-      username = "Penix IST";
     };
 
     tailscale = {

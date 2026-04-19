@@ -22,11 +22,6 @@
         systems.follows = "systems";
       };
     };
-    istannouncements = {
-      url = "github:mkuritsu/ISTAnnouncements";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.systems.follows = "systems";
-    };
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
