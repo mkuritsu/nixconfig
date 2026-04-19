@@ -6,8 +6,6 @@
   inherit (pkgs.stdenv.hostPlatform) system;
 in {
   home.packages = [
-    inputs.helium.packages.${system}.default
-    inputs.zen-browser.packages.${system}.default
     inputs.noctalia.packages.${system}.default
     pkgs.kdePackages.qtstyleplugin-kvantum
     pkgs.kdePackages.qt6ct
