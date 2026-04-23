@@ -1,16 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: let
-  inherit (pkgs.stdenv.hostPlatform) system;
-in {
-  home.packages = [
-    inputs.noctalia.packages.${system}.default
-    pkgs.kdePackages.qtstyleplugin-kvantum
-    pkgs.kdePackages.qt6ct
-  ];
-
+{pkgs, ...}: {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
