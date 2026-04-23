@@ -18,6 +18,5 @@
     })
     osu-lazer-bin
     heroic
-    # lutris
   ];
 }

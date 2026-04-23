@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   programs = {
     virt-manager.enable = true;
     obs-studio = {
@@ -18,13 +17,8 @@
     mangohud
     obsidian
     discord
-    easyeffects
-    thunderbird
     rnote
     zotero
-    libreoffice-fresh
-    gimp
-    kdePackages.kdenlive
     zed-editor
   ];
 }
