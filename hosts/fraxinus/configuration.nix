@@ -61,8 +61,13 @@
   system.autoUpgrade = {
     enable = true;
     flake = "github:mkuritsu/nixconfig";
+    flags = ["--recreate-lock-file" "--commit-lock-file"];
     dates = "05:00";
     allowReboot = true;
+    rebootWindow = {
+      lower = "04:00";
+      upper = "06:00";
+    };
   };
 
   system.stateVersion = "25.11";
