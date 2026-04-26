@@ -1,8 +1,13 @@
 {
+  inputs,
   config,
   pkgs,
   ...
 }: {
+  imports = [
+    inputs.nix-flatpak.nixosModules.nix-flatpak
+  ];
+
   hardware = {
     bluetooth.enable = true;
     opentabletdriver = {
@@ -17,22 +22,28 @@
     gvfs.enable = true;
     printing.enable = true;
     playerctld.enable = true;
-    flatpak.enable = true;
-  };
+    displayManager.gdm.enable = true;
 
-  # https://ryjelsum.me/homelab/greetd-session-choose/
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember --remember-user-session --asterisks";
-        user = "greeter";
+    flatpak = {
+      enable = true;
+      packages = [
+        "com.discordapp.Discord"
+        "com.spotify.Client"
+      ];
+      update.auto = {
+        enable = true;
+        onCalendar = "daily";
       };
     };
   };
 
+
   xdg = {
     mime.enable = true;
     menus.enable = true;
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [ xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-desktop-portal-hyprland ];
+    };
   };
 }

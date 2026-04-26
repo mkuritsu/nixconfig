@@ -1,10 +1,11 @@
 {pkgs, ...}: {
   services.gnome.gnome-keyring.enable = true;
 
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
+  programs.niri.enable = true;
+  # programs.hyprland = {
+  #   enable = true;
+  #   withUWSM = true;
+  # };
 
   environment.systemPackages = with pkgs; [
     brightnessctl
@@ -16,11 +17,12 @@
     nautilus
     file-roller
     ghostty
-    imv
-    zathura
+    papers
+    loupe
 
     hyprpolkitagent
     hyprpicker
     noctalia-shell
+    xwayland-satellite
   ];
 }

@@ -22,6 +22,7 @@
         systems.follows = "systems";
       };
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = {self, ...} @ inputs: rec {
@@ -35,7 +36,6 @@
           "graphical"
           "gaming"
           "hardware/amd.nix"
-          "desktop/hyprland.nix"
         ];
         users = ["kuritsu"];
       };
@@ -45,7 +45,6 @@
         modules = [
           "common"
           "graphical"
-          "desktop/hyprland.nix"
         ];
         users = ["kuritsu"];
       };

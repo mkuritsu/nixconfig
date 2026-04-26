@@ -26,12 +26,12 @@
       vulkan-loader
       vulkan-validation-layers
       lld
-      xorg.libX11
-      xorg.libXcursor
-      xorg.libXi
-      xorg.libXrandr
+      libX11
+      libXcursor
+      libXi
+      libXrandr
       libxkbcommon
-      xorg.libxkbfile
+      libxkbfile
       udev
       libGL
       glfw

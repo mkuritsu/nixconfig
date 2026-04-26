@@ -1,9 +1,10 @@
-let
+{pkgs, ...}: let
   username = "kuritsu";
   homeDirectory = "/home/${username}";
 in {
   users.users.${username} = {
     isNormalUser = true;
+    shell = pkgs.fish;
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -18,7 +19,6 @@ in {
     };
 
     imports = [
-      ./modules/programs.nix
       ./modules/services.nix
     ];
   };

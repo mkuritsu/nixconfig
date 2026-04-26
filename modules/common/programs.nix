@@ -15,6 +15,7 @@ in {
       silent = true;
       nix-direnv.enable = true;
     };
+    fish.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -33,7 +34,7 @@ in {
     yazi
     ripgrep
     distrobox
-    fish
+    chezmoi
     openssl
     just
     libqalculate
@@ -41,6 +42,8 @@ in {
     bat
     btop
     pax-utils
+    neovim
+    tree-sitter
     inputs.agenix.packages.${system}.default
   ];
 }
