@@ -30,18 +30,8 @@
     settings.PasswordAuthentication = false;
   };
 
-  hardware.openrazer.enable = true;
-  hardware.openrazer.batteryNotifier.enable = false;
-
-  users.users.kuritsu = {
-    extraGroups = ["openrazer"];
-  };
-
-  services.ratbagd.enable = true;
-
   environment.systemPackages = with pkgs; [
     nm-connection-editor-only
-    polychromatic
   ];
 
   system.stateVersion = "24.11";

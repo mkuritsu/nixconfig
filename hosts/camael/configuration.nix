@@ -27,7 +27,8 @@
 
   services = {
     openssh.enable = true;
-    tlp.enable = true;
+    thermald.enable = true;
+    power-profiles-daemon.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
