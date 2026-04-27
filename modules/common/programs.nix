@@ -1,25 +1,10 @@
 {
+  self,
   inputs,
   pkgs,
   ...
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
-
-  neovim-fhs = pkgs.buildFHSEnv {
-    name = "nvim";
-    targetPkgs = pkgs:
-      with pkgs; [
-        neovim
-        tree-sitter
-        gcc
-        gnumake
-        pkg-config
-        stdenv.cc.cc.lib
-        cargo
-        rustc
-      ];
-    runScript = "nvim";
-  };
 in {
   programs = {
     fish.enable = true;
@@ -56,7 +41,7 @@ in {
     bat
     btop
     pax-utils
-    neovim-fhs
+    self.packages.${system}.neovim-fhs
     inputs.agenix.packages.${system}.default
   ];
 }

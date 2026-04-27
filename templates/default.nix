@@ -9,11 +9,6 @@
     path = ./java;
   };
 
-  maximal = {
-    description = "Maximal template to serve as a 'global' shell";
-    path = ./maximal;
-  };
-
   minimal = {
     description = "Minimal starting template for other things";
     path = ./minimal;
