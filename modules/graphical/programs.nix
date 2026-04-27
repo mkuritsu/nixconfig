@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  self,
+  pkgs,
+  ...
+}: let
+  inherit (pkgs.stdenv.hostPlatform) system;
+in {
   programs = {
     obs-studio = {
       enable = true;
@@ -18,7 +24,7 @@
     zotero
     zed-editor-fhs
     vscode-fhs
-    chromium
+    self.packages.${system}.helium-browser
     gnome-software
   ];
 }

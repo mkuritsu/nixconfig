@@ -58,6 +58,7 @@
     packages = lib.eachSystem (pkgs: {
       setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
       neovim-fhs = pkgs.callPackage ./pkgs/neovim-fhs.nix {};
+      helium-browser = pkgs.callPackage ./pkgs/helium-browser.nix {};
     });
 
     templates = import ./templates;
