@@ -9,11 +9,7 @@
       efi.canTouchEfiVariables = true;
       timeout = 0;
     };
-    binfmt.emulatedSystems = ["aarch64-linux"];
   };
-
-  programs.localsend.enable = true;
-  programs.localsend.openFirewall = true;
 
   networking.networkmanager = {
     enable = true;
@@ -24,10 +20,14 @@
     ];
   };
 
-  services.openssh = {
-    enable = true;
-    openFirewall = true;
-    settings.PasswordAuthentication = false;
+  services = {
+    thermald.enable = true;
+    power-profiles-daemon.enable = true;
+    openssh = {
+      enable = true;
+      openFirewall = true;
+      settings.PasswordAuthentication = false;
+    };
   };
 
   environment.systemPackages = with pkgs; [

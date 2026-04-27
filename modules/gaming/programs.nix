@@ -8,15 +8,11 @@
     };
   };
 
+  services.flatpak.packages = [
+    "org.prismlauncher.PrismLauncher"
+  ];
+
   environment.systemPackages = with pkgs; [
-    (prismlauncher.override {
-      jdks = [
-        jdk17
-        jdk21
-        jdk25
-      ];
-    })
     osu-lazer-bin
-    heroic
   ];
 }

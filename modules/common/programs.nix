@@ -22,16 +22,13 @@
   };
 in {
   programs = {
-    gnupg.agent = {
-      enable = true;
-      # pinentryPackage = pkgs.pinentry-curses;
-    };
+    fish.enable = true;
+    gnupg.agent.enable = true;
     direnv = {
       enable = true;
       silent = true;
       nix-direnv.enable = true;
     };
-    fish.enable = true;
   };
 
   environment.systemPackages = with pkgs; [

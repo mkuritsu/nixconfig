@@ -1,6 +1,5 @@
 {
   inputs,
-  config,
   pkgs,
   ...
 }: {
@@ -37,13 +36,12 @@
     };
   };
 
-
   xdg = {
     mime.enable = true;
     menus.enable = true;
     portal = {
       enable = true;
-      extraPortals = with pkgs; [ xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-desktop-portal-hyprland ];
+      extraPortals = with pkgs; [xdg-desktop-portal-gnome xdg-desktop-portal-gtk xdg-desktop-portal-hyprland];
     };
   };
 }
