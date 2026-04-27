@@ -4,11 +4,27 @@
   ...
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
+
+  neovim-fhs = pkgs.buildFHSEnv {
+    name = "nvim";
+    targetPkgs = pkgs:
+      with pkgs; [
+        neovim
+        tree-sitter
+        gcc
+        gnumake
+        pkg-config
+        stdenv.cc.cc.lib
+        cargo
+        rustc
+      ];
+    runScript = "nvim";
+  };
 in {
   programs = {
     gnupg.agent = {
       enable = true;
-      pinentryPackage = pkgs.pinentry-curses;
+      # pinentryPackage = pkgs.pinentry-curses;
     };
     direnv = {
       enable = true;
@@ -21,6 +37,7 @@ in {
   environment.systemPackages = with pkgs; [
     wget
     git
+    delta
     fzf
     less
     jq
@@ -42,8 +59,7 @@ in {
     bat
     btop
     pax-utils
-    neovim
-    tree-sitter
+    neovim-fhs
     inputs.agenix.packages.${system}.default
   ];
 }

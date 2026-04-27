@@ -10,16 +10,14 @@
     };
   };
 
-  # virtualisation.virtualbox.host.enable = true;
-
   environment.systemPackages = with pkgs; [
     wiremix
     scrcpy
     wl-clipboard
     mangohud
     zotero
-    zed-editor
-    vscode
+    zed-editor-fhs
+    vscode-fhs
     chromium
     gnome-software
   ];
