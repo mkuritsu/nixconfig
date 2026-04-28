@@ -41,6 +41,9 @@ in {
     bat
     btop
     pax-utils
+    eza
+    zoxide
+    bat
     self.packages.${system}.neovim-fhs
     inputs.agenix.packages.${system}.default
   ];
