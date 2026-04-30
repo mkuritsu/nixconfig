@@ -1,0 +1,13 @@
+name: Build fraxinus
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  build-fraxinus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v31
+      - run: nix build .#nixosConfigurations.fraxinus.config.system.build.toplevel --no-link

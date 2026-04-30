@@ -1,0 +1,13 @@
+name: Build zaphkiel
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  build-zaphkiel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v31
+      - run: nix build .#nixosConfigurations.zaphkiel.config.system.build.toplevel --no-link
