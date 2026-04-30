@@ -1,4 +1,6 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+set -euo pipefail
 
 # Setup script to use during nixos installation to setup partitions, filesystems etc
 # Usage: ./setup.sh <disk>
@@ -39,6 +41,7 @@ echo "Created 8GB swap partition at ${PARTITION_PREFIX}2"
 
 parted "$DISK" -- mkpart primary 9GB 100%
 cryptsetup --verify-passphrase -v luksFormat "$PARTITION_PREFIX"3
+systemd-cryptenroll --tpm2-device=auto "$PARTITION_PREFIX"3
 cryptsetup open "$PARTITION_PREFIX"3 NIXCRYPT
 mkfs.btrfs -L NIXOS $CRYPT_MAPPER
 echo "Create encrypted btrfs parition, mapper: $CRYPT_MAPPER"
