@@ -1,5 +1,4 @@
 {
-  self,
   inputs,
   pkgs,
   ...
@@ -32,7 +31,6 @@ in {
     starship
     yazi
     ripgrep
-    distrobox
     chezmoi
     openssl
     just
@@ -44,7 +42,6 @@ in {
     eza
     zoxide
     bat
-    self.packages.${system}.neovim-fhs
     inputs.agenix.packages.${system}.default
   ];
 }

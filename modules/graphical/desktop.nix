@@ -15,7 +15,7 @@
     grim
     slurp
 
-    mpv
+    # mpv
     nautilus
     file-roller
     ghostty
@@ -26,5 +26,6 @@
     hyprpicker
     noctalia-shell
     xwayland-satellite
+    vicinae
   ];
 }
