@@ -2,6 +2,7 @@
   self,
   osConfig,
   pkgs,
+  lib,
   ...
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
@@ -13,14 +14,11 @@
       bash -c 'export IN_NIX_SHELL=impure name=dev-fhs-env; $SHELL'
     '';
   };
-in {
-  xdg.userDirs = {
-    enable = true;
-    createDirectories = true;
-    setSessionVariables = true;
-  };
 
-  programs.distrobox = {
+  # HACK: probably find later a better way to check for graphical environment?
+  is-graphical = osConfig.hardware.graphics.enable;
+in {
+  programs.distrobox = lib.mkIf is-graphical {
     enable = true;
     enableSystemdUnit = true;
     containers = {
@@ -32,10 +30,13 @@ in {
     };
   };
 
-  home.packages = [
-    dev-fhs-env
-    self.packages.${system}.neovim-fhs
-    self.packages.${system}.my-vscode-fhs
-    pkgs.zed-editor-fhs
-  ];
+  home.packages =
+    if is-graphical
+    then [
+      dev-fhs-env
+      self.packages.${system}.neovim-fhs
+      self.packages.${system}.my-vscode-fhs
+      pkgs.zed-editor-fhs
+    ]
+    else [pkgs.neovim];
 }

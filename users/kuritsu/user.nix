@@ -19,7 +19,8 @@ in {
     };
 
     imports = [
-      ./modules/services.nix
+      ./modules/dev.nix
+      ./modules/xdg.nix
     ];
   };
 }
