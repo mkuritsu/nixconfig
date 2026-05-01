@@ -34,7 +34,7 @@
           "common"
           "graphical"
           "gaming"
-          "hardware/amd.nix"
+          "hardware/amdgpu.nix"
         ];
         users = ["kuritsu"];
       };
@@ -44,6 +44,7 @@
         modules = [
           "common"
           "graphical"
+          "hardware/intelgpu.nix"
         ];
         users = ["kuritsu"];
       };
