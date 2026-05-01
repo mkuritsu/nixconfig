@@ -1,15 +1,9 @@
 {pkgs, ...}: {
   imports = [
-    ./hardware-configuration.nix
+    ./boot.nix
+    ./fs.nix
+    ./hardware.nix
   ];
-
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      timeout = 0;
-    };
-  };
 
   networking.networkmanager = {
     enable = true;
