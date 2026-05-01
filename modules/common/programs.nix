@@ -40,6 +40,7 @@ in {
     btop
     pax-utils
     eza
+    file
     zoxide
     bat
     inputs.agenix.packages.${system}.default

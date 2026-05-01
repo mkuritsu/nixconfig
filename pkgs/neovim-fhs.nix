@@ -11,6 +11,8 @@ pkgs.buildFHSEnv {
       stdenv.cc.cc.lib
       cargo
       rustc
+      nodejs
+      python3
     ];
   runScript = "nvim";
 }

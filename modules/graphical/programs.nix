@@ -26,5 +26,8 @@ in {
     vscode-fhs
     self.packages.${system}.helium-browser
     gnome-software
+    (mpv.override {
+      youtubeSupport = false; # rusty v8 compiling (no thank you)
+    })
   ];
 }
