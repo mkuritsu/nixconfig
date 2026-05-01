@@ -1,5 +1,9 @@
-{self, osConfig, pkgs, ...}: 
-let
+{
+  self,
+  osConfig,
+  pkgs,
+  ...
+}: let
   inherit (pkgs.stdenv.hostPlatform) system;
 
   dev-fhs-env = pkgs.buildFHSEnv {
@@ -9,8 +13,7 @@ let
       bash -c 'export IN_NIX_SHELL=impure name=dev-fhs-env; $SHELL'
     '';
   };
-in
-{
+in {
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
@@ -32,7 +35,7 @@ in
   home.packages = [
     dev-fhs-env
     self.packages.${system}.neovim-fhs
+    self.packages.${system}.my-vscode-fhs
     pkgs.zed-editor-fhs
-    pkgs.vscode-fhs
   ];
 }

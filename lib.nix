@@ -9,7 +9,7 @@
     "aarch64-linux"
   ];
 in rec {
-  eachSystem = fn: nixpkgs.lib.genAttrs systems (system: fn nixpkgs.legacyPackages.${system});
+  eachSystem = fn: nixpkgs.lib.genAttrs systems (system: fn (mkPkgs system));
 
   mkPkgs = system:
     import nixpkgs {
