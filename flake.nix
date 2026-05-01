@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +18,10 @@
         systems.follows = "systems";
       };
     };
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    helium-browser = {
+      url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {self, ...} @ inputs: rec {
@@ -58,7 +62,6 @@
     packages = lib.eachSystem (pkgs: {
       setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
       neovim-fhs = pkgs.callPackage ./pkgs/neovim-fhs.nix {};
-      helium-browser = pkgs.callPackage ./pkgs/helium-browser.nix {};
     });
 
     templates = import ./templates;

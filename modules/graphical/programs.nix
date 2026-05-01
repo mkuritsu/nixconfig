@@ -1,5 +1,5 @@
 {
-  self,
+  inputs,
   pkgs,
   ...
 }: let
@@ -22,9 +22,7 @@ in {
     wl-clipboard
     mangohud
     zotero
-    zed-editor-fhs
-    vscode-fhs
-    self.packages.${system}.helium-browser
+    inputs.helium-browser.packages.${system}.default
     gnome-software
     (mpv.override {
       youtubeSupport = false; # rusty v8 compiling (no thank you)
