@@ -13,10 +13,10 @@ jobs:
   update-flake:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
       - run: nix flake update
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: flake-lock
           path: flake.lock
@@ -34,10 +34,11 @@ jobs:
             runs-on: ubuntu-24.04-arm
     runs-on: ${{ matrix.runs-on }}
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v8
         with:
           name: flake-lock
+          path: flake-lock
       - run: cp flake-lock/flake.lock flake.lock
       - uses: cachix/install-nix-action@v31
       - run: nix build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel --no-link
@@ -46,12 +47,11 @@ jobs:
     needs: build-hosts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v8
         with:
           name: flake-lock
-      - run: cp flake-lock/flake.lock flake.lock
-      - uses: peter-evans/create-pull-request@v6
+      - uses: peter-evans/create-pull-request@v8
         with:
           branch: weekly-flake-update
           commit-message: Update flake inputs
