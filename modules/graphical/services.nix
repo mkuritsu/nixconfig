@@ -21,7 +21,7 @@
     gvfs.enable = true;
     printing.enable = true;
     playerctld.enable = true;
-    displayManager.gdm.enable = true;
+    displayManager.ly.enable = true;
 
     flatpak = {
       enable = true;

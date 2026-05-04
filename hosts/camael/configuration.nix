@@ -16,6 +16,7 @@
       powersave = true;
       macAddress = "random";
       scanRandMacAddress = true;
+      backend = "iwd";
     };
   };
 

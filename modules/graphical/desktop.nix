@@ -27,5 +27,8 @@
     noctalia-shell
     xwayland-satellite
     vicinae
+
+    adwaita-fonts
+    adwaita-icon-theme
   ];
 }

@@ -24,8 +24,6 @@ in {
     zotero
     inputs.helium-browser.packages.${system}.default
     gnome-software
-    (mpv.override {
-      youtubeSupport = false; # rusty v8 compiling (no thank you)
-    })
+    mpv
   ];
 }

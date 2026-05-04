@@ -62,8 +62,6 @@
 
     packages = lib.eachSystem (pkgs: {
       setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
-      neovim-fhs = pkgs.callPackage ./pkgs/neovim-fhs.nix {};
-      my-vscode-fhs = pkgs.callPackage ./pkgs/my-vscode-fhs.nix {};
     });
 
     templates = import ./templates;
