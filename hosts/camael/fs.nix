@@ -8,7 +8,7 @@
   fileSystems."/" = {
     device = "/dev/mapper/NIXCRYPT";
     fsType = "btrfs";
-    options = ["subvol=root" "noatime" "compress=zstd"];
+    options = ["subvol=root" "noatime" "compress=zstd" "x-gvfs-show" "x-gvfs-name=root"];
   };
 
   fileSystems."/home" = {
