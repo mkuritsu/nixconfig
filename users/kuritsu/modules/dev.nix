@@ -130,10 +130,12 @@ in {
   home.packages =
     if is-graphical
     then [
-      dev-fhs-env
-      neovim-fhs
-      (pkgs.vscode.fhsWithPackages fhs-packages)
-      (pkgs.zed-editor.fhsWithPackages fhs-packages)
+      pkgs.neovim
+      # dev-fhs-env
+      # neovim-fhs
+      # pkgs.vscode
+      # (pkgs.vscode.fhsWithPackages fhs-packages)
+      # (pkgs.zed-editor.fhsWithPackages fhs-packages)
     ]
     else [pkgs.neovim];
 }

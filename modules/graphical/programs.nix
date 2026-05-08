@@ -21,9 +21,9 @@ in {
     scrcpy
     wl-clipboard
     mangohud
-    zotero
     inputs.helium-browser.packages.${system}.default
-    gnome-software
     mpv
+    vscode
+    zed-editor
   ];
 }

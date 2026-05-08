@@ -21,13 +21,15 @@
     gvfs.enable = true;
     printing.enable = true;
     playerctld.enable = true;
-    displayManager.ly.enable = true;
+    displayManager.gdm.enable = true;
 
     flatpak = {
       enable = true;
       packages = [
         "com.discordapp.Discord"
         "com.spotify.Client"
+        "org.zotero.Zotero"
+        "io.github.kolunmi.Bazaar"
       ];
       update.auto = {
         enable = true;
