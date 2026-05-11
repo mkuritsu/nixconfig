@@ -9,7 +9,7 @@
     };
   };
 
-  virtualisation.virtualbox.host.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   environment.systemPackages = with pkgs; [
     brightnessctl
@@ -17,7 +17,7 @@
     grim
     slurp
 
-    # mpv
+    mpv
     nautilus
     file-roller
     ghostty
@@ -26,11 +26,11 @@
 
     hyprpolkitagent
     hyprpicker
-    noctalia-shell
+    dms-shell
+    quickshell
     xwayland-satellite
     vicinae
 
-    adwaita-fonts
     adwaita-icon-theme
   ];
 }

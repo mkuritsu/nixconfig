@@ -22,7 +22,6 @@ in {
     wl-clipboard
     mangohud
     inputs.helium-browser.packages.${system}.default
-    mpv
     vscode
     zed-editor
   ];
