@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   update-flake:
@@ -43,7 +42,7 @@ jobs:
       - uses: cachix/install-nix-action@v31
       - run: nix build .#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel --no-link
 
-  create-pr:
+  commit:
     needs: build-hosts
     runs-on: ubuntu-latest
     steps:
@@ -51,12 +50,12 @@ jobs:
       - uses: actions/download-artifact@v8
         with:
           name: flake-lock
-      - uses: peter-evans/create-pull-request@v8
-        with:
-          branch: weekly-flake-update
-          commit-message: Update flake inputs
-          title: Update flake inputs
-          body: |
-            Automated weekly flake update.
-
-            All host builds passed for the updated lockfile.
+          path: flake-lock
+      - name: Commit and push lockfile
+        run: |
+          cp flake-lock/flake.lock flake.lock
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add flake.lock
+          git commit -m "chore: update flake inputs"
+          git push origin main
