@@ -40,14 +40,9 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [
-    8001
-  ];
-
   system.autoUpgrade = {
     enable = true;
     flake = "github:mkuritsu/nixconfig";
-    flags = ["--recreate-lock-file" "--no-write-lock-file"];
     dates = "05:00";
     allowReboot = true;
     rebootWindow = {
