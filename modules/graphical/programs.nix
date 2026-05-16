@@ -24,5 +24,27 @@ in {
     inputs.helium-browser.packages.${system}.default
     vscode
     zed-editor
+
+    gcc
+    gnumake
+    meson
+    cmake
+    ccache
+    ninja
+
+    nodejs
+    pnpm
+
+    python314
+    python314Packages.pip
+    uv
+
+    jdk21
+    maven
+    gradle
+
+    rustup
+    lua
+    dotnet-sdk
   ];
 }

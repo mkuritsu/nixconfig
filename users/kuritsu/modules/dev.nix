@@ -131,6 +131,7 @@ in {
     if is-graphical
     then [
       pkgs.neovim
+      pkgs.tree-sitter
       # dev-fhs-env
       # neovim-fhs
       # pkgs.vscode
