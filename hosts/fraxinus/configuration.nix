@@ -38,6 +38,67 @@
       enable = true;
       authKeyFile = config.age.secrets.tailscale.path;
     };
+
+    filebrowser = {
+      enable = true;
+      settings.port = 8081;
+    };
+
+    forgejo = {
+      enable = true;
+      database.type = "sqlite3";
+      settings = {
+        server = {
+          DOMAIN = "git.fraxinus.local";
+          ROOT_URL = "http://git.fraxinus.local";
+          HTTP_ADDR = "127.0.0.1";
+          HTTP_PORT = 3000;
+        };
+      };
+    };
+
+    glance = {
+      enable = true;
+      settings = {
+        pages = [
+          {
+            name = "Dashboard";
+            columns = [
+              {
+                size = "full";
+                widgets = [
+                  {
+                    type = "monitor";
+                    cache = "1m";
+                    title = "Services";
+                    sites = [
+                      {
+                        title = "Git";
+                        url = "http://127.0.0.1:3000";
+                      }
+                      {
+                        title = "Storage";
+                        url = "http://127.0.0.1:8081";
+                      }
+                    ];
+                  }
+                ];
+              }
+            ];
+          }
+        ];
+      };
+    };
+
+    caddy = {
+      enable = true;
+      openFirewall = true;
+      virtualHosts = {
+        "fraxinus.local".extraConfig = ''reverse_proxy 127.0.0.1:8080'';
+        "git.fraxinus.local".extraConfig = ''reverse_proxy 127.0.0.1:3000'';
+        "files.fraxinus.local".extraConfig = ''reverse_proxy 127.0.0.1:8081'';
+      };
+    };
   };
 
   system.autoUpgrade = {
