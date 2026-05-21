@@ -21,10 +21,6 @@
         }
       ];
     };
-    defaultGateway = {
-      address = "192.168.1.254";
-      interface = "end0";
-    };
   };
 
   services = {
