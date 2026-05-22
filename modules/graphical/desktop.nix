@@ -1,4 +1,10 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: let
+  inherit (pkgs.stdenv.hostPlatform) system;
+in {
   services.gnome.gnome-keyring.enable = true;
 
   programs = {
@@ -7,9 +13,10 @@
       enable = true;
       withUWSM = true;
     };
+    dms-shell.enable = true;
   };
 
-  services.desktopManager.gnome.enable = true;
+  # services.desktopManager.gnome.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -28,13 +35,9 @@
 
     hyprpolkitagent
     hyprpicker
-    dms-shell
-    dgop
-    quickshell
     xwayland-satellite
     vicinae
 
     adwaita-icon-theme
-    uwsm
   ];
 }
