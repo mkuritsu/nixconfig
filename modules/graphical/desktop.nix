@@ -33,7 +33,6 @@ in {
     papers
     loupe
 
-    hyprpolkitagent
     hyprpicker
     xwayland-satellite
     vicinae
