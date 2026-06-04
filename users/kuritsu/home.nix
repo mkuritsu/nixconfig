@@ -7,6 +7,7 @@
     };
 
     imports = [
+      ./modules/dank-shell.nix
       ./modules/dev.nix
       ./modules/xdg.nix
     ];

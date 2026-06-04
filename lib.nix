@@ -14,7 +14,9 @@ in rec {
   mkPkgs = system:
     import nixpkgs {
       inherit system;
-      overlays = [(import ./overlays/nm-applet.nix)];
+      overlays = [
+        (import ./overlays/nm-applet.nix)
+      ];
       config.allowUnfree = true;
     };
 

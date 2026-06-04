@@ -13,10 +13,8 @@ in {
       enable = true;
       withUWSM = true;
     };
-    dms-shell.enable = true;
   };
 
-  # services.desktopManager.gnome.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -26,12 +24,18 @@ in {
     slurp
 
     mpv
-    nautilus
-    file-roller
     ghostty
     foot
+
     papers
+    nautilus
+    file-roller
     loupe
+
+    # kdePackages.okular
+    # kdePackages.dolphin
+    # kdePackages.ark
+    # kdePackages.gwenview
 
     hyprpicker
     xwayland-satellite

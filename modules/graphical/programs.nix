@@ -22,6 +22,7 @@ in {
     wl-clipboard
     mangohud
     inputs.helium-browser.packages.${system}.default
+    firefox
     vscode
     zed-editor
 

@@ -132,11 +132,7 @@ in {
     then [
       pkgs.neovim
       pkgs.tree-sitter
-      # dev-fhs-env
-      # neovim-fhs
-      # pkgs.vscode
-      # (pkgs.vscode.fhsWithPackages fhs-packages)
-      # (pkgs.zed-editor.fhsWithPackages fhs-packages)
+      pkgs.neovide
     ]
     else [pkgs.neovim];
 }

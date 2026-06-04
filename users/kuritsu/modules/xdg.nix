@@ -1,4 +1,9 @@
-{osConfig, pkgs, lib, ...}: let
+{
+  osConfig,
+  pkgs,
+  lib,
+  ...
+}: let
   is-graphical = osConfig.hardware.graphics.enable;
 in {
   xdg.userDirs = {

@@ -34,8 +34,6 @@
       packages = [
         "com.discordapp.Discord"
         "com.spotify.Client"
-        "org.zotero.Zotero"
-        "io.github.kolunmi.Bazaar"
       ];
       update.auto = {
         enable = true;
