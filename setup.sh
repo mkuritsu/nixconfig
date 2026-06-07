@@ -112,7 +112,7 @@ mount "$PARTITION_PREFIX"1 /mnt/boot
 nixos-generate-config --root /mnt
 
 if $INSTALL; then
-    nixos-install --flake "github:mkuritsu/nixconfig#$HOSTNAME"
+    nixos-install --no-root-password --flake "github:mkuritsu/nixconfig#$HOSTNAME"
     nixos-enter --root /mnt -c "passwd kuritsu"
     echo "NixOS installation completed!"
 else
