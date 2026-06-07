@@ -1,15 +1,9 @@
 {pkgs, ...}: {
   imports = [
-    ./hardware-configuration.nix
+    ./boot.nix
+    ./fs.nix
+    ./hardware.nix
   ];
-
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      timeout = 0;
-    };
-  };
 
   networking.networkmanager = {
     enable = true;
@@ -29,10 +23,6 @@
       settings.PasswordAuthentication = false;
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    nm-connection-editor-only
-  ];
 
   system.stateVersion = "24.11";
 }
