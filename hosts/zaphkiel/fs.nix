@@ -35,9 +35,9 @@
     options = ["fmask=0177" "dmask=0077" "noatime"];
   };
 
-  swapDevices = [
-    {device = "/dev/disk/by-label/SWAP";}
-  ];
+  # swapDevices = [
+  #   {device = "/dev/disk/by-label/SWAP";}
+  # ];
 
   fileSystems."/mnt/ssd2" = {
     device = "/dev/disk/by-label/ssd2";

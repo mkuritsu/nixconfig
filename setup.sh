@@ -63,14 +63,14 @@ parted $DISK -- set 1 esp on
 mkfs.vfat -F 32 -n BOOT "$PARTITION_PREFIX"1
 echo "Created 1GB fat32 boot partition at ${PARTITION_PREFIX}1"
 
-parted $DISK -- mkpart swap linux-swap 1GB 9GB
-mkswap -L SWAP "$PARTITION_PREFIX"2
-echo "Created 8GB swap partition at ${PARTITION_PREFIX}2"
+# parted $DISK -- mkpart swap linux-swap 1GB 9GB
+# mkswap -L SWAP "$PARTITION_PREFIX"2
+# echo "Created 8GB swap partition at ${PARTITION_PREFIX}2"
 
-parted "$DISK" -- mkpart primary 9GB 100%
-cryptsetup --verify-passphrase -v luksFormat "$PARTITION_PREFIX"3
-systemd-cryptenroll --tpm2-device=auto "$PARTITION_PREFIX"3
-cryptsetup open "$PARTITION_PREFIX"3 NIXCRYPT
+parted "$DISK" -- mkpart primary 1GB 100%
+cryptsetup --verify-passphrase -v luksFormat "$PARTITION_PREFIX"2
+systemd-cryptenroll --tpm2-device=auto "$PARTITION_PREFIX"2
+cryptsetup open "$PARTITION_PREFIX"2 NIXCRYPT
 mkfs.btrfs -L NIXOS $CRYPT_MAPPER
 echo "Create encrypted btrfs parition, mapper: $CRYPT_MAPPER"
 
@@ -105,7 +105,7 @@ mount -o subvol=log$EXTRA_FLAGS $CRYPT_MAPPER /mnt/var/log
 mkdir /mnt/boot
 mount "$PARTITION_PREFIX"1 /mnt/boot
 
-swapon "$PARTITION_PREFIX"2
+# swapon "$PARTITION_PREFIX"2
 
 
 # nixos config
