@@ -125,7 +125,7 @@
   # HACK: probably find later a better way to check for graphical environment?
   is-graphical = osConfig.hardware.graphics.enable;
 in {
-  programs.distrobox.enable = true;
+  programs.distrobox.enable = is-graphical;
 
   home.packages =
     if is-graphical

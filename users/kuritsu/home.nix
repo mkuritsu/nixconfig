@@ -1,4 +1,8 @@
 {
+  osConfig,
+  lib,
+  ...
+}: {
   home-manager.users.kuritsu = {osConfig, ...}: {
     home = {
       username = "kuritsu";
@@ -6,10 +10,13 @@
       stateVersion = "24.11";
     };
 
-    imports = [
-      ./modules/dank-shell.nix
-      ./modules/dev.nix
-      ./modules/xdg.nix
-    ];
+    imports =
+      [
+        ./modules/dev.nix
+        ./modules/xdg.nix
+      ]
+      ++ lib.optionals osConfig.hardware.graphics.enable [
+        ./modules/dank-shell.nix
+      ];
   };
 }
