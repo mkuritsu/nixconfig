@@ -47,5 +47,9 @@ in {
     rustup
     lua
     dotnet-sdk
+
+    nil
+    alejandra
+    nixd
   ];
 }

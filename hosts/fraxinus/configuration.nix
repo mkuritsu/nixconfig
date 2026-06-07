@@ -13,6 +13,7 @@
   };
 
   networking = {
+    defaultGateway = "192.168.1.1";
     interfaces.end0 = {
       ipv4.addresses = [
         {
@@ -108,5 +109,5 @@
     };
   };
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "24.11";
 }

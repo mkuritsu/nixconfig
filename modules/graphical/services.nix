@@ -21,15 +21,7 @@
     gvfs.enable = true;
     printing.enable = true;
     playerctld.enable = true;
-
     displayManager.plasma-login-manager.enable = true;
-
-    # displayManager.ly = {
-    #   enable = true;
-    #   settings = {
-    #     session_log = ".local/state/ly-session.log";
-    #   };
-    # };
 
     flatpak = {
       enable = true;

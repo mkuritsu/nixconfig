@@ -1,10 +1,7 @@
 {
-  inputs,
   pkgs,
   ...
-}: let
-  inherit (pkgs.stdenv.hostPlatform) system;
-in {
+}: {
   services.gnome.gnome-keyring.enable = true;
 
   programs = {
@@ -15,7 +12,7 @@ in {
     # };
   };
 
-  # services.desktopManager.plasma6.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   environment.systemPackages = with pkgs; [
     # brightnessctl
@@ -36,6 +33,7 @@ in {
     kdePackages.dolphin
     kdePackages.ark
     kdePackages.gwenview
+    haruna
 
     # hyprpicker
     # xwayland-satellite
