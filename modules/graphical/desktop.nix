@@ -36,6 +36,7 @@
     kdePackages.dolphin
     kdePackages.ark
     kdePackages.gwenview
+    kdePackages.ksshaskpass
     haruna
 
     hyprpicker

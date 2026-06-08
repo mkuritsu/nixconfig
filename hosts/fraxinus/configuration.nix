@@ -1,7 +1,8 @@
-{config, ...}: {
+{inputs, config, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./secrets.nix
+    inputs.acoustic-bot.nixosModules.default
   ];
 
   boot = {
@@ -107,6 +108,11 @@
       lower = "04:00";
       upper = "06:00";
     };
+  };
+
+  services.acoustic-bot = {
+    enable = true;
+    envFile = config.age.secrets.acoustic-bot-env.path;
   };
 
   system.stateVersion = "24.11";

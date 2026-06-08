@@ -26,6 +26,11 @@
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    acoustic-bot = {
+      url = "github:mkuritsu/acoustic-bot";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.systems.follows = "systems";
+    };
   };
 
   outputs = {self, ...} @ inputs: rec {

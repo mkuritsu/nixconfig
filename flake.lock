@@ -1,5 +1,28 @@
 {
   "nodes": {
+    "acoustic-bot": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780856014,
+        "narHash": "sha256-OBypRPidk1/8IEQYqA0pmgZQdYsWxtH2YUo9ye1sg0A=",
+        "owner": "mkuritsu",
+        "repo": "acoustic-bot",
+        "rev": "7778ee06aa63d8aa6f0010b1dc94180cebf18fdb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkuritsu",
+        "repo": "acoustic-bot",
+        "type": "github"
+      }
+    },
     "agenix": {
       "inputs": {
         "darwin": [],
@@ -136,6 +159,7 @@
     },
     "root": {
       "inputs": {
+        "acoustic-bot": "acoustic-bot",
         "agenix": "agenix",
         "dms": "dms",
         "helium-browser": "helium-browser",
