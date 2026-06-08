@@ -4,6 +4,16 @@
   ...
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
+
+  helium-kdewallet = pkgs.symlinkJoin {
+    name = "helium";
+    buildInputs = [ pkgs.makeWrapper ];
+    paths = [inputs.helium-browser.packages.${system}.default];
+    postBuild = ''
+      wrapProgram $out/bin/helium \
+        --add-flags "--password-store=kwallet6"
+    '';
+  };
 in {
   programs = {
     obs-studio = {
@@ -21,7 +31,7 @@ in {
     scrcpy
     wl-clipboard
     mangohud
-    inputs.helium-browser.packages.${system}.default
+    helium-kdewallet
     firefox
     vscode
     zed-editor
