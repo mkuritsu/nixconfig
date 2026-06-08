@@ -15,13 +15,21 @@
     };
   };
 
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+  };
+  programs.virt-manager.enable = true;
+
+  environment.systemPackages = [ pkgs.dnsmasq];
+
   services = {
     upower.enable = true;
     udisks2.enable = true;
     gvfs.enable = true;
     printing.enable = true;
     playerctld.enable = true;
-    displayManager.plasma-login-manager.enable = true;
+    displayManager.cosmic-greeter.enable = true;
 
     flatpak = {
       enable = true;

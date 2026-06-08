@@ -5,13 +5,13 @@
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
 
-  helium-kdewallet = pkgs.symlinkJoin {
+  helium-keyring = pkgs.symlinkJoin {
     name = "helium";
     buildInputs = [ pkgs.makeWrapper ];
     paths = [inputs.helium-browser.packages.${system}.default];
     postBuild = ''
       wrapProgram $out/bin/helium \
-        --add-flags "--password-store=kwallet6"
+        --add-flags "--password-store=gnome-libsecret"
     '';
   };
 in {
@@ -31,7 +31,7 @@ in {
     scrcpy
     wl-clipboard
     mangohud
-    helium-kdewallet
+    helium-keyring
     firefox
     vscode
     zed-editor

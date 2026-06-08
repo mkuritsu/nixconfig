@@ -1,5 +1,5 @@
-{lib, pkgs, ...}: {
-  services.gnome.gnome-keyring.enable = lib.mkForce false;
+{pkgs, ...}: {
+  services.gnome.gnome-keyring.enable = true;
 
   programs = {
     niri.enable = true;
@@ -36,7 +36,6 @@
     kdePackages.dolphin
     kdePackages.ark
     kdePackages.gwenview
-    kdePackages.ksshaskpass
     haruna
 
     hyprpicker

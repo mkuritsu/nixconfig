@@ -25,6 +25,10 @@
   };
 
   boot.binfmt.emulatedSystems = ["aarch64-linux"];
+  virtualisation.virtualbox.host.enable = true;
+  environment.systemPackages = [
+    pkgs.vagrant
+  ];
 
   system.stateVersion = "24.11";
 }
