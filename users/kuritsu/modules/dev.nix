@@ -3,17 +3,8 @@
   pkgs,
   ...
 }: let
-  withDev = pkgList: let
-    addDev = pkg:
-      if pkg ? dev
-      then [pkg pkg.dev]
-      else [pkg];
-  in
-    builtins.concatLists (map addDev pkgList);
-
   fhs-packages = pkgs:
-    withDev
-    (with pkgs; [
+    with pkgs; [
       # Shells
       bash
       fish
@@ -100,25 +91,16 @@
       harfbuzz
       pixman
       dbus
-    ]);
+    ] ++ osConfig.environment.systemPackages;
 
   dev-fhs-env = pkgs.buildFHSEnv {
     name = "dev-fhs-env";
-    targetPkgs = pkgs: [pkgs.vscode pkgs.zed-editor pkgs.neovim] ++ (fhs-packages pkgs);
+    extraOutputsToInstall = [ "out" "dev" "bin" "lib" "share" ];
+    targetPkgs = pkgs: fhs-packages pkgs;
     runScript = "fish";
     profile = ''
       export IN_NIX_SHELL=impure
       export name=dev-fhs-env
-    '';
-  };
-
-  neovim-fhs = pkgs.buildFHSEnv {
-    name = "nvim";
-    targetPkgs = pkgs: [pkgs.neovim] ++ (fhs-packages pkgs);
-    runScript = "nvim";
-    profile = ''
-      export IN_NIX_SHELL=impure
-      export name=neovim-fhs
     '';
   };
 
@@ -133,6 +115,7 @@ in {
       pkgs.neovim
       pkgs.tree-sitter
       pkgs.neovide
+      dev-fhs-env
     ]
     else [pkgs.neovim];
 }

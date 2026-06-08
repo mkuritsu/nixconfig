@@ -1,9 +1,5 @@
 {
-  osConfig,
-  lib,
-  ...
-}: {
-  home-manager.users.kuritsu = {osConfig, ...}: {
+  home-manager.users.kuritsu = {osConfig, lib, ...}: {
     home = {
       username = "kuritsu";
       homeDirectory = "/home/kuritsu";
