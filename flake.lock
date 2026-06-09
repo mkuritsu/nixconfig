@@ -10,11 +10,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780976869,
-        "narHash": "sha256-S17dyq64IdyxBONYWjyLhr3RJNDgJoXszobTjCbGTSY=",
+        "lastModified": 1781007362,
+        "narHash": "sha256-anXYWBCdT7Up8ZpdicaOoTF6rzTDRDBejvF/EKUnzXQ=",
         "owner": "mkuritsu",
         "repo": "acoustic-bot",
-        "rev": "e3c8e2c287090744479fb18ad7772bff855d32d1",
+        "rev": "4089aa2f66bb13769994869b99756674683a29f0",
         "type": "github"
       },
       "original": {
@@ -56,11 +56,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780868844,
-        "narHash": "sha256-YnqjsE6AcA2FTl0t/YnC9oWq72CqPjEZBrnYP9nMnoI=",
+        "lastModified": 1780980221,
+        "narHash": "sha256-l70x50JfXtnAVSQMUMGd6kv+NM9Fei2+VFynBijow8A=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "d08c7c5e5528133d84aac80f34935931ae3423c9",
+        "rev": "8856d458873e6b7aab353314271aef0fc5e7f7aa",
         "type": "github"
       },
       "original": {
