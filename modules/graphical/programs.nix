@@ -5,6 +5,7 @@
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
 
+  # ensure gnome-keyring is used, this preserves browser logins across desktops (plasma, hypr, niri and gnome)
   helium-keyring = pkgs.symlinkJoin {
     name = "helium";
     buildInputs = [ pkgs.makeWrapper ];
@@ -26,6 +27,11 @@ in {
     };
   };
 
+  services.flatpak.packages = [
+    "com.discordapp.Discord"
+    "com.spotify.Client"
+  ];
+
   environment.systemPackages = with pkgs; [
     wiremix
     scrcpy
@@ -35,6 +41,11 @@ in {
     firefox
     vscode
     zed-editor
+    adwaita-icon-theme
+    yt-dlp
+    mpv
+    ghostty
+    foot
 
     gcc
     gnumake
