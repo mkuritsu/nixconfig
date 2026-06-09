@@ -10,11 +10,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780856014,
-        "narHash": "sha256-OBypRPidk1/8IEQYqA0pmgZQdYsWxtH2YUo9ye1sg0A=",
+        "lastModified": 1780969242,
+        "narHash": "sha256-rnwCNHwnTGrB+n3EBWTuX3uscBCny4JSBPVXxazp9CY=",
         "owner": "mkuritsu",
         "repo": "acoustic-bot",
-        "rev": "7778ee06aa63d8aa6f0010b1dc94180cebf18fdb",
+        "rev": "fa6edc1fa432ec8f46db6de6bec2ae58ee68066e",
         "type": "github"
       },
       "original": {
