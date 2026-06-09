@@ -8,6 +8,7 @@
     ./services/forgejo.nix
     ./services/glance.nix
     ./services/openssh.nix
+    ./services/podman-auto-update.nix
     ./services/tailscale.nix
   ];
 

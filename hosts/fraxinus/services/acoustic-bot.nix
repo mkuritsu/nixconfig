@@ -1,14 +1,8 @@
-{
-  inputs,
-  config,
-  ...
-}: {
-  imports = [
-    inputs.acoustic-bot.nixosModules.default
-  ];
-
-  services.acoustic-bot = {
-    enable = true;
-    envFile = config.age.secrets.acoustic-bot-env.path;
+{config, ...}: {
+  virtualisation.oci-containers.containers.acoustic-bot = {
+    image = "ghcr.io/mkuritsu/acoustic-bot:latest";
+    autoStart = true;
+    extraOptions = ["--label=io.containers.autoupdate=registry"];
+    environmentFiles = [config.age.secrets.acoustic-bot-env.path];
   };
 }
