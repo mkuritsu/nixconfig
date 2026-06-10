@@ -20,6 +20,7 @@ in {
     git
     delta
     fzf
+    fd
     less
     jq
     zip
