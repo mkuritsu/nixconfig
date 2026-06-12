@@ -1,4 +1,8 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.dms.homeModules.default
   ];
@@ -8,11 +12,23 @@
   };
 
   home.pointerCursor = {
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 20;
+    package = pkgs.adwaita-icon-theme;
+    name = "Adwaita";
+    size = 24;
 
     gtk.enable = true;
     x11.enable = true;
+  };
+
+  home.packages = [
+    pkgs.kdePackages.qt6ct
+  ];
+
+  gtk = {
+    enable = true;
+    gtk3.theme = {
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
+    };
   };
 }

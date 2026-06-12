@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   pkgs,
   ...
 }: let
@@ -8,7 +9,7 @@
   # ensure gnome-keyring is used, this preserves browser logins across desktops (plasma, hypr, niri and gnome)
   helium-keyring = pkgs.symlinkJoin {
     name = "helium";
-    buildInputs = [ pkgs.makeWrapper ];
+    buildInputs = [pkgs.makeWrapper];
     paths = [inputs.helium-browser.packages.${system}.default];
     postBuild = ''
       wrapProgram $out/bin/helium \
@@ -32,6 +33,8 @@ in {
     "com.spotify.Client"
   ];
 
+  environment.variables.EDITOR = "nvim";
+
   environment.systemPackages = with pkgs; [
     wiremix
     scrcpy
@@ -41,6 +44,10 @@ in {
     firefox
     vscode
     zed-editor
+    neovim
+    helix
+    tree-sitter
+    distrobox
     adwaita-icon-theme
     yt-dlp
     mpv

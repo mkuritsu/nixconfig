@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.nix-flatpak.nixosModules.nix-flatpak
   ];
@@ -12,8 +9,8 @@
     gvfs.enable = true;
     printing.enable = true;
     playerctld.enable = true;
-    displayManager.cosmic-greeter.enable = true;
     gnome.gnome-keyring.enable = true;
+    displayManager.gdm.enable = true;
 
     flatpak = {
       enable = true;

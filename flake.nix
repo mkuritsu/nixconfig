@@ -68,6 +68,10 @@
       setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
     });
 
+    overlays = {
+      nm-applet = import ./overlays/nm-applet.nix;
+    };
+
     templates = import ./templates;
   };
 }

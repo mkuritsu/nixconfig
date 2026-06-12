@@ -1,9 +1,5 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
-  fonts.fontconfig.enable = config.hardware.graphics.enable;
+{pkgs, ...}: {
+  fonts.fontconfig.enable = true;
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans

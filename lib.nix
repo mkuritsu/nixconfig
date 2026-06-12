@@ -9,16 +9,7 @@
     "aarch64-linux"
   ];
 in rec {
-  eachSystem = fn: nixpkgs.lib.genAttrs systems (system: fn (mkPkgs system));
-
-  mkPkgs = system:
-    import nixpkgs {
-      inherit system;
-      overlays = [
-        (import ./overlays/nm-applet.nix)
-      ];
-      config.allowUnfree = true;
-    };
+  eachSystem = fn: nixpkgs.lib.genAttrs systems (system: fn (nixpkgs.legacyPackages.${system}));
 
   mkNixOs = hostname: {
     system,
@@ -30,8 +21,6 @@ in rec {
   in
     nixpkgs.lib.nixosSystem {
       inherit system;
-
-      pkgs = mkPkgs system;
       specialArgs = {inherit inputs self;};
       modules =
         [

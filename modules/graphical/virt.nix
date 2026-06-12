@@ -1,9 +1,9 @@
 {pkgs, ...}: {
   virtualisation.libvirtd = {
     enable = true;
-    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+    qemu.vhostUserPackages = with pkgs; [virtiofsd];
   };
   programs.virt-manager.enable = true;
 
-  environment.systemPackages = [ pkgs.dnsmasq];
+  environment.systemPackages = [pkgs.dnsmasq];
 }
