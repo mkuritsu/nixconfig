@@ -17,6 +17,7 @@ in {
 
   environment.systemPackages = with pkgs; [
     wget
+    curl
     git
     delta
     fzf
@@ -43,7 +44,7 @@ in {
     eza
     file
     zoxide
-    bat
+    libnotify
     inputs.agenix.packages.${system}.default
   ];
 }

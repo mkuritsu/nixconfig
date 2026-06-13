@@ -5,6 +5,12 @@
     bypassWorkqueues = true;
   };
 
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-label/BOOT";
+    fsType = "vfat";
+    options = ["fmask=0177" "dmask=0077" "noatime"];
+  };
+
   fileSystems."/" = {
     device = "/dev/mapper/NIXCRYPT";
     fsType = "btrfs";
@@ -29,19 +35,16 @@
     options = ["subvol=log" "noatime" "compress=zstd:9"];
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-label/BOOT";
-    fsType = "vfat";
-    options = ["fmask=0177" "dmask=0077" "noatime"];
-  };
-
-  # swapDevices = [
-  #   {device = "/dev/disk/by-label/SWAP";}
-  # ];
-
   fileSystems."/mnt/ssd2" = {
     device = "/dev/disk/by-label/ssd2";
     fsType = "btrfs";
     options = ["noatime" "compress=zstd:9" "x-gvfs-show" "x-gvfs-name=ssd2" "nofail"];
   };
+
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 16 * 1024;
+    }
+  ];
 }

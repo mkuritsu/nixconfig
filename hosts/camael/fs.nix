@@ -5,37 +5,40 @@
     bypassWorkqueues = true;
   };
 
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-label/BOOT";
+    fsType = "vfat";
+    options = ["fmask=0177" "dmask=0077" "noatime"];
+  };
+
   fileSystems."/" = {
     device = "/dev/mapper/NIXCRYPT";
     fsType = "btrfs";
-    options = ["subvol=root" "noatime" "compress=zstd" "x-gvfs-show" "x-gvfs-name=root"];
+    options = ["subvol=root" "noatime" "compress=zstd:9" "x-gvfs-show" "x-gvfs-name=root"];
   };
 
   fileSystems."/home" = {
     device = "/dev/mapper/NIXCRYPT";
     fsType = "btrfs";
-    options = ["subvol=home" "noatime" "compress=zstd"];
+    options = ["subvol=home" "noatime" "compress=zstd:9"];
   };
 
   fileSystems."/nix" = {
     device = "/dev/mapper/NIXCRYPT";
     fsType = "btrfs";
-    options = ["subvol=nix" "noatime" "compress=zstd"];
+    options = ["subvol=nix" "noatime" "compress=zstd:9"];
   };
 
   fileSystems."/var/log" = {
     device = "/dev/mapper/NIXCRYPT";
     fsType = "btrfs";
-    options = ["subvol=log" "noatime" "compress=zstd"];
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-label/BOOT";
-    fsType = "vfat";
-    options = ["fmask=0022" "dmask=0022" "noatime"];
+    options = ["subvol=log" "noatime" "compress=zstd:9"];
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-label/SWAP";}
+    {
+      device = "/swapfile";
+      size = 16 * 1024;
+    }
   ];
 }
