@@ -1,6 +1,5 @@
 {
   inputs,
-  lib,
   pkgs,
   ...
 }: let
@@ -33,6 +32,9 @@ in {
     "com.spotify.Client"
   ];
 
+  environment.etc."/xdg/menus/applications.menu".text =
+    builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
@@ -53,6 +55,12 @@ in {
     mpv
     ghostty
     foot
+
+    kdePackages.okular
+    kdePackages.dolphin
+    kdePackages.ark
+    kdePackages.gwenview
+    haruna
 
     gcc
     gnumake
