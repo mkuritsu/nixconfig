@@ -35,8 +35,6 @@ in {
   environment.etc."/xdg/menus/applications.menu".text =
     builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
-  environment.variables.EDITOR = "nvim";
-
   environment.systemPackages = with pkgs; [
     wiremix
     scrcpy
@@ -46,7 +44,6 @@ in {
     firefox
     vscode
     zed-editor
-    neovim
     helix
     tree-sitter
     distrobox
@@ -55,11 +52,13 @@ in {
     mpv
     ghostty
     foot
+    libnotify
 
     kdePackages.okular
     kdePackages.dolphin
     kdePackages.ark
     kdePackages.gwenview
+    kdePackages.filelight
     haruna
 
     gcc

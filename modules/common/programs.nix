@@ -1,11 +1,13 @@
 {
   inputs,
+  lib,
   pkgs,
   ...
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
 in {
   programs = {
+    nano.enable = lib.mkForce false;
     fish.enable = true;
     gnupg.agent.enable = true;
     direnv = {
@@ -14,6 +16,8 @@ in {
       nix-direnv.enable = true;
     };
   };
+
+  environment.sessionVariables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
     wget
@@ -44,7 +48,7 @@ in {
     eza
     file
     zoxide
-    libnotify
+    neovim
     inputs.agenix.packages.${system}.default
   ];
 }

@@ -114,10 +114,10 @@ in {
   home.packages =
     if is-graphical
     then [
-      pkgs.neovim
       pkgs.tree-sitter
       pkgs.neovide
+      pkgs.emacs
       dev-env
     ]
-    else [pkgs.neovim];
+    else [];
 }
