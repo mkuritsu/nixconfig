@@ -116,7 +116,6 @@ in {
     then [
       pkgs.tree-sitter
       pkgs.neovide
-      pkgs.emacs
       dev-env
     ]
     else [];

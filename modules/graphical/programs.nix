@@ -56,10 +56,13 @@ in {
 
     kdePackages.okular
     kdePackages.dolphin
+    kdePackages.ffmpegthumbs
+    kdePackages.kdegraphics-thumbnailers
     kdePackages.ark
     kdePackages.gwenview
     kdePackages.filelight
     haruna
+    swappy
 
     gcc
     gnumake
@@ -82,6 +85,7 @@ in {
     rustup
     lua
     dotnet-sdk
+    gdb
 
     nil
     alejandra

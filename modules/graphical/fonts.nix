@@ -6,7 +6,6 @@
     noto-fonts-cjk-serif
     noto-fonts-color-emoji
     dejavu_fonts
-    cantarell-fonts
     adwaita-fonts
     nerd-fonts.jetbrains-mono
     nerd-fonts.caskaydia-mono
