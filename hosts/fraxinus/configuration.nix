@@ -4,6 +4,7 @@
     ./secrets.nix
     ./services/acoustic-bot.nix
     ./services/caddy.nix
+    ./services/excalidraw.nix
     ./services/filebrowser.nix
     ./services/forgejo.nix
     ./services/glance.nix
