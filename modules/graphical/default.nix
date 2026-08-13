@@ -1,8 +1,6 @@
 {
   imports = [
-    # ./desktop/cosmic.nix
     ./desktop/hyprland.nix
-    # ./desktop/kde.nix
     ./desktop/niri.nix
 
     ./audio.nix

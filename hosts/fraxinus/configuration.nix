@@ -3,11 +3,9 @@
     ./hardware-configuration.nix
     ./secrets.nix
     ./services/acoustic-bot.nix
-    # ./services/caddy.nix
     ./services/cloudflared.nix
     ./services/filebrowser.nix
     ./services/forgejo.nix
-    # ./services/glance.nix
     ./services/openssh.nix
     ./services/podman-auto-update.nix
     ./services/tailscale.nix
