@@ -1,8 +1,4 @@
-{
-  self,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   nix = {
     settings.experimental-features = [
       "nix-command"
@@ -18,10 +14,6 @@
       "steam"
       "steam-unwrapped"
     ];
-
-  nixpkgs.overlays = [
-    self.overlays.nm-applet
-  ];
 
   programs.nh = {
     enable = true;
