@@ -46,7 +46,5 @@
     packages = lib.eachSystem (pkgs: {
       setup-script = pkgs.writeShellScriptBin "nixos-setup-script" (builtins.readFile ./setup.sh);
     });
-
-    templates = import ./templates;
   };
 }
