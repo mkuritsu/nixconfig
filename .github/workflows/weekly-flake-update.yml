@@ -25,10 +25,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - host: zaphkiel
-            runs-on: ubuntu-latest
-          - host: camael
-            runs-on: ubuntu-latest
           - host: fraxinus
             runs-on: ubuntu-24.04-arm
     runs-on: ${{ matrix.runs-on }}

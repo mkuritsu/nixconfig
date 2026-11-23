@@ -32,27 +32,6 @@
     lib = import ./lib.nix {inherit self inputs;};
 
     nixosConfigurations = lib.mkNixOsSystems {
-      zaphkiel = {
-        system = "x86_64-linux";
-        modules = [
-          "common"
-          "graphical"
-          "gaming"
-          "hardware/amdgpu.nix"
-        ];
-        users = ["kuritsu"];
-      };
-
-      camael = {
-        system = "x86_64-linux";
-        modules = [
-          "common"
-          "graphical"
-          "hardware/intelgpu.nix"
-        ];
-        users = ["kuritsu"];
-      };
-
       fraxinus = {
         system = "aarch64-linux";
         modules = [
